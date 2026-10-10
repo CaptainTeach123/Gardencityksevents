@@ -35,7 +35,8 @@
   const nowStamp = () => new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
 
   const place = (v) => (v ? [v.name, v.address].filter(Boolean).join(", ") : "");
-  const describe = (e) => [e.open ? "Start time only; the end time was not published." : "", e.desc || "", e.url || ""]
+  const dateOnly = (local) => local.slice(0, 10).replace(/-/g, "");                  // 2026-10-10T00:00 -> 20261010
+const describe = (e) => [e.open && !e.allDay ? "Start time only; the end time was not published." : "", e.desc || "", e.url || ""]
     .filter(Boolean).join("\n\n");
 
   function uid(e) {
@@ -48,8 +49,9 @@
       "BEGIN:VEVENT",
       `UID:${uid(e)}`,
       `DTSTAMP:${stamp}`,
-      `DTSTART;TZID=${TZID}:${localStamp(e.start)}`,
-      `DTEND;TZID=${TZID}:${localStamp(e.end)}`,
+      ...(e.allDay
+        ? [`DTSTART;VALUE=DATE:${dateOnly(e.start)}`, `DTEND;VALUE=DATE:${dateOnly(e.end)}`]            // all-day: date only, end is exclusive
+        : [`DTSTART;TZID=${TZID}:${localStamp(e.start)}`, `DTEND;TZID=${TZID}:${localStamp(e.end)}`]),
       `SUMMARY:${esc(e.title)}`,
       `DESCRIPTION:${esc(describe(e))}`,
     ];
@@ -87,8 +89,8 @@
   /* "Add to Google Calendar" link (opens a pre-filled event form; no sign-in handoff needed). */
   function googleUrl(e, v) {
     const q = new URLSearchParams({
-      action: "TEMPLATE", text: e.title, dates: `${localStamp(e.start)}/${localStamp(e.end)}`, ctz: TZID,
-      details: describe(e), location: place(v),
+      action: "TEMPLATE", text: e.title, dates: e.allDay ? `${dateOnly(e.start)}/${dateOnly(e.end)}` : `${localStamp(e.start)}/${localStamp(e.end)}`,
+      ctz: TZID, details: describe(e), location: place(v),
     });
     return "https://calendar.google.com/calendar/render?" + q.toString();
   }

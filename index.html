@@ -394,6 +394,10 @@
   const timeOf = (mins) => `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(mins % 60).padStart(2, "0")}`;
 
   function timeRange(e) {
+    if (e.allDay) {
+      const last = addDays(e.end.slice(0, 10), -1);
+      return last > e.start.slice(0, 10) ? `All day · through ${dayShort(last)}` : "All day";
+    }
     if (e.open) return `Starts ${timeStr(e.start)}`;
     if (e.end.slice(0, 10) !== e.start.slice(0, 10)) return `${timeStr(e.start)} – ${dayShort(e.end.slice(0, 10))} ${timeStr(e.end)}`;
     const a = parts(e.start), b = parts(e.end), fa = fmt12(a.h, a.mi), fb = fmt12(b.h, b.mi);
@@ -637,8 +641,9 @@
     if (isIOS) return `<div class="install"><p><b>Keep it on your home screen.</b> In Safari, tap <b>Share</b>, then <b>Add to Home Screen</b>.</p></div>`;
     return "";
   }
+  const sourceLinks = () => Object.values(meta.sources || {}).map((s) => `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ");
   function footHtml() {
-    return installHtml() + `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} from <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
+    return installHtml() + `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))}, from ${sourceLinks()}. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
   }
 
   function detailHtml(evs) {
@@ -652,6 +657,7 @@
           <div style="flex:1;min-width:0"><h3>${esc(e.title)}</h3><p class="meta">${esc(dayShort(e.start.slice(0, 10)))} · ${esc(timeRange(e))}</p></div>
           ${tagFor(e, T)}
         </div>
+        ${(meta.sources || {})[e.src] ? `<p class="meta" style="font-size:12.5px">Source: ${esc(meta.sources[e.src].name)}</p>` : ""}
         ${e.desc ? `<p class="desc">${esc(e.desc.length >= 320 ? e.desc.slice(0, 320).replace(/\s+\S*$/, "") + "…" : e.desc)}</p>` : ""}
         <div class="btn-row">
           <a class="btn small" href="${esc(IcsExport.googleUrl(e, v))}" target="_blank" rel="noopener">${svg("calplus", 17)} Google Calendar</a>
@@ -694,7 +700,10 @@
 
     // day strip, with how many events touch each day
     const set = new Set();
-    if (meta.from) { let d = meta.from; for (let i = 0; i < 31 && d <= meta.to; i++) { set.add(d); d = addDays(d, 1); } }
+    if (meta.from) {
+      let d = addDays(state.date, -3) < meta.from ? meta.from : addDays(state.date, -3);
+      for (let i = 0; i < 31 && d <= meta.to; i++) { set.add(d); d = addDays(d, 1); }
+    }
     set.add(state.date); set.add(n.date);
     const daysEl = $("days"), keep = daysEl.scrollLeft;
     const count = (d) => events.filter((e) => state.cats.has(e.category) && e.start < `${addDays(d, 1)}T00:00` && e.end > `${d}T00:00`).length;
@@ -711,7 +720,7 @@
     const bars = [];
     for (let s = 0; s < 48; s++) {
       const a = `${state.date}T${timeOf(s * 30)}`, b = s === 47 ? `${addDays(state.date, 1)}T00:00` : `${state.date}T${timeOf(s * 30 + 30)}`;
-      bars.push(events.filter((e) => state.cats.has(e.category) && e.start < b && e.end > a).length);
+      bars.push(events.filter((e) => !e.allDay && state.cats.has(e.category) && e.start < b && e.end > a).length);
     }
     const max = Math.max(1, ...bars), cur = Math.floor(minutesOf(state.time) / 30);
     $("density").innerHTML = bars.map((c, i) => `<i${i === cur ? ' class="on"' : ""} style="height:${c ? 3 + Math.round((c / max) * 25) : 3}px"></i>`).join("");
@@ -852,7 +861,7 @@
   applySnap("half");
   setWhen(mq.matches);          // open on desktop, collapsed on phones
   render();
-  if (meta.from) $("dataNote").innerHTML = `${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} · <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>`;
+  if (meta.from) $("dataNote").innerHTML = `${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} · ${Object.keys(meta.sources || {}).length} sources`;
   fitAll();
 })();
 </script>

@@ -1,20 +1,22 @@
-name: Update events from VisitGCK.com
+name: Update events
 
-# How events get refreshed:
-#  1. Upload a new calendar export as data/visitgck.ics (GitHub: Add file -> Upload files, commit).
-#     This workflow then rebuilds events.js, geocodes any new venues and redeploys the site.
-#  2. "Run workflow" (Actions tab) also tries to DOWNLOAD the calendar from visitgck.com first.
-#     As of Oct 2026 their firewall answers GitHub's servers with HTTP 403, so that only works
-#     if they allow-list GitHub. If it ever does, uncomment the schedule below for a daily refresh.
+# What this does
+#   Every morning it pulls events from the Finney County Public Library, Garden City Arts and Garden City Community
+#   College (scripts/pull-feeds.js), merges them with your latest VisitGCK upload (data/visitgck.ics), places any new
+#   venues on the map, and redeploys the site.
+#
+# VisitGCK.com blocks automated downloads (HTTP 403 to GitHub), so that one is still manual:
+#   GitHub -> Add file -> Upload files -> data/visitgck.ics (export from their calendar page), commit. This workflow
+#   then runs by itself. "Run workflow" below also tries downloading it first, in case they ever allow GitHub in.
 on:
+  schedule:
+    - cron: "23 11 * * *"      # every day, about 6 AM Garden City time
   push:
     paths: ["data/visitgck.ics"]
   workflow_dispatch:
-  # schedule:
-  #   - cron: "17 11 * * *"      # daily, ~6 AM Garden City time
 
 permissions:
-  contents: write              # commit the refreshed events.js
+  contents: write              # commit the refreshed data
   actions: write               # start the Pages deploy afterwards
 
 concurrency:
@@ -22,8 +24,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Calendar export URLs, tried in order. Override with a repository variable ICS_URLS (space-separated).
-  ICS_URLS: ${{ vars.ICS_URLS || 'https://www.visitgck.com/events-calendar/?ical=1&eventDisplay=list https://www.visitgck.com/events-calendar/?ical=1 https://www.visitgck.com/?post_type=tribe_events&ical=1&eventDisplay=list' }}
+  ICS_URLS: ${{ vars.ICS_URLS || 'https://www.visitgck.com/events-calendar/?ical=1&eventDisplay=list https://www.visitgck.com/events-calendar/?ical=1' }}
 
 jobs:
   update:
@@ -35,28 +36,24 @@ jobs:
         with:
           node-version: 22
 
-      - name: Fetch calendar (iCal)
-        id: fetch
-        if: github.event_name != 'push'
+      - name: Try to download the VisitGCK calendar (manual runs only)
+        if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
         run: |
           mkdir -p data
           for url in $ICS_URLS; do
-            echo "Trying $url"
-            code=$(curl -sS -L -m 60 --retry 2 -o /tmp/cal.ics -w '%{http_code}' \
-              -A "gardencityksevents-map/1.0 (+https://github.com/${{ github.repository }})" \
-              -H 'Accept: text/calendar' "$url" || true)
-            echo "  -> HTTP $code, $(wc -c < /tmp/cal.ics 2>/dev/null || echo 0) bytes, starts: $(head -c 40 /tmp/cal.ics 2>/dev/null | tr -d '\r\n')"
+            code=$(curl -sS -L -m 60 -o /tmp/cal.ics -w '%{http_code}' -A "gardencityksevents-map/1.0 (+https://github.com/${{ github.repository }})" -H 'Accept: text/calendar' "$url" || true)
+            echo "$url -> HTTP $code"
             if [ "$code" = "200" ] && head -c 15 /tmp/cal.ics | grep -q 'BEGIN:VCALENDAR' && grep -q 'BEGIN:VEVENT' /tmp/cal.ics; then
-              cp /tmp/cal.ics data/visitgck.ics
-              echo "Saved $(grep -c 'BEGIN:VEVENT' data/visitgck.ics) events from $url"
-              exit 0
+              cp /tmp/cal.ics data/visitgck.ics; echo "Saved $(grep -c 'BEGIN:VEVENT' data/visitgck.ics) events"; exit 0
             fi
           done
-          echo "::error::Could not download a calendar from any URL (site firewall? wrong export URL?). Keeping the existing events."
-          exit 1
+          echo "::notice::VisitGCK still blocks downloads. Using the last uploaded data/visitgck.ics."
 
-      - name: Build events.js, geocode new venues, rebuild
+      - name: Pull the local feeds (library, Garden City Arts, GCCC)
+        run: node scripts/pull-feeds.js
+
+      - name: Build, place new venues on the map, rebuild
         run: |
           node scripts/build-events.js
           node scripts/geocode.js || true
@@ -71,7 +68,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"; echo "No changes."
           else
-            git commit -m "Update events from VisitGCK.com"
+            git commit -m "Update events"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -82,7 +79,3 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run jekyll-gh-pages.yml --ref "${{ github.ref_name }}"
-
-      - name: Fail if the download failed
-        if: steps.fetch.outcome == 'failure'
-        run: exit 1

@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /*
- * Convert a VisitGCK.com iCal export into events.js for the map.
+ * Build events.js (and the subscribable garden-city-events.ics) for the map from:
+ *   - data/visitgck.ics   a VisitGCK.com iCal export (upload it by hand, their site blocks robots)
+ *   - data/feeds.json     the library, Garden City Arts and GCCC feeds (scripts/pull-feeds.js, runs daily)
  *
- *   node scripts/build-events.js [input.ics] [output.js]
- *   (defaults: data/visitgck.ics -> events.js)
+ *   node scripts/build-events.js [visitgck.ics] [output.js]
  *
- * Export the .ics from the "Subscribe / Export" link on https://www.visitgck.com/events-calendar/
- * Venues are looked up in scripts/venues.json; unknown venues are skipped and listed.
+ * Duplicates (the same event listed by VisitGCK and by its organizer) are merged, keeping the organizer's version.
+ * Venues come from scripts/venues.json; new ones are added automatically and placed by scripts/geocode.js.
  */
 const fs = require("fs");
 const path = require("path");
@@ -14,6 +15,7 @@ const IcsExport = require("../ics.js");
 
 const root = path.join(__dirname, "..");
 const input = process.argv[2] || path.join(root, "data", "visitgck.ics");
+const feedsFile = path.join(root, "data", "feeds.json");
 const output = process.argv[3] || path.join(root, "events.js");
 const venuesFile = path.join(__dirname, "venues.json");
 const venues = JSON.parse(fs.readFileSync(venuesFile, "utf8"));
@@ -89,38 +91,85 @@ function addVenue(location) {
 }
 
 const CATEGORY_RULES = [   // first match wins
-  ["music",     /karaoke|singo|concert|live music|band/i],
-  ["sports",    /rodeo|golf|buffalo dunes|water walking|5k|race|football|soccer|volleyball|basketball/i],
-  ["food",      /wine|tasting|gala|food truck|dinner|market/i],
-  ["family",    /fall fest|hootenanny|funday|story|kitchen fun|pok[eé]mon|family|kids|trunk|trick/i],
-  ["arts",      /arts|craft|macrame|clay|paint|studio|writers|maker|class/i],
+  ["music",     /karaoke|singo|concert|live music|band|choir|orchestra/i],
+  ["sports",    /rodeo|golf|buffalo dunes|water walking|5k|race|football|soccer|volleyball|basketball|tailgate|tournament|cross country|track/i],
+  ["food",      /wine|tasting|gala|food truck|dinner|market|brew|lunch|breakfast/i],
+  ["family",    /fall fest|hootenanny|funday|story|kitchen fun|pok[eé]mon|family|kids|trunk|trick|toddler|baby|babies|wee readers|lego/i],
+  ["arts",      /arts|craft|macrame|clay|paint|studio|writers|maker|class|pour|canvas|theat|exhibit|gallery/i],
 ];
-function categorize(title) {
+const TAG_RULES = [["family", /babies|toddler|family|kids|children/i], ["arts", /art|craft/i], ["music", /music/i], ["sports", /sport|athletic/i]];
+function categorize(title, tags = []) {
   for (const [c, re] of CATEGORY_RULES) if (re.test(title)) return c;
+  for (const [c, re] of TAG_RULES) if (tags.some((t) => re.test(t))) return c;
   return "community";
 }
 
+/* ---- gather candidates from every source ---- */
+const SOURCES = {
+  visitgck: { name: "VisitGCK.com", url: "https://www.visitgck.com/events-calendar/" },
+  library:  { name: "Finney County Public Library", url: "https://finneylibrary.org/events/" },
+  gca:      { name: "Garden City Arts", url: "https://gardencityarts.org/upcoming-events" },
+  gccc:     { name: "Garden City Community College", url: "https://www.gcccks.edu/events/" },
+};
+const PRIORITY = { library: 0, gca: 0, gccc: 0, visitgck: 1 };   // when two sources list the same event, the organizer's own listing wins
+
+const cands = [];
+let stamp;
+if (fs.existsSync(input)) {
+  const raw = parseEvents(fs.readFileSync(input, "utf8"));
+  stamp = raw.map((r) => r["LAST-MODIFIED"]?.value || r.DTSTAMP?.value || "").filter((x) => /Z$/.test(x)).sort().pop() || undefined;
+  for (const r of raw) {
+    const start = toLocal(r.DTSTART);
+    let end = r.DTEND ? toLocal(r.DTEND) : start, open = false;
+    if (end <= start) { end = addMinutes(start, DEFAULT_HOURS * 60); open = true; }
+    cands.push({ source: "visitgck", title: unescapeText(r.SUMMARY?.value || "").trim(), desc: r.DESCRIPTION ? unescapeText(r.DESCRIPTION.value) : "",
+      location: r.LOCATION ? unescapeText(r.LOCATION.value) : "", start, end, open, url: r.URL?.value, tags: [] });
+  }
+} else console.warn(`(no ${path.relative(root, input)} yet, building from the feeds only)`);
+let feedInfo = {};
+if (fs.existsSync(feedsFile)) {
+  const f = JSON.parse(fs.readFileSync(feedsFile, "utf8"));
+  feedInfo = f.sources || {};
+  cands.push(...(f.events || []));
+}
+
+/* ---- same event listed twice? ---- */
+const MONTH_WORDS = "jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|january|february|march|april|june|july|august|september|october|november|december";
+const STOP = new Set(["the", "a", "an", "and", "at", "of", "with", "for", "in", "on", "to"]);
+function words(title, venueName) {
+  let t = title.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
+  t = t.replace(new RegExp(`^${venueName.toLowerCase().replace(/[^a-z0-9 ]/g, ".")}\\s*[:\\-–]\\s*`), "");
+  t = t.replace(/[^a-z0-9 ]+/g, " ").replace(new RegExp(`\\b(${MONTH_WORDS})\\b`, "g"), " ").replace(/\b\d+(st|nd|rd|th)?\b/g, " ");
+  return new Set(t.split(/\s+/).filter((w) => w && !STOP.has(w)));
+}
+function sameEvent(a, b) {
+  if (a.venue !== b.venue || a.allDay !== b.allDay) return false;
+  if (Math.abs(Date.parse(a.start + ":00Z") - Date.parse(b.start + ":00Z")) > 30 * 60000) return false;
+  const A = words(a.title, venues[a.venue].name), B = words(b.title, venues[b.venue].name);
+  if (!A.size || !B.size) return a.title.toLowerCase() === b.title.toLowerCase();
+  const common = [...A].filter((w) => B.has(w)).length;
+  return common >= 1 && common / Math.min(A.size, B.size) >= 0.8;
+}
+
 /* ---- build ---- */
-const raw = parseEvents(fs.readFileSync(input, "utf8"));
-const stamp = raw.map((r) => r["LAST-MODIFIED"]?.value || r.DTSTAMP?.value || "").filter((x) => /Z$/.test(x)).sort().pop() || undefined;
+const today = new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(new Date());
+const cutoff = `${new Date(Date.parse(today + "T00:00:00Z") - 86400000).toISOString().slice(0, 10)}T00:00`;   // drop anything that ended before yesterday
 const out = [], skipped = [], pending = new Set(), addedVenues = [];
-for (const r of raw) {
-  const title = unescapeText(r.SUMMARY?.value || "").trim();
-  const location = r.LOCATION ? unescapeText(r.LOCATION.value) : "";
-  const desc = r.DESCRIPTION ? unescapeText(r.DESCRIPTION.value) : "";
-  const venue = findVenue(location, desc) || (location ? addVenue(location) : null);
-  if (!venue) { skipped.push(`${title} (no location)`); continue; }
-  if (venues[venue].lat == null) { pending.add(venues[venue].name); skipped.push(`${title} @ ${venues[venue].name} (no coordinates yet)`); continue; }
+let dupes = 0;
+cands.sort((a, b) => (PRIORITY[a.source] ?? 1) - (PRIORITY[b.source] ?? 1));
+for (const c of cands) {
+  if (c.end <= cutoff) continue;
+  const venue = findVenue(c.location, c.desc) || (c.location ? addVenue(c.location) : null);
+  if (!venue) { skipped.push(`${c.title} (no location)`); continue; }
+  if (venues[venue].lat == null) { pending.add(venues[venue].name); skipped.push(`${c.title} @ ${venues[venue].name} (no coordinates yet)`); continue; }
 
-  const start = toLocal(r.DTSTART);
-  let end = r.DTEND ? toLocal(r.DTEND) : start;
-  let open = false;
-  if (end <= start) { end = addMinutes(start, DEFAULT_HOURS * 60); open = true; }
-
-  const ev = { title, venue, category: categorize(title), start, end };
-  if (open) ev.open = true;                       // end time unknown: UI shows only the start
-  if (r.URL) ev.url = r.URL.value;
-  ev.desc = desc.replace(/\s+/g, " ").trim().slice(0, 320);
+  const ev = { title: c.title, venue, category: categorize(c.title, c.tags || []), start: c.start, end: c.end };
+  if (c.open) ev.open = true;                      // end time unknown: UI shows only the start
+  if (c.allDay) ev.allDay = true;
+  if (c.url) ev.url = c.url;
+  ev.src = c.source;
+  ev.desc = (c.desc || "").replace(/\s+/g, " ").trim().slice(0, 320);
+  if (out.some((o) => sameEvent(o, ev))) { dupes++; continue; }
   out.push(ev);
 }
 out.sort((a, b) => a.start.localeCompare(b.start) || a.title.localeCompare(b.title));
@@ -134,13 +183,14 @@ const usedVenues = Object.fromEntries(
   Object.entries(venues).filter(([id]) => out.some((e) => e.venue === id))
     .map(([id, v]) => [id, { name: v.name, address: v.address, lat: v.lat, lng: v.lng, ...(v.approx ? { approx: true } : {}) }]));
 
+const usedSources = [...new Set(out.map((e) => e.src))];
 const meta = {
-  source: "VisitGCK.com", sourceUrl: "https://www.visitgck.com/events-calendar/",
+  sources: Object.fromEntries(usedSources.map((k) => [k, SOURCES[k] || { name: k }])),
   from: out[0]?.start.slice(0, 10), to: out[out.length - 1]?.start.slice(0, 10),
 };
 
 const body =
-`/* GENERATED by scripts/build-events.js from ${path.basename(input)} — edit scripts/venues.json or re-run, not this file.
+`/* GENERATED by scripts/build-events.js from ${path.basename(input)} + data/feeds.json — edit scripts/venues.json or re-run, not this file.
  * Times are Garden City local time "YYYY-MM-DDTHH:MM"; \`end\` is exclusive. \`open: true\` = end time unknown. */
 window.EVENTS_META = ${JSON.stringify(meta)};
 window.VENUES = ${JSON.stringify(usedVenues, null, 2)};
@@ -154,6 +204,8 @@ fs.writeFileSync(output, body);
 const feed = path.join(path.dirname(output), "garden-city-events.ics");
 fs.writeFileSync(feed, IcsExport.build(out, usedVenues, { name: "Garden City, KS Events", stamp }));
 
+console.log(`${Object.entries(Object.fromEntries(usedSources.map((k) => [k, out.filter((e) => e.src === k).length]))).map(([k, n]) => `${k}: ${n}`).join(", ")}; ${dupes} duplicate(s) merged`);
+for (const [k, v] of Object.entries(feedInfo)) if (!v.ok) console.warn(`⚠ ${k} feed failed on its last pull (${v.error}); showing its previously saved events`);
 console.log(`Wrote ${out.length} events at ${Object.keys(usedVenues).length} venues (${meta.from} → ${meta.to}) to ${path.relative(process.cwd(), output)} and ${path.basename(feed)}`);
 if (skipped.length) console.warn(`\nSkipped ${skipped.length} event(s):\n  ` + skipped.join("\n  "));
 if (pending.size) console.warn(`\nRun scripts/geocode.js, then build again, to place: ${[...pending].join("; ")}`);

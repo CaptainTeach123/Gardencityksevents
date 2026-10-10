@@ -127,5 +127,16 @@
     "lat": 37.968,
     "lng": -100.94,
     "approx": true
+  },
+  "garden-city-community-college": {
+    "name": "Garden City Community College",
+    "address": "801 Campus Dr, Garden City, KS",
+    "match": [
+      "garden city community college"
+    ],
+    "lat": null,
+    "lng": null,
+    "approx": true,
+    "auto": true
   }
 }
