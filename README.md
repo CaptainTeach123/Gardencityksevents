@@ -13,7 +13,21 @@ Interactive map of events in Garden City, KS. Pick a date and time and see which
 No build step. Open `index.html` in a browser (needs internet for the Leaflet library and OpenStreetMap tiles),
 or serve the folder: `python3 -m http.server`.
 
-## Editing events
+## Updating events (from VisitGCK.com)
 
-All data lives in `events.js`. **The current events are sample placeholders** and venue coordinates are approximate —
-replace them with real ones. Times are local `YYYY-MM-DDTHH:MM`; `end` is exclusive. Categories are defined in `index.html`.
+Events come from the iCal export of https://www.visitgck.com/events-calendar/ (their site blocks automated
+requests, so download the `.ics` in your browser).
+
+```
+# 1. save the export as data/visitgck.ics
+# 2. regenerate events.js
+node scripts/build-events.js
+```
+
+- Venues are defined in `scripts/venues.json`. If the build reports "unknown venue", add it there
+  (`match` = lowercase text found in the event's location).
+- **Pin locations are rough estimates** (`"approx": true`; popups say so). Run
+  `node scripts/geocode.js` on a machine with internet to look up real coordinates from each venue's address
+  (OpenStreetMap Nominatim), then re-run the build. Check the result on the map.
+- Events with no published end time show only a start time and count as "happening" for 2 hours.
+- The current data covers Oct 9–14, 2026 only; the map says so when you pick a date outside the range.

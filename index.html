@@ -48,6 +48,8 @@
   .item:hover, .item:focus-visible { background: #f1f3f7; }
   .item .t { font-weight: 600; display: flex; gap: 6px; align-items: center; }
   .item .m { color: var(--muted); font-size: 13px; }
+  .pop a { color: var(--accent); }
+  .pop .approx { color: #b54708; font-size: 12px; margin-top: 4px; }
   .empty { padding: 24px 16px; color: var(--muted); text-align: center; }
 
   .badge { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; color: #fff; white-space: nowrap; }
@@ -90,6 +92,7 @@
     <header>
       <h1>Garden City Event Map</h1>
       <p>Pick a date &amp; time to see what's happening and where.</p>
+      <p id="dataNote"></p>
     </header>
 
     <section class="controls" aria-label="Date and time">
@@ -150,6 +153,7 @@
   const FALLBACK_CAT = { label: "Other", icon: "📍", color: "#eee" };
   const cat = (k) => CATEGORIES[k] || FALLBACK_CAT;
 
+  const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "");
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -169,6 +173,7 @@
   const fmtDay = (s) => toDate(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
   const fmtTime = (s) => toDate(s).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
   function fmtRange(e) {
+    if (e.open) return `${fmtDay(e.start)} · starts ${fmtTime(e.start)}`;   // end time not published
     const sameDay = e.start.slice(0, 10) === e.end.slice(0, 10);
     return sameDay ? `${fmtDay(e.start)} · ${fmtTime(e.start)} – ${fmtTime(e.end)}`
                    : `${fmtDay(e.start)} ${fmtTime(e.start)} – ${fmtDay(e.end)} ${fmtTime(e.end)}`;
@@ -186,6 +191,13 @@
     if (!ok) console.warn("Skipping invalid event:", e);
     return ok;
   });
+
+  const meta = window.EVENTS_META || {};
+  function outOfRange() {
+    if (!meta.from) return "";
+    return state.date < meta.from || state.date > meta.to
+      ? `Event data only covers ${fmtDay(meta.from + "T00:00")} – ${fmtDay(meta.to + "T00:00")}.` : "";
+  }
 
   function statusOf(e, T) {
     if (e.end <= T) return "ended";
@@ -225,10 +237,15 @@
 
   const badge = (s) => `<span class="badge ${s}">${s === "active" ? "Happening now" : s === "upcoming" ? "Upcoming" : "Ended"}</span>`;
 
+  const descShort = (d) => (d.length > 200 ? d.slice(0, 200).replace(/\s+\S*$/, "") + "…" : d);
+
   function popupHtml(venueId, evs) {
     return `<div class="pop"><h3>${esc(venues[venueId].name)}</h3>` + evs.map((e) =>
       `<div class="ev"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
-       <div class="m">${esc(fmtRange(e))}</div>${e.desc ? `<p>${esc(e.desc)}</p>` : ""}</div>`).join("") + `</div>`;
+       <div class="m">${esc(fmtRange(e))}</div>${e.desc ? `<p>${esc(descShort(e.desc))}</p>` : ""}
+       ${safeUrl(e.url) ? `<p><a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Event details ↗</a></p>` : ""}</div>`).join("")
+      + (venues[venueId].address ? `<div class="m">📍 ${esc(venues[venueId].address)}</div>` : "")
+      + (venues[venueId].approx ? `<div class="approx">Pin location is approximate.</div>` : "") + `</div>`;
   }
 
   function render() {
@@ -264,7 +281,7 @@
     /* list */
     const list = $("list");
     if (!evs.length) {
-      list.innerHTML = `<div class="empty">No events match this date and time.<br>Try a later time, a wider “Upcoming” range, or more categories.</div>`;
+      list.innerHTML = `<div class="empty">No events match this date and time.<br>Try a later time, a wider “Upcoming” range, or more categories.${outOfRange() ? `<br><br><b>${esc(outOfRange())}</b>` : ""}</div>`;
     } else {
       list.innerHTML = evs.map((e, i) =>
         `<button class="item" data-i="${i}"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
@@ -334,6 +351,9 @@
     if (t && /^([01]\d|2[0-3]):[0-5]\d$/.test(t)) state.time = t;
     if (["day", "week", "all", "none"].includes(w)) state.window = w;
   }
+
+  if (meta.from) $("dataNote").innerHTML =
+    `Events ${esc(fmtDay(meta.from + "T00:00"))} – ${esc(fmtDay(meta.to + "T00:00"))} · data: <a href="${esc(meta.sourceUrl)}" target="_blank" rel="noopener">${esc(meta.source)}</a>`;
 
   const n = nowLocal();
   state.date = n.date; state.time = n.time;

@@ -1,0 +1,440 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Finney County Kansas | Garden City Attractions and Events : VisitGCK.com - ECPv6.17.0//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Finney County Kansas | Garden City Attractions and Events : VisitGCK.com
+X-ORIGINAL-URL:https://www.visitgck.com
+X-WR-CALDESC:Events for Finney County Kansas | Garden City Attractions and Events : VisitGCK.com
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261009T160000
+DTEND;TZID=America/Chicago:20261009T170000
+DTSTAMP:20260626T210830Z
+CREATED:20260626T210830Z
+LAST-MODIFIED:20260626T210830Z
+UID:10008255-1791561600-1791565200@www.visitgck.com
+SUMMARY:Finney County Public Library: Anime Night
+DESCRIPTION:Join us for activities and to watch 4-6 episodes of our current anime each week! Ages 13+ or with adult.\n\nFridays at 4pm\nFinney County Public Library\, 605 E Walnut St.\n\nSubject to cancellation. Visit finneylibrary.org or follow Finney County Public Library on Facebook for updates.
+URL:https://www.visitgck.com/event/finney-county-public-library-anime-night/2026-10-09/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261009T170000
+DTEND;TZID=America/Chicago:20261009T220000
+DTSTAMP:20260406T212220Z
+CREATED:20260406T212220Z
+LAST-MODIFIED:20260406T212220Z
+UID:10008004-1791565200-1791583200@www.visitgck.com
+SUMMARY:GCCC Rodeo - 2026 High School / Jr. High Rodeo
+DESCRIPTION:Support the students by attending the 2026 High School / Jr. High Rodeo on October 9th – 11th at the Broncbuster Horse Palace.
+URL:https://www.visitgck.com/event/gccc-rodeo-2026-high-school-jr-high-rodeo/
+LOCATION:Broncbuster Horse Palace\, 401 S. Taylor \, Garden City \, Kansas\, 67846
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261009T180000
+DTEND;TZID=America/Chicago:20261009T200000
+DTSTAMP:20261008T193131Z
+CREATED:20261008T193131Z
+LAST-MODIFIED:20261008T193131Z
+UID:10009116-1791568800-1791576000@www.visitgck.com
+SUMMARY:Craft Club: Thriller Bookmarks
+DESCRIPTION:Calling all thriller lovers… this one is for YOU. 👀\n\nJoin us for a creepy-cute night of creating your own thriller-inspired bookmarks while we embrace all the dark\, mysterious\, unhinged bookish vibes. 🖤📖\n\n🗓️ Friday\, October 9\, 2026\n⏰ 6:00–8:00 PM\n📍 Craft Club\, 105 W Chestnut St\n\n$15 per person. Register here: Sweet Mudd Shop Website
+URL:https://www.visitgck.com/event/craft-club-thriller-bookmarks/
+LOCATION:Craft Club by Sweet Mudd Shop\, 105 W Chestnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261009T180000
+DTEND;TZID=America/Chicago:20261009T210000
+DTSTAMP:20261001T160423Z
+CREATED:20261001T160423Z
+LAST-MODIFIED:20261001T160423Z
+UID:10009097-1791568800-1791579600@www.visitgck.com
+SUMMARY:Garden City Arts: Open Studio
+DESCRIPTION:Get out of your craft room/studio or off your kitchen table and join your fellow creatives for open studio nights at GCA. Bring your own project to work on OR use materials provided by GCA to start something new! This informal event will help you network with fellow creatives. You are welcome to come and go at your convenience.\n\nOct 9th | 6-9PMAges 14+FREELocation: Garden City Arts
+URL:https://www.visitgck.com/event/garden-city-arts-open-studio-4/
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261009T210000
+DTEND;TZID=America/Chicago:20261009T210000
+DTSTAMP:20250226T175051Z
+CREATED:20250226T175051Z
+LAST-MODIFIED:20250226T175051Z
+UID:10005611-1791579600-1791579600@www.visitgck.com
+SUMMARY:Karaoke Night - Every Friday Night at Loving's Moon
+DESCRIPTION:Grab your friends and come on down to the Moon for karaoke\, drink specials\, great service\, and the nicest pool tables in town! Every Friday night starting at 9pm at Loving’s Moon.
+URL:https://www.visitgck.com/event/karaoke-night-every-friday-night-at-lovings-moon/2026-10-09/
+LOCATION:Loving’s Moon\, 1621 Taylor Plaza W\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T090000
+DTEND;TZID=America/Chicago:20261010T160000
+DTSTAMP:20261008T153737Z
+CREATED:20261008T153719Z
+LAST-MODIFIED:20261008T153737Z
+UID:10009105-1791622800-1791648000@www.visitgck.com
+SUMMARY:Mahjong 101 + Open Play
+DESCRIPTION:LEARN + PLAY SATURDAY AT ROOTS \n\n\nWant to learn American Mahjong? Already know how to play and just want a seat at the table? Join West Wind Mahjong Society for a Learn + Play Saturday at Roots in Garden City!\n Saturday\, October 10 Roots Juice Co & Wellness Studio\, 214 N Main St | Garden City\, KS\nMAHJONG 101 | 9 AM–12 PM\nOPEN PLAY | 1–4 PMBrand new to Mahjong? Start here! We’ll walk you through the basics of American Mahjong\, from understanding the tiles and NMJL card to Charleston\, gameplay\, strategy and calling your first Mahj. No experience needed. We provide everything you need to play.\n\nAlready know how to play? Pull up a chair! Open Play is for experienced players and anyone who takes our Mahjong 101 class that morning. It’s the perfect chance for new players to put what they just learned into practice while it’s still fresh.\n\nCome for Mahjong 101\, Open Play\, or make a day of it and join us for both!\n Mahjong 101: $50/person Open Play: $5/person Equipment provided Food and drinks available for purchase from Roots\n\nGrab a friend\, choose your session\, and come spend a Saturday around the Mahjong table.\nREGISTER ONLINE–> https://westwindmahjongsociety.com/register\nWhere Good Company is Always in Play.
+URL:https://www.visitgck.com/event/mahjong-101-open-play/
+LOCATION:Roots Juice Co. & Wellness Studio\, 216 North Main\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T100000
+DTEND;TZID=America/Chicago:20261010T120000
+DTSTAMP:20261001T160139Z
+CREATED:20261001T160139Z
+LAST-MODIFIED:20261001T160139Z
+UID:10009096-1791626400-1791633600@www.visitgck.com
+SUMMARY:Garden City Arts: Writers Meetup
+DESCRIPTION:Calling all writers! Whether you are published\, writing poems or prose for personal enjoyment\, or just beginning your writing journey\, this quarterly meetup is designed to support and connect writers in our community. Garden City Arts’ Writers Meetup offers a welcoming space for networking\, discussion\, and creative encouragement.\n\nWriters may also choose to submit work for group critique through an online portal below. Submissions Guidelines include:**Submissions MUST be fewer than 5 pages.**Submissions must be submitted 1 week prior to the Meetup.**Writers must be present at the meetup for their work to be discussed. Please only submit work if you are able to attend.\n\nRegister or submit your work for a group critique here: Garden City Arts Website\n\nOct 10th | 10AM-12PMAges 14+ | FREELocation: Garden City Arts\, 318 N Main StAdvance registration is encouraged.
+URL:https://www.visitgck.com/event/garden-city-arts-writers-meetup-2/
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T100000
+DTEND;TZID=America/Chicago:20261010T180000
+DTSTAMP:20260406T212538Z
+CREATED:20260406T212323Z
+LAST-MODIFIED:20260406T212538Z
+UID:10008005-1791626400-1791655200@www.visitgck.com
+SUMMARY:GCCC Rodeo - 2026 High School / Jr. High Rodeo
+DESCRIPTION:Support the students by attending the 2026 High School / Jr. High Rodeo on October 9th – 11th at the Broncbuster Horse Palace.
+URL:https://www.visitgck.com/event/gccc-rodeo-2026-high-school-jr-high-rodeo-2/
+LOCATION:Broncbuster Horse Palace\, 401 S. Taylor \, Garden City \, Kansas\, 67846
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T130000
+DTEND;TZID=America/Chicago:20261010T150000
+DTSTAMP:20261001T155843Z
+CREATED:20261001T155843Z
+LAST-MODIFIED:20261001T155843Z
+UID:10009095-1791637200-1791644400@www.visitgck.com
+SUMMARY:Garden City Arts: Project Lab
+DESCRIPTION:Explore a new art medium each month! Miss Wheet teaches foundational techniques\, then encourages students to use their imagination to create unique\, one-of-a-kind projects. Snacks will be provided.\n\nRegister here: Garden City Arts Website\n\nAges 11-14\nOct 10th | 1-3PM\n$20 per ($15 members)\nInstructor: Ariana Wheet\nLocation: Garden City Arts\, 318 N Main St
+URL:https://www.visitgck.com/event/garden-city-arts-project-lab/
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T140000
+DTEND;TZID=America/Chicago:20261010T150000
+DTSTAMP:20260629T152712Z
+CREATED:20260629T152712Z
+LAST-MODIFIED:20260629T152712Z
+UID:10008402-1791640800-1791644400@www.visitgck.com
+SUMMARY:Finney County Public Library: Kitchen Fun
+DESCRIPTION:Beginner-friendly cooking focused on basic skills and fun but simple recipes!\n\nAges 10-17\nSaturdays at 2pm\nFinney County Public Library\, 605 E Walnut St.\n\nSubject to cancellation. Visit finneylibrary.org or follow Finney County Public Library on Facebook for updates.
+URL:https://www.visitgck.com/event/finney-county-public-library-kitchen-fun/2026-10-10/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T140000
+DTEND;TZID=America/Chicago:20261010T170000
+DTSTAMP:20260930T211828Z
+CREATED:20260930T211828Z
+LAST-MODIFIED:20260930T211828Z
+UID:10009085-1791640800-1791651600@www.visitgck.com
+SUMMARY:GPMS Class: Macrame Bat Wall Hanging
+DESCRIPTION:Get ready for spooky season! Or just for bats\, that is completely acceptable\, too.\n\nIn this class Sherrailynn will walk you through the process of making a macrame bat wall hanging. All materials will be provided. Makers ages 12 and over can take this class\, and no prior macrame knowledge is needed.\n\nClass costs $20 for non-member and $15 for GPMS members. Registration is required so we know how many people to expect. If no one is registered 24 hours before class starts\, the class may be cancelled. Register here: GPMS Website\n\nSaturday\, October 10 | 2pm\nGreat Plains MakerSpace\, 2308 N 3rd St
+URL:https://www.visitgck.com/event/gpms-class-macrame-bat-wall-hanging-2/
+LOCATION:Great Plains MakerSpace\, 2308 N. Third Street\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T163000
+DTEND;TZID=America/Chicago:20261010T193000
+DTSTAMP:20260406T201134Z
+CREATED:20260406T164549Z
+LAST-MODIFIED:20260406T201134Z
+UID:10007949-1791649800-1791660600@www.visitgck.com
+SUMMARY:Finney County Public Library: Dungeons & Dragons
+DESCRIPTION:One-shot campaigns with available characters or character sheets to make your own\, Ages 13+ or with an adultSaturdays\, 4:30-7:30pmDates\, times\, and locations are subject to change. Please check finneylibrary.org for more details.
+URL:https://www.visitgck.com/event/finney-county-public-library-dungeons-dragons/2026-10-10/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T180000
+DTEND;TZID=America/Chicago:20261010T200000
+DTSTAMP:20260924T165601Z
+CREATED:20260924T165601Z
+LAST-MODIFIED:20260924T165601Z
+UID:10009080-1791655200-1791662400@www.visitgck.com
+SUMMARY:Bible Christian Church Fall Fest
+DESCRIPTION:You are all invited to join us for the FREE event! We will have food\, games\, and family fun from 6-8pm on Saturday\, October 10th\, for our annual FALL FEST! No registration is needed; bring the whole family and be ready to have fun! \nSaturday\, October 10 | 6pm – 8pm\nBible Christian Church\, 1501 E Mary St
+URL:https://www.visitgck.com/event/bible-christian-church-fall-fest-2/
+LOCATION:Bible Christian Church\, 1404 East Mary Street\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T183000
+DTEND;TZID=America/Chicago:20261010T183000
+DTSTAMP:20261009T153939Z
+CREATED:20261009T153939Z
+LAST-MODIFIED:20261009T153939Z
+UID:10009119-1791657000-1791657000@www.visitgck.com
+SUMMARY:Nichole Faulconer Agency Presents: A Halloween SINGO
+DESCRIPTION:3 Rockin’ Rounds of SINGO BINGO featuring three playlists all with three possible chances to win! It’s going to be a frightfully good time!*SINGO Can Be Enjoyed by All Ages.** Purchase is Not Necessary to Win SINGO.*** Though\, Drinking and Singing Along is Encouraged  \nSaturday\, October 10\, 2026 | 6:30pm\nHidden Trail Brewing\, 2010 E Schulman Ave
+URL:https://www.visitgck.com/event/nichole-faulconer-agency-presents-a-halloween-singo/
+LOCATION:Hidden Trail Brewing\, 2010 E Schulman Ave\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T183000
+DTEND;TZID=America/Chicago:20261010T210000
+DTSTAMP:20250829T190343Z
+CREATED:20250829T190343Z
+LAST-MODIFIED:20250829T190343Z
+UID:10006309-1791657000-1791666000@www.visitgck.com
+SUMMARY:Trivia at Loving's Moon
+DESCRIPTION:Trivia at Loving’s Moon every Saturday night! \nStarting at 6:30 pm.
+URL:https://www.visitgck.com/event/trivia-at-lovings-moon/2026-10-10/
+LOCATION:Loving’s Moon\, 1621 Taylor Plaza W\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T190000
+DTEND;TZID=America/Chicago:20261010T220000
+DTSTAMP:20260923T150223Z
+CREATED:20260917T210354Z
+LAST-MODIFIED:20260923T150223Z
+UID:10008808-1791658800-1791669600@www.visitgck.com
+SUMMARY:Emerald City Gala - The Annual Wine Tasting Event
+DESCRIPTION:Tickets are STILL available for the Emerald City Gala! Follow the glow and join us for an unforgettable evening at the Garden City Area Chamber of Commerce Annual Wine Tasting! Enjoy a night filled with wine\, whiskey\, spirits\, beer\, cigars & more while sipping\, socializing\, and supporting the Chamber. Whether you’re planning a date night\, girls’ night\, or an evening out with friends\, you won’t want to miss one of our favorite events of the year! Emerald City Gala – Annual Wine Tasting\nMUST BE 21+ to attend this event!!!!! Saturday\, October 10 7:00–10:00 PM The Refinery\, 3122 Cecil Dr Tickets: $100 General Admission\, $50 Allocated Whiskey Room TicketThere’s still time to grab your ticket and join us somewhere over the rainbow! Get yours before they’re gone!https://business.gckschamber.com/…/wine-tasting-event…
+URL:https://www.visitgck.com/event/emerald-city-gala-the-annual-wine-tasting-event/
+LOCATION:The Refinery Event Center\, 3122 Cecil Dr\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261011T080000
+DTEND;TZID=America/Chicago:20261011T170000
+DTSTAMP:20260406T212615Z
+CREATED:20260406T212410Z
+LAST-MODIFIED:20260406T212615Z
+UID:10008007-1791705600-1791738000@www.visitgck.com
+SUMMARY:GCCC Rodeo - 2026 High School / Jr. High Rodeo
+DESCRIPTION:Support the students by attending the 2026 High School / Jr. High Rodeo on October 9th – 11th at the Broncbuster Horse Palace.
+URL:https://www.visitgck.com/event/gccc-rodeo-2026-high-school-jr-high-rodeo-3/
+LOCATION:Broncbuster Horse Palace\, 401 S. Taylor \, Garden City \, Kansas\, 67846
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261011T130000
+DTEND;TZID=America/Chicago:20261011T170000
+DTSTAMP:20261008T194755Z
+CREATED:20260924T170215Z
+LAST-MODIFIED:20261008T194755Z
+UID:10009081-1791723600-1791738000@www.visitgck.com
+SUMMARY:Gravity Wellness Spa Halloween Hootenanny
+DESCRIPTION:🎃👻 THE 4TH ANNUAL HALLOWEEN HOOTENANNY IS BACK! 👻🎃 \nMark your calendars and bring the whole family for an afternoon of Halloween fun\, local businesses\, food\, candy\, costumes\, music\, and community! We are so excited to bring back one of our favorite community events for its 4th year! Last year\, more than 350 people joined us\, and we’re expecting an even bigger crowd this year! 🎃 The Halloween Hootenanny is all about bringing our community together and supporting the amazing local businesses that make Garden City such a great place to live. Bring your family. Bring your friends. Bring your appetite. And definitely bring your Halloween spirit! Admission is FREE! \n📅 Sunday\, October 11\, 2026\n⏰ 1:00 PM – 5:00 PM\n📍 Gravity Wellness Spa\, 1106 N. Campus Drive\, Garden City\, KS \n🎶 THIS YEAR\, WE’RE TURNING UP THE VIBE!\nWe’re excited to have a DJ joining us this year to keep the energy going and set the perfect Halloween Hootenanny vibe! 🎶👻\nCome ready for music\, fun\, dancing\, costumes\, and plenty of Halloween spirit! \n🍬 TRUNK-OR-TREAT\nKids will receive a Gravity treat bag to use while visiting participating local businesses and food trucks throughout the event.\nCome dressed in your favorite Halloween costume and get ready to fill your bag with treats! 👻🍭 \n🛍️ SHOP LOCAL\nWe’ll have a fantastic lineup of local businesses\, vendors\, and food trucks joining us for the afternoon.\nCome support local businesses\, discover something new\, grab some delicious food\, and enjoy everything our community has to offer! \n🧒 KID’S ZONE\nOur Kid’s Zone will be located at the back of the property and will feature a bounce house and other fun activities for the kids! \n🎁 GIVEAWAYS\nWe’ll have several Gravity Wellness Spa service drawings\, along with giveaways from participating local businesses. There will be lots of chances to win something fun! 🎉 \n👻 COME IN COSTUME!\nHalloween costumes are highly encouraged! Whether you’re going for cute\, spooky\, funny\, or completely over-the-top\, we want to see your Halloween spirit!
+URL:https://www.visitgck.com/event/gravity-wellness-spa-halloween-hootenanny/
+LOCATION:Gravity Wellness Spa\, 1106 N Campus Drive\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261011T143000
+DTEND;TZID=America/Chicago:20261011T143000
+DTSTAMP:20260126T201644Z
+CREATED:20260126T201644Z
+LAST-MODIFIED:20260126T201644Z
+UID:10007081-1791729000-1791729000@www.visitgck.com
+SUMMARY:Finney County Public Library: Sunday FunDay
+DESCRIPTION:Crafts & activities for the whole family!\nSundays at 2:30pm\, Finney County Public Library\, 605 E Walnut St\nDates\, times\, and locations are subject to change. Please check finneylibrary.org for more details.
+URL:https://www.visitgck.com/event/finney-county-public-library-sunday-funday/2026-10-11/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261012T170000
+DTEND;TZID=America/Chicago:20261012T190000
+DTSTAMP:20260209T201807Z
+CREATED:20260209T201807Z
+LAST-MODIFIED:20260209T201807Z
+UID:10007187-1791824400-1791831600@www.visitgck.com
+SUMMARY:Water Walking at Parrot Cove
+DESCRIPTION:FREE water walking at Parrot Cove Indoor Water Park! No pre-sign up required! Walk at your own time and pace.\n\nWater walking benefits:\n– Muscle strengthening\n– Cardiovascular health\n– Joint protection\n– Weight management\n– Stress relief\n\nMondays & Wednesdays\n5:00pm – 7:00pm\nParrot Cove Water Park\, 990 Stone Creek Drive
+URL:https://www.visitgck.com/event/water-walking-at-parrot-cove/2026-10-12/
+LOCATION:Parrot Cove Indoor Water Park\, 990 Stone Creek Drive\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261012T180000
+DTEND;TZID=America/Chicago:20261012T180000
+DTSTAMP:20261008T161529Z
+CREATED:20261008T161529Z
+LAST-MODIFIED:20261008T161529Z
+UID:10009108-1791828000-1791828000@www.visitgck.com
+SUMMARY:GPMS: Nerd Talk
+DESCRIPTION:Listen to (sort of) intellectual talks while enjoying some refreshments provided by Flourish Herbals. Free and open for everyone to attend!\n\nThis month we have:\nTrevor Hands: Why the Co-op ExistsShelby Espino: Why You Should be a Fan of BTSHunter Carson: Traveling Taste Buds: Souvenirs You Can Eat\n\nMonday\, October 12 | 6pm\nGreat Plains MakerSpace\, 2308 N 3rd St
+URL:https://www.visitgck.com/event/gpms-nerd-talk-2/
+LOCATION:Great Plains MakerSpace\, 2308 N. Third Street\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T100000
+DTEND;TZID=America/Chicago:20261013T113000
+DTSTAMP:20261001T155357Z
+CREATED:20261001T155357Z
+LAST-MODIFIED:20261001T155357Z
+UID:10009094-1791885600-1791891000@www.visitgck.com
+SUMMARY:Garden City Arts: ArtFULL Mornings
+DESCRIPTION:Fill your morning with art\, learning\, and creativity!\n\nArtFULL Mornings is a free monthly program for adults that combines art history\, hands-on creativity\, and conversation. Each month\, Conny will introduce an artist\, movement\, or moment in art history through a short presentation and discussion. Then\, Robin will lead a simple art project inspired by what you’ve learned. No art experience is necessary\, and coffee is provided!\n\nRegister here: Garden City Arts Website\n\nOctober Topic: What Makes Modern Art Modern?\nOct. 13 | 10–11:30 AM\nAges 18+ | FREE\nLocation: Garden City Arts\, 318 N Main St\nAdvance registration is required. Space is limited to 12 participants.
+URL:https://www.visitgck.com/event/garden-city-arts-artfull-mornings/
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T170000
+DTEND;TZID=America/Chicago:20261013T200000
+DTSTAMP:20260406T200625Z
+CREATED:20260406T200209Z
+LAST-MODIFIED:20260406T200625Z
+UID:10007886-1791910800-1791921600@www.visitgck.com
+SUMMARY:Ladies Night - Buffalo Dunes
+DESCRIPTION:Ladies Night at Buffalo Dunes!\n\n$15 for non members\, free for members$2 beers and seltzers\n5:00\, 5:10\, 5:20\, 5:30–structured play\, call to play with a partner\n5:30\, 5:40\, 5:50\, 6:00\, 6:10–relax play\, call to play with your foursomes\nCall clubhouse\, no google forms this year: 620-276-1210
+URL:https://www.visitgck.com/event/ladies-night-buffalo-dunes-2/2026-10-13/
+LOCATION:Buffalo Dunes Golf Course
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T183000
+DTEND;TZID=America/Chicago:20261013T183000
+DTSTAMP:20250904T191520Z
+CREATED:20250611T213400Z
+LAST-MODIFIED:20250904T191520Z
+UID:10006386-1791916200-1791916200@www.visitgck.com
+SUMMARY:Trivia Night at Main Street Food & Brew Hall
+DESCRIPTION:Join Main Street Food & Brew Hall every Tuesday at 6:30 PM for an evening of fun\, prizes\, and bragging rights.\n🏆 Prizes:\n🥇 1st Place: $50 Gift Card\n🥈 2nd Place: $25 Gift Card\n🥉 3rd Place: $15 Gift Card
+URL:https://www.visitgck.com/event/trivia-night-at-main-street-food-brew-hall-4/2026-10-13/
+LOCATION:Main St Food & Brew Hall\, 207 N Main\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T183000
+DTEND;TZID=America/Chicago:20261013T183000
+DTSTAMP:20260629T151634Z
+CREATED:20260629T151634Z
+LAST-MODIFIED:20260629T151634Z
+UID:10008344-1791916200-1791916200@www.visitgck.com
+SUMMARY:Finney County Public Library: Family Crafts
+DESCRIPTION:Whether you come by yourself or have the whole crew in tow\, join us for different crafts each week or bring your own project from home!\n\nAll ages\nTuesdays at 6:30pm\nFinney County Public Library\, 605 E Walnut St.\n\nSubject to cancellation. Visit finneylibrary.org or follow Finney County Public Library on Facebook for updates.
+URL:https://www.visitgck.com/event/finney-county-public-library-family-crafts/2026-10-13/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T183000
+DTEND;TZID=America/Chicago:20261013T183000
+DTSTAMP:20260923T164156Z
+CREATED:20260923T164048Z
+LAST-MODIFIED:20260923T164156Z
+UID:10008816-1791916200-1791916200@www.visitgck.com
+SUMMARY:Finney County Public Library: Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can bring your own project from home.\nAges 18+ \nTuesdays at 6:30pm\nFinney County Public Library\, 605 E Walnut St \nSubject to cancellation. Call (620) 272-3680\, go to finneylibrary.org\, or visit Finney County Public Library on Facebook for more information.
+URL:https://www.visitgck.com/event/finney-county-public-library-adult-craft-night/2026-10-13/
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261013T183000
+DTEND;TZID=America/Chicago:20261013T183000
+DTSTAMP:20261008T160039Z
+CREATED:20261008T160039Z
+LAST-MODIFIED:20261008T160039Z
+UID:10009107-1791916200-1791916200@www.visitgck.com
+SUMMARY:GPMS Class: Clay Witch Hat Tea Lights
+DESCRIPTION:Bring on the spooky season! Join Elena in learning to make witch hat luminaries. Participants will create little witch hats to cover tea lights for another spooky cute Halloween decoration. The pieces will be dried and fired at GPMS over the week following class. Participants will need to return to GPMS to pick up their project about one week after class. Elena will contact you when items are ready to be picked up.\n\nGPMS will provide the clay\, glaze\, instruction\, and tools needed for this project.\n\nThis class costs $25 for non-members and $20 for members. If there is no one registered for class approximately 24 hours in advance\, class may be cancelled. Register here: GPMS Website\n\n\nTuesday\, October 13 | 6:30pm\nGreat Plains MakerSpace\, 2308 N 3rd St
+URL:https://www.visitgck.com/event/gpms-class-clay-witch-hat-tea-lights/
+LOCATION:Great Plains MakerSpace\, 2308 N. Third Street\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261014T163000
+DTEND;TZID=America/Chicago:20261014T173000
+DTSTAMP:20260414T142439Z
+CREATED:20260414T142439Z
+LAST-MODIFIED:20260414T142439Z
+UID:10008120-1791995400-1791999000@www.visitgck.com
+SUMMARY:Finney County Public Library: Pokémon Club (Ages 6-9)
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games\, cards\, and show! From crafts\, activities based around the theme\, watch parties\, and gaming days\, Pokemon club has something to offer every fan! Starts April 1st at 4:30pm. Ages 6-9 \nSubject to cancellation. Check finneylibrary.org or Facebook Finney County Public Library for updates.
+URL:https://www.visitgck.com/event/finney-county-public-library-pokemon-club-ages-6-9/2026-10-14/
+LOCATION:Finney County Public Library\, 605 East Walnut\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261014T170000
+DTEND;TZID=America/Chicago:20261014T190000
+DTSTAMP:20260311T151253Z
+CREATED:20260209T201920Z
+LAST-MODIFIED:20260311T151253Z
+UID:10007448-1791997200-1792004400@www.visitgck.com
+SUMMARY:Water Walking at Parrot Cove
+DESCRIPTION:FREE water walking at Parrot Cove Indoor Water Park! No pre-sign up required! Walk at your own time and pace.\n\nWater walking benefits:\n– Muscle strengthening\n– Cardiovascular health\n– Joint protection\n– Weight management\n– Stress relief\n\nMondays & Wednesdays\n5:00pm – 7:00pm\nParrot Cove Water Park\, 990 Stone Creek Drive \nSubject to cancellation – check our Facebook for updates: Parrot Cove Indoor Water Park
+URL:https://www.visitgck.com/event/water-walking-at-parrot-cove-2/2026-10-14/
+LOCATION:Parrot Cove Indoor Water Park\, 990 Stone Creek Drive\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261014T183000
+DTEND;TZID=America/Chicago:20261014T183000
+DTSTAMP:20260930T212105Z
+CREATED:20260930T212105Z
+LAST-MODIFIED:20260930T212105Z
+UID:10009086-1792002600-1792002600@www.visitgck.com
+SUMMARY:GPMS Class: Gingerbread Zombie Man
+DESCRIPTION:Come glaze a cute Christmas\, er\, Halloween ornament with us! Each participant will glaze a pre-made clay gingerbread ornament. You don’t *have* to make him a zombie\, but it is spooky season. \n\n\nGPMS will provide the bisque\, glaze\, instructions\, and tools needed for this project. You will glaze the project during the class. It will be kept at the makerspace to dry and be fired. It will be available for pick up about one week after class. You will be contacted by the instructor.\n\nThis class costs $15 for non-members and $10 for members. If there is no one registered for class approximately 24 hours in advance\, class may be cancelled. Register here: GPMS Website\n\nWednesday\, October 14 | 6:30pm\nGreat Plains MakerSpace\, 2308 N 3rd St
+URL:https://www.visitgck.com/event/gpms-class-gingerbread-zombie-man/
+LOCATION:Great Plains MakerSpace\, 2308 N. Third Street\, Garden City\, KS\, 67846\, United States
+CATEGORIES:All Events
+END:VEVENT
+END:VCALENDAR

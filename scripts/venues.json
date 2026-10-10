@@ -1,0 +1,17 @@
+{
+  "_note": "Source of truth for pin locations. `match` = lowercase substrings looked for in an event's LOCATION. lat/lng below are ROUGH ESTIMATES (approx: true) — run `node scripts/geocode.js` from a machine with internet to replace them with real coordinates.",
+  "library":   { "name": "Finney County Public Library",  "address": "605 E Walnut St, Garden City, KS 67846",       "match": ["finney county public library"], "lat": 37.9795, "lng": -100.8650, "approx": true },
+  "gca":       { "name": "Garden City Arts",              "address": "318 N Main St, Garden City, KS 67846",         "match": ["garden city arts"],             "lat": 37.9760, "lng": -100.8727, "approx": true },
+  "mainfood":  { "name": "Main St Food & Brew Hall",      "address": "207 N Main St, Garden City, KS 67846",         "match": ["main st food", "main street food"], "lat": 37.9745, "lng": -100.8727, "approx": true },
+  "roots":     { "name": "Roots Juice Co. & Wellness Studio", "address": "216 N Main St, Garden City, KS 67846",     "match": ["roots juice"],                  "lat": 37.9747, "lng": -100.8728, "approx": true },
+  "craftclub": { "name": "Craft Club by Sweet Mudd Shop", "address": "105 W Chestnut St, Garden City, KS 67846",     "match": ["craft club"],                   "lat": 37.9775, "lng": -100.8742, "approx": true },
+  "rodeo":     { "name": "Broncbuster Horse Palace",      "address": "401 S Taylor Ave, Garden City, KS 67846",      "match": ["broncbuster"],                  "lat": 37.9585, "lng": -100.8795, "approx": true },
+  "lovings":   { "name": "Loving's Moon",                 "address": "1621 Taylor Plaza W, Garden City, KS 67846",   "match": ["loving"],                       "lat": 37.9640, "lng": -100.8900, "approx": true },
+  "gpms":      { "name": "Great Plains MakerSpace",       "address": "2308 N 3rd St, Garden City, KS 67846",         "match": ["great plains makerspace"],      "lat": 37.9870, "lng": -100.8780, "approx": true },
+  "bible":     { "name": "Bible Christian Church",        "address": "1404 E Mary St, Garden City, KS 67846",        "match": ["bible christian church"],       "lat": 37.9810, "lng": -100.8570, "approx": true },
+  "hidden":    { "name": "Hidden Trail Brewing",          "address": "2010 E Schulman Ave, Garden City, KS 67846",   "match": ["hidden trail"],                 "lat": 37.9690, "lng": -100.8480, "approx": true },
+  "refinery":  { "name": "The Refinery Event Center",     "address": "3122 Cecil Dr, Garden City, KS 67846",         "match": ["the refinery"],                 "lat": 37.9555, "lng": -100.8430, "approx": true },
+  "gravity":   { "name": "Gravity Wellness Spa",          "address": "1106 N Campus Dr, Garden City, KS 67846",      "match": ["gravity wellness"],             "lat": 37.9905, "lng": -100.8795, "approx": true },
+  "parrot":    { "name": "Parrot Cove Indoor Water Park", "address": "990 Stone Creek Dr, Garden City, KS 67846",    "match": ["parrot cove"],                  "lat": 37.9930, "lng": -100.8855, "approx": true },
+  "buffalo":   { "name": "Buffalo Dunes Golf Course",     "address": "Buffalo Dunes Golf Course, Garden City, KS",   "match": ["buffalo dunes"],                "lat": 37.9680, "lng": -100.9400, "approx": true }
+}
