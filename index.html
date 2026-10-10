@@ -73,6 +73,11 @@
   .btn-now { height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--gold); color: var(--gold-ink); font-weight: 700; }
   .icon-btn { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; color: var(--ink); }
   .icon-btn:active, .btn-now:active { transform: scale(.96); }
+  .when-bar { gap: 6px; padding: 8px 8px 8px 6px; }
+  .when-bar .icon-btn { width: 42px; height: 42px; }
+  .when-bar .btn-now { padding: 0 14px; height: 42px; }
+  .when-summary { padding: 0 2px; }
+  @media (max-width: 380px) { .when-summary .chev { display: none; } }
 
   .when-body { display: none; gap: 12px; padding: 4px 12px 14px; max-height: calc(100dvh - 120px - var(--safe-t)); overflow-y: auto; overscroll-behavior: contain; }
   .when.open .when-body { display: grid; }
@@ -340,6 +345,41 @@
   .plan-clock .draw .pev text { animation: fadein .5s ease both; animation-delay: calc(var(--k, 0) * 90ms + 450ms); }
   @keyframes sweep { to { stroke-dashoffset: 0; } }
   @keyframes fadein { from { opacity: 0; } }
+
+  /* ---------- search, quick picks, welcome, calendar card ---------- */
+  .searchbar { display: none; align-items: center; gap: 8px; padding: 8px 8px 8px 16px; color: var(--muted); }
+  .when.searching .searchbar { display: flex; }
+  .when.searching .when-bar, .when.searching .when-body { display: none; }
+  .searchbar input { flex: 1; min-width: 0; height: 44px; border: 0; background: none; color: var(--ink); font: 500 17px var(--font); outline: none; -webkit-appearance: none; appearance: none; }
+  .searchbar input::-webkit-search-cancel-button { display: none; }
+  .searchbar input::placeholder { color: var(--muted); }
+  .presets { flex: none; display: flex; gap: 8px; overflow-x: auto; padding: 0 14px 10px; scrollbar-width: none; touch-action: pan-x; }
+  .presets::-webkit-scrollbar { display: none; }
+  .sheet.in-detail .presets { display: none; }
+  .pre { flex: none; height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); font-weight: 600; font-size: 14.5px; color: var(--ink-2); }
+  .pre[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .welcome { margin: 2px 2px 8px; padding: 12px 14px; border-radius: 18px; background: linear-gradient(135deg, color-mix(in srgb, var(--gold) 24%, var(--surface)), var(--surface) 80%); border: 1px solid color-mix(in srgb, var(--gold) 38%, var(--line)); display: grid; gap: 6px; }
+  .welcome .wtop { display: flex; align-items: center; gap: 10px; }
+  .welcome h3 { margin: 0; font: 700 17px var(--display); }
+  .welcome p { margin: 0; font-size: 14px; color: var(--ink-2); }
+  .welcome .wok { margin-left: auto; height: 36px; padding: 0 14px; border: 0; border-radius: 999px; background: rgba(0,0,0,.08); font-weight: 700; font-size: 13.5px; color: var(--ink); }
+  @media (prefers-color-scheme: dark) { .welcome .wok { background: rgba(255,255,255,.12); } }
+  .calcard { width: 100%; margin-top: 18px; display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface-2); text-align: left; }
+  .calcard svg { flex: none; color: var(--ink); }
+  .calcard b { display: block; font-size: 15px; }
+  .calcard small { color: var(--muted); font-size: 13px; }
+  .chip { height: 40px; }
+  .seg button { min-height: 44px; }
+  .quick button { height: 38px; }
+  .btn.small { min-height: 44px; }
+
+  /* short screens (phones on their side): side panel with a compact top */
+  @media (min-width: 761px) and (max-height: 700px) {
+    .brand { display: none; }
+    .top { padding-top: 10px; gap: 8px; }
+    .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; }
+    .top, .sheet-body, .presets { padding-left: max(14px, env(safe-area-inset-left)); }
+  }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
@@ -357,6 +397,11 @@
     </header>
 
     <div class="card when" id="when">
+      <form class="searchbar" id="searchBar" role="search">
+        <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Search events, places, kids, music…" enterkeyhint="search" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Search events">
+        <button type="button" id="qClear" class="icon-btn" aria-label="Close search"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      </form>
       <div class="when-bar">
         <button class="when-summary" id="whenToggle" type="button" aria-expanded="false" aria-controls="whenBody">
           <span class="sun" aria-hidden="true"><i></i></span>
@@ -364,7 +409,8 @@
           <svg class="ico chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <button class="btn-now" id="now" type="button">Now</button>
-        <button class="icon-btn" id="calBtn" type="button" aria-label="Add to calendar"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/></svg></button>
+        <button class="icon-btn" id="searchBtn" type="button" aria-label="Search events"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+        <button class="icon-btn" id="calBtn" type="button" data-opencal aria-label="Add to calendar"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/></svg></button>
       </div>
       <div class="when-body" id="whenBody">
         <div class="days" id="days" role="group" aria-label="Day"></div>
@@ -407,6 +453,7 @@
       <button class="handle" id="handle" type="button" aria-label="Expand or collapse the event list"></button>
       <div class="sheet-head" id="sheetHead"></div>
     </div>
+    <div class="presets" id="presets" role="group" aria-label="Quick picks"></div>
     <div class="sheet-body" id="sheetBody" aria-live="polite"></div>
   </section>
 
@@ -487,6 +534,8 @@
     ext: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
     calplus: '<path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/>',
     download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+    search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+    share: '<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/>',
     heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
     plus: '<path d="M5 12h14"/><path d="M12 5v14"/>',
     minus: '<path d="M5 12h14"/>',
@@ -560,7 +609,7 @@
     if (!ok) console.warn("Skipping invalid event:", e);
     return ok;
   });
-  events.forEach((e, i) => { e.idx = i; e.uid = IcsExport.uid(e); });
+  events.forEach((e, i) => { e.idx = i; e.uid = IcsExport.uid(e); e.hay = `${e.title} ${venues[e.venue].name} ${e.desc || ""} ${(CATEGORIES[e.category] || {}).label || ""}`.toLowerCase(); });
 
   /* "my day": events the visitor hearted, remembered on this device */
   const PLAN_KEY = "gc-plan-v1";
@@ -570,13 +619,14 @@
   const touchesDay = (e, d) => e.start < `${addDays(d, 1)}T00:00` && e.end > `${d}T00:00`;
   const plannedFor = (d) => events.filter((e) => plan.has(e.uid) && touchesDay(e, d));
 
-  const state = { date: "", time: "", window: "week", showEnded: false, cats: new Set(Object.keys(CATEGORIES)), sel: null };
+  const state = { date: "", time: "", window: "week", showEnded: false, cats: new Set(Object.keys(CATEGORIES)), sel: null, q: "", preset: null, until: null };
   const moment = () => `${state.date}T${state.time}`;
   let shown = [];                // events currently visible (calendar export uses this)
 
   const statusOf = (e, T) => (e.end <= T ? "ended" : e.start <= T ? "active" : "upcoming");
   function inWindow(e, T) {
     const day = T.slice(0, 10);
+    if (state.until) return e.start < `${state.until}T00:00`;               // "Weekend" and similar quick picks
     switch (state.window) {
       case "none": return false;
       case "day":  return e.start < `${addDays(day, 1)}T00:00`;
@@ -585,11 +635,12 @@
     }
   }
   function visibleEvents() {
-    const T = moment(), dayStart = `${state.date}T00:00`;
+    const T = moment(), dayStart = `${state.date}T00:00`, toks = state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return events
       .filter((e) => state.cats.has(e.category))
+      .filter((e) => toks.every((t) => e.hay.includes(t)))
       .map((e) => ({ ...e, status: statusOf(e, T) }))
-      .filter((e) => e.status === "active" || (e.status === "upcoming" ? inWindow(e, T) : state.showEnded && e.end > dayStart))
+      .filter((e) => e.status === "active" || (e.status === "upcoming" ? (toks.length || inWindow(e, T)) : state.showEnded && e.end > dayStart))
       .sort((a, b) => a.start.localeCompare(b.start) || a.title.localeCompare(b.title));
   }
   function outOfRange() {
@@ -670,7 +721,7 @@
   let snap = "half";
   const safeBottom = () => parseFloat(getComputedStyle($("safeProbe")).paddingBottom) || 0;
   function snapPx() {
-    const appH = app.clientHeight, top = $("top").offsetHeight, peek = 108 + safeBottom();
+    const appH = app.clientHeight, top = $("top").offsetHeight, peek = $("grab").offsetHeight + ($("presets").offsetHeight || 50) + safeBottom() + 4;
     return { peek, half: Math.max(peek + 120, Math.round(appH * 0.5)), full: Math.max(peek + 160, appH - top - 12) };
   }
   function applySnap(s) {
@@ -795,10 +846,12 @@
     const T = moment();
     if (!evs.length) {
       const hint = outOfRange();
-      return `<div class="empty">${sunSvg(64).replace("<svg ", '<svg class="sun-art" ')}<h3>Nothing on the map</h3><p>No events match this day and time. Try a later time, “All upcoming”, or turn on more categories.</p>${hint ? `<p style="margin-top:10px"><b>${esc(hint)}</b></p>` : ""}</div>` + footHtml();
+      if (state.q.trim()) return welcomeHtml() + `<div class="empty">${sunSvg(64).replace("<svg ", '<svg class="sun-art" ')}<h3>No matches</h3><p>Nothing found for “${esc(state.q.trim())}”. Try a shorter word, or clear the search.</p><p style="margin-top:12px"><button class="btn" type="button" data-clearq>Clear search</button></p></div>` + footHtml();
+      return welcomeHtml() + `<div class="empty">${sunSvg(64).replace("<svg ", '<svg class="sun-art" ')}<h3>Nothing on the map</h3><p>No events match this day and time. Try a later time, “All upcoming”, or turn on more categories.</p>${hint ? `<p style="margin-top:10px"><b>${esc(hint)}</b></p>` : ""}</div>` + footHtml();
     }
     const live = evs.filter((e) => e.status === "active");
     const soon = evs.filter((e) => e.status === "upcoming");
+    const lead = welcomeHtml();
     const ended = evs.filter((e) => e.status === "ended");
     const groups = [];
     if (live.length) groups.push({ title: "Happening now", cls: "live", list: live });
@@ -809,7 +862,7 @@
     }));
     if (ended.length) groups.push({ title: "Already ended", list: ended });
     let n = 0;
-    return groups.map((g) => `<h3 class="gh ${g.cls || ""}">${esc(g.title)} <b>${g.list.length}</b></h3>` + g.list.map((e) => `
+    return lead + groups.map((g) => `<h3 class="gh ${g.cls || ""}">${esc(g.title)} <b>${g.list.length}</b></h3>` + g.list.map((e) => `
       <div class="evrow" style="--i:${n++}">
         <button class="ev ${e.status}" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
           ${timeBlock(e)}
@@ -829,8 +882,13 @@
     return "";
   }
   const sourceLinks = () => Object.values(meta.sources || {}).map((s) => `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ");
+  const WELCOME_KEY = "gc-welcome-v1";
+  let welcomed = false; try { welcomed = !!localStorage.getItem(WELCOME_KEY); } catch (_) {}
+  const welcomeHtml = () => welcomed ? "" : `<div class="welcome"><div class="wtop">${sunSvg(30)}<h3>New here?</h3><button class="wok" type="button" data-welcome-ok>Got it</button></div>
+    <p>Tap <b>Tonight</b>, <b>Tomorrow</b> or <b>Weekend</b> to see what's on. Tap ♡ to save events, then <b>Plan my day</b>.</p></div>`;
+  const calCardHtml = () => `<button class="calcard" type="button" data-opencal>${svg("calplus", 24)}<span><b>Add to your calendar</b><small>Download these events, or subscribe to the whole calendar</small></span></button>`;
   function footHtml() {
-    return installHtml() + `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))}, from ${sourceLinks()}. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
+    return calCardHtml() + installHtml() + `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))}, from ${sourceLinks()}. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
   }
 
   function detailHtml(evs) {
@@ -848,6 +906,7 @@
         ${e.desc ? `<p class="desc">${esc(e.desc.length >= 320 ? e.desc.slice(0, 320).replace(/\s+\S*$/, "") + "…" : e.desc)}</p>` : ""}
         <div class="btn-row">
           <button class="btn small" type="button" data-plan="${e.idx}" aria-pressed="${plan.has(e.uid)}">${svg("heart", 17)} ${plan.has(e.uid) ? "In my day" : "Add to my day"}</button>
+          <button class="btn small" type="button" data-share="${e.idx}">${svg("share", 17)} Share</button>
           <a class="btn small" href="${esc(IcsExport.googleUrl(e, v))}" target="_blank" rel="noopener">${svg("calplus", 17)} Google Calendar</a>
           <button class="btn small" type="button" data-ics="${e.idx}">${svg("download", 17)} Apple / Outlook</button>
           ${safeUrl(e.url) ? `<a class="btn small" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Details ${svg("ext", 16)}</a>` : ""}
@@ -876,6 +935,8 @@
     if (state.sel) return `<button class="back" type="button" data-back data-nodrag>${svg("back", 18)} All events</button>`;
     const live = evs.filter((e) => e.status === "active").length, soon = evs.filter((e) => e.status === "upcoming").length;
     const mine = plannedFor(state.date).length;
+    if (state.q.trim()) return `<div class="sum"><span>${evs.length} result${evs.length === 1 ? "" : "s"} for “${esc(state.q.trim())}”</span></div>
+      <button class="plan-btn" type="button" data-openplan data-nodrag>${svg("clock", 17)} Plan my day${mine ? ` <b>${mine}</b>` : ""}</button>`;
     return `<div class="sum"><span><i style="background:var(--live)"></i>${live} live</span><span><i style="background:var(--soon)"></i>${soon} upcoming</span></div>
       <button class="plan-btn" type="button" data-openplan data-nodrag>${svg("clock", 17)} Plan my day${mine ? ` <b>${mine}</b>` : ""}</button>`;
   }
@@ -928,6 +989,8 @@
     renderMap(evs);
 
     $("sheetHead").innerHTML = sheetHeadHtml(evs);
+    sheet.classList.toggle("in-detail", !!state.sel);
+    renderPresets();
     const body = $("sheetBody"), view = state.sel ? "detail:" + state.sel.venue : "list", st = body.scrollTop;
     body.innerHTML = state.sel ? detailHtml(evs) : listHtml(evs);
     body.scrollTop = view === lastView ? st : 0;
@@ -944,9 +1007,34 @@
   function setMoment(date, time) {
     if (date) state.date = date;
     if (time) state.time = time;
+    state.preset = null; state.until = null;
     render();
   }
+
+  /* quick picks, in the thumb zone */
+  const PRESET_LABELS = [["now", "Now"], ["tonight", "Tonight"], ["tomorrow", "Tomorrow"], ["weekend", "Weekend"], ["all", "Anytime"]];
+  function renderPresets() {
+    $("presets").innerHTML = PRESET_LABELS.map(([k, l]) => `<button class="pre" type="button" data-pre="${k}" aria-pressed="${state.preset === k}">${l}</button>`).join("");
+  }
+  function applyPreset(k) {
+    const n = nowLocal(), dow = dowOf(n.date);
+    let r;
+    if (k === "now") r = { date: n.date, time: n.time, window: "week" };
+    else if (k === "tonight") r = { date: n.date, time: minutesOf(n.time) < 17 * 60 ? "17:00" : n.time, window: "day" };
+    else if (k === "tomorrow") r = { date: addDays(n.date, 1), time: "06:00", window: "day" };
+    else if (k === "weekend") {
+      const start = dow === 6 || dow === 0 ? n.date : addDays(n.date, 6 - dow);
+      r = { date: start, time: start === n.date ? n.time : "06:00", window: "day", until: addDays(start, dowOf(start) === 6 ? 2 : 1) };
+    } else r = { date: n.date, time: n.time, window: "all" };
+    Object.assign(state, { date: r.date, time: r.time, window: r.window, until: r.until || null, preset: k, sel: null });
+    if (!mq.matches && snap === "peek") applySnap("half");
+    render();
+  }
+  /* The phone's back button closes a venue / the plan / the calendar sheet instead of leaving the site. */
+  const pushOverlay = (o) => { try { history.pushState({ o }, "", location.href); } catch (_) {} };
+  const popOverlay = (o) => { if (history.state && history.state.o === o) { history.back(); return true; } return false; };
   function openVenue(id, idx, fly) {
+    if (!state.sel) pushOverlay("venue");
     state.sel = { venue: id, idx };
     setWhen(false);
     if (!mq.matches && snap !== "half") applySnap("half");
@@ -954,7 +1042,8 @@
     if (fly !== false) { const v = venues[id]; focusOn(L.latLng(v.lat, v.lng), Math.max(map.getZoom(), 15)); }
     else { const v = venues[id]; if (!mq.matches) { const pt = map.latLngToContainerPoint([v.lat, v.lng]), { top, bottom } = insets(); if (pt.y > map.getSize().y - bottom - 30 || pt.y < top) focusOn(L.latLng(v.lat, v.lng), map.getZoom()); } }
   }
-  function closeVenue() { state.sel = null; render(); }
+  function closeVenueNow() { state.sel = null; render(); }
+  function closeVenue() { if (!popOverlay("venue")) closeVenueNow(); }
 
   let snapBeforeWhen = null;
   function setWhen(open) {
@@ -1118,14 +1207,17 @@
   function openPlan() {
     planHalf = minutesOf(state.time) < 720 ? "am" : "pm"; planSel = null; planAll = false; planAnimate = true;
     setWhen(false);
+    pushOverlay("plan");
     $("plan").hidden = false; app.classList.add("plan-open"); renderPlan(); $("planClose").focus();
   }
-  function closePlan() { $("plan").hidden = true; app.classList.remove("plan-open"); planDragging = false; render(); }
+  function closePlanNow() { $("plan").hidden = true; app.classList.remove("plan-open"); planDragging = false; render(); }
+  function closePlan() { if (!popOverlay("plan")) closePlanNow(); }
   function togglePlan(idx) {
     const e = events[idx]; if (!e) return;
     if (plan.has(e.uid)) { plan.delete(e.uid); if (planSel === e.uid) planSel = null; toast("Removed from your day"); }
     else { plan.add(e.uid); planSel = e.uid; toast("Added to your day"); if (!e.allDay) planHalf = toMin(e.start) - toMin(`${state.date}T00:00`) < 720 ? "am" : "pm"; }
     savePlan(); render();
+    try { navigator.vibrate && navigator.vibrate(12); } catch (_) {}
     if (plan.has(e.uid)) document.querySelectorAll(`.heart[data-plan="${idx}"]`).forEach((b) => b.classList.add("pop"));
   }
 
@@ -1165,7 +1257,7 @@
     if (t.closest("[data-now]")) { const n = nowLocal(); planHalf = minutesOf(n.time) < 720 ? "am" : "pm"; setMoment(n.date, n.time); return; }
     const h = t.closest("[data-h]"); if (h) { planHalf = h.dataset.h; renderPlan(); return; }
     if (t.closest("[data-planall]")) { planAll = true; renderPlan(); return; }
-    const sm = t.closest("[data-showmap]"); if (sm) { const e = events[+sm.dataset.showmap]; closePlan(); openVenue(e.venue, e.idx, true); return; }
+    const sm = t.closest("[data-showmap]"); if (sm) { const e = events[+sm.dataset.showmap]; const had = !!state.sel; closePlanNow(); try { history.replaceState(had ? { o: "venue" } : null, "", location.href); } catch (_) {} openVenue(e.venue, e.idx, true); return; }
   });
   $("planClose").addEventListener("click", closePlan);
   $("planPrev").addEventListener("click", () => { planSel = null; planAll = false; setMoment(addDays(state.date, -1)); });
@@ -1177,11 +1269,12 @@
 
   /* ---- events ---- */
   $("whenToggle").addEventListener("click", () => setWhen(!$("when").classList.contains("open")));
-  $("now").addEventListener("click", () => { const n = nowLocal(); setMoment(n.date, n.time); });
+  $("now").addEventListener("click", () => applyPreset("now"));
   $("slider").addEventListener("input", (e) => setMoment(null, timeOf(+e.target.value)));
   $("days").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (b) setMoment(b.dataset.d); });
   $("quick").addEventListener("click", (e) => { const b = e.target.closest("[data-t]"); if (b) setMoment(null, b.dataset.t); });
-  $("seg").addEventListener("click", (e) => { const b = e.target.closest("[data-w]"); if (b) { state.window = b.dataset.w; render(); } });
+  $("seg").addEventListener("click", (e) => { const b = e.target.closest("[data-w]"); if (b) { state.window = b.dataset.w; state.preset = null; state.until = null; render(); } });
+  $("presets").addEventListener("click", (e) => { const b = e.target.closest("[data-pre]"); if (b) applyPreset(b.dataset.pre); });
   map.on("click", () => { if (!mq.matches) setWhen(false); });
   map.on("dragstart", () => { if (!mq.matches) setWhen(false); });
   $("fit").addEventListener("click", () => { state.sel = null; render(); fitAll(); });
@@ -1196,6 +1289,10 @@
     }
     const heart = e.target.closest("[data-plan]");
     if (heart) { togglePlan(+heart.dataset.plan); return; }
+    if (e.target.closest("[data-welcome-ok]")) { welcomed = true; try { localStorage.setItem(WELCOME_KEY, "1"); } catch (_) {} render(); return; }
+    if (e.target.closest("[data-clearq]")) { setSearch(false); return; }
+    if (e.target.closest("[data-opencal]")) { openCal(); return; }
+    const sh = e.target.closest("[data-share]"); if (sh) { shareEvent(events[+sh.dataset.share]); return; }
     const ics = e.target.closest("[data-ics]");
     if (ics) { const x = events[+ics.dataset.ics]; download(`${slug(x.title)}.ics`, icsOf([x])); toast("Calendar file downloaded"); }
   });
@@ -1228,9 +1325,31 @@
     render();
   });
 
+  /* search */
+  let qTimer;
+  function setSearch(on) {
+    $("when").classList.toggle("searching", on);
+    if (on) { setWhen(false); if (state.sel) closeVenue(); if (!mq.matches && snap === "peek") applySnap("half"); $("q").focus(); }
+    else { clearTimeout(qTimer); $("q").value = ""; $("q").blur(); if (state.q) { state.q = ""; render(); } }
+  }
+  $("searchBtn").addEventListener("click", () => setSearch(true));
+  $("qClear").addEventListener("click", () => setSearch(false));
+  $("searchBar").addEventListener("submit", (e) => { e.preventDefault(); $("q").blur(); });
+  $("q").addEventListener("input", () => { clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = $("q").value; if (state.sel) state.sel = null; render(); }, 120); });
+  $("q").addEventListener("keydown", (e) => { if (e.key === "Escape") { e.stopPropagation(); setSearch(false); } });
+
+  async function shareEvent(e) {
+    const url = safeUrl(e.url) || location.href.split("#")[0];
+    const text = `${e.title}: ${dayShort(e.start.slice(0, 10))}, ${timeRange(e)} at ${venues[e.venue].name}`;
+    if (navigator.share) { try { await navigator.share({ title: e.title, text, url }); } catch (_) {} return; }
+    try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("Link copied"); } catch (_) { toast("Couldn't copy the link"); }
+  }
+
   /* calendar dialog */
   const dlg = $("calDialog");
-  $("calBtn").addEventListener("click", () => { dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); });
+  function openCal() { pushOverlay("cal"); dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); }
+  dlg.addEventListener("close", () => { popOverlay("cal"); });
+  $("calBtn").addEventListener("click", openCal);
   $("calClose").addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
   $("dlVisible").addEventListener("click", () => { if (shown.length) { download(`garden-city-events-${state.date}.ics`, icsOf(shown)); toast("Calendar file downloaded"); dlg.close(); } });
@@ -1243,8 +1362,15 @@
     });
   } else $("subBox").hidden = true;
 
+  window.addEventListener("popstate", () => {
+    const o = history.state && history.state.o;
+    if (!$("plan").hidden && o !== "plan") closePlanNow();
+    if (dlg.open && o !== "cal") dlg.close();
+    if (state.sel && o !== "venue" && o !== "plan" && o !== "cal") closeVenueNow();
+  });
+
   /* shareable link: #d=2026-10-10&t=18:30&w=week */
-  function saveHash() { try { history.replaceState(null, "", `#d=${state.date}&t=${state.time}&w=${state.window}`); } catch (_) {} }
+  function saveHash() { try { history.replaceState(history.state, "", `#d=${state.date}&t=${state.time}&w=${state.window}`); } catch (_) {} }
   function loadHash() {
     const h = new URLSearchParams(location.hash.slice(1)), d = h.get("d"), t = h.get("t"), w = h.get("w");
     if (d && /^\d{4}-\d\d-\d\d$/.test(d)) state.date = d;
@@ -1275,7 +1401,7 @@
   loadHash();
   app.style.setProperty("--top-h", $("top").offsetHeight + "px");
   applySnap("half");
-  setWhen(mq.matches);          // open on desktop, collapsed on phones
+  setWhen(window.matchMedia("(min-width: 761px) and (min-height: 700px)").matches);   // open on roomy desktops, collapsed on phones and short screens
   render();
   if (meta.from) $("dataNote").innerHTML = `${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} · ${Object.keys(meta.sources || {}).length} sources`;
   fitAll();

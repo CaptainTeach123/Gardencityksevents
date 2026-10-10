@@ -50,6 +50,17 @@ keep the attribution in the corner of the map.
 - **List rows** lead with the start time; live events are highlighted green with an "until" tag. Venue pages open with a header
   coloured by category. There's a loading screen, gentle entrance animations, and everything respects "reduce motion".
 
+## Using it on a phone
+
+- **Quick picks** (Now · Tonight · Tomorrow · Weekend · Anytime) sit at the top of the list, within thumb reach. Picking
+  one sets the time and window for you; changing the time by hand clears the pick.
+- **Search** (magnifier in the top bar) looks through titles, venues, categories and descriptions across every date.
+- **Back button:** on Android, Back closes the open venue, day plan or calendar sheet instead of leaving the site.
+- **Share** an event from its detail view (the phone's share sheet, or copies the link on desktops).
+- **First visit:** a small "New here?" tip explains the basics once and stays dismissed afterwards.
+- Tap targets are at least 40–44 px, the time panel starts collapsed on small screens, and landscape phones get a
+  compact layout so the list stays usable.
+
 ## Where the events come from
 
 Events are merged from four places and de-duplicated (when VisitGCK and the organizer both list the same event, the
