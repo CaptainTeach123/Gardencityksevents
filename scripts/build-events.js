@@ -10,6 +10,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const IcsExport = require("../ics.js");
 
 const root = path.join(__dirname, "..");
 const input = process.argv[2] || path.join(root, "data", "visitgck.ics");
@@ -101,6 +102,7 @@ function categorize(title) {
 
 /* ---- build ---- */
 const raw = parseEvents(fs.readFileSync(input, "utf8"));
+const stamp = raw.map((r) => r["LAST-MODIFIED"]?.value || r.DTSTAMP?.value || "").filter((x) => /Z$/.test(x)).sort().pop() || undefined;
 const out = [], skipped = [], pending = new Set(), addedVenues = [];
 for (const r of raw) {
   const title = unescapeText(r.SUMMARY?.value || "").trim();
@@ -148,6 +150,10 @@ ${out.map((e) => "  " + JSON.stringify(e)).join(",\n")}
 `;
 fs.writeFileSync(output, body);
 
-console.log(`Wrote ${out.length} events at ${Object.keys(usedVenues).length} venues (${meta.from} → ${meta.to}) to ${path.relative(process.cwd(), output)}`);
+// Subscribable calendar feed (served next to the page as garden-city-events.ics)
+const feed = path.join(path.dirname(output), "garden-city-events.ics");
+fs.writeFileSync(feed, IcsExport.build(out, usedVenues, { name: "Garden City, KS Events", stamp }));
+
+console.log(`Wrote ${out.length} events at ${Object.keys(usedVenues).length} venues (${meta.from} → ${meta.to}) to ${path.relative(process.cwd(), output)} and ${path.basename(feed)}`);
 if (skipped.length) console.warn(`\nSkipped ${skipped.length} event(s):\n  ` + skipped.join("\n  "));
 if (pending.size) console.warn(`\nRun scripts/geocode.js, then build again, to place: ${[...pending].join("; ")}`);

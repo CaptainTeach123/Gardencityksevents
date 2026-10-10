@@ -48,7 +48,14 @@
   .item:hover, .item:focus-visible { background: #f1f3f7; }
   .item .t { font-weight: 600; display: flex; gap: 6px; align-items: center; }
   .item .m { color: var(--muted); font-size: 13px; }
-  .pop a { color: var(--accent); }
+  .pop a, .cal a { color: var(--accent); }
+  .pop .acts { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 4px; font-size: 13px; }
+  .pop .acts + .acts { margin-top: 2px; }
+  .pop .venue-links { margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--line); font-size: 13px; }
+  button.lnk { border: 0; padding: 0; background: none; color: var(--accent); text-decoration: underline; cursor: pointer; font: inherit; font-size: 13px; }
+  button.lnk:hover { background: none; }
+  .cal { padding: 8px 16px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; }
+  .cal button { padding: 5px 9px; font-size: 13px; }
   .pop .approx { color: #b54708; font-size: 12px; margin-top: 4px; }
   .empty { padding: 24px 16px; color: var(--muted); text-align: center; }
 
@@ -122,6 +129,14 @@
     </section>
 
     <div class="summary" id="summary"></div>
+    <div class="cal" id="cal" aria-label="Calendar">
+      <button id="dlVisible" type="button">📅 Add these to my calendar</button>
+      <span id="subLinks" hidden>
+        Subscribe: <a id="subWebcal" href="#">Apple / Outlook</a> ·
+        <a id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar</a> ·
+        <button class="lnk" id="copyFeed" type="button">Copy link</button>
+      </span>
+    </div>
     <div class="list" id="list" aria-live="polite"></div>
   </aside>
 
@@ -136,6 +151,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="events.js"></script>
+<script src="ics.js"></script>
 <script>
 (function () {
   "use strict";
@@ -199,6 +215,8 @@
       ? `Event data only covers ${fmtDay(meta.from + "T00:00")} – ${fmtDay(meta.to + "T00:00")}.` : "";
   }
 
+  events.forEach((e, i) => { e.idx = i; });
+
   function statusOf(e, T) {
     if (e.end <= T) return "ended";
     if (e.start <= T) return "active";
@@ -237,17 +255,52 @@
 
   const badge = (s) => `<span class="badge ${s}">${s === "active" ? "Happening now" : s === "upcoming" ? "Upcoming" : "Ended"}</span>`;
 
+  /* Google Maps links. Real places are searched by name + address so Google shows the business itself;
+     venues whose pin is only approximate fall back to the coordinates. */
+  function mapsUrl(id, kind) {
+    const v = venues[id];
+    const q = v.approx ? `${v.lat},${v.lng}` : [v.name, v.address].filter(Boolean).join(", ");
+    return kind === "dir"
+      ? "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q)
+      : "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+  }
+
+  /* Calendar downloads (.ics generated in the browser) */
+  const icsStamp = (list) => IcsExport.build(list, venues, { name: "Garden City, KS Events" });
+  function download(filename, text) {
+    const url = URL.createObjectURL(new Blob([text], { type: "text/calendar;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+  const slug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 50) || "event";
+  map.on("popupopen", (ev) => {
+    const el = ev.popup.getElement();
+    if (!el) return;
+    el.querySelectorAll("[data-ics]").forEach((b) => b.addEventListener("click", () => {
+      const e = events[+b.dataset.ics];
+      download(`${slug(e.title)}.ics`, icsStamp([e]));
+    }));
+  });
+
   const descShort = (d) => (d.length > 200 ? d.slice(0, 200).replace(/\s+\S*$/, "") + "…" : d);
 
   function popupHtml(venueId, evs) {
     return `<div class="pop"><h3>${esc(venues[venueId].name)}</h3>` + evs.map((e) =>
       `<div class="ev"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
        <div class="m">${esc(fmtRange(e))}</div>${e.desc ? `<p>${esc(descShort(e.desc))}</p>` : ""}
-       ${safeUrl(e.url) ? `<p><a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Event details ↗</a></p>` : ""}</div>`).join("")
-      + (venues[venueId].address ? `<div class="m">📍 ${esc(venues[venueId].address)}
-           · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venues[venueId].name + ", " + venues[venueId].address)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>` : "")
+       <div class="acts">
+         ${safeUrl(e.url) ? `<a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Event details ↗</a>` : ""}
+         <a href="${esc(IcsExport.googleUrl(e, venues[venueId]))}" target="_blank" rel="noopener">＋ Google Calendar</a>
+         <button class="lnk" type="button" data-ics="${e.idx}">＋ Apple / Outlook (.ics)</button>
+       </div></div>`).join("")
+      + `<div class="venue-links">${venues[venueId].address ? `📍 ${esc(venues[venueId].address)}<br>` : ""}
+           <a href="${esc(mapsUrl(venueId, "dir"))}" target="_blank" rel="noopener">Directions ↗</a> ·
+           <a href="${esc(mapsUrl(venueId, "search"))}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`
       + (venues[venueId].approx ? `<div class="approx">Pin location is approximate.</div>` : "") + `</div>`;
   }
+
+  let shown = [];   // events currently on the map, for the calendar export
 
   function render() {
     const evs = visibleEvents();
@@ -278,6 +331,12 @@
       `<span><span class="dot" style="background:var(--active)"></span><b>${active}</b> happening</span>` +
       `<span><span class="dot" style="background:var(--upcoming)"></span><b>${upcoming}</b> upcoming</span>` +
       `<span>${fmtDay(moment())}, ${fmtTime(moment())}</span>`;
+
+    /* calendar export of whatever is showing */
+    const dl = $("dlVisible");
+    dl.disabled = !evs.length;
+    dl.textContent = evs.length ? `📅 Add these ${evs.length} to my calendar` : "📅 Add these to my calendar";
+    shown = evs;
 
     /* list */
     const list = $("list");
@@ -327,6 +386,25 @@
   $("now").addEventListener("click", () => { const n = nowLocal(); setMoment(n.date, n.time); });
   $("window").addEventListener("change", (e) => { state.window = e.target.value; render(); });
   $("showEnded").addEventListener("change", (e) => { state.showEnded = e.target.checked; render(); });
+
+  $("dlVisible").addEventListener("click", () => {
+    if (shown.length) download(`garden-city-events-${state.date}.ics`, icsStamp(shown));
+  });
+
+  /* Subscription feed (garden-city-events.ics is rebuilt with events.js); needs the site to be served over http(s) */
+  if (/^https?:$/.test(location.protocol)) {
+    const feed = new URL("garden-city-events.ics", location.href).href;
+    const webcal = feed.replace(/^https?:/, "webcal:");
+    $("subWebcal").href = webcal;
+    $("subGoogle").href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
+    $("copyFeed").addEventListener("click", async () => {
+      const b = $("copyFeed");
+      try { await navigator.clipboard.writeText(feed); b.textContent = "Copied!"; }
+      catch (_) { b.textContent = feed; }   // clipboard blocked: show the link so it can be selected
+      setTimeout(() => { b.textContent = "Copy link"; }, 6000);
+    });
+    $("subLinks").hidden = false;
+  }
 
   const chips = $("chips");
   Object.entries(CATEGORIES).forEach(([key, c]) => {

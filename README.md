@@ -6,6 +6,10 @@ Interactive map of events in Garden City, KS. Pick a date and time and see which
 - Date/time pickers, a time-of-day slider, prev/next day, and a **Now** button (Garden City time).
 - "Upcoming" range: rest of the day / next 7 days / all future / only events happening then.
 - Category filters, venue pins that group multiple events, click a list item to jump to its pin.
+- **Calendar:** every popup has "＋ Google Calendar" and "＋ Apple / Outlook (.ics)"; the sidebar button downloads
+  whatever events are currently showing; and visitors can **subscribe** to `garden-city-events.ics`
+  (Apple/Outlook via `webcal://`, or Google Calendar) — the feed is rebuilt with `events.js`, so subscribers get updates.
+- **Google Maps:** every venue popup has "Directions" and "Open in Google Maps" links (links only — no API key needed).
 - Shareable links: `index.html#d=2026-10-10&t=18:30&w=week`.
 
 ## Run
