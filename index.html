@@ -53,7 +53,7 @@
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   .app { position: relative; height: 100vh; height: 100dvh; overflow: hidden; --sheet-h: 0px; --top-h: 0px; }
-  #map { position: absolute; inset: 0; z-index: 0; background: var(--surface-2); }
+  #map { position: absolute; inset: 0; z-index: 0; }
 
   /* ---------- top: when + filters ---------- */
   .top { position: absolute; z-index: 1200; left: 0; right: 0; top: 0; padding: calc(var(--safe-t) + 8px) 10px 0; display: grid; gap: 8px; pointer-events: none; }
@@ -126,7 +126,8 @@
   .app[data-sheet="full"] .fabs { display: none; }
   .attrib { position: absolute; z-index: 800; left: 8px; bottom: calc(var(--sheet-h) + 6px); max-width: calc(100% - 16px); padding: 2px 7px; border-radius: 6px; background: color-mix(in srgb, var(--surface) 88%, transparent); font-size: 10.5px; color: var(--muted); transition: bottom .28s cubic-bezier(.2,.8,.2,1); }
   .attrib a { color: inherit; }
-  .leaflet-container { font-family: var(--font); background: var(--surface-2); }
+  .leaflet-container { font-family: var(--font); background: #f1eee6; }
+  @media (prefers-color-scheme: dark) { .leaflet-container { background: #161e1a; } }
   .leaflet-control-zoom { display: none; }
 
   /* ---------- map pins ---------- */
@@ -136,7 +137,11 @@
   .pin.active::after { content: ""; position: absolute; inset: -7px; border-radius: 50%; border: 3px solid var(--live); animation: pulse 1.8s ease-out infinite; }
   .pin.active::before { content: ""; position: absolute; top: -5px; left: -5px; width: 14px; height: 14px; border-radius: 50%; background: var(--live); border: 2px solid #fff; z-index: 1; }
   .pin .n { position: absolute; top: -9px; right: -9px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--ink); color: var(--surface); font: 700 11px/20px var(--font); text-align: center; border: 2px solid #fff; }
-  .pin.cluster { --c: #15241d; width: 46px; height: 46px; font: 700 16px var(--font); }
+  .pin.cluster { width: 50px; height: 50px; border-width: 3px; padding: 0; }
+  .pin.cluster span { width: 30px; height: 30px; border-radius: 50%; background: #fff; color: #15241d; display: grid; place-items: center; font: 700 15px var(--font); box-shadow: 0 0 0 2px rgba(0,0,0,.08); }
+  .pin.cluster::before { top: -6px; left: -6px; }
+  .plabel { position: absolute; top: 46px; left: 50%; transform: translateX(-50%); white-space: nowrap; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.96); color: #15241d; font: 600 12px var(--font); box-shadow: 0 2px 8px rgba(0,0,0,.25); pointer-events: none; }
+  @media (prefers-color-scheme: dark) { .plabel { background: rgba(22,32,27,.96); color: #eaf1ec; } }
   .pin.sel { transform: scale(1.25); z-index: 5; }
   @keyframes pulse { from { transform: scale(.85); opacity: 1; } to { transform: scale(1.5); opacity: 0; } }
   .me { width: 18px; height: 18px; border-radius: 50%; background: var(--soon); border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(53, 86, 216, .25); }
@@ -299,6 +304,42 @@
     .plan-main { max-width: 1040px; grid-template-columns: minmax(380px, 1fr) minmax(340px, 400px); align-items: start; gap: 18px 36px; }
     .plan-clock { grid-row: 1 / span 2; }
   }
+
+  /* ---------- list rows built around the start time ---------- */
+  .ev { gap: 12px; padding: 9px 8px; position: relative; }
+  .ev-time { flex: none; width: 58px; padding: 7px 0; border-radius: 13px; text-align: center; display: grid; line-height: 1.05; background: color-mix(in srgb, var(--c) 13%, var(--surface)); color: var(--c); }
+  .ev-time b { font: 700 17px var(--font); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+  .ev-time i { font: 700 10.5px var(--font); font-style: normal; letter-spacing: .09em; }
+  .ev.active { background: linear-gradient(90deg, var(--live-bg), transparent 88%); }
+  .ev.active .ev-time { background: var(--live); color: #fff; }
+  .ev.ended { opacity: .6; }
+  .ev-meta svg { vertical-align: -2px; margin-right: 5px; color: var(--c); }
+  .ev-meta .until { color: var(--muted); }
+  .sheet-body.enter .evrow { animation: rise .4s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(min(var(--i, 0), 12) * 30ms); }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+  .heart.pop svg { animation: pop .45s cubic-bezier(.3,1.6,.5,1); }
+  @keyframes pop { 0% { transform: scale(.7); } 45% { transform: scale(1.4); } 100% { transform: scale(1); } }
+
+  /* ---------- venue header + event cards ---------- */
+  .hero { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 22px; border: 1px solid color-mix(in srgb, var(--c) 28%, var(--line));
+          background: linear-gradient(135deg, color-mix(in srgb, var(--c) 22%, var(--surface)), var(--surface) 85%); }
+  .hero-ico { flex: none; width: 54px; height: 54px; border-radius: 17px; background: var(--c); color: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px color-mix(in srgb, var(--c) 40%, transparent); }
+  .hero h2 { margin: 0; }
+  .evd { border-left: 5px solid var(--c); }
+
+  /* ---------- empty state + splash ---------- */
+  .empty .sun-art { display: block; margin: 0 auto 14px; opacity: .95; }
+  .splash { position: absolute; inset: 0; z-index: 3000; display: grid; place-content: center; justify-items: center; gap: 18px; background: #15241d; color: #f1f5f2; transition: opacity .45s ease, visibility .45s; }
+  .splash.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+  .splash h1 { margin: 0; font: 700 26px var(--display); letter-spacing: .01em; }
+  .splash p { margin: -10px 0 0; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #8fa398; }
+  .splash svg { animation: spin 14s linear infinite, breathe 2.4s ease-in-out infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes breathe { 50% { scale: 1.06; } }
+  .plan-clock .draw .main { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sweep .8s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--k, 0) * 90ms); }
+  .plan-clock .draw .pev text { animation: fadein .5s ease both; animation-delay: calc(var(--k, 0) * 90ms + 450ms); }
+  @keyframes sweep { to { stroke-dashoffset: 0; } }
+  @keyframes fadein { from { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
@@ -392,6 +433,7 @@
     <div class="plan-foot"><button class="btn primary" id="planCal" type="button"></button></div>
   </section>
 
+  <div class="splash" id="splash" aria-hidden="true"><div id="splashSun"></div><h1>Garden City Events</h1><p>What's on, and where</p></div>
   <div class="toast" id="toast" role="status"></div>
   <div id="safeProbe" style="position:absolute;visibility:hidden;padding-bottom:env(safe-area-inset-bottom,0px)"></div>
 </div>
@@ -417,6 +459,7 @@
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="vendor/protomaps/pmtiles.js"></script>
 <script src="vendor/protomaps/protomaps-leaflet.js"></script>
+<script src="vendor/protomaps/flavors.js"></script>
 <script src="events.js"></script>
 <script src="ics.js"></script>
 <script>
@@ -450,6 +493,10 @@
     x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
     alert: '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
     rss: '<path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>',
+  };
+  const sunSvg = (size) => {          // sunflower mark used by the loading screen and empty states
+    const petals = Array.from({ length: 16 }, (_, i) => `<ellipse cx="0" cy="-34" rx="9" ry="20" transform="rotate(${i * 22.5})" fill="${i % 2 ? "#d9980f" : "#f0b429"}"/>`).join("");
+    return `<svg width="${size}" height="${size}" viewBox="-60 -60 120 120" aria-hidden="true">${petals}<circle r="22" fill="#3a2a00"/><circle r="16" fill="#4a3300"/></svg>`;
   };
   const svg = (name, size) => `<svg class="ico" width="${size || 18}" height="${size || 18}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.other}</svg>`;
 
@@ -567,10 +614,32 @@
     }
   }
   const archive = new pmtiles.PMTiles(new MemorySource("tiles/garden-city.pmtiles"));
-  const basemap = (flavor) => protomapsL.leafletLayer({ url: archive, flavor, lang: "en", attribution: "" });
+  /* Our own map colours: warm paper land, sage parks, soft blue water, golden highways. */
+  const L0 = window.PM_FLAVORS.light, D0 = window.PM_FLAVORS.dark;
+  const FLAVORS = {
+    light: { ...L0, background: "#f1eee6", earth: "#f1eee6", park_a: "#dbe8d0", park_b: "#c3deb4", wood_a: "#d3e4c7", wood_b: "#b9d9a8", scrub_a: "#e0e7d2", scrub_b: "#cfe0bd",
+      water: "#a8d5e5", sand: "#efe6cf", beach: "#f0e6c8", school: "#ece5d6", hospital: "#f0dedb", industrial: "#e7e5dc", zoo: "#d6e6d0", pedestrian: "#f5f1e6", buildings: "#e5dfd2",
+      aerodrome: "#e9e6df", runway: "#fbf9f3", military: "#e4e2da", other: "#fbf9f3", minor_service: "#fbf9f3", minor_a: "#fbf9f3", minor_b: "#ffffff", link: "#ffffff",
+      minor_casing: "#e6e0d1", minor_service_casing: "#e6e0d1", link_casing: "#e2dccb", major: "#ffffff", major_casing_early: "#dcd5c3", major_casing_late: "#dcd5c3",
+      highway: "#fbd877", highway_casing_early: "#e2b64d", highway_casing_late: "#e2b64d", railway: "#b9b3a4", boundaries: "#cbc3af",
+      bridges_other: "#fbf9f3", bridges_other_casing: "#e6e0d1", bridges_minor: "#ffffff", bridges_minor_casing: "#e6e0d1", bridges_link: "#ffffff", bridges_link_casing: "#e2dccb",
+      bridges_major: "#ffffff", bridges_major_casing: "#dcd5c3", bridges_highway: "#fbd877", bridges_highway_casing: "#e2b64d",
+      roads_label_minor: "#7d786a", roads_label_minor_halo: "#fffdf8", roads_label_major: "#6e6a5c", roads_label_major_halo: "#fffdf8",
+      subplace_label: "#6c7a70", subplace_label_halo: "#f1eee6", city_label: "#26332c", city_label_halo: "#f6f3ea", state_label: "#a9a595", state_label_halo: "#f1eee6", address_label: "#8b8676", address_label_halo: "#fffdf8" },
+    dark: { ...D0, background: "#161e1a", earth: "#1b2420", park_a: "#1f3327", park_b: "#244130", wood_a: "#203629", wood_b: "#274632", scrub_a: "#212f27", scrub_b: "#264033",
+      water: "#1a3445", sand: "#242a22", beach: "#262b22", school: "#222a25", hospital: "#2b2423", industrial: "#212824", zoo: "#233328", pedestrian: "#222b26", buildings: "#252e29",
+      other: "#2a352f", minor_service: "#2a352f", minor_a: "#2a352f", minor_b: "#3a4740", link: "#3a4740", minor_casing: "#161e1a", minor_service_casing: "#161e1a", link_casing: "#161e1a",
+      major: "#46544c", major_casing_early: "#161e1a", major_casing_late: "#161e1a", highway: "#7c6726", highway_casing_early: "#463a14", highway_casing_late: "#463a14", railway: "#4a554e", boundaries: "#3c4841",
+      roads_label_minor: "#8a978f", roads_label_minor_halo: "#161e1a", roads_label_major: "#a3afa8", roads_label_major_halo: "#161e1a",
+      subplace_label: "#93a199", subplace_label_halo: "#161e1a", city_label: "#dbe5df", city_label_halo: "#161e1a", state_label: "#53605a", state_label_halo: "#161e1a", address_label: "#7f8c84", address_label_halo: "#161e1a" },
+  };
+  const basemap = (isDark) => {
+    const f = FLAVORS[isDark ? "dark" : "light"];
+    return protomapsL.leafletLayer({ url: archive, paintRules: protomapsL.paintRules(f), labelRules: protomapsL.labelRules(f, "en"), backgroundColor: f.background, attribution: "" });
+  };
   const dark = window.matchMedia("(prefers-color-scheme: dark)");
-  let tiles = basemap(dark.matches ? "dark" : "light").addTo(map);
-  dark.addEventListener?.("change", () => { map.removeLayer(tiles); tiles = basemap(dark.matches ? "dark" : "light").addTo(map); });
+  let tiles = basemap(dark.matches).addTo(map);
+  dark.addEventListener?.("change", () => { map.removeLayer(tiles); tiles = basemap(dark.matches).addTo(map); });
   const layer = L.layerGroup().addTo(map);
   const markers = {};
 
@@ -661,9 +730,15 @@
   mq.addEventListener?.("change", () => applySnap(snap));
 
   /* ---- render ---- */
-  function pinHtml(list, status, selected) {
+  function pinHtml(list, status, selected, label) {
     const first = list[0], c = cat(first.category);
-    return `<div class="pin ${status}${selected ? " sel" : ""}" style="--c:${c.color}">${svg(CATEGORIES[first.category] ? first.category : "other", 19)}${list.length > 1 ? `<span class="n">${list.length}</span>` : ""}</div>`;
+    return `<div class="pin ${status}${selected ? " sel" : ""}" style="--c:${c.color}">${svg(CATEGORIES[first.category] ? first.category : "other", 19)}${list.length > 1 ? `<span class="n">${list.length}</span>` : ""}${label ? `<span class="plabel">${esc(label.length > 24 ? label.slice(0, 23).trimEnd() + "…" : label)}</span>` : ""}</div>`;
+  }
+  /* a cluster is a donut coloured by what's inside it */
+  function donut(all) {
+    const counts = {}; all.forEach((e) => { counts[e.category] = (counts[e.category] || 0) + 1; });
+    let acc = 0; const stops = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k, n]) => { const from = (acc / all.length) * 100; acc += n; return `${cat(k).color} ${from.toFixed(1)}% ${((acc / all.length) * 100).toFixed(1)}%`; });
+    return `conic-gradient(${stops.join(",")})`;
   }
 
   let lastEvs = [];
@@ -686,14 +761,14 @@
     clusters.forEach((c) => {
       if (c.ids.length === 1) {
         const id = c.ids[0], v = venues[id], list = byVenue[id], status = statusOf2(list), selected = id === selId;
-        const icon = L.divIcon({ className: "", iconSize: [40, 40], iconAnchor: [20, 20], html: pinHtml(list, status, selected) });
+        const icon = L.divIcon({ className: "", iconSize: [40, 40], iconAnchor: [20, 20], html: pinHtml(list, status, selected, z >= 16 || selected ? v.name : "") });
         const m = L.marker([v.lat, v.lng], { icon, title: `${v.name} (${list.length})`, alt: v.name, zIndexOffset: selected ? 2000 : status === "active" ? 1000 : 0 }).addTo(layer);
         m.on("click", () => openVenue(id, null, false));
         markers[id] = m;
       } else {
         const all = c.ids.flatMap((id) => byVenue[id]), status = statusOf2(all);
         const ll = c.ids.map((id) => L.latLng(venues[id].lat, venues[id].lng)), center = L.latLngBounds(ll).getCenter();
-        const icon = L.divIcon({ className: "", iconSize: [46, 46], iconAnchor: [23, 23], html: `<div class="pin cluster ${status}">${all.length}</div>` });
+        const icon = L.divIcon({ className: "", iconSize: [50, 50], iconAnchor: [25, 25], html: `<div class="pin cluster ${status}" style="background:${donut(all)}"><span>${all.length}</span></div>` });
         const m = L.marker(center, { icon, title: `${all.length} events at ${c.ids.length} nearby places`, alt: `${all.length} events at ${c.ids.length} nearby places`, zIndexOffset: status === "active" ? 900 : 0 }).addTo(layer);
         m.on("click", () => { const { top, bottom } = insets(); map.fitBounds(L.latLngBounds(ll), { maxZoom: 18, paddingTopLeft: [50, top + 50], paddingBottomRight: [50, bottom + 50] }); });
         markers["cluster:" + c.ids.join(",")] = m;
@@ -703,18 +778,24 @@
   map.on("zoomend", () => renderMap(lastEvs));
 
   function tagFor(e, T) {
-    if (e.status === "active") return `<span class="tag live"><i></i>Live</span>`;
+    if (e.status === "active") return `<span class="tag live"><i></i>${e.open || e.allDay ? "Live" : "until " + esc(e.end.slice(0, 10) === e.start.slice(0, 10) ? timeStr(e.end) : dayShort(e.end.slice(0, 10)))}</span>`;
     if (e.status === "ended") return `<span class="tag ended">Ended</span>`;
     const r = rel(e, T);
     return r ? `<span class="tag">${esc(r)}</span>` : "";
   }
 
+  function timeBlock(e) {
+    if (e.allDay) return `<span class="ev-time"><b>ALL</b><i>DAY</i></span>`;
+    const p = parts(e.start), f = fmt12(p.h, p.mi);
+    return `<span class="ev-time"><b>${f.num.includes(":") ? f.num : f.num + ":00"}</b><i>${f.ap}</i></span>`;
+  }
+  const untilText = (e) => (e.open || e.allDay ? "" : `<span class="until"> · until ${esc(e.end.slice(0, 10) === e.start.slice(0, 10) ? timeStr(e.end) : dayShort(e.end.slice(0, 10)) + " " + timeStr(e.end))}</span>`);
   const heartBtn = (e) => `<button class="heart" type="button" data-plan="${e.idx}" aria-pressed="${plan.has(e.uid)}" aria-label="${plan.has(e.uid) ? "Remove from my day" : "Add to my day"}: ${esc(e.title)}">${svg("heart", 22)}</button>`;
   function listHtml(evs) {
     const T = moment();
     if (!evs.length) {
       const hint = outOfRange();
-      return `<div class="empty"><h3>Nothing on the map</h3><p>No events match this day and time. Try a later time, “All upcoming”, or turn on more categories.</p>${hint ? `<p style="margin-top:10px"><b>${esc(hint)}</b></p>` : ""}</div>` + footHtml();
+      return `<div class="empty">${sunSvg(64).replace("<svg ", '<svg class="sun-art" ')}<h3>Nothing on the map</h3><p>No events match this day and time. Try a later time, “All upcoming”, or turn on more categories.</p>${hint ? `<p style="margin-top:10px"><b>${esc(hint)}</b></p>` : ""}</div>` + footHtml();
     }
     const live = evs.filter((e) => e.status === "active");
     const soon = evs.filter((e) => e.status === "upcoming");
@@ -727,11 +808,12 @@
       list: soon.filter((e) => e.start.startsWith(d)),
     }));
     if (ended.length) groups.push({ title: "Already ended", list: ended });
+    let n = 0;
     return groups.map((g) => `<h3 class="gh ${g.cls || ""}">${esc(g.title)} <b>${g.list.length}</b></h3>` + g.list.map((e) => `
-      <div class="evrow">
-        <button class="ev" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
-          <span class="ev-ico">${svg(CATEGORIES[e.category] ? e.category : "other", 20)}</span>
-          <span class="ev-main"><span class="ev-title">${esc(e.title)}</span><span class="ev-meta when">${esc(timeRange(e))}</span><span class="ev-meta">${esc(venues[e.venue].name)}</span></span>
+      <div class="evrow" style="--i:${n++}">
+        <button class="ev ${e.status}" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
+          ${timeBlock(e)}
+          <span class="ev-main"><span class="ev-title">${esc(e.title)}</span><span class="ev-meta">${svg(CATEGORIES[e.category] ? e.category : "other", 14)}${esc(venues[e.venue].name)}</span></span>
           ${tagFor(e, T)}
         </button>
         ${heartBtn(e)}
@@ -771,10 +853,14 @@
           ${safeUrl(e.url) ? `<a class="btn small" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Details ${svg("ext", 16)}</a>` : ""}
         </div>
       </article>`;
+    const hc = cat((first[0] || rest[0] || { category: "community" }).category);
     return `<div class="detail">
-      <div>
-        <h2>${esc(v.name)}</h2>
-        ${v.address ? `<p class="addr">${svg("pin", 17)}<span>${esc(v.address)}</span></p>` : ""}
+      <div class="hero" style="--c:${hc.color}">
+        <span class="hero-ico">${svg((first[0] || rest[0] || {}).category in CATEGORIES ? (first[0] || rest[0]).category : "pin", 26)}</span>
+        <div style="min-width:0">
+          <h2>${esc(v.name)}</h2>
+          ${v.address ? `<p class="addr">${svg("pin", 16)}<span>${esc(v.address)}</span></p>` : ""}
+        </div>
       </div>
       <div class="btn-row">
         <a class="btn primary grow" href="${esc(mapsUrl(id, "dir"))}" target="_blank" rel="noopener">${svg("nav", 18)} Directions</a>
@@ -834,7 +920,7 @@
     $("density").innerHTML = bars.map((c, i) => `<i${i === cur ? ' class="on"' : ""} style="height:${c ? 3 + Math.round((c / max) * 25) : 3}px"></i>`).join("");
   }
 
-  let lastDate = "", lastView = "";
+  let lastDate = "", lastView = "", enterTimer;
   function render() {
     const evs = visibleEvents();
     shown = evs;
@@ -844,7 +930,9 @@
     $("sheetHead").innerHTML = sheetHeadHtml(evs);
     const body = $("sheetBody"), view = state.sel ? "detail:" + state.sel.venue : "list", st = body.scrollTop;
     body.innerHTML = state.sel ? detailHtml(evs) : listHtml(evs);
-    body.scrollTop = view === lastView ? st : 0; lastView = view;
+    body.scrollTop = view === lastView ? st : 0;
+    if (view !== lastView) { body.classList.add("enter"); clearTimeout(enterTimer); enterTimer = setTimeout(() => body.classList.remove("enter"), 900); }
+    lastView = view;
 
     const n = evs.length;
     $("dlVisible").disabled = !n;
@@ -929,7 +1017,8 @@
     const half = Math.max(150, laneR(lanes - 1) + th / 2 + 12);
     const tm = minutesOf(state.time);
 
-    let out = `<svg viewBox="${-half} ${-half} ${half * 2} ${half * 2}" role="group" aria-label="Clock of your day, ${planHalf === "am" ? "morning" : "afternoon"}">`;
+    const drawing = planAnimate; planAnimate = false;
+    let out = `<svg class="${drawing ? "draw" : ""}" viewBox="${-half} ${-half} ${half * 2} ${half * 2}" role="group" aria-label="Clock of your day, ${planHalf === "am" ? "morning" : "afternoon"}">`;
     out += `<circle class="face" r="${G.FACE}" fill="#14132a" stroke="rgba(255,255,255,.07)" stroke-width="2"/>`;
     for (let i = 0; i < 60; i++) {                                       // minute dots, bigger on the hours
       const [x, y] = polar(G.FACE - 9, i * 6);
@@ -947,9 +1036,9 @@
       const textPath = top ? arcD(tr, a1, a2, 1) : arcD(tr, a2, a1, 0);
       const done = status === "ended", sel = planSel === e.uid;
       const spoken = `${e.title}, ${timeRange(e)}, ${venues[e.venue].name}`;
-      out += `<g class="pev" data-uid="${esc(e.uid)}" tabindex="0" role="button" aria-label="${esc(spoken)}" opacity="${done ? 0.5 : 1}">`;
+      out += `<g class="pev" style="--k:${i}" data-uid="${esc(e.uid)}" tabindex="0" role="button" aria-label="${esc(spoken)}" opacity="${done ? 0.5 : 1}">`;
       if (sel) out += `<path d="${arcD(r, a1, a2, 1)}" fill="none" stroke="#fff" stroke-width="${th + 6}" stroke-linecap="round" opacity=".95"/>`;
-      out += `<path class="main" d="${arcD(r, a1, a2, 1)}" fill="none" stroke="${c}" stroke-width="${th}" stroke-linecap="round"/>`;
+      out += `<path class="main" pathLength="1" d="${arcD(r, a1, a2, 1)}" fill="none" stroke="${c}" stroke-width="${th}" stroke-linecap="round"/>`;
       if (status === "active" && !e.open) {                              // the part of the block that has already happened is darker
         const now = Math.min(Math.max((tm - (planHalf === "am" ? 0 : 720)) / 2, a1), a2);
         if (now > a1 + 0.2) out += `<path d="${arcD(r, a1, now, 1)}" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="${th}" stroke-linecap="round"/>`;
@@ -1018,7 +1107,7 @@
     $("planCal").disabled = !n;
     $("planCal").innerHTML = `${svg("calplus", 19)} ${n ? `Add my ${n} event${n === 1 ? "" : "s"} to my calendar` : "Nothing planned yet"}`;
   }
-  let planAll = false;
+  let planAll = false, planAnimate = false;
 
   function updateHands() {
     const tm = minutesOf(state.time);
@@ -1027,7 +1116,7 @@
     const ct = clockTime(state.time); const o = $("planOut"); if (o) o.innerHTML = `${ct.txt}<small>${ct.ap}</small>`;
   }
   function openPlan() {
-    planHalf = minutesOf(state.time) < 720 ? "am" : "pm"; planSel = null; planAll = false;
+    planHalf = minutesOf(state.time) < 720 ? "am" : "pm"; planSel = null; planAll = false; planAnimate = true;
     setWhen(false);
     $("plan").hidden = false; app.classList.add("plan-open"); renderPlan(); $("planClose").focus();
   }
@@ -1037,6 +1126,7 @@
     if (plan.has(e.uid)) { plan.delete(e.uid); if (planSel === e.uid) planSel = null; toast("Removed from your day"); }
     else { plan.add(e.uid); planSel = e.uid; toast("Added to your day"); if (!e.allDay) planHalf = toMin(e.start) - toMin(`${state.date}T00:00`) < 720 ? "am" : "pm"; }
     savePlan(); render();
+    if (plan.has(e.uid)) document.querySelectorAll(`.heart[data-plan="${idx}"]`).forEach((b) => b.classList.add("pop"));
   }
 
   // drag the clock face to set the time (snaps to 5 minutes)
@@ -1174,6 +1264,11 @@
     navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloading) { reloading = true; location.reload(); } });
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
+
+  $("splashSun").innerHTML = sunSvg(84);
+  const hideSplash = () => $("splash").classList.add("hide");
+  tiles.once("load", () => setTimeout(hideSplash, 250));
+  setTimeout(hideSplash, 4500);                                  // never keep people waiting on the map
 
   const n = nowLocal();
   state.date = n.date; state.time = n.time;

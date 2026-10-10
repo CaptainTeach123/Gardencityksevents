@@ -41,6 +41,15 @@ To refresh the map data (or change the area), run **Actions → Build Garden Cit
 area out of Protomaps' free daily world build and redeploys the site. Map data © OpenStreetMap contributors (ODbL);
 keep the attribution in the corner of the map.
 
+## Look and feel
+
+- **Map style:** our own palette (warm paper land, sage parks, soft blue water, golden highways) with a matching dark
+  version. Colours live in the `FLAVORS` object in `index.html`; the defaults they extend are in `vendor/protomaps/flavors.js`.
+- **Pins and clusters:** pins are coloured by category with the venue name showing when you zoom in; clusters are donuts
+  coloured by what's inside them.
+- **List rows** lead with the start time; live events are highlighted green with an "until" tag. Venue pages open with a header
+  coloured by category. There's a loading screen, gentle entrance animations, and everything respects "reduce motion".
+
 ## Where the events come from
 
 Events are merged from four places and de-duplicated (when VisitGCK and the organizer both list the same event, the
