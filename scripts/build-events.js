@@ -14,7 +14,9 @@ const path = require("path");
 const root = path.join(__dirname, "..");
 const input = process.argv[2] || path.join(root, "data", "visitgck.ics");
 const output = process.argv[3] || path.join(root, "events.js");
-const venues = JSON.parse(fs.readFileSync(path.join(__dirname, "venues.json"), "utf8"));
+const venuesFile = path.join(__dirname, "venues.json");
+const venues = JSON.parse(fs.readFileSync(venuesFile, "utf8"));
+const note = venues._note;
 delete venues._note;
 
 const TZ = "America/Chicago";
@@ -69,6 +71,22 @@ function findVenue(location, description) {
   }
   return null;
 }
+/* A venue we've never seen: create an entry from the LOCATION text. It has no coordinates until
+ * scripts/geocode.js fills them in; events there are held back (and reported) until then. */
+function addVenue(location) {
+  const parts = location.split(",").map((x) => x.trim()).filter((x) => x && !/^united states$/i.test(x));
+  if (!parts.length) return null;
+  const name = parts[0];
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  if (!id) return null;
+  if (!venues[id]) {
+    const street = parts.slice(1).join(", ");
+    venues[id] = { name, address: street ? `${street}` : `${name}, Garden City, KS`, match: [name.toLowerCase()], lat: null, lng: null, approx: true, auto: true };
+    addedVenues.push(name);
+  }
+  return id;
+}
+
 const CATEGORY_RULES = [   // first match wins
   ["music",     /karaoke|singo|concert|live music|band/i],
   ["sports",    /rodeo|golf|buffalo dunes|water walking|5k|race|football|soccer|volleyball|basketball/i],
@@ -83,13 +101,14 @@ function categorize(title) {
 
 /* ---- build ---- */
 const raw = parseEvents(fs.readFileSync(input, "utf8"));
-const out = [], skipped = [];
+const out = [], skipped = [], pending = new Set(), addedVenues = [];
 for (const r of raw) {
   const title = unescapeText(r.SUMMARY?.value || "").trim();
   const location = r.LOCATION ? unescapeText(r.LOCATION.value) : "";
   const desc = r.DESCRIPTION ? unescapeText(r.DESCRIPTION.value) : "";
-  const venue = findVenue(location, desc);
-  if (!venue) { skipped.push(`${title} @ ${location || "(no location)"}`); continue; }
+  const venue = findVenue(location, desc) || (location ? addVenue(location) : null);
+  if (!venue) { skipped.push(`${title} (no location)`); continue; }
+  if (venues[venue].lat == null) { pending.add(venues[venue].name); skipped.push(`${title} @ ${venues[venue].name} (no coordinates yet)`); continue; }
 
   const start = toLocal(r.DTSTART);
   let end = r.DTEND ? toLocal(r.DTEND) : start;
@@ -103,6 +122,11 @@ for (const r of raw) {
   out.push(ev);
 }
 out.sort((a, b) => a.start.localeCompare(b.start) || a.title.localeCompare(b.title));
+
+if (addedVenues.length) {
+  fs.writeFileSync(venuesFile, JSON.stringify({ _note: note, ...venues }, null, 2) + "\n");
+  console.log(`Added ${addedVenues.length} new venue(s) to scripts/venues.json: ${addedVenues.join("; ")}`);
+}
 
 const usedVenues = Object.fromEntries(
   Object.entries(venues).filter(([id]) => out.some((e) => e.venue === id))
@@ -125,4 +149,5 @@ ${out.map((e) => "  " + JSON.stringify(e)).join(",\n")}
 fs.writeFileSync(output, body);
 
 console.log(`Wrote ${out.length} events at ${Object.keys(usedVenues).length} venues (${meta.from} → ${meta.to}) to ${path.relative(process.cwd(), output)}`);
-if (skipped.length) console.warn(`\nSkipped ${skipped.length} event(s) with unknown venue — add them to scripts/venues.json:\n  ` + skipped.join("\n  "));
+if (skipped.length) console.warn(`\nSkipped ${skipped.length} event(s):\n  ` + skipped.join("\n  "));
+if (pending.size) console.warn(`\nRun scripts/geocode.js, then build again, to place: ${[...pending].join("; ")}`);

@@ -1,0 +1,79 @@
+name: Update events from VisitGCK.com
+
+on:
+  schedule:
+    - cron: "17 11 * * *"      # daily, ~6 AM Garden City time
+  workflow_dispatch:           # Actions tab -> "Update events" -> Run workflow
+
+permissions:
+  contents: write              # commit the refreshed events.js
+  actions: write               # start the Pages deploy afterwards
+
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+env:
+  # Calendar export URLs, tried in order. Override with a repository variable ICS_URLS (space-separated).
+  ICS_URLS: ${{ vars.ICS_URLS || 'https://www.visitgck.com/events-calendar/?ical=1&eventDisplay=list https://www.visitgck.com/events-calendar/?ical=1 https://www.visitgck.com/?post_type=tribe_events&ical=1&eventDisplay=list' }}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch calendar (iCal)
+        id: fetch
+        continue-on-error: true
+        run: |
+          mkdir -p data
+          for url in $ICS_URLS; do
+            echo "Trying $url"
+            code=$(curl -sS -L -m 60 --retry 2 -o /tmp/cal.ics -w '%{http_code}' \
+              -A "gardencityksevents-map/1.0 (+https://github.com/${{ github.repository }})" \
+              -H 'Accept: text/calendar' "$url" || true)
+            echo "  -> HTTP $code, $(wc -c < /tmp/cal.ics 2>/dev/null || echo 0) bytes, starts: $(head -c 40 /tmp/cal.ics 2>/dev/null | tr -d '\r\n')"
+            if [ "$code" = "200" ] && head -c 15 /tmp/cal.ics | grep -q 'BEGIN:VCALENDAR' && grep -q 'BEGIN:VEVENT' /tmp/cal.ics; then
+              cp /tmp/cal.ics data/visitgck.ics
+              echo "Saved $(grep -c 'BEGIN:VEVENT' data/visitgck.ics) events from $url"
+              exit 0
+            fi
+          done
+          echo "::error::Could not download a calendar from any URL (site firewall? wrong export URL?). Keeping the existing events."
+          exit 1
+
+      - name: Build events.js, geocode new venues, rebuild
+        run: |
+          node scripts/build-events.js
+          node scripts/geocode.js || true
+          node scripts/build-events.js
+
+      - name: Commit changes
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data events.js scripts/venues.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "No changes."
+          else
+            git commit -m "Update events from VisitGCK.com"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so start the deploy explicitly.
+      - name: Deploy site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run jekyll-gh-pages.yml --ref "${{ github.ref_name }}"
+
+      - name: Fail if the download failed
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
