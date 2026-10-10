@@ -15,6 +15,18 @@ Interactive map of events in Garden City, KS. Pick a date and time and see which
 - **Google Maps:** every venue's detail view has "Directions" and "Open in Google Maps" links (links only — no API key needed).
 - Shareable links: `index.html#d=2026-10-10&t=18:30&w=week`.
 
+## Install on a phone (PWA)
+
+The site is an installable web app with its own icon, full-screen launch and offline support (the app, saved events and
+the map library load without a connection; map tiles need internet).
+
+- **iPhone:** open the site in Safari, tap **Share**, then **Add to Home Screen**.
+- **Android:** open in Chrome and tap **Install app** (shown at the bottom of the event list) or the browser menu's "Install".
+
+Files: `manifest.webmanifest` (name, icons, colours), `sw.js` (offline caching: our own files are network-first so new
+events appear right away), `icons/` (sunflower icon in the sizes iOS/Android need), `vendor/leaflet/` (the map library,
+bundled so nothing important loads from a CDN). If you change `sw.js` caching rules, bump `VERSION` at the top of it.
+
 ## Run
 
 No build step. Open `index.html` in a browser (needs internet for the Leaflet library and OpenStreetMap tiles),

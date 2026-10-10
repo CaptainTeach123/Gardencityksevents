@@ -6,11 +6,18 @@
 <meta name="theme-color" content="#15241d">
 <meta name="description" content="What's happening in Garden City, Kansas, and where. Pick a date and time to see live and upcoming events on the map.">
 <title>Garden City Event Map</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23f0b429'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2315241d'/%3E%3C/svg%3E">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="GC Events">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <style>
   /* Layout concept: map-first. Phone = full-bleed map, a floating "when" bar on top and a draggable bottom sheet
      for the list / details. Desktop = the same pieces stacked in a left panel beside the map. */
@@ -165,6 +172,8 @@
   .empty { padding: 36px 20px; text-align: center; color: var(--muted); }
   .empty h3 { margin: 0 0 6px; font-family: var(--display); font-size: 20px; color: var(--ink); }
   .empty p { margin: 0 auto; max-width: 30ch; }
+  .install { margin: 18px 4px 0; padding: 14px; border-radius: 14px; background: var(--surface-2); display: grid; gap: 8px; font-size: 14px; }
+  .install p { margin: 0; color: var(--ink-2); }
   .foot { margin: 22px 4px 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
   .foot a { color: var(--link); }
 
@@ -317,7 +326,7 @@
   </div>
 </dialog>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
 <script src="events.js"></script>
 <script src="ics.js"></script>
 <script>
@@ -605,8 +614,17 @@
         ${tagFor(e, T)}
       </button>`).join("")).join("") + footHtml();
   }
+  const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  let installEvt = null;
+  function installHtml() {
+    if (isStandalone()) return "";
+    if (installEvt) return `<div class="install"><p><b>Keep it on your home screen</b> for one-tap access, even offline.</p><button class="btn primary" type="button" data-install>${svg("download", 18)} Install app</button></div>`;
+    if (isIOS) return `<div class="install"><p><b>Keep it on your home screen.</b> In Safari, tap <b>Share</b>, then <b>Add to Home Screen</b>.</p></div>`;
+    return "";
+  }
   function footHtml() {
-    return `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} from <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
+    return installHtml() + `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} from <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
   }
 
   function detailHtml(evs) {
@@ -742,6 +760,11 @@
   $("sheetBody").addEventListener("click", (e) => {
     const ev = e.target.closest("[data-ev]");
     if (ev) { const x = events[+ev.dataset.ev]; openVenue(x.venue, x.idx, true); return; }
+    if (e.target.closest("[data-install]") && installEvt) {
+      installEvt.prompt();
+      installEvt.userChoice.finally(() => { installEvt = null; render(); });
+      return;
+    }
     const ics = e.target.closest("[data-ics]");
     if (ics) { const x = events[+ics.dataset.ics]; download(`${slug(x.title)}.ics`, icsOf([x])); toast("Calendar file downloaded"); }
   });
@@ -793,6 +816,15 @@
     if (d && /^\d{4}-\d\d-\d\d$/.test(d)) state.date = d;
     if (t && /^([01]\d|2[0-3]):[0-5]\d$/.test(t)) state.time = t;
     if (["day", "week", "all", "none"].includes(w)) state.window = w;
+  }
+
+  /* installable + offline */
+  window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; render(); });
+  window.addEventListener("appinstalled", () => { installEvt = null; render(); toast("Installed"); });
+  window.addEventListener("offline", () => toast("You're offline. Showing saved events."));
+  window.addEventListener("online", () => toast("Back online"));
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
 
   const n = nowLocal();

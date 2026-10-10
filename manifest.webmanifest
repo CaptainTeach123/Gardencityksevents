@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Garden City Event Map",
+  "short_name": "GC Events",
+  "description": "What's happening in Garden City, Kansas, and where.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#15241d",
+  "theme_color": "#15241d",
+  "categories": ["events", "travel", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
