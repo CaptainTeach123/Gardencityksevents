@@ -1,0 +1,70 @@
+name: Build Garden City map tiles
+
+# Cuts a small Garden City map (OpenStreetMap data, Protomaps basemap) out of Protomaps' free daily world build
+# and saves it as tiles/garden-city.pmtiles, which the site loads instead of a third-party tile server.
+# Run it once from the Actions tab (and again whenever you want fresher map data, e.g. a couple of times a year).
+on:
+  workflow_dispatch:
+    inputs:
+      bbox:
+        description: "Area to include: west,south,east,north"
+        default: "-101.06,37.86,-100.69,38.08"
+      maxzoom:
+        description: "Most detailed zoom level (15 is the maximum; lower = smaller file)"
+        default: "15"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: build-map-tiles
+  cancel-in-progress: false
+
+jobs:
+  tiles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the pmtiles tool
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/pm
+          gh release download --repo protomaps/go-pmtiles --pattern '*Linux_x86_64.tar.gz' --dir /tmp/pm
+          tar -xzf /tmp/pm/*.tar.gz -C /tmp/pm
+          /tmp/pm/pmtiles version
+
+      - name: Find a recent Protomaps world build
+        run: |
+          for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14; do
+            d=$(date -u -d "$i days ago" +%Y%m%d)
+            code=$(curl -s -I -o /dev/null -w '%{http_code}' "https://build.protomaps.com/$d.pmtiles" || true)
+            echo "$d -> HTTP $code"
+            if [ "$code" = "200" ]; then echo "BUILD=$d" >> "$GITHUB_ENV"; exit 0; fi
+          done
+          echo "::error::No Protomaps build found in the last 14 days"; exit 1
+
+      - name: Extract Garden City
+        run: |
+          mkdir -p tiles
+          /tmp/pm/pmtiles extract "https://build.protomaps.com/${BUILD}.pmtiles" tiles/garden-city.pmtiles \
+            --bbox="${{ inputs.bbox }}" --maxzoom="${{ inputs.maxzoom }}"
+          ls -la tiles
+          /tmp/pm/pmtiles show tiles/garden-city.pmtiles | head -30
+          size=$(stat -c %s tiles/garden-city.pmtiles)
+          echo "Size: $size bytes"
+          if [ "$size" -gt 40000000 ]; then echo "::error::File is over 40 MB. Re-run with a smaller bbox or a lower maxzoom."; exit 1; fi
+
+      - name: Commit and deploy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tiles/garden-city.pmtiles
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git commit -m "Update map tiles (Protomaps build ${BUILD})"
+          git push
+          gh workflow run jekyll-gh-pages.yml --ref "${{ github.ref_name }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
