@@ -696,14 +696,13 @@
   },
   {
    "source": "gccc",
-   "title": "Trunk or Treat | 6:00-8:00 PM",
+   "title": "Trunk or Treat",
    "desc": "",
    "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
    "url": "https://www.gcccks.edu/events/2026/5th-annual-halloween-fest-trunk-or-treat.html",
    "tags": [],
    "start": "2026-10-30T18:00",
-   "end": "2026-10-30T20:00",
-   "open": true
+   "end": "2026-10-30T20:00"
   },
   {
    "source": "library",
