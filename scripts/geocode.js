@@ -18,6 +18,7 @@ const all = process.argv.includes("--all");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 (async () => {
+  let found = 0;
   for (const [id, v] of Object.entries(venues)) {
     if (id.startsWith("_") || (!all && !v.approx)) continue;
     const url = "https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=" + encodeURIComponent(v.address);
@@ -26,11 +27,13 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
       const hits = await res.json();
       if (hits[0]) {
         v.lat = +(+hits[0].lat).toFixed(5); v.lng = +(+hits[0].lon).toFixed(5); delete v.approx;
+        found++;
         console.log(`✓ ${id}: ${v.lat}, ${v.lng}  (${hits[0].display_name.slice(0, 70)})`);
       } else console.log(`✗ ${id}: no match for "${v.address}" — fix the address or set lat/lng by hand`);
     } catch (e) { console.log(`✗ ${id}: ${e.message}`); }
     await sleep(1100);
   }
+  if (!found) { console.log("\nNothing geocoded (no network access to nominatim.openstreetmap.org?). venues.json left untouched."); return; }
   fs.writeFileSync(file, JSON.stringify(venues, null, 2) + "\n");
-  console.log("\nSaved scripts/venues.json. Now run: node scripts/build-events.js");
+  console.log(`\nUpdated ${found} venue(s) in scripts/venues.json. Now run: node scripts/build-events.js`);
 })();
