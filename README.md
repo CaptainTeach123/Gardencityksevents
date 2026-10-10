@@ -18,7 +18,7 @@ Interactive map of events in Garden City, KS. Pick a date and time and see which
 ## Install on a phone (PWA)
 
 The site is an installable web app with its own icon, full-screen launch and offline support (the app, saved events and
-the map library load without a connection; map tiles need internet).
+the map and its tiles load without a connection once the page has been opened online).
 
 - **iPhone:** open the site in Safari, tap **Share**, then **Add to Home Screen**.
 - **Android:** open in Chrome and tap **Install app** (shown at the bottom of the event list) or the browser menu's "Install".
@@ -29,8 +29,7 @@ bundled so nothing important loads from a CDN). If you change `sw.js` caching ru
 
 ## Run
 
-No build step. Open `index.html` in a browser (needs internet for the Leaflet library and OpenStreetMap tiles),
-or serve the folder: `python3 -m http.server`.
+No build step. Serve the folder (the offline map file is loaded with fetch, so double-clicking `index.html` won't work): `python3 -m http.server`.
 
 ## The map (Protomaps)
 
