@@ -127,22 +127,6 @@ GEO:37.96586;-100.87408
 URL:https://www.visitgck.com/event/mahjong-101-open-play/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-garden-city-arts-writers-meetup-2-202610101000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261010T100000
-DTEND;TZID=America/Chicago:20261010T120000
-SUMMARY:Garden City Arts: Writers Meetup
-DESCRIPTION:Calling all writers! Whether you are published\, writing poems 
- or prose for personal enjoyment\, or just beginning your writing journey\,
-  this quarterly meetup is designed to support and connect writers in our c
- ommunity. Garden City Arts’ Writers Meetup offers a welcoming space for 
- networking\, discussion\, and creative enc\n\nhttps://www.visitgck.com/eve
- nt/garden-city-arts-writers-meetup-2/
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://www.visitgck.com/event/garden-city-arts-writers-meetup-2/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-gccc-rodeo-2026-high-school-jr-high-rodeo-2-202610101000@gardenci
  tyksevents
 DTSTAMP:20261009T153939Z
@@ -159,38 +143,44 @@ URL:https://www.visitgck.com/event/gccc-rodeo-2026-high-school-jr-high-rode
  o-2/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-garden-city-arts-project-lab-202610101300@gardencityksevents
+UID:event-lego-club-4-2026-10-10-202610101000@gardencityksevents
 DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261010T130000
-DTEND;TZID=America/Chicago:20261010T150000
-SUMMARY:Garden City Arts: Project Lab
-DESCRIPTION:Explore a new art medium each month! Miss Wheet teaches foundat
- ional techniques\, then encourages students to use their imagination to cr
- eate unique\, one-of-a-kind projects. Snacks will be provided. Register he
- re: Garden City Arts Website Ages 11-14 Oct 10th | 1-3PM $20 per ($15 memb
- ers) Instructor: Ariana Wheet Locatio\n\nhttps://www.visitgck.com/event/ga
- rden-city-arts-project-lab/
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://www.visitgck.com/event/garden-city-arts-project-lab/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-finney-county-public-library-kitchen-fun-2026-10-10-202610101400@
- gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261010T140000
-DTEND;TZID=America/Chicago:20261010T150000
-SUMMARY:Finney County Public Library: Kitchen Fun
-DESCRIPTION:Beginner-friendly cooking focused on basic skills and fun but s
- imple recipes! Ages 10-17 Saturdays at 2pm Finney County Public Library\, 
- 605 E Walnut St. Subject to cancellation. Visit finneylibrary.org or follo
- w Finney County Public Library on Facebook for updates.\n\nhttps://www.vis
- itgck.com/event/finney-county-public-library-kitchen-fun/2026-10-10/
+DTSTART;TZID=America/Chicago:20261010T100000
+DTEND;TZID=America/Chicago:20261010T110000
+SUMMARY:Lego Club
+DESCRIPTION:create and imagine freely using the library’s LEGO collection
+ \n\nhttps://finneylibrary.org/event/lego-club-4/2026-10-10/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-kitchen-fun
- /2026-10-10/
+URL:https://finneylibrary.org/event/lego-club-4/2026-10-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-writers-meetup-sept-12th-gnadz-p6497-202610101000@garde
+ ncityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261010T100000
+DTEND;TZID=America/Chicago:20261010T120000
+SUMMARY:Writers Meetup - Oct 10th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/writers-meetup-sept-
+ 12th-gnadz-p6497
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/writers-meetup-sept-12th-gna
+ dz-p6497
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-lab-oct-2026-82y4w-hpmjn-202610101300@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261010T130000
+DTEND;TZID=America/Chicago:20261010T150000
+SUMMARY:Project Lab - Oct 10th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/lab-oct-2026-82y4w-h
+ pmjn
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/lab-oct-2026-82y4w-hpmjn
 END:VEVENT
 BEGIN:VEVENT
 UID:event-gpms-class-macrame-bat-wall-hanging-2-202610101400@gardencityksev
@@ -210,22 +200,31 @@ GEO:37.98644;-100.86477
 URL:https://www.visitgck.com/event/gpms-class-macrame-bat-wall-hanging-2/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-finney-county-public-library-dungeons-dragons-2026-10-10-20261010
- 1630@gardencityksevents
+UID:event-kitchen-fun-2-2026-10-10-202610101400@gardencityksevents
 DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261010T163000
-DTEND;TZID=America/Chicago:20261010T193000
-SUMMARY:Finney County Public Library: Dungeons & Dragons
-DESCRIPTION:One-shot campaigns with available characters or character sheet
- s to make your own\, Ages 13+ or with an adultSaturdays\, 4:30-7:30pmDates
- \, times\, and locations are subject to change. Please check finneylibrary
- .org for more details.\n\nhttps://www.visitgck.com/event/finney-county-pub
- lic-library-dungeons-dragons/2026-10-10/
+DTSTART;TZID=America/Chicago:20261010T140000
+DTEND;TZID=America/Chicago:20261010T150000
+SUMMARY:Kitchen Fun
+DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
+ imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-2/2026-10-10/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-dungeons-dr
- agons/2026-10-10/
+URL:https://finneylibrary.org/event/kitchen-fun-2/2026-10-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-10-10-202610101630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261010T163000
+DTEND;TZID=America/Chicago:20261010T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-10-10/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-10-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-bible-christian-church-fall-fest-2-202610101800@gardencityksevent
@@ -348,6 +347,19 @@ URL:https://www.visitgck.com/event/finney-county-public-library-sunday-fund
  ay/2026-10-11/
 END:VEVENT
 BEGIN:VEVENT
+UID:event-sunday-fun-day-2-2026-10-11-202610111430@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261011T143000
+DTEND;TZID=America/Chicago:20261011T163000
+SUMMARY:Sunday Fun Day
+DESCRIPTION:laid-back gathering with crafts\, activities\, and plenty of fu
+ n\n\nhttps://finneylibrary.org/event/sunday-fun-day-2/2026-10-11/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/sunday-fun-day-2/2026-10-11/
+END:VEVENT
+BEGIN:VEVENT
 UID:event-water-walking-at-parrot-cove-2026-10-12-202610121700@gardencityks
  events
 DTSTAMP:20261009T153939Z
@@ -382,20 +394,55 @@ GEO:37.98644;-100.86477
 URL:https://www.visitgck.com/event/gpms-nerd-talk-2/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-garden-city-arts-artfull-mornings-202610131000@gardencityksevents
+UID:upcoming-events-artfull-oct-2026-202610131000@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261013T100000
 DTEND;TZID=America/Chicago:20261013T113000
-SUMMARY:Garden City Arts: ArtFULL Mornings
-DESCRIPTION:Fill your morning with art\, learning\, and creativity! ArtFULL
-  Mornings is a free monthly program for adults that combines art history\,
-  hands-on creativity\, and conversation. Each month\, Conny will introduce
-  an artist\, movement\, or moment in art history through a short presentat
- ion and discussion. Then\, Robin will lead \n\nhttps://www.visitgck.com/ev
- ent/garden-city-arts-artfull-mornings/
+SUMMARY:ArtFULL Mornings
+DESCRIPTION:https://gardencityarts.org/upcoming-events/artfull-oct-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
-URL:https://www.visitgck.com/event/garden-city-arts-artfull-mornings/
+URL:https://gardencityarts.org/upcoming-events/artfull-oct-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-you-and-me-sensory-2-2026-10-13-202610131000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261013T100000
+DTEND;TZID=America/Chicago:20261013T103000
+SUMMARY:You and Me Sensory
+DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
+ nneylibrary.org/event/you-and-me-sensory-2/2026-10-13/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-10-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-movie-mania-10-2026-10-13-202610131630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261013T163000
+DTEND;TZID=America/Chicago:20261013T183000
+SUMMARY:Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/movie-mania-10/2026-10-13/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/movie-mania-10/2026-10-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-sept-yzxkg-sf9pc-xlely-202610131700@garde
+ ncityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261013T170000
+DTEND;TZID=America/Chicago:20261013T183000
+SUMMARY:Creative Crew: Grades 1st-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
+ zxkg-sf9pc-xlely
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-sf9
+ pc-xlely
 END:VEVENT
 BEGIN:VEVENT
 UID:event-ladies-night-buffalo-dunes-2-2026-10-13-202610131700@gardencityks
@@ -415,24 +462,18 @@ LOCATION:Buffalo Dunes Golf Course\, Buffalo Dunes Golf Course\, Garden Cit
 URL:https://www.visitgck.com/event/ladies-night-buffalo-dunes-2/2026-10-13/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-finney-county-public-library-adult-craft-night-2026-10-13-2026101
- 31830@gardencityksevents
+UID:event-adult-craft-night-2026-10-13-202610131830@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261013T183000
-DTEND;TZID=America/Chicago:20261013T203000
-SUMMARY:Finney County Public Library: Adult Craft Night
-DESCRIPTION:Start time only\; the end time was not published.\n\nA differen
- t craft will be provided each month\, or you can bring your own project fr
- om home. Ages 18+ Tuesdays at 6:30pm Finney County Public Library\, 605 E 
- Walnut St Subject to cancellation. Call (620) 272-3680\, go to finneylibra
- ry.org\, or visit Finney County Public Library on Facebook for more inform
- ation.\n\nhttps://www.visitgck.com/event/finney-county-public-library-adul
- t-craft-night/2026-10-13/
+DTEND;TZID=America/Chicago:20261013T193000
+SUMMARY:Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can brin
+ g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
+ dult-craft-night/2026-10-13/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-adult-craft
- -night/2026-10-13/
+URL:https://finneylibrary.org/event/adult-craft-night/2026-10-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-finney-county-public-library-family-crafts-2026-10-13-20261013183
@@ -491,23 +532,59 @@ URL:https://www.visitgck.com/event/trivia-night-at-main-street-food-brew-ha
  ll-4/2026-10-13/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-finney-county-public-library-pokemon-club-ages-6-9-2026-10-14-202
- 610141630@gardencityksevents
+UID:events-2026-fall-2026-choir-concert-html-202610131900@gardencityksevent
+ s
 DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261014T163000
-DTEND;TZID=America/Chicago:20261014T173000
-SUMMARY:Finney County Public Library: Pokémon Club (Ages 6-9)
-DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
- \, cards\, and show! From crafts\, activities based around the theme\, wat
- ch parties\, and gaming days\, Pokemon club has something to offer every f
- an! Starts April 1st at 4:30pm. Ages 6-9 Subject to cancellation. Check fi
- nneylibrary.org or Facebook Finney County \n\nhttps://www.visitgck.com/eve
- nt/finney-county-public-library-pokemon-club-ages-6-9/2026-10-14/
+DTSTART;TZID=America/Chicago:20261013T190000
+DTEND;TZID=America/Chicago:20261013T210000
+SUMMARY:Fall 2026 Choir Concert
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/fall-2026-choir-concert.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/fall-2026-choir-concert.html
+END:VEVENT
+BEGIN:VEVENT
+UID:event-club-read-2-2026-10-14-202610141300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261014T130000
+DTEND;TZID=America/Chicago:20261014T140000
+SUMMARY:Club Read
+DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
+ read-2/2026-10-14/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-pokemon-clu
- b-ages-6-9/2026-10-14/
+URL:https://finneylibrary.org/event/club-read-2/2026-10-14/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-pokemon-club-2-2026-10-14-202610141630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261014T163000
+DTEND;TZID=America/Chicago:20261014T170000
+SUMMARY:Pokémon Club
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
+ \, cards\, and show! From crafts\, activities based around the theme\, wat
+ ch parties\, and gaming days\, the Pokémon club has something to offer ev
+ ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-10-14/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/pokemon-club-2/2026-10-14/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa-202610141700
+ @gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261014T170000
+DTEND;TZID=America/Chicago:20261014T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
+ zxkg-6cm3b-ln8jb-7fdfa
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm
+ 3b-ln8jb-7fdfa
 END:VEVENT
 BEGIN:VEVENT
 UID:event-water-walking-at-parrot-cove-2-2026-10-14-202610141700@gardencity
@@ -544,5 +621,1051 @@ DESCRIPTION:Start time only\; the end time was not published.\n\nCome glaze
 LOCATION:Great Plains MakerSpace\, 2308 N 3rd St\, Garden City\, KS 67846
 GEO:37.98644;-100.86477
 URL:https://www.visitgck.com/event/gpms-class-gingerbread-zombie-man/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-10-15-202610151030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261015T103000
+DTEND;TZID=America/Chicago:20261015T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-10-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-10-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-drawn-together-2026-10-15-202610151630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261015T163000
+DTEND;TZID=America/Chicago:20261015T170000
+SUMMARY:Drawn Together
+DESCRIPTION:Learn the process for making art and the different forms it tak
+ es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-10-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/drawn-together/2026-10-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paintoct-15th-202610151800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261015T180000
+DTEND;TZID=America/Chicago:20261015T200000
+SUMMARY:Canvas+Paint - Oct 15th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th
+END:VEVENT
+BEGIN:VEVENT
+UID:event-genealogy-night-2026-10-15-202610151800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261015T180000
+DTEND;TZID=America/Chicago:20261015T190000
+SUMMARY:Genealogy Night
+DESCRIPTION:Learn how to find your ancestors and map your family tree. Ages
+  18+\n\nhttps://finneylibrary.org/event/genealogy-night/2026-10-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/genealogy-night/2026-10-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-22-2026-10-16-202610161030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261016T103000
+DTEND;TZID=America/Chicago:20261016T110000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-10-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-22/2026-10-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-game-night-10-2026-10-16-202610161630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261016T163000
+DTEND;TZID=America/Chicago:20261016T173000
+SUMMARY:Game Night
+DESCRIPTION:drop in and play with any of our board\, video\, or card games\
+ n\nhttps://finneylibrary.org/event/game-night-10/2026-10-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/game-night-10/2026-10-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-10-16-202610161800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261016T180000
+DTEND;TZID=America/Chicago:20261016T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-10-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-10-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-oct-17th-202610171000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T100000
+DTEND;TZID=America/Chicago:20261017T170000
+SUMMARY:Drop-BY Art Saturday - Oct 17th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-oct-17th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-oct-17th
+END:VEVENT
+BEGIN:VEVENT
+UID:event-lego-club-4-2026-10-17-202610171000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T100000
+DTEND;TZID=America/Chicago:20261017T110000
+SUMMARY:Lego Club
+DESCRIPTION:create and imagine freely using the library’s LEGO collection
+ \n\nhttps://finneylibrary.org/event/lego-club-4/2026-10-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/lego-club-4/2026-10-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-fall-postcards-202610171300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T130000
+DTEND;TZID=America/Chicago:20261017T150000
+SUMMARY:Fall Postcards - Oct 17th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/fall-postcards
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/fall-postcards
+END:VEVENT
+BEGIN:VEVENT
+UID:event-kitchen-fun-2-2026-10-17-202610171400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T140000
+DTEND;TZID=America/Chicago:20261017T150000
+SUMMARY:Kitchen Fun
+DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
+ imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-2/2026-10-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/kitchen-fun-2/2026-10-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-fall-postcards-late-202610171600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T160000
+DTEND;TZID=America/Chicago:20261017T180000
+SUMMARY:Fall Postcards - Oct 17th (late afternoon)
+DESCRIPTION:https://gardencityarts.org/upcoming-events/fall-postcards-late
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/fall-postcards-late
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-10-17-202610171630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261017T163000
+DTEND;TZID=America/Chicago:20261017T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-10-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-10-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-sunday-fun-day-2-2026-10-18-202610181430@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261018T143000
+DTEND;TZID=America/Chicago:20261018T163000
+SUMMARY:Sunday Fun Day
+DESCRIPTION:laid-back gathering with crafts\, activities\, and plenty of fu
+ n\n\nhttps://finneylibrary.org/event/sunday-fun-day-2/2026-10-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/sunday-fun-day-2/2026-10-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-you-and-me-sensory-2-2026-10-20-202610201000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261020T100000
+DTEND;TZID=America/Chicago:20261020T103000
+SUMMARY:You and Me Sensory
+DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
+ nneylibrary.org/event/you-and-me-sensory-2/2026-10-20/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-10-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-movie-mania-10-2026-10-20-202610201630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261020T163000
+DTEND;TZID=America/Chicago:20261020T183000
+SUMMARY:Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/movie-mania-10/2026-10-20/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/movie-mania-10/2026-10-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-sept-yzxkg-sf9pc-xlely-9x2ne-202610201700
+ @gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261020T170000
+DTEND;TZID=America/Chicago:20261020T183000
+SUMMARY:Creative Crew: Grades 1st-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
+ zxkg-sf9pc-xlely-9x2ne
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-sf9
+ pc-xlely-9x2ne
+END:VEVENT
+BEGIN:VEVENT
+UID:event-adult-craft-night-2026-10-20-202610201830@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261020T183000
+DTEND;TZID=America/Chicago:20261020T193000
+SUMMARY:Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can brin
+ g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
+ dult-craft-night/2026-10-20/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/adult-craft-night/2026-10-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-club-read-2-2026-10-21-202610211300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261021T130000
+DTEND;TZID=America/Chicago:20261021T140000
+SUMMARY:Club Read
+DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
+ read-2/2026-10-21/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/club-read-2/2026-10-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-pokemon-club-2-2026-10-21-202610211630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261021T163000
+DTEND;TZID=America/Chicago:20261021T170000
+SUMMARY:Pokémon Club
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
+ \, cards\, and show! From crafts\, activities based around the theme\, wat
+ ch parties\, and gaming days\, the Pokémon club has something to offer ev
+ ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-10-21/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/pokemon-club-2/2026-10-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa-563xb-202610
+ 211700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261021T170000
+DTEND;TZID=America/Chicago:20261021T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
+ zxkg-6cm3b-ln8jb-7fdfa-563xb
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm
+ 3b-ln8jb-7fdfa-563xb
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-10-22-202610221030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261022T103000
+DTEND;TZID=America/Chicago:20261022T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-10-22/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-10-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-drawn-together-2026-10-22-202610221630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261022T163000
+DTEND;TZID=America/Chicago:20261022T170000
+SUMMARY:Drawn Together
+DESCRIPTION:Learn the process for making art and the different forms it tak
+ es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-10-22/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/drawn-together/2026-10-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paintoct-15th-k6bxz-202610221800@gardencitykseve
+ nts
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261022T180000
+DTEND;TZID=America/Chicago:20261022T200000
+SUMMARY:Canvas+Paint - Oct 22nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th
+ -k6bxz
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th-k6bxz
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-10-22-202610221800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261022T180000
+DTEND;TZID=America/Chicago:20261022T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-10-22/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 10-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-t-a-l-c-8-2026-10-22-202610221800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261022T180000
+DTEND;TZID=America/Chicago:20261022T190000
+SUMMARY:T.A.L.C
+DESCRIPTION:This is a teen group of volunteers that help the library with a
+ ny and all aspects of Library Programming. This group meets the 4th Thursd
+ ay of every month at 6pm. Ages 10-17! Contact the library for more details
+ \n\nhttps://finneylibrary.org/event/t-a-l-c-8/2026-10-22/
+LOCATION:Finnup/Hutchison Rooms\, 605 E. Walnut Street\, Garden City\, KS
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/t-a-l-c-8/2026-10-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-22-2026-10-23-202610231030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261023T103000
+DTEND;TZID=America/Chicago:20261023T110000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-10-23/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-22/2026-10-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-game-night-10-2026-10-23-202610231630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261023T163000
+DTEND;TZID=America/Chicago:20261023T173000
+SUMMARY:Game Night
+DESCRIPTION:drop in and play with any of our board\, video\, or card games\
+ n\nhttps://finneylibrary.org/event/game-night-10/2026-10-23/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/game-night-10/2026-10-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-10-23-202610231800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261023T180000
+DTEND;TZID=America/Chicago:20261023T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-10-23/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-10-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-blushing-oct-23rd-202610231900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261023T190000
+DTEND;TZID=America/Chicago:20261023T213000
+SUMMARY:Blushing Artiste - Oct 23rd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/blushing-oct-23rd
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/blushing-oct-23rd
+END:VEVENT
+BEGIN:VEVENT
+UID:event-lego-club-4-2026-10-24-202610241000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261024T100000
+DTEND;TZID=America/Chicago:20261024T110000
+SUMMARY:Lego Club
+DESCRIPTION:create and imagine freely using the library’s LEGO collection
+ \n\nhttps://finneylibrary.org/event/lego-club-4/2026-10-24/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/lego-club-4/2026-10-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-kitchen-fun-2-2026-10-24-202610241400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261024T140000
+DTEND;TZID=America/Chicago:20261024T150000
+SUMMARY:Kitchen Fun
+DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
+ imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-2/2026-10-24/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/kitchen-fun-2/2026-10-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-10-24-202610241630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261024T163000
+DTEND;TZID=America/Chicago:20261024T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-10-24/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-10-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-board-meeting-2026-10-26-202610261700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261026T170000
+DTEND;TZID=America/Chicago:20261026T183000
+SUMMARY:Library Board Meeting
+DESCRIPTION:https://finneylibrary.org/event/library-board-meeting/2026-10-2
+ 6/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-board-meeting/2026-10-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-nov-202610271700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261027T170000
+DTEND;TZID=America/Chicago:20261027T183000
+SUMMARY:Creative Crew: Grades 1st-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-nov
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-oct-yzxkg-6cm3b-ln8jb-7fdfa-563xb-d8fky-2
+ 02610281700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261028T170000
+DTEND;TZID=America/Chicago:20261028T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-oct-yz
+ xkg-6cm3b-ln8jb-7fdfa-563xb-d8fky
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-oct-yzxkg-6cm3
+ b-ln8jb-7fdfa-563xb-d8fky
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-5th-annual-halloween-fest-trunk-or-treat-html-202610301800@
+ gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261030T180000
+DTEND;TZID=America/Chicago:20261030T200000
+SUMMARY:Trunk or Treat | 6:00-8:00 PM
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/5th-annual-halloween-fest-trunk-or-treat.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/5th-annual-halloween-fest-trunk-or-t
+ reat.html
+END:VEVENT
+BEGIN:VEVENT
+UID:event-halloween-extravaganza-2-202610311100@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261031T110000
+DTEND;TZID=America/Chicago:20261031T150000
+SUMMARY:HALLOWEEN EXTRAVAGANZA
+DESCRIPTION:Community Trunk-or-Treat. Location: Finney County Public Librar
+ y and Kansas Children’s Service League Parking Lots.\n\nhttps://finneyli
+ brary.org/event/halloween-extravaganza-2/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/halloween-extravaganza-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-nov-kcx2e-202611031700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261103T170000
+DTEND;TZID=America/Chicago:20261103T183000
+SUMMARY:Creative Crew: Grades 1st-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
+ x2e
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-nov-202611041700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261104T170000
+DTEND;TZID=America/Chicago:20261104T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-nov
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-nov
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-11-05-202611051800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261105T180000
+DTEND;TZID=America/Chicago:20261105T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-11-05/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 11-05/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-mini-cp-nov-2026-202611051800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261105T180000
+DTEND;TZID=America/Chicago:20261105T193000
+SUMMARY:Mini Canvas+Paint - Nov 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-11-06-202611061800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261106T180000
+DTEND;TZID=America/Chicago:20261106T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-11-06/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-11-06/
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-12-angry-jurors-performances-friday-html-202611061900@garde
+ ncityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261106T190000
+DTEND;TZID=America/Chicago:20261106T210000
+SUMMARY:12 Angry Jurors | Friday Evening Performance
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/12-angry-jurors-performances-friday.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/12-angry-jurors-performances-friday.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-oct-17th-xfstm-202611071000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261107T100000
+DTEND;TZID=America/Chicago:20261107T170000
+SUMMARY:Drop-BY Art Saturday - Nov 7th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-oct-17th-xfs
+ tm
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-oct-17th-xfstm
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-watercolor-nov-7th-morning-202611071000@gardencitykseve
+ nts
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261107T100000
+DTEND;TZID=America/Chicago:20261107T120000
+SUMMARY:Watercolor Workshop - Nov 7th (Morning Session)
+DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-nov-7th-m
+ orning
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/watercolor-nov-7th-morning
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-watercolor-nov-7th-202611071300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261107T130000
+DTEND;TZID=America/Chicago:20261107T150000
+SUMMARY:Watercolor Workshop - Nov 7th (Afternoon Session)
+DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-nov-7th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/watercolor-nov-7th
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-12-angry-jurors-performances-saturday-html-202611071900@gar
+ dencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261107T190000
+DTEND;TZID=America/Chicago:20261107T210000
+SUMMARY:12 Angry Jurors | Saturday Evening Performance
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/12-angry-jurors-performances-saturday.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/12-angry-jurors-performances-saturda
+ y.html
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-12-angry-jurors-performances-sunday-html-202611081400@garde
+ ncityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261108T140000
+DTEND;TZID=America/Chicago:20261108T160000
+SUMMARY:12 Angry Jurors | Sunday Matinee Performance
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/12-angry-jurors-performances-sunday.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/12-angry-jurors-performances-sunday.
+ html
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-202611101700@gardencityks
+ events
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261110T170000
+DTEND;TZID=America/Chicago:20261110T183000
+SUMMARY:Creative Crew: Grades 1st-2nd (Copy)
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
+ x2e-xkae6
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae
+ 6
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-exploration-day-event-html-202611110830@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261111T083000
+DTEND;TZID=America/Chicago:20261111T103000
+SUMMARY:Exploration Day 2026
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/exploration-day-event.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/exploration-day-event.html
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-nov-8pksd-202611111700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261111T170000
+DTEND;TZID=America/Chicago:20261111T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-nov-8p
+ ksd
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-nov-8pksd
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-nov-12th-202611121800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261112T180000
+DTEND;TZID=America/Chicago:20261112T200000
+SUMMARY:Canvas+Paint - Nov 12th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12t
+ h
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12th
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-11-12-202611121800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261112T180000
+DTEND;TZID=America/Chicago:20261112T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-11-12/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 11-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-11-13-202611131800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261113T180000
+DTEND;TZID=America/Chicago:20261113T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-11-13/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-11-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-open-studio-oct-2026-yanf6-202611131800@gardencitykseve
+ nts
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261113T180000
+DTEND;TZID=America/Chicago:20261113T210000
+SUMMARY:Open Studio - Nov
+DESCRIPTION:https://gardencityarts.org/upcoming-events/open-studio-oct-2026
+ -yanf6
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/open-studio-oct-2026-yanf6
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-lab-nov-2026-82y4w-hpmjn-nefgp-202611141300@gardencityk
+ sevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261114T130000
+DTEND;TZID=America/Chicago:20261114T150000
+SUMMARY:Project Lab - Nov 14th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/lab-nov-2026-82y4w-h
+ pmjn-nefgp
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/lab-nov-2026-82y4w-hpmjn-nef
+ gp
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-lngg5-202611171700@garden
+ cityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261117T170000
+DTEND;TZID=America/Chicago:20261117T183000
+SUMMARY:Creative Crew: Grades 1st-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
+ x2e-xkae6-lngg5
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae
+ 6-lngg5
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-nov-8pksd-n5zen-202611181700@gardencityks
+ events
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261118T170000
+DTEND;TZID=America/Chicago:20261118T183000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-nov-8p
+ ksd-n5zen
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-nov-8pksd-n5ze
+ n
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-nov-19th-bbwah-202611191800@gardencityksev
+ ents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261119T180000
+DTEND;TZID=America/Chicago:20261119T200000
+SUMMARY:Canvas+Paint - Nov 19th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19t
+ h-bbwah
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-11-19-202611191800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261119T180000
+DTEND;TZID=America/Chicago:20261119T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-11-19/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 11-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-holiday-member-only-202611201800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261120T180000
+DTEND;TZID=America/Chicago:20261120T200000
+SUMMARY:Holiday Open House - Member’s Preview
+DESCRIPTION:https://gardencityarts.org/upcoming-events/holiday-member-only
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/holiday-member-only
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-11-20-202611201800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261120T180000
+DTEND;TZID=America/Chicago:20261120T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-11-20/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-11-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-nov-21st-202611211000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261121T100000
+DTEND;TZID=America/Chicago:20261121T170000
+SUMMARY:Drop-BY Art Saturday - Nov 21st
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-nov-21st
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-nov-21st
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-holiday-open-2026-202611211000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261121T100000
+DTEND;TZID=America/Chicago:20261121T170000
+SUMMARY:Holiday Open House
+DESCRIPTION:https://gardencityarts.org/upcoming-events/holiday-open-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/holiday-open-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-board-meeting-2026-11-23-202611231700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261123T170000
+DTEND;TZID=America/Chicago:20261123T183000
+SUMMARY:Library Board Meeting
+DESCRIPTION:https://finneylibrary.org/event/library-board-meeting/2026-11-2
+ 3/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-board-meeting/2026-11-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-11-26-202611261800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261126T180000
+DTEND;TZID=America/Chicago:20261126T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-11-26/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 11-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-11-27-202611271800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261127T180000
+DTEND;TZID=America/Chicago:20261127T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-11-27/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-11-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-blushing-nov-17th-202611271900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261127T190000
+DTEND;TZID=America/Chicago:20261127T213000
+SUMMARY:Blushing Artiste - Nov 27th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/blushing-nov-17th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/blushing-nov-17th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-acrylic-pour-junior-202611281000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261128T100000
+DTEND;TZID=America/Chicago:20261128T113000
+SUMMARY:Acrylic Pour Junior - Nov 28th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/acrylic-pour-junior
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/acrylic-pour-junior
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-acrylic-pour-202611281500@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261128T150000
+DTEND;TZID=America/Chicago:20261128T170000
+SUMMARY:Acrylic Pour Workshop - Nov 28th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/acrylic-pour
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/acrylic-pour
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-03-202612031800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T180000
+DTEND;TZID=America/Chicago:20261203T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-12-03/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-12-04-202612041800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-12-04/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-12-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-10-202612101800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T180000
+DTEND;TZID=America/Chicago:20261210T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-12-10/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-12-11-202612111800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261211T180000
+DTEND;TZID=America/Chicago:20261211T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-12-11/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-12-11/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-17-202612171800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261217T180000
+DTEND;TZID=America/Chicago:20261217T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-12-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-12-18-202612181800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T180000
+DTEND;TZID=America/Chicago:20261218T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-12-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-12-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261219T150000
+DTEND;TZID=America/Chicago:20261219T170000
+SUMMARY:Closing Reception - Annual Member Showcase
+DESCRIPTION:https://gardencityarts.org/upcoming-events/annual-member-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/annual-member-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-24-202612241800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261224T180000
+DTEND;TZID=America/Chicago:20261224T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
+ org/event/dungeons-dragons-junior-trial-run/2026-12-24/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-24/
 END:VEVENT
 END:VCALENDAR

@@ -134,9 +134,18 @@
     "match": [
       "garden city community college"
     ],
-    "lat": null,
-    "lng": null,
-    "approx": true,
+    "lat": 37.97008,
+    "lng": -100.84966,
+    "auto": true
+  },
+  "finnup-hutchison-rooms": {
+    "name": "Finnup/Hutchison Rooms",
+    "address": "605 E. Walnut Street, Garden City, KS",
+    "match": [
+      "finnup/hutchison rooms"
+    ],
+    "lat": 37.97057,
+    "lng": -100.86578,
     "auto": true
   }
 }
