@@ -1,9 +1,17 @@
 name: Update events from VisitGCK.com
 
+# How events get refreshed:
+#  1. Upload a new calendar export as data/visitgck.ics (GitHub: Add file -> Upload files, commit).
+#     This workflow then rebuilds events.js, geocodes any new venues and redeploys the site.
+#  2. "Run workflow" (Actions tab) also tries to DOWNLOAD the calendar from visitgck.com first.
+#     As of Oct 2026 their firewall answers GitHub's servers with HTTP 403, so that only works
+#     if they allow-list GitHub. If it ever does, uncomment the schedule below for a daily refresh.
 on:
-  schedule:
-    - cron: "17 11 * * *"      # daily, ~6 AM Garden City time
-  workflow_dispatch:           # Actions tab -> "Update events" -> Run workflow
+  push:
+    paths: ["data/visitgck.ics"]
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "17 11 * * *"      # daily, ~6 AM Garden City time
 
 permissions:
   contents: write              # commit the refreshed events.js
@@ -29,6 +37,7 @@ jobs:
 
       - name: Fetch calendar (iCal)
         id: fetch
+        if: github.event_name != 'push'
         continue-on-error: true
         run: |
           mkdir -p data
