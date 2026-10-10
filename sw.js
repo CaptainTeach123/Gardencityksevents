@@ -1,6 +1,6 @@
 /* Service worker: lets the app open offline and keeps events fresh when online.
  * Bump VERSION when this file's caching rules change. */
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL = `gc-shell-${VERSION}`;      // our own files (network first, so new events show up right away)
 const LIBS = `gc-libs-${VERSION}`;        // Google Fonts (cached as they are used)
 
@@ -28,7 +28,10 @@ const cacheable = (res) => res && (res.ok || res.type === "opaque");
 async function networkFirst(req) {
   const cache = await caches.open(SHELL);
   try {
-    const res = await Promise.race([fetch(req), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 4000))]);
+    // "no-cache" = always ask the server whether the file changed (cheap 304 if not), so a new deploy shows up at once
+    // instead of waiting out GitHub Pages' 10-minute browser cache.
+    const fresh = fetch(req.mode === "navigate" ? req.url : req, { cache: "no-cache" });
+    const res = await Promise.race([fresh, new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 4000))]);
     if (cacheable(res)) cache.put(req, res.clone());
     return res;
   } catch (_) {

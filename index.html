@@ -838,6 +838,10 @@
   window.addEventListener("offline", () => toast("You're offline. Showing saved events."));
   window.addEventListener("online", () => toast("Back online"));
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloading = false;
+    // A new version of the app took over: reload once so people never keep seeing the old one.
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !reloading) { reloading = true; location.reload(); } });
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
 
