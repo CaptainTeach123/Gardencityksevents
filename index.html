@@ -2,152 +2,320 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#15241d">
+<meta name="description" content="What's happening in Garden City, Kansas, and where. Pick a date and time to see live and upcoming events on the map.">
 <title>Garden City Event Map</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23f0b429'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2315241d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
+  /* Layout concept: map-first. Phone = full-bleed map, a floating "when" bar on top and a draggable bottom sheet
+     for the list / details. Desktop = the same pieces stacked in a left panel beside the map. */
   :root {
-    --bg: #f6f7f9; --panel: #fff; --text: #1d2330; --muted: #667085; --line: #e3e6ec;
-    --active: #16a34a; --upcoming: #2563eb; --ended: #98a2b3; --accent: #2563eb;
+    --bg: #eef2ef; --surface: #ffffff; --surface-2: #f4f7f5;
+    --ink: #15241d; --ink-2: #3a4a42; --muted: #66756d;
+    --line: #dde4df; --line-strong: #c3cec7;
+    --gold: #f0b429; --gold-ink: #3a2a00; --link: #8a5a00;
+    --live: #1b8f4b; --live-bg: #e3f5ea; --soon: #3556d8; --soon-bg: #e8edfd;
+    --shadow: 0 6px 24px rgba(15, 30, 22, .18), 0 1px 3px rgba(15, 30, 22, .12);
+    --font: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --safe-t: env(safe-area-inset-top, 0px); --safe-b: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
   }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body { font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); }
-  .app { display: grid; grid-template-columns: 380px 1fr; height: 100%; }
-  .side { display: flex; flex-direction: column; background: var(--panel); border-right: 1px solid var(--line); min-height: 0; }
-  #map { height: 100%; width: 100%; }
-
-  header { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
-  header h1 { margin: 0 0 2px; font-size: 18px; }
-  header p { margin: 0; color: var(--muted); font-size: 13px; }
-
-  .controls { padding: 12px 16px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
-  .row { display: flex; gap: 8px; align-items: center; }
-  .row > * { min-width: 0; }
-  label.field { display: grid; gap: 3px; font-size: 12px; color: var(--muted); flex: 1; }
-  input[type=date], input[type=time], select {
-    font: inherit; color: var(--text); padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; width: 100%;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1613; --surface: #16201b; --surface-2: #1d2a23;
+      --ink: #eaf1ec; --ink-2: #c5d2ca; --muted: #9fb0a6;
+      --line: #263229; --line-strong: #3a4a40;
+      --link: #f0b429; --live: #3ddc84; --live-bg: #12331f; --soon: #8aa4ff; --soon-bg: #1b2547;
+      --shadow: 0 6px 24px rgba(0, 0, 0, .5), 0 1px 3px rgba(0, 0, 0, .4);
+      color-scheme: dark;
+    }
   }
-  input[type=range] { width: 100%; accent-color: var(--accent); }
-  button { font: inherit; cursor: pointer; border: 1px solid var(--line); background: #fff; color: var(--text); border-radius: 8px; padding: 7px 10px; }
-  button:hover { background: #f1f3f7; }
-  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  button.primary:hover { background: #1d4ed8; }
-  .slider-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: -4px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { border-radius: 999px; padding: 4px 10px; font-size: 13px; display: inline-flex; gap: 5px; align-items: center; }
-  .chip[aria-pressed=false] { opacity: .45; }
-  .check { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; margin: 0; background: var(--bg); }
+  body { font: 400 15px/1.45 var(--font); color: var(--ink); overflow: hidden; }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  svg.ico { flex: none; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-  .summary { padding: 8px 16px; font-size: 13px; color: var(--muted); border-bottom: 1px solid var(--line); display: flex; gap: 12px; flex-wrap: wrap; }
-  .summary b { color: var(--text); }
-  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; }
+  .app { position: relative; height: 100vh; height: 100dvh; overflow: hidden; --sheet-h: 0px; --top-h: 0px; }
+  #map { position: absolute; inset: 0; z-index: 0; background: var(--surface-2); }
 
-  .list { overflow-y: auto; flex: 1; padding: 6px 8px 16px; }
-  .item { display: block; width: 100%; text-align: left; border: 0; border-radius: 10px; padding: 9px 10px; background: transparent; }
-  .item:hover, .item:focus-visible { background: #f1f3f7; }
-  .item .t { font-weight: 600; display: flex; gap: 6px; align-items: center; }
-  .item .m { color: var(--muted); font-size: 13px; }
-  .pop a, .cal a { color: var(--accent); }
-  .pop .acts { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 4px; font-size: 13px; }
-  .pop .acts + .acts { margin-top: 2px; }
-  .pop .venue-links { margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--line); font-size: 13px; }
-  button.lnk { border: 0; padding: 0; background: none; color: var(--accent); text-decoration: underline; cursor: pointer; font: inherit; font-size: 13px; }
-  button.lnk:hover { background: none; }
-  .cal { padding: 8px 16px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; }
-  .cal button { padding: 5px 9px; font-size: 13px; }
-  .pop .approx { color: #b54708; font-size: 12px; margin-top: 4px; }
-  .empty { padding: 24px 16px; color: var(--muted); text-align: center; }
+  /* ---------- top: when + filters ---------- */
+  .top { position: absolute; z-index: 1200; left: 0; right: 0; top: 0; padding: calc(var(--safe-t) + 8px) 10px 0; display: grid; gap: 8px; pointer-events: none; }
+  .top > * { pointer-events: auto; }
+  .brand { display: none; }
+  .card { background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); }
 
-  .badge { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; color: #fff; white-space: nowrap; }
-  .badge.active { background: var(--active); }
-  .badge.upcoming { background: var(--upcoming); }
-  .badge.ended { background: var(--ended); }
+  .when-bar { display: flex; align-items: center; gap: 8px; padding: 8px; }
+  .when-summary { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px 0 6px; border: 0; background: none; text-align: left; border-radius: 12px; }
+  .when-summary .sun { width: 28px; height: 28px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; flex: none; }
+  .when-summary .sun i { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+  .when-summary .txt { flex: 1; min-width: 0; display: grid; line-height: 1.15; }
+  .when-summary .d { font-weight: 700; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .when-summary .t { color: var(--muted); font-size: 13px; }
+  .when-summary .chev { transition: transform .2s; color: var(--muted); }
+  .when.open .when-summary .chev { transform: rotate(180deg); }
+  .btn-now { height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--gold); color: var(--gold-ink); font-weight: 700; }
+  .icon-btn { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; color: var(--ink); }
+  .icon-btn:active, .btn-now:active { transform: scale(.96); }
 
-  /* map pins */
-  .pin { position: relative; width: 36px; height: 36px; border-radius: 50%; background: #fff; border: 3px solid var(--ring);
-         display: grid; place-items: center; font-size: 17px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
-  .pin.active { --ring: var(--active); }
-  .pin.upcoming { --ring: var(--upcoming); }
-  .pin.ended { --ring: var(--ended); opacity: .7; }
-  .pin.active::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 3px solid var(--active); animation: pulse 1.6s ease-out infinite; }
-  .pin .n { position: absolute; top: -7px; right: -7px; background: #1d2330; color: #fff; font: 700 11px/18px system-ui; min-width: 18px; height: 18px; border-radius: 9px; text-align: center; padding: 0 4px; }
-  @keyframes pulse { from { transform: scale(1); opacity: .9; } to { transform: scale(1.7); opacity: 0; } }
-  @media (prefers-reduced-motion: reduce) { .pin.active::after { animation: none; } }
+  .when-body { display: none; gap: 12px; padding: 4px 12px 14px; max-height: calc(100dvh - 120px - var(--safe-t)); overflow-y: auto; overscroll-behavior: contain; }
+  .when.open .when-body { display: grid; }
+  @media (max-width: 760px) { .when.open + .chips { display: none; } }
 
-  .leaflet-popup-content { margin: 12px 14px; min-width: 220px; }
-  .pop h3 { margin: 0 0 6px; font-size: 15px; }
-  .pop .ev { padding: 6px 0; border-top: 1px solid var(--line); }
-  .pop .ev:first-of-type { border-top: 0; }
-  .pop .ev .t { font-weight: 600; }
-  .pop .ev .m { color: var(--muted); font-size: 13px; }
-  .pop .ev p { margin: 3px 0 0; font-size: 13px; }
+  .days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -12px; padding: 2px 12px; scroll-snap-type: x proximity; }
+  .days::-webkit-scrollbar, .chips::-webkit-scrollbar { display: none; }
+  .day { position: relative; flex: none; width: 54px; height: 68px; padding: 0; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; line-height: 1.1; scroll-snap-align: center; }
+  .day .w { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .day .n { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .day .c { height: 12px; font-size: 10.5px; font-weight: 700; color: var(--soon); font-variant-numeric: tabular-nums; }
+  .day.today .w { color: var(--link); }
+  .day[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .day[aria-pressed="true"] .w, .day[aria-pressed="true"] .c { color: var(--gold); }
+  .day.pick { gap: 3px; }
+  .day.pick { position: relative; cursor: pointer; width: 60px; border-style: dashed; color: var(--muted); }
+  .day.pick span { font-size: 11px; font-weight: 600; }
+  .day.pick input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
 
-  .legend-note { position: absolute; z-index: 500; right: 10px; bottom: 28px; background: rgba(255,255,255,.95); border-radius: 8px;
-                 padding: 6px 10px; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+  .time-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .time-big { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .time-big small { font-family: var(--font); font-size: 14px; font-weight: 700; color: var(--muted); margin-left: 4px; }
+  .quick { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .quick button { height: 32px; padding: 0 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 600; color: var(--ink-2); }
+  .quick button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
 
-  @media (max-width: 760px) {
-    .app { grid-template-columns: 1fr; grid-template-rows: 46% 54%; }
-    .app > .mapwrap { order: -1; }
-    .side { border-right: 0; border-top: 1px solid var(--line); }
+  .slider-wrap { position: relative; padding-top: 30px; }
+  .density { position: absolute; left: 14px; right: 14px; top: 0; height: 28px; display: flex; align-items: flex-end; gap: 2px; pointer-events: none; }
+  .density i { flex: 1; min-height: 3px; border-radius: 2px 2px 0 0; background: var(--line-strong); opacity: .8; }
+  .density i.on { background: var(--live); opacity: 1; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; margin: 0; background: transparent; touch-action: pan-y; }
+  input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: var(--line-strong); }
+  input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: var(--line-strong); }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -11px; border-radius: 50%; background: var(--gold); border: 4px solid var(--ink); box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--gold); border: 4px solid var(--ink); box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .ticks { display: flex; justify-content: space-between; margin: -6px 6px 0; font-size: 11px; color: var(--muted); }
+
+  .seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 3px; background: var(--surface-2); border-radius: 12px; border: 1px solid var(--line); }
+  .seg button { min-height: 38px; padding: 4px 2px; border: 0; border-radius: 9px; background: none; font-size: 12.5px; font-weight: 600; line-height: 1.15; color: var(--ink-2); }
+  .seg button[aria-pressed="true"] { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,.18); color: var(--ink); }
+
+  .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 6px; margin: 0 -10px; padding-left: 10px; padding-right: 10px; }
+  .chip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 13px 0 11px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,.12); font-size: 14px; font-weight: 600; color: var(--muted); }
+  .chip svg { color: var(--c, var(--muted)); }
+  .chip[aria-pressed="true"] { color: var(--ink); border-color: var(--c, var(--ink)); background: var(--surface); box-shadow: inset 0 0 0 1px var(--c, var(--ink)), 0 1px 3px rgba(0,0,0,.12); }
+  .chip.ghost { --c: var(--ink-2); }
+
+  /* ---------- floating map buttons ---------- */
+  .fabs { position: absolute; z-index: 900; right: 10px; top: calc(var(--top-h) + 6px); display: grid; gap: 8px; }
+  .fab { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--surface); box-shadow: var(--shadow); display: grid; place-items: center; }
+  .app[data-sheet="full"] .fabs { display: none; }
+  .attrib { position: absolute; z-index: 800; left: 8px; bottom: calc(var(--sheet-h) + 6px); max-width: calc(100% - 16px); padding: 2px 7px; border-radius: 6px; background: color-mix(in srgb, var(--surface) 88%, transparent); font-size: 10.5px; color: var(--muted); transition: bottom .28s cubic-bezier(.2,.8,.2,1); }
+  .attrib a { color: inherit; }
+  .leaflet-container { font-family: var(--font); background: var(--surface-2); }
+  .leaflet-control-zoom { display: none; }
+
+  /* ---------- map pins ---------- */
+  .pin { position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--c); color: #fff; display: grid; place-items: center; border: 3px solid #fff; box-shadow: 0 3px 10px rgba(0,0,0,.35); transition: transform .15s; }
+  .pin.upcoming { box-shadow: 0 3px 10px rgba(0,0,0,.35), 0 0 0 3px color-mix(in srgb, var(--soon) 70%, transparent); }
+  .pin.ended { filter: grayscale(.9); opacity: .65; }
+  .pin.active::after { content: ""; position: absolute; inset: -7px; border-radius: 50%; border: 3px solid var(--live); animation: pulse 1.8s ease-out infinite; }
+  .pin.active::before { content: ""; position: absolute; top: -5px; left: -5px; width: 14px; height: 14px; border-radius: 50%; background: var(--live); border: 2px solid #fff; z-index: 1; }
+  .pin .n { position: absolute; top: -9px; right: -9px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--ink); color: var(--surface); font: 700 11px/20px var(--font); text-align: center; border: 2px solid #fff; }
+  .pin.cluster { --c: #15241d; width: 46px; height: 46px; font: 700 16px var(--font); }
+  .pin.sel { transform: scale(1.25); z-index: 5; }
+  @keyframes pulse { from { transform: scale(.85); opacity: 1; } to { transform: scale(1.5); opacity: 0; } }
+  .me { width: 18px; height: 18px; border-radius: 50%; background: var(--soon); border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(53, 86, 216, .25); }
+
+  /* ---------- bottom sheet ---------- */
+  .sheet { position: absolute; z-index: 1100; left: 0; right: 0; bottom: 0; height: var(--h, 50%); display: flex; flex-direction: column; background: var(--surface); border-radius: 22px 22px 0 0; box-shadow: 0 -8px 28px rgba(0,0,0,.22); transition: height .28s cubic-bezier(.2,.8,.2,1); }
+  .sheet.dragging { transition: none; }
+  .grab { flex: none; touch-action: none; padding: 6px 16px 8px; cursor: grab; user-select: none; -webkit-user-select: none; }
+  .handle { display: block; width: 100%; height: 22px; padding: 0; border: 0; background: none; position: relative; }
+  .handle::after { content: ""; position: absolute; left: 50%; top: 9px; width: 42px; height: 5px; margin-left: -21px; border-radius: 3px; background: var(--line-strong); }
+  .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 40px; }
+  .sheet-head .sum { display: flex; flex-wrap: wrap; gap: 4px 14px; font-weight: 700; font-size: 15px; }
+  .sheet-head .sum span { display: inline-flex; align-items: center; gap: 6px; }
+  .sheet-head .sum i { width: 10px; height: 10px; border-radius: 50%; }
+  .sheet-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 0 12px calc(24px + var(--safe-b)); }
+
+  .gh { position: sticky; top: 0; z-index: 2; margin: 0; padding: 14px 4px 6px; background: var(--surface); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .gh.live { color: var(--live); }
+  .gh b { font-weight: 700; padding: 0 7px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); letter-spacing: 0; }
+  .ev { width: 100%; display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 10px 8px; border: 0; border-radius: 14px; background: none; text-align: left; }
+  .ev:active, .ev:hover { background: var(--surface-2); }
+  .ev-ico { flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: var(--c); background: color-mix(in srgb, var(--c) 14%, var(--surface)); }
+  .ev-main { flex: 1; min-width: 0; display: grid; gap: 1px; }
+  .ev-title { font-weight: 700; font-size: 15.5px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ev-meta { font-size: 13.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ev-meta.when { color: var(--ink-2); font-weight: 600; }
+  .tag { flex: none; align-self: center; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; background: var(--soon-bg); color: var(--soon); }
+  .tag.live { background: var(--live-bg); color: var(--live); display: inline-flex; align-items: center; gap: 5px; }
+  .tag.live i { width: 7px; height: 7px; border-radius: 50%; background: var(--live); animation: blink 1.6s ease-in-out infinite; }
+  .tag.ended { background: var(--surface-2); color: var(--muted); }
+  @keyframes blink { 50% { opacity: .3; } }
+
+  .empty { padding: 36px 20px; text-align: center; color: var(--muted); }
+  .empty h3 { margin: 0 0 6px; font-family: var(--display); font-size: 20px; color: var(--ink); }
+  .empty p { margin: 0 auto; max-width: 30ch; }
+  .foot { margin: 22px 4px 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+  .foot a { color: var(--link); }
+
+  /* ---------- venue detail ---------- */
+  .back { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px 0 8px; border-radius: 12px; border: 0; background: var(--surface-2); font-weight: 600; }
+  .detail { display: grid; gap: 14px; padding-top: 4px; }
+  .detail h2 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1.15; text-wrap: balance; }
+  .addr { margin: 4px 0 0; color: var(--muted); display: flex; gap: 6px; align-items: flex-start; }
+  .note { margin: 0; font-size: 13px; color: var(--link); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 15px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font-weight: 600; font-size: 14.5px; text-decoration: none; }
+  .btn:active { transform: scale(.97); }
+  .btn.primary { background: var(--gold); border-color: var(--gold); color: var(--gold-ink); }
+  .btn.grow { flex: 1; }
+  .btn.small { min-height: 40px; padding: 0 12px; font-size: 13.5px; }
+  .sub { margin: 4px 0 -6px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .evd { display: grid; gap: 10px; padding: 14px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
+  .evd.focus { border-color: var(--gold); box-shadow: 0 0 0 2px color-mix(in srgb, var(--gold) 45%, transparent); }
+  .evd-top { display: flex; gap: 12px; align-items: flex-start; }
+  .evd h3 { margin: 0; font-size: 17px; line-height: 1.25; }
+  .evd .meta { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  .evd .desc { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+
+  /* ---------- dialog + toast ---------- */
+  dialog { border: 0; padding: 0; color: var(--ink); background: var(--surface); width: 100%; max-width: 100%; margin: auto 0 0; border-radius: 22px 22px 0 0; box-shadow: var(--shadow); }
+  dialog::backdrop { background: rgba(8, 16, 12, .5); }
+  .dlg { display: grid; gap: 12px; padding: 18px 16px calc(18px + var(--safe-b)); }
+  .dlg h2 { margin: 0; font-family: var(--display); font-size: 22px; }
+  .dlg p { margin: 0; color: var(--muted); font-size: 14px; }
+  .dlg .btn { justify-content: flex-start; }
+  .dlg .btn[disabled] { opacity: .5; }
+  .dlg-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .toast { position: absolute; z-index: 2000; left: 50%; bottom: calc(var(--sheet-h) + 18px); transform: translate(-50%, 20px); max-width: calc(100% - 32px); padding: 10px 16px; border-radius: 12px; background: var(--ink); color: var(--surface); font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* ---------- desktop ---------- */
+  @media (min-width: 761px) {
+    .app { display: grid; grid-template-columns: 420px 1fr; grid-template-rows: auto minmax(0, 1fr); }
+    #map { position: relative; inset: auto; grid-column: 2; grid-row: 1 / 3; }
+    .top { position: relative; grid-column: 1; grid-row: 1; padding: 18px 16px 0; background: var(--surface); gap: 12px; pointer-events: auto; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand .sun { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; flex: none; }
+    .brand .sun i { width: 13px; height: 13px; border-radius: 50%; background: var(--ink); }
+    .brand h1 { margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.1; }
+    .brand p { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+    .brand p a { color: var(--link); }
+    .card { box-shadow: none; border: 1px solid var(--line); background: var(--surface-2); }
+    .day { background: var(--surface); }
+    .chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0 0 12px; }
+    .chip { height: 34px; font-size: 13.5px; box-shadow: none; }
+    .chip[aria-pressed="true"] { box-shadow: inset 0 0 0 1px var(--c, var(--ink)); }
+    .sheet { position: relative; grid-column: 1; grid-row: 2; height: auto; border-radius: 0; box-shadow: none; border-top: 1px solid var(--line); transition: none; }
+    .grab { cursor: default; padding-top: 10px; }
+    .handle { display: none; }
+    .fabs { top: 12px; }
+    .attrib { bottom: 6px; left: auto; right: 8px; }
+    .leaflet-control-zoom { display: block; }
+    .toast { left: calc(420px + (100% - 420px) / 2); bottom: 20px; }
+    dialog { margin: auto; max-width: 440px; border-radius: 22px; }
   }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  @media (max-width: 360px) { .time-big { font-size: 26px; } .quick button { padding: 0 9px; } }
 </style>
 </head>
 <body>
-<div class="app">
-  <aside class="side">
-    <header>
-      <h1>Garden City Event Map</h1>
-      <p>Pick a date &amp; time to see what's happening and where.</p>
-      <p id="dataNote"></p>
+<div class="app" id="app">
+  <div id="map" role="application" aria-label="Map of events in Garden City"></div>
+
+  <section class="top" id="top">
+    <header class="brand">
+      <span class="sun" aria-hidden="true"><i></i></span>
+      <div><h1>Garden City Events</h1><p id="dataNote"></p></div>
     </header>
 
-    <section class="controls" aria-label="Date and time">
-      <div class="row">
-        <button id="prevDay" title="Previous day" aria-label="Previous day">◀</button>
-        <label class="field">Date <input type="date" id="date"></label>
-        <label class="field">Time <input type="time" id="time" step="900"></label>
-        <button id="nextDay" title="Next day" aria-label="Next day">▶</button>
+    <div class="card when" id="when">
+      <div class="when-bar">
+        <button class="when-summary" id="whenToggle" type="button" aria-expanded="false" aria-controls="whenBody">
+          <span class="sun" aria-hidden="true"><i></i></span>
+          <span class="txt"><span class="d" id="whenDay"></span><span class="t" id="whenSub"></span></span>
+          <svg class="ico chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <button class="btn-now" id="now" type="button">Now</button>
+        <button class="icon-btn" id="calBtn" type="button" aria-label="Add to calendar"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/></svg></button>
       </div>
-      <div>
-        <input type="range" id="slider" min="0" max="1425" step="15" aria-label="Time of day">
-        <div class="slider-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
+      <div class="when-body" id="whenBody">
+        <div class="days" id="days" role="group" aria-label="Day"></div>
+        <div class="time-row">
+          <div class="time-big" id="timeBig" aria-live="polite"></div>
+          <div class="quick" id="quick" role="group" aria-label="Quick times"></div>
+        </div>
+        <div>
+          <div class="slider-wrap">
+            <div class="density" id="density" aria-hidden="true"></div>
+            <input type="range" id="slider" min="0" max="1425" step="15" aria-label="Time of day">
+          </div>
+          <div class="ticks" aria-hidden="true"><span>12a</span><span>6a</span><span>12p</span><span>6p</span><span>12a</span></div>
+        </div>
+        <div class="seg" id="seg" role="group" aria-label="Which events to show">
+          <button type="button" data-w="none">Only then</button>
+          <button type="button" data-w="day">Rest of day</button>
+          <button type="button" data-w="week">Next 7 days</button>
+          <button type="button" data-w="all">All upcoming</button>
+        </div>
       </div>
-      <div class="row">
-        <button id="now" class="primary">Now</button>
-        <label class="field" style="margin:0">
-          <select id="window" aria-label="How far ahead to show upcoming events">
-            <option value="day">Upcoming: rest of that day</option>
-            <option value="week" selected>Upcoming: next 7 days</option>
-            <option value="all">Upcoming: all future</option>
-            <option value="none">Only events happening then</option>
-          </select>
-        </label>
-      </div>
-      <div class="chips" id="chips" aria-label="Categories"></div>
-      <label class="check"><input type="checkbox" id="showEnded"> Also show events that already ended that day</label>
-    </section>
-
-    <div class="summary" id="summary"></div>
-    <div class="cal" id="cal" aria-label="Calendar">
-      <button id="dlVisible" type="button">📅 Add these to my calendar</button>
-      <span id="subLinks" hidden>
-        Subscribe: <a id="subWebcal" href="#">Apple / Outlook</a> ·
-        <a id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar</a> ·
-        <button class="lnk" id="copyFeed" type="button">Copy link</button>
-      </span>
     </div>
-    <div class="list" id="list" aria-live="polite"></div>
-  </aside>
 
-  <main class="mapwrap" style="position:relative; min-height:0">
-    <div id="map"></div>
-    <div class="legend-note">
-      <span class="dot" style="background:var(--active)"></span>Happening now
-      &nbsp;<span class="dot" style="background:var(--upcoming)"></span>Upcoming
+    <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+  </section>
+
+  <div class="fabs" id="fabs">
+    <button class="fab" id="fit" type="button" aria-label="Show all events on the map"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1"/></svg></button>
+    <button class="fab" id="locate" type="button" aria-label="Show my location"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg></button>
+  </div>
+
+  <div class="attrib" id="attrib">
+    <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> · ©
+    <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ©
+    <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>
+  </div>
+
+  <section class="sheet" id="sheet" aria-label="Events">
+    <div class="grab" id="grab">
+      <button class="handle" id="handle" type="button" aria-label="Expand or collapse the event list"></button>
+      <div class="sheet-head" id="sheetHead"></div>
     </div>
-  </main>
+    <div class="sheet-body" id="sheetBody" aria-live="polite"></div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div id="safeProbe" style="position:absolute;visibility:hidden;padding-bottom:env(safe-area-inset-bottom,0px)"></div>
 </div>
+
+<dialog id="calDialog" aria-labelledby="calTitle">
+  <div class="dlg">
+    <div class="dlg-head">
+      <h2 id="calTitle">Add to your calendar</h2>
+      <button class="icon-btn" id="calClose" type="button" aria-label="Close"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+    <button class="btn primary" id="dlVisible" type="button"></button>
+    <div id="subBox">
+      <p style="margin-bottom:8px">Or subscribe to all events and your calendar stays up to date.</p>
+      <div class="btn-row">
+        <a class="btn grow" id="subWebcal" href="#">Apple / Outlook</a>
+        <a class="btn grow" id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar</a>
+        <button class="btn" id="copyFeed" type="button">Copy link</button>
+      </div>
+    </div>
+  </div>
+</dialog>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="events.js"></script>
@@ -158,70 +326,92 @@
 
   const TZ = "America/Chicago";            // Garden City, KS
   const CENTER = [37.9717, -100.8727];
-  const CATEGORIES = {
-    music:     { label: "Music",     icon: "🎵", color: "#fde7f3" },
-    food:      { label: "Food",      icon: "🍔", color: "#fff0d6" },
-    family:    { label: "Family",    icon: "🎈", color: "#e6f4ea" },
-    sports:    { label: "Sports",    icon: "🏃", color: "#e0efff" },
-    arts:      { label: "Arts",      icon: "🎨", color: "#efe7ff" },
-    community: { label: "Community", icon: "🤝", color: "#e8eef5" },
-  };
-  const FALLBACK_CAT = { label: "Other", icon: "📍", color: "#eee" };
-  const cat = (k) => CATEGORIES[k] || FALLBACK_CAT;
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "");
+  /* Icons are from Lucide (ISC license), drawn as 24x24 strokes. */
+  const ICONS = {
+    music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+    food: '<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>',
+    family: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>',
+    sports: '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>',
+    arts: '<circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>',
+    community: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    other: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    clock: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+    back: '<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>',
+    nav: '<polygon points="3 11 22 2 13 21 11 13 3 11"/>',
+    pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    ext: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+    calplus: '<path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/>',
+    download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+    rss: '<path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>',
+  };
+  const svg = (name, size) => `<svg class="ico" width="${size || 18}" height="${size || 18}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.other}</svg>`;
+
+  const CATEGORIES = {
+    music:     { label: "Music",     color: "#a8325e" },
+    food:      { label: "Food",      color: "#c2561c" },
+    family:    { label: "Family",    color: "#a86a12" },
+    sports:    { label: "Sports",    color: "#2b6cb0" },
+    arts:      { label: "Arts",      color: "#6b46c1" },
+    community: { label: "Community", color: "#2c7a7b" },
+  };
+  const OTHER = { label: "Other", color: "#4a5568" };
+  const cat = (k) => CATEGORIES[k] || OTHER;
+
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "");
 
-  /* ---- time helpers: everything is a naive "YYYY-MM-DDTHH:MM" string in Garden City time,
-          so string comparison == chronological comparison. ---- */
+  /* ---- time: everything is a naive "YYYY-MM-DDTHH:MM" string in Garden City time, so string order == time order ---- */
   function nowLocal() {
     const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
       timeZone: TZ, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
     }).formatToParts(new Date()).map((x) => [x.type, x.value]));
     return { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}` };
   }
-  function addDays(dateStr, n) {
-    const [y, m, d] = dateStr.split("-").map(Number);
-    return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10);
-  }
-  const toDate = (s) => { const [d, t] = s.split("T"); const [y, m, dd] = d.split("-").map(Number); const [h, mi] = t.split(":").map(Number); return new Date(y, m - 1, dd, h, mi); };
-  const fmtDay = (s) => toDate(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
-  const fmtTime = (s) => toDate(s).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
-  function fmtRange(e) {
-    if (e.open) return `${fmtDay(e.start)} · starts ${fmtTime(e.start)}`;   // end time not published
-    const sameDay = e.start.slice(0, 10) === e.end.slice(0, 10);
-    return sameDay ? `${fmtDay(e.start)} · ${fmtTime(e.start)} – ${fmtTime(e.end)}`
-                   : `${fmtDay(e.start)} ${fmtTime(e.start)} – ${fmtDay(e.end)} ${fmtTime(e.end)}`;
-  }
+  const parts = (s) => { const m = s.match(/^(\d{4})-(\d\d)-(\d\d)(?:T(\d\d):(\d\d))?$/); return { y: +m[1], mo: +m[2], d: +m[3], h: +(m[4] || 0), mi: +(m[5] || 0) }; };
+  const addDays = (date, n) => { const p = parts(date); return new Date(Date.UTC(p.y, p.mo - 1, p.d + n)).toISOString().slice(0, 10); };
+  const dowOf = (date) => { const p = parts(date); return new Date(Date.UTC(p.y, p.mo - 1, p.d)).getUTCDay(); };
+  const toMin = (s) => { const p = parts(s); return Date.UTC(p.y, p.mo - 1, p.d, p.h, p.mi) / 60000; };
+  const dayShort = (date) => { const p = parts(date); return `${DOW[dowOf(date)]}, ${MON[p.mo - 1]} ${p.d}`; };
+  const dayLong = (date) => { const p = parts(date); return `${["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dowOf(date)]}, ${MON[p.mo - 1]} ${p.d}`; };
+  const fmt12 = (h, mi) => ({ num: mi ? `${h % 12 || 12}:${String(mi).padStart(2, "0")}` : `${h % 12 || 12}`, ap: h < 12 ? "AM" : "PM" });
+  const timeStr = (s) => { const p = parts(s); const f = fmt12(p.h, p.mi); return `${f.num} ${f.ap}`; };
   const minutesOf = (t) => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
   const timeOf = (mins) => `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(mins % 60).padStart(2, "0")}`;
 
-  /* ---- state ---- */
-  const state = { date: "", time: "", window: "week", showEnded: false, cats: new Set(Object.keys(CATEGORIES)) };
-  const moment = () => `${state.date}T${state.time}`;
+  function timeRange(e) {
+    if (e.open) return `Starts ${timeStr(e.start)}`;
+    if (e.end.slice(0, 10) !== e.start.slice(0, 10)) return `${timeStr(e.start)} – ${dayShort(e.end.slice(0, 10))} ${timeStr(e.end)}`;
+    const a = parts(e.start), b = parts(e.end), fa = fmt12(a.h, a.mi), fb = fmt12(b.h, b.mi);
+    return fa.ap === fb.ap ? `${fa.num} – ${fb.num} ${fb.ap}` : `${fa.num} ${fa.ap} – ${fb.num} ${fb.ap}`;
+  }
+  function rel(e, T) {
+    const diff = toMin(e.start) - toMin(T);
+    if (diff <= 0) return "";
+    if (diff < 60) return `in ${diff} min`;
+    const sd = e.start.slice(0, 10), td = T.slice(0, 10);
+    if (sd === td) { const h = Math.floor(diff / 60), m = diff % 60; return m ? `in ${h} h ${m} m` : `in ${h} h`; }
+    return sd === addDays(td, 1) ? "Tomorrow" : DOW[dowOf(sd)];
+  }
 
+  /* ---- data ---- */
   const venues = window.VENUES || {};
+  const meta = window.EVENTS_META || {};
   const events = (window.EVENTS || []).filter((e) => {
     const ok = venues[e.venue] && /^\d{4}-\d\d-\d\dT\d\d:\d\d$/.test(e.start) && /^\d{4}-\d\d-\d\dT\d\d:\d\d$/.test(e.end);
     if (!ok) console.warn("Skipping invalid event:", e);
     return ok;
   });
-
-  const meta = window.EVENTS_META || {};
-  function outOfRange() {
-    if (!meta.from) return "";
-    return state.date < meta.from || state.date > meta.to
-      ? `Event data only covers ${fmtDay(meta.from + "T00:00")} – ${fmtDay(meta.to + "T00:00")}.` : "";
-  }
-
   events.forEach((e, i) => { e.idx = i; });
 
-  function statusOf(e, T) {
-    if (e.end <= T) return "ended";
-    if (e.start <= T) return "active";
-    return "upcoming";
-  }
+  const state = { date: "", time: "", window: "week", showEnded: false, cats: new Set(Object.keys(CATEGORIES)), sel: null };
+  const moment = () => `${state.date}T${state.time}`;
+  let shown = [];                // events currently visible (calendar export uses this)
+
+  const statusOf = (e, T) => (e.end <= T ? "ended" : e.start <= T ? "active" : "upcoming");
   function inWindow(e, T) {
     const day = T.slice(0, 10);
     switch (state.window) {
@@ -232,213 +422,387 @@
     }
   }
   function visibleEvents() {
-    const T = moment();
-    const dayStart = `${state.date}T00:00`;
+    const T = moment(), dayStart = `${state.date}T00:00`;
     return events
       .filter((e) => state.cats.has(e.category))
       .map((e) => ({ ...e, status: statusOf(e, T) }))
-      .filter((e) => {
-        if (e.status === "active") return true;
-        if (e.status === "upcoming") return inWindow(e, T);
-        return state.showEnded && e.end > dayStart;   // ended earlier that same day
-      })
+      .filter((e) => e.status === "active" || (e.status === "upcoming" ? inWindow(e, T) : state.showEnded && e.end > dayStart))
       .sort((a, b) => a.start.localeCompare(b.start) || a.title.localeCompare(b.title));
+  }
+  function outOfRange() {
+    if (!meta.from) return "";
+    return state.date < meta.from || state.date > meta.to ? `Event data covers ${dayShort(meta.from)} – ${dayShort(meta.to)}.` : "";
   }
 
   /* ---- map ---- */
-  const map = L.map("map", { zoomControl: true }).setView(CENTER, 13);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  }).addTo(map);
+  const mq = window.matchMedia("(min-width: 761px)");
+  const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const map = L.map("map", { zoomControl: false, attributionControl: false, tap: true }).setView(CENTER, 13);
+  if (fine) L.control.zoom({ position: "bottomright" }).addTo(map);
+  const TILE = (style) => L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/${style}/{z}/{x}/{y}{r}.png`, { subdomains: "abcd", maxZoom: 20 });
+  const dark = window.matchMedia("(prefers-color-scheme: dark)");
+  let tiles = TILE(dark.matches ? "dark_all" : "voyager").addTo(map);
+  dark.addEventListener?.("change", () => { map.removeLayer(tiles); tiles = TILE(dark.matches ? "dark_all" : "voyager").addTo(map); });
   const layer = L.layerGroup().addTo(map);
-  const markers = {};   // venueId -> marker
+  const markers = {};
 
-  const badge = (s) => `<span class="badge ${s}">${s === "active" ? "Happening now" : s === "upcoming" ? "Upcoming" : "Ended"}</span>`;
-
-  /* Google Maps links. Real places are searched by name + address so Google shows the business itself;
-     venues whose pin is only approximate fall back to the coordinates. */
+  /* ---- Google Maps + calendar helpers ---- */
   function mapsUrl(id, kind) {
     const v = venues[id];
-    const q = v.approx ? `${v.lat},${v.lng}` : [v.name, v.address].filter(Boolean).join(", ");
-    return kind === "dir"
-      ? "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q)
-      : "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+    const q = v.approx ? `${v.lat},${v.lng}` : [v.name, v.address].filter(Boolean).join(", ");   // approximate pins: use coordinates
+    return kind === "dir" ? "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q)
+                          : "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
   }
-
-  /* Calendar downloads (.ics generated in the browser) */
-  const icsStamp = (list) => IcsExport.build(list, venues, { name: "Garden City, KS Events" });
   function download(filename, text) {
     const url = URL.createObjectURL(new Blob([text], { type: "text/calendar;charset=utf-8" }));
     const a = document.createElement("a");
     a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
   }
+  const icsOf = (list) => IcsExport.build(list, venues, { name: "Garden City, KS Events" });
   const slug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 50) || "event";
-  map.on("popupopen", (ev) => {
-    const el = ev.popup.getElement();
-    if (!el) return;
-    el.querySelectorAll("[data-ics]").forEach((b) => b.addEventListener("click", () => {
-      const e = events[+b.dataset.ics];
-      download(`${slug(e.title)}.ics`, icsStamp([e]));
-    }));
-  });
 
-  const descShort = (d) => (d.length > 200 ? d.slice(0, 200).replace(/\s+\S*$/, "") + "…" : d);
-
-  function popupHtml(venueId, evs) {
-    return `<div class="pop"><h3>${esc(venues[venueId].name)}</h3>` + evs.map((e) =>
-      `<div class="ev"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
-       <div class="m">${esc(fmtRange(e))}</div>${e.desc ? `<p>${esc(descShort(e.desc))}</p>` : ""}
-       <div class="acts">
-         ${safeUrl(e.url) ? `<a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Event details ↗</a>` : ""}
-         <a href="${esc(IcsExport.googleUrl(e, venues[venueId]))}" target="_blank" rel="noopener">＋ Google Calendar</a>
-         <button class="lnk" type="button" data-ics="${e.idx}">＋ Apple / Outlook (.ics)</button>
-       </div></div>`).join("")
-      + `<div class="venue-links">${venues[venueId].address ? `📍 ${esc(venues[venueId].address)}<br>` : ""}
-           <a href="${esc(mapsUrl(venueId, "dir"))}" target="_blank" rel="noopener">Directions ↗</a> ·
-           <a href="${esc(mapsUrl(venueId, "search"))}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`
-      + (venues[venueId].approx ? `<div class="approx">Pin location is approximate.</div>` : "") + `</div>`;
+  let toastTimer;
+  function toast(msg) {
+    const t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
   }
 
-  let shown = [];   // events currently on the map, for the calendar export
+  /* ---- bottom sheet (phone): peek / half / full, drag to resize ---- */
+  const app = $("app"), sheet = $("sheet"), grab = $("grab");
+  let snap = "half";
+  const safeBottom = () => parseFloat(getComputedStyle($("safeProbe")).paddingBottom) || 0;
+  function snapPx() {
+    const appH = app.clientHeight, top = $("top").offsetHeight, peek = 108 + safeBottom();
+    return { peek, half: Math.max(peek + 120, Math.round(appH * 0.5)), full: Math.max(peek + 160, appH - top - 12) };
+  }
+  function applySnap(s) {
+    snap = s;
+    if (mq.matches) { sheet.style.removeProperty("--h"); app.style.setProperty("--sheet-h", "0px"); app.dataset.sheet = ""; return; }
+    const h = snapPx()[s];
+    sheet.style.setProperty("--h", h + "px");
+    app.style.setProperty("--sheet-h", h + "px");
+    app.dataset.sheet = s;
+  }
+  let drag = null;
+  grab.addEventListener("pointerdown", (e) => {
+    if (mq.matches || e.target.closest("[data-nodrag]")) return;
+    drag = { y0: e.clientY, h0: sheet.offsetHeight, last: e.clientY, t: performance.now(), v: 0, moved: false };
+    grab.setPointerCapture(e.pointerId);
+    sheet.classList.add("dragging");
+  });
+  grab.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dy = drag.y0 - e.clientY;
+    if (Math.abs(dy) > 5) drag.moved = true;
+    const now = performance.now();
+    drag.v = (drag.last - e.clientY) / Math.max(1, now - drag.t); drag.last = e.clientY; drag.t = now;
+    const px = snapPx(), h = Math.min(px.full, Math.max(px.peek, drag.h0 + dy));
+    sheet.style.setProperty("--h", h + "px"); app.style.setProperty("--sheet-h", h + "px");
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    sheet.classList.remove("dragging");
+    const px = snapPx(), d = drag; drag = null;
+    if (!d.moved) { applySnap(snap === "peek" ? "half" : snap === "full" ? "half" : "peek"); return; }
+    const projected = sheet.offsetHeight + d.v * 160;
+    applySnap(Object.entries(px).sort((a, b) => Math.abs(a[1] - projected) - Math.abs(b[1] - projected))[0][0]);
+  };
+  grab.addEventListener("pointerup", endDrag);
+  grab.addEventListener("pointercancel", endDrag);
+  $("handle").addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); applySnap(snap === "peek" ? "half" : snap === "half" ? "full" : "peek"); }
+  });
 
-  function render() {
-    const evs = visibleEvents();
+  /* ---- keep map content clear of the floating bar and the sheet ---- */
+  function insets() { return mq.matches ? { top: 0, bottom: 0 } : { top: $("top").offsetHeight, bottom: snapPx()[snap] }; }
+  function focusOn(latlng, zoom) {
+    const { top, bottom } = insets();
+    const p = map.project(latlng, zoom).add([0, (bottom - top) / 2]);
+    map.flyTo(map.unproject(p, zoom), zoom, { duration: 0.5 });
+  }
+  function fitAll() {
+    const pts = Object.values(markers).map((m) => m.getLatLng());
+    const { top, bottom } = insets();
+    if (pts.length > 1) map.fitBounds(L.latLngBounds(pts), { paddingTopLeft: [36, top + 24], paddingBottomRight: [36, bottom + 24], maxZoom: 15 });
+    else if (pts.length === 1) focusOn(pts[0], 15);
+    else map.setView(CENTER, 13);
+  }
+  new ResizeObserver(() => { app.style.setProperty("--top-h", $("top").offsetHeight + "px"); applySnap(snap); }).observe($("top"));
+  window.addEventListener("resize", () => applySnap(snap));
+  mq.addEventListener?.("change", () => applySnap(snap));
+
+  /* ---- render ---- */
+  function pinHtml(list, status, selected) {
+    const first = list[0], c = cat(first.category);
+    return `<div class="pin ${status}${selected ? " sel" : ""}" style="--c:${c.color}">${svg(CATEGORIES[first.category] ? first.category : "other", 19)}${list.length > 1 ? `<span class="n">${list.length}</span>` : ""}</div>`;
+  }
+
+  let lastEvs = [];
+  function renderMap(evs) {
+    lastEvs = evs;
     const byVenue = {};
     evs.forEach((e) => (byVenue[e.venue] ||= []).push(e));
-
-    const openVenue = Object.keys(markers).find((id) => markers[id].isPopupOpen());
     layer.clearLayers();
     Object.keys(markers).forEach((k) => delete markers[k]);
+    const statusOf2 = (list) => (list.some((e) => e.status === "active") ? "active" : list.some((e) => e.status === "upcoming") ? "upcoming" : "ended");
 
-    Object.entries(byVenue).forEach(([id, list]) => {
-      const v = venues[id];
-      const s = list.some((e) => e.status === "active") ? "active" : list.some((e) => e.status === "upcoming") ? "upcoming" : "ended";
-      const icon = L.divIcon({
-        className: "", iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -18],
-        html: `<div class="pin ${s}">${cat(list[0].category).icon}${list.length > 1 ? `<span class="n">${list.length}</span>` : ""}</div>`,
-      });
-      const m = L.marker([v.lat, v.lng], { icon, title: v.name, zIndexOffset: s === "active" ? 1000 : 0 })
-        .bindPopup(popupHtml(id, list)).addTo(layer);
-      markers[id] = m;
+    // Group venues whose pins would overlap at this zoom. The selected venue always keeps its own pin.
+    const z = map.getZoom(), selId = state.sel && state.sel.venue, clusters = [];
+    Object.keys(byVenue).sort((a, b) => byVenue[b].length - byVenue[a].length).forEach((id) => {
+      const pt = map.project([venues[id].lat, venues[id].lng], z);
+      const hit = id === selId ? null : clusters.find((c) => !c.fixed && pt.distanceTo(c.pt) < 38);
+      if (hit) hit.ids.push(id); else clusters.push({ ids: [id], pt, fixed: id === selId });
     });
-    if (openVenue && markers[openVenue]) markers[openVenue].openPopup();
 
-    /* summary */
-    const active = evs.filter((e) => e.status === "active").length;
-    const upcoming = evs.filter((e) => e.status === "upcoming").length;
-    $("summary").innerHTML =
-      `<span><span class="dot" style="background:var(--active)"></span><b>${active}</b> happening</span>` +
-      `<span><span class="dot" style="background:var(--upcoming)"></span><b>${upcoming}</b> upcoming</span>` +
-      `<span>${fmtDay(moment())}, ${fmtTime(moment())}</span>`;
+    clusters.forEach((c) => {
+      if (c.ids.length === 1) {
+        const id = c.ids[0], v = venues[id], list = byVenue[id], status = statusOf2(list), selected = id === selId;
+        const icon = L.divIcon({ className: "", iconSize: [40, 40], iconAnchor: [20, 20], html: pinHtml(list, status, selected) });
+        const m = L.marker([v.lat, v.lng], { icon, title: `${v.name} (${list.length})`, alt: v.name, zIndexOffset: selected ? 2000 : status === "active" ? 1000 : 0 }).addTo(layer);
+        m.on("click", () => openVenue(id, null, false));
+        markers[id] = m;
+      } else {
+        const all = c.ids.flatMap((id) => byVenue[id]), status = statusOf2(all);
+        const ll = c.ids.map((id) => L.latLng(venues[id].lat, venues[id].lng)), center = L.latLngBounds(ll).getCenter();
+        const icon = L.divIcon({ className: "", iconSize: [46, 46], iconAnchor: [23, 23], html: `<div class="pin cluster ${status}">${all.length}</div>` });
+        const m = L.marker(center, { icon, title: `${all.length} events at ${c.ids.length} nearby places`, alt: `${all.length} events at ${c.ids.length} nearby places`, zIndexOffset: status === "active" ? 900 : 0 }).addTo(layer);
+        m.on("click", () => { const { top, bottom } = insets(); map.fitBounds(L.latLngBounds(ll), { maxZoom: 18, paddingTopLeft: [50, top + 50], paddingBottomRight: [50, bottom + 50] }); });
+        markers["cluster:" + c.ids.join(",")] = m;
+      }
+    });
+  }
+  map.on("zoomend", () => renderMap(lastEvs));
 
-    /* calendar export of whatever is showing */
-    const dl = $("dlVisible");
-    dl.disabled = !evs.length;
-    dl.textContent = evs.length ? `📅 Add these ${evs.length} to my calendar` : "📅 Add these to my calendar";
-    shown = evs;
+  function tagFor(e, T) {
+    if (e.status === "active") return `<span class="tag live"><i></i>Live</span>`;
+    if (e.status === "ended") return `<span class="tag ended">Ended</span>`;
+    const r = rel(e, T);
+    return r ? `<span class="tag">${esc(r)}</span>` : "";
+  }
 
-    /* list */
-    const list = $("list");
+  function listHtml(evs) {
+    const T = moment();
     if (!evs.length) {
-      list.innerHTML = `<div class="empty">No events match this date and time.<br>Try a later time, a wider “Upcoming” range, or more categories.${outOfRange() ? `<br><br><b>${esc(outOfRange())}</b>` : ""}</div>`;
-    } else {
-      list.innerHTML = evs.map((e, i) =>
-        `<button class="item" data-i="${i}"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
-         <div class="m">${esc(fmtRange(e))}</div><div class="m">📍 ${esc(venues[e.venue].name)}</div></button>`).join("");
-      list.querySelectorAll(".item").forEach((btn) => btn.addEventListener("click", () => {
-        const m = markers[evs[+btn.dataset.i].venue];
-        if (!m) return;
-        map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 15), { duration: 0.6 });
-        m.openPopup();
-      }));
+      const hint = outOfRange();
+      return `<div class="empty"><h3>Nothing on the map</h3><p>No events match this day and time. Try a later time, “All upcoming”, or turn on more categories.</p>${hint ? `<p style="margin-top:10px"><b>${esc(hint)}</b></p>` : ""}</div>` + footHtml();
     }
+    const live = evs.filter((e) => e.status === "active");
+    const soon = evs.filter((e) => e.status === "upcoming");
+    const ended = evs.filter((e) => e.status === "ended");
+    const groups = [];
+    if (live.length) groups.push({ title: "Happening now", cls: "live", list: live });
+    const days = [...new Set(soon.map((e) => e.start.slice(0, 10)))];
+    days.forEach((d) => groups.push({
+      title: d === state.date ? `Later · ${dayShort(d)}` : d === addDays(state.date, 1) ? `Tomorrow · ${dayShort(d)}` : dayShort(d),
+      list: soon.filter((e) => e.start.startsWith(d)),
+    }));
+    if (ended.length) groups.push({ title: "Already ended", list: ended });
+    return groups.map((g) => `<h3 class="gh ${g.cls || ""}">${esc(g.title)} <b>${g.list.length}</b></h3>` + g.list.map((e) => `
+      <button class="ev" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
+        <span class="ev-ico">${svg(CATEGORIES[e.category] ? e.category : "other", 20)}</span>
+        <span class="ev-main"><span class="ev-title">${esc(e.title)}</span><span class="ev-meta when">${esc(timeRange(e))}</span><span class="ev-meta">${esc(venues[e.venue].name)}</span></span>
+        ${tagFor(e, T)}
+      </button>`).join("")).join("") + footHtml();
+  }
+  function footHtml() {
+    return `<p class="foot">${meta.from ? `Events ${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} from <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>. ` : ""}Times are Garden City time. Always check with the organizer, since plans can change.</p>`;
+  }
+
+  function detailHtml(evs) {
+    const id = state.sel.venue, v = venues[id], T = moment();
+    const here = evs.filter((e) => e.venue === id);
+    const first = here.filter((e) => e.idx === state.sel.idx), rest = here.filter((e) => e.idx !== state.sel.idx);
+    const block = (e) => `
+      <article class="evd${e.idx === state.sel.idx ? " focus" : ""}" style="--c:${cat(e.category).color}">
+        <div class="evd-top">
+          <span class="ev-ico">${svg(CATEGORIES[e.category] ? e.category : "other", 20)}</span>
+          <div style="flex:1;min-width:0"><h3>${esc(e.title)}</h3><p class="meta">${esc(dayShort(e.start.slice(0, 10)))} · ${esc(timeRange(e))}</p></div>
+          ${tagFor(e, T)}
+        </div>
+        ${e.desc ? `<p class="desc">${esc(e.desc.length >= 320 ? e.desc.slice(0, 320).replace(/\s+\S*$/, "") + "…" : e.desc)}</p>` : ""}
+        <div class="btn-row">
+          <a class="btn small" href="${esc(IcsExport.googleUrl(e, v))}" target="_blank" rel="noopener">${svg("calplus", 17)} Google Calendar</a>
+          <button class="btn small" type="button" data-ics="${e.idx}">${svg("download", 17)} Apple / Outlook</button>
+          ${safeUrl(e.url) ? `<a class="btn small" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Details ${svg("ext", 16)}</a>` : ""}
+        </div>
+      </article>`;
+    return `<div class="detail">
+      <div>
+        <h2>${esc(v.name)}</h2>
+        ${v.address ? `<p class="addr">${svg("pin", 17)}<span>${esc(v.address)}</span></p>` : ""}
+      </div>
+      <div class="btn-row">
+        <a class="btn primary grow" href="${esc(mapsUrl(id, "dir"))}" target="_blank" rel="noopener">${svg("nav", 18)} Directions</a>
+        <a class="btn grow" href="${esc(mapsUrl(id, "search"))}" target="_blank" rel="noopener">Google Maps ${svg("ext", 16)}</a>
+      </div>
+      ${v.approx ? `<p class="note">This pin is approximate. Use Directions for the exact address.</p>` : ""}
+      ${here.length ? `<p class="sub">${here.length === 1 ? "Event here" : `${here.length} events here`}</p>${first.concat(rest).map(block).join("")}`
+                   : `<div class="empty" style="padding:16px 0"><p>No events here for this day and time with your current filters.</p></div>`}
+    </div>`;
+  }
+
+  function sheetHeadHtml(evs) {
+    if (state.sel) return `<button class="back" type="button" data-back data-nodrag>${svg("back", 18)} All events</button>`;
+    const live = evs.filter((e) => e.status === "active").length, soon = evs.filter((e) => e.status === "upcoming").length;
+    return `<div class="sum"><span><i style="background:var(--live)"></i>${live} live</span><span><i style="background:var(--soon)"></i>${soon} upcoming</span></div>`;
+  }
+
+  function renderWhen(dateChanged) {
+    const n = nowLocal(), T = moment(), p = parts(T), f = fmt12(p.h, p.mi);
+    $("whenDay").textContent = dayShort(state.date);
+    $("whenSub").textContent = `${f.num.includes(":") ? f.num : f.num + ":00"} ${f.ap}` + (state.date === n.date ? " · Today" : "");
+    $("timeBig").innerHTML = `${esc(f.num.includes(":") ? f.num : f.num + ":00")}<small>${f.ap}</small>`;
+    $("slider").value = Math.min(1425, Math.floor(minutesOf(state.time) / 15) * 15);
+
+    // quick times
+    const quick = [["Morning", "09:00"], ["Noon", "12:00"], ["Evening", "19:00"]];
+    $("quick").innerHTML = quick.map(([l, t]) => `<button type="button" data-t="${t}" aria-pressed="${state.time === t}">${l}</button>`).join("");
+    document.querySelectorAll("#seg button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.w === state.window)));
+
+    // day strip, with how many events touch each day
+    const set = new Set();
+    if (meta.from) { let d = meta.from; for (let i = 0; i < 31 && d <= meta.to; i++) { set.add(d); d = addDays(d, 1); } }
+    set.add(state.date); set.add(n.date);
+    const daysEl = $("days"), keep = daysEl.scrollLeft;
+    const count = (d) => events.filter((e) => state.cats.has(e.category) && e.start < `${addDays(d, 1)}T00:00` && e.end > `${d}T00:00`).length;
+    daysEl.innerHTML = [...set].sort().map((d) => {
+      const c = count(d), pd = parts(d);
+      return `<button class="day${d === n.date ? " today" : ""}" type="button" data-d="${d}" aria-pressed="${d === state.date}" aria-label="${esc(dayLong(d))}, ${c} events">
+        <span class="w">${d === n.date ? "Today" : DOW[dowOf(d)]}</span><span class="n">${pd.d}</span><span class="c">${c || ""}</span></button>`;
+    }).join("") + `<label class="day pick">${svg("calplus", 20)}<span>Pick</span><input type="date" id="date" value="${state.date}" aria-label="Pick a date"></label>`;
+    $("date").addEventListener("change", (e) => e.target.value && setMoment(e.target.value));
+    daysEl.scrollLeft = keep;
+    if (dateChanged) { const sel = daysEl.querySelector('[aria-pressed="true"]'); if (sel) daysEl.scrollTo({ left: sel.offsetLeft - daysEl.clientWidth / 2 + sel.clientWidth / 2, behavior: "smooth" }); }
+
+    // busy-ness of the day, half hour by half hour
+    const bars = [];
+    for (let s = 0; s < 48; s++) {
+      const a = `${state.date}T${timeOf(s * 30)}`, b = s === 47 ? `${addDays(state.date, 1)}T00:00` : `${state.date}T${timeOf(s * 30 + 30)}`;
+      bars.push(events.filter((e) => state.cats.has(e.category) && e.start < b && e.end > a).length);
+    }
+    const max = Math.max(1, ...bars), cur = Math.floor(minutesOf(state.time) / 30);
+    $("density").innerHTML = bars.map((c, i) => `<i${i === cur ? ' class="on"' : ""} style="height:${c ? 3 + Math.round((c / max) * 25) : 3}px"></i>`).join("");
+  }
+
+  let lastDate = "", lastView = "";
+  function render() {
+    const evs = visibleEvents();
+    shown = evs;
+    renderWhen(state.date !== lastDate); lastDate = state.date;
+    renderMap(evs);
+
+    $("sheetHead").innerHTML = sheetHeadHtml(evs);
+    const body = $("sheetBody"), view = state.sel ? "detail:" + state.sel.venue : "list", st = body.scrollTop;
+    body.innerHTML = state.sel ? detailHtml(evs) : listHtml(evs);
+    body.scrollTop = view === lastView ? st : 0; lastView = view;
+
+    const n = evs.length;
+    $("dlVisible").disabled = !n;
+    $("dlVisible").innerHTML = `${svg("download", 19)} ${n ? `Download ${n} event${n === 1 ? "" : "s"} (.ics)` : "No events to add"}`;
     saveHash();
   }
 
-  function fitAll() {
-    const pts = Object.values(markers).map((m) => m.getLatLng());
-    if (pts.length > 1) map.fitBounds(L.latLngBounds(pts).pad(0.25), { maxZoom: 15 });
-    else if (pts.length === 1) map.setView(pts[0], 15);
-    else map.setView(CENTER, 13);
-  }
-
-  /* ---- controls ---- */
-  function syncInputs() {
-    $("date").value = state.date;
-    $("time").value = state.time;
-    $("slider").value = Math.min(1425, Math.floor(minutesOf(state.time) / 15) * 15);
-    $("window").value = state.window;
-    $("showEnded").checked = state.showEnded;
-  }
   function setMoment(date, time) {
     if (date) state.date = date;
     if (time) state.time = time;
-    syncInputs();
     render();
   }
+  function openVenue(id, idx, fly) {
+    state.sel = { venue: id, idx };
+    setWhen(false);
+    if (!mq.matches && snap !== "half") applySnap("half");
+    render();
+    if (fly !== false) { const v = venues[id]; focusOn(L.latLng(v.lat, v.lng), Math.max(map.getZoom(), 15)); }
+    else { const v = venues[id]; if (!mq.matches) { const pt = map.latLngToContainerPoint([v.lat, v.lng]), { top, bottom } = insets(); if (pt.y > map.getSize().y - bottom - 30 || pt.y < top) focusOn(L.latLng(v.lat, v.lng), map.getZoom()); } }
+  }
+  function closeVenue() { state.sel = null; render(); }
 
-  $("date").addEventListener("change", (e) => e.target.value && setMoment(e.target.value));
-  $("time").addEventListener("change", (e) => e.target.value && setMoment(null, e.target.value));
-  $("slider").addEventListener("input", (e) => setMoment(null, timeOf(+e.target.value)));
-  $("prevDay").addEventListener("click", () => setMoment(addDays(state.date, -1)));
-  $("nextDay").addEventListener("click", () => setMoment(addDays(state.date, 1)));
+  let snapBeforeWhen = null;
+  function setWhen(open) {
+    if (!mq.matches) {     // phones: the panel floats over the sheet, so tuck the sheet down while it's open
+      if (open && !$("when").classList.contains("open")) { snapBeforeWhen = snap; applySnap("peek"); }
+      else if (!open && snapBeforeWhen) { applySnap(snapBeforeWhen); snapBeforeWhen = null; }
+    }
+    $("when").classList.toggle("open", open);
+    $("whenToggle").setAttribute("aria-expanded", String(open));
+  }
+
+  /* ---- events ---- */
+  $("whenToggle").addEventListener("click", () => setWhen(!$("when").classList.contains("open")));
   $("now").addEventListener("click", () => { const n = nowLocal(); setMoment(n.date, n.time); });
-  $("window").addEventListener("change", (e) => { state.window = e.target.value; render(); });
-  $("showEnded").addEventListener("change", (e) => { state.showEnded = e.target.checked; render(); });
+  $("slider").addEventListener("input", (e) => setMoment(null, timeOf(+e.target.value)));
+  $("days").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (b) setMoment(b.dataset.d); });
+  $("quick").addEventListener("click", (e) => { const b = e.target.closest("[data-t]"); if (b) setMoment(null, b.dataset.t); });
+  $("seg").addEventListener("click", (e) => { const b = e.target.closest("[data-w]"); if (b) { state.window = b.dataset.w; render(); } });
+  map.on("click", () => { if (!mq.matches) setWhen(false); });
+  map.on("dragstart", () => { if (!mq.matches) setWhen(false); });
+  $("fit").addEventListener("click", () => { state.sel = null; render(); fitAll(); });
 
-  $("dlVisible").addEventListener("click", () => {
-    if (shown.length) download(`garden-city-events-${state.date}.ics`, icsStamp(shown));
+  $("sheetBody").addEventListener("click", (e) => {
+    const ev = e.target.closest("[data-ev]");
+    if (ev) { const x = events[+ev.dataset.ev]; openVenue(x.venue, x.idx, true); return; }
+    const ics = e.target.closest("[data-ics]");
+    if (ics) { const x = events[+ics.dataset.ics]; download(`${slug(x.title)}.ics`, icsOf([x])); toast("Calendar file downloaded"); }
+  });
+  $("sheetHead").addEventListener("click", (e) => { if (e.target.closest("[data-back]")) closeVenue(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && state.sel && !$("calDialog").open) closeVenue(); });
+
+  let me;
+  $("locate").addEventListener("click", () => {
+    if (!navigator.geolocation) return toast("Location isn't available on this device");
+    navigator.geolocation.getCurrentPosition((p) => {
+      const ll = L.latLng(p.coords.latitude, p.coords.longitude);
+      if (me) me.setLatLng(ll); else me = L.marker(ll, { icon: L.divIcon({ className: "", iconSize: [18, 18], html: '<div class="me"></div>' }), interactive: false, keyboard: false }).addTo(map);
+      focusOn(ll, 15);
+    }, () => toast("Couldn't get your location"), { enableHighAccuracy: true, timeout: 10000 });
   });
 
-  /* Subscription feed (garden-city-events.ics is rebuilt with events.js); needs the site to be served over http(s) */
+  /* categories */
+  const chips = $("chips");
+  chips.innerHTML = Object.entries(CATEGORIES).map(([k, c]) =>
+    `<button class="chip" type="button" data-cat="${k}" aria-pressed="true" style="--c:${c.color}">${svg(k, 17)}<span>${c.label}</span></button>`).join("")
+    + `<button class="chip ghost" type="button" data-ended aria-pressed="false">${svg("clock", 17)}<span>Show ended</span></button>`;
+  chips.addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    if (b.hasAttribute("data-ended")) state.showEnded = !state.showEnded;
+    else { const k = b.dataset.cat; state.cats.has(k) ? state.cats.delete(k) : state.cats.add(k); }
+    b.setAttribute("aria-pressed", String(b.hasAttribute("data-ended") ? state.showEnded : state.cats.has(b.dataset.cat)));
+    render();
+  });
+
+  /* calendar dialog */
+  const dlg = $("calDialog");
+  $("calBtn").addEventListener("click", () => { dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); });
+  $("calClose").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+  $("dlVisible").addEventListener("click", () => { if (shown.length) { download(`garden-city-events-${state.date}.ics`, icsOf(shown)); toast("Calendar file downloaded"); dlg.close(); } });
   if (/^https?:$/.test(location.protocol)) {
-    const feed = new URL("garden-city-events.ics", location.href).href;
-    const webcal = feed.replace(/^https?:/, "webcal:");
+    const feed = new URL("garden-city-events.ics", location.href).href, webcal = feed.replace(/^https?:/, "webcal:");
     $("subWebcal").href = webcal;
     $("subGoogle").href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
     $("copyFeed").addEventListener("click", async () => {
-      const b = $("copyFeed");
-      try { await navigator.clipboard.writeText(feed); b.textContent = "Copied!"; }
-      catch (_) { b.textContent = feed; }   // clipboard blocked: show the link so it can be selected
-      setTimeout(() => { b.textContent = "Copy link"; }, 6000);
+      try { await navigator.clipboard.writeText(feed); toast("Link copied"); } catch (_) { window.prompt("Copy this link:", feed); }
     });
-    $("subLinks").hidden = false;
-  }
+  } else $("subBox").hidden = true;
 
-  const chips = $("chips");
-  Object.entries(CATEGORIES).forEach(([key, c]) => {
-    const b = document.createElement("button");
-    b.className = "chip"; b.type = "button"; b.style.background = c.color; b.setAttribute("aria-pressed", "true");
-    b.textContent = `${c.icon} ${c.label}`;
-    b.addEventListener("click", () => {
-      state.cats.has(key) ? state.cats.delete(key) : state.cats.add(key);
-      b.setAttribute("aria-pressed", String(state.cats.has(key)));
-      render();
-    });
-    chips.appendChild(b);
-  });
-
-  /* ---- shareable link: #d=2026-10-10&t=18:00&w=week ---- */
-  function saveHash() {
-    try { history.replaceState(null, "", `#d=${state.date}&t=${state.time}&w=${state.window}`); } catch (_) {}
-  }
+  /* shareable link: #d=2026-10-10&t=18:30&w=week */
+  function saveHash() { try { history.replaceState(null, "", `#d=${state.date}&t=${state.time}&w=${state.window}`); } catch (_) {} }
   function loadHash() {
-    const h = new URLSearchParams(location.hash.slice(1));
-    const d = h.get("d"), t = h.get("t"), w = h.get("w");
+    const h = new URLSearchParams(location.hash.slice(1)), d = h.get("d"), t = h.get("t"), w = h.get("w");
     if (d && /^\d{4}-\d\d-\d\d$/.test(d)) state.date = d;
     if (t && /^([01]\d|2[0-3]):[0-5]\d$/.test(t)) state.time = t;
     if (["day", "week", "all", "none"].includes(w)) state.window = w;
   }
 
-  if (meta.from) $("dataNote").innerHTML =
-    `Events ${esc(fmtDay(meta.from + "T00:00"))} – ${esc(fmtDay(meta.to + "T00:00"))} · data: <a href="${esc(meta.sourceUrl)}" target="_blank" rel="noopener">${esc(meta.source)}</a>`;
-
   const n = nowLocal();
   state.date = n.date; state.time = n.time;
   loadHash();
-  syncInputs();
+  app.style.setProperty("--top-h", $("top").offsetHeight + "px");
+  applySnap("half");
+  setWhen(mq.matches);          // open on desktop, collapsed on phones
   render();
+  if (meta.from) $("dataNote").innerHTML = `${esc(dayShort(meta.from))} – ${esc(dayShort(meta.to))} · <a href="${esc(safeUrl(meta.sourceUrl))}" target="_blank" rel="noopener">${esc(meta.source)}</a>`;
   fitAll();
 })();
 </script>
