@@ -244,7 +244,8 @@
       `<div class="ev"><div class="t">${cat(e.category).icon} ${esc(e.title)} ${badge(e.status)}</div>
        <div class="m">${esc(fmtRange(e))}</div>${e.desc ? `<p>${esc(descShort(e.desc))}</p>` : ""}
        ${safeUrl(e.url) ? `<p><a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Event details ↗</a></p>` : ""}</div>`).join("")
-      + (venues[venueId].address ? `<div class="m">📍 ${esc(venues[venueId].address)}</div>` : "")
+      + (venues[venueId].address ? `<div class="m">📍 ${esc(venues[venueId].address)}
+           · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venues[venueId].name + ", " + venues[venueId].address)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>` : "")
       + (venues[venueId].approx ? `<div class="approx">Pin location is approximate.</div>` : "") + `</div>`;
   }
 
