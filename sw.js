@@ -1,10 +1,11 @@
 /* Service worker: lets the app open offline and keeps events fresh when online.
  * Bump VERSION when this file's caching rules change. */
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL = `gc-shell-${VERSION}`;      // our own files (network first, so new events show up right away)
 const LIBS = `gc-libs-${VERSION}`;        // Google Fonts (cached as they are used)
 
-const SHELL_FILES = ["./", "index.html", "events.js", "ics.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/icon.svg", "vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css"];
+const SHELL_FILES = ["./", "index.html", "events.js", "ics.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/icon.svg", "vendor/leaflet/leaflet.js", "vendor/leaflet/leaflet.css",
+  "vendor/protomaps/pmtiles.js", "vendor/protomaps/protomaps-leaflet.js", "tiles/garden-city.pmtiles"];
 const CDN_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];   // Google Fonts only
 
 self.addEventListener("install", (event) => {

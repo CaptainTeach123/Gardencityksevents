@@ -32,6 +32,16 @@ bundled so nothing important loads from a CDN). If you change `sw.js` caching ru
 No build step. Open `index.html` in a browser (needs internet for the Leaflet library and OpenStreetMap tiles),
 or serve the folder: `python3 -m http.server`.
 
+## The map (Protomaps)
+
+The basemap is drawn in the browser from `tiles/garden-city.pmtiles`, a small (~1.4 MB) OpenStreetMap-based map of
+Garden City that lives in this repo. There is no third-party tile server, so there are no per-view fees or usage
+limits to worry about, and it works offline once loaded. Libraries: `vendor/protomaps/` (BSD-3-Clause).
+
+To refresh the map data (or change the area), run **Actions → Build Garden City map tiles → Run workflow**. It cuts the
+area out of Protomaps' free daily world build and redeploys the site. Map data © OpenStreetMap contributors (ODbL);
+keep the attribution in the corner of the map.
+
 ## Updating events (from VisitGCK.com)
 
 Events come from the iCal export of https://www.visitgck.com/events-calendar/ (their site blocks automated

@@ -292,8 +292,8 @@
 
   <div class="attrib" id="attrib">
     <a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> · ©
-    <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ©
-    <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>
+    <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors ·
+    <a href="https://protomaps.com" target="_blank" rel="noopener">Protomaps</a>
   </div>
 
   <section class="sheet" id="sheet" aria-label="Events">
@@ -327,6 +327,8 @@
 </dialog>
 
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/protomaps/pmtiles.js"></script>
+<script src="vendor/protomaps/protomaps-leaflet.js"></script>
 <script src="events.js"></script>
 <script src="ics.js"></script>
 <script>
@@ -446,12 +448,24 @@
   /* ---- map ---- */
   const mq = window.matchMedia("(min-width: 761px)");
   const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  const map = L.map("map", { zoomControl: false, attributionControl: false, tap: true }).setView(CENTER, 13);
+  /* Basemap: our own Protomaps/OpenStreetMap vector tiles, served from tiles/garden-city.pmtiles (no third-party tile server).
+     The whole file is downloaded once (a few MB) and then cached, so the map works offline. */
+  const BOUNDS = L.latLngBounds([37.86, -101.06], [38.08, -100.69]);      // area covered by the tile file
+  const map = L.map("map", { zoomControl: false, attributionControl: false, tap: true, minZoom: 10, maxZoom: 18, maxBounds: BOUNDS.pad(0.1), maxBoundsViscosity: 0.8 }).setView(CENTER, 13);
   if (fine) L.control.zoom({ position: "bottomright" }).addTo(map);
-  const TILE = (style) => L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/${style}/{z}/{x}/{y}{r}.png`, { subdomains: "abcd", maxZoom: 20 });
+  class MemorySource {
+    constructor(url) { this.url = url; this.buf = null; }
+    getKey() { return this.url; }
+    async getBytes(offset, length) {
+      if (!this.buf) this.buf = fetch(this.url).then((r) => { if (!r.ok) throw new Error("map tiles: HTTP " + r.status); return r.arrayBuffer(); }).catch((e) => { this.buf = null; throw e; });
+      return { data: (await this.buf).slice(offset, offset + length) };
+    }
+  }
+  const archive = new pmtiles.PMTiles(new MemorySource("tiles/garden-city.pmtiles"));
+  const basemap = (flavor) => protomapsL.leafletLayer({ url: archive, flavor, lang: "en", attribution: "" });
   const dark = window.matchMedia("(prefers-color-scheme: dark)");
-  let tiles = TILE(dark.matches ? "dark_all" : "voyager").addTo(map);
-  dark.addEventListener?.("change", () => { map.removeLayer(tiles); tiles = TILE(dark.matches ? "dark_all" : "voyager").addTo(map); });
+  let tiles = basemap(dark.matches ? "dark" : "light").addTo(map);
+  dark.addEventListener?.("change", () => { map.removeLayer(tiles); tiles = basemap(dark.matches ? "dark" : "light").addTo(map); });
   const layer = L.layerGroup().addTo(map);
   const markers = {};
 
