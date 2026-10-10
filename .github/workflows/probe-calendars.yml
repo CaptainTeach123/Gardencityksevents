@@ -24,8 +24,14 @@ jobs:
             elif grep -qi '<rss\|<feed\|<channel' /tmp/p.out 2>/dev/null; then
               echo "*** RSS/Atom FEED: $(grep -ci '<item\|<entry' /tmp/p.out) items"; grep -m6 -i '<title' /tmp/p.out | head -6
             elif head -c 1 /tmp/p.out | grep -q '[{\[]'; then
-              echo "*** JSON: $(head -c 700 /tmp/p.out | tr '\n' ' ')"
+              echo "*** JSON: $(head -c 300 /tmp/p.out | tr '\n' ' ')"
+              case "$url" in
+                *gardencityarts*) echo "--- GCA upcoming:"; jq -c '[.upcoming[0:3][] | {title, startDate, endDate, fullUrl, location, recurrence}], (.upcoming|length), (.past|length)' /tmp/p.out 2>&1 | head -c 1500 ;;
+                *tribe/events*) echo "--- library event sample:"; jq -c '.events[0:2][] | {title, start_date, end_date, timezone, url, venue: (.venue|{venue,address}), categories: [.categories[].name]}' /tmp/p.out 2>&1 | head -c 1500; jq -c '{total, total_pages}' /tmp/p.out ;;
+              esac
             else
+              echo "ical/webcal/ics mentions:"; grep -oiE "[^\"' <>]*(webcal|\.ics|ical)[^\"' <>]*" /tmp/p.out | sort -u | head -12
+              echo "ld+json blocks: $(grep -c 'application/ld+json' /tmp/p.out)"; grep -o 'application/ld+json[^<]*<' /tmp/p.out | head -c 0
               echo "title: $(grep -io '<title>[^<]*' /tmp/p.out | head -1)"
               echo "feed-like links:"
               grep -oiE "(href|src)=[\"'][^\"']*(\.ics|ical|webcal|\.rss|rss|/feed|RSSFeed|\.xml|calendar|events)[^\"']*" /tmp/p.out | sed -E "s/^(href|src)=[\"']//I" | sort -u | head -25
