@@ -76,10 +76,20 @@ function findVenue(location, description) {
 }
 /* A venue we've never seen: create an entry from the LOCATION text. It has no coordinates until
  * scripts/geocode.js fills them in; events there are held back (and reported) until then. */
+const ABBR = { street: "st", avenue: "ave", drive: "dr", road: "rd", boulevard: "blvd", lane: "ln", north: "n", south: "s", east: "e", west: "w" };
+const streetKey = (addr) => {      // "605 E. Walnut Street, Garden City" -> "605 e walnut"
+  const t = String(addr || "").split(",")[0].toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(Boolean).map((w) => ABBR[w] || w);
+  return /^\d/.test(t[0] || "") ? t.filter((w) => !["st", "ave", "dr", "rd", "blvd", "ln"].includes(w)).slice(0, 3).join(" ") : "";
+};
 function addVenue(location) {
   const parts = location.split(",").map((x) => x.trim()).filter((x) => x && !/^united states$/i.test(x));
   if (!parts.length) return null;
   const name = parts[0];
+  const key = streetKey(parts[1]);
+  if (key) {                       // e.g. "Finnup/Hutchison Rooms" at the library's street address: same place, same pin
+    const same = Object.entries(venues).find(([, v]) => streetKey(v.address) === key);
+    if (same) { same[1].match.push(name.toLowerCase()); return same[0]; }
+  }
   const id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   if (!id) return null;
   if (!venues[id]) {

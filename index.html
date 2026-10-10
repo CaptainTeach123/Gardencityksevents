@@ -207,6 +207,7 @@
   .dlg .btn[disabled] { opacity: .5; }
   .dlg-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .toast { position: absolute; z-index: 2000; left: 50%; bottom: calc(var(--sheet-h) + 18px); transform: translate(-50%, 20px); max-width: calc(100% - 32px); padding: 10px 16px; border-radius: 12px; background: var(--ink); color: var(--surface); font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+  .app.plan-open .toast { bottom: calc(86px + var(--safe-b)); }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
   /* ---------- desktop ---------- */
@@ -232,7 +233,71 @@
     .attrib { bottom: 6px; left: auto; right: 8px; }
     .leaflet-control-zoom { display: block; }
     .toast { left: calc(420px + (100% - 420px) / 2); bottom: 20px; }
+    .app.plan-open .toast { left: 50%; }
     dialog { margin: auto; max-width: 440px; border-radius: 22px; }
+  }
+
+  /* ---------- hearts + plan button ---------- */
+  .evrow { display: flex; align-items: center; }
+  .evrow .ev { flex: 1; min-width: 0; }
+  .heart { flex: none; width: 44px; height: 44px; border: 0; border-radius: 12px; background: none; color: var(--muted); display: grid; place-items: center; }
+  .heart:active { transform: scale(.9); }
+  .heart[aria-pressed="true"] { color: #e8485c; }
+  .heart[aria-pressed="true"] svg { fill: currentColor; }
+  .plan-btn { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border: 0; border-radius: 999px; background: var(--ink); color: var(--surface); font-weight: 700; font-size: 14px; white-space: nowrap; }
+  .plan-btn b { background: var(--gold); color: var(--gold-ink); border-radius: 999px; padding: 0 7px; font-size: 12px; }
+
+  /* ---------- plan my day ---------- */
+  .plan { position: absolute; inset: 0; z-index: 1500; display: flex; flex-direction: column; color: #f1effa; --pm: #a9a5cc; --pl: rgba(255,255,255,.14);
+          background-color: #201d38; background-image: radial-gradient(rgba(255,255,255,.17) 1.4px, transparent 1.6px), radial-gradient(120% 80% at 50% 0%, #34315c 0%, #201d38 58%, #151326 100%); background-size: 40px 40px, 100% 100%; }
+  .plan[hidden] { display: none; }
+  .plan :focus-visible { outline-color: #f0b429; }
+  .plan-top { flex: none; display: flex; align-items: center; gap: 8px; padding: calc(var(--safe-t) + 10px) 12px 4px; }
+  .pbtn { flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.1); color: #f1effa; display: grid; place-items: center; }
+  .pbtn:active { transform: scale(.94); }
+  .plan-day { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 2px; }
+  .plan-day h2 { margin: 0; font-family: var(--display); font-size: 19px; line-height: 1.1; text-align: center; min-width: 8.5ch; white-space: nowrap; display: grid; }
+  .plan-day h2 small { font: 700 11px var(--font); letter-spacing: .08em; text-transform: uppercase; color: #f0b429; }
+  .plan-day .pbtn { background: none; }
+  .ampm { flex: none; display: flex; padding: 3px; border-radius: 12px; background: rgba(255,255,255,.1); }
+  .ampm button { min-height: 36px; padding: 0 12px; border: 0; border-radius: 9px; background: none; color: var(--pm); font-weight: 700; font-size: 13px; }
+  .ampm button[aria-pressed="true"] { background: #f1effa; color: #201d38; }
+  .plan-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 14px 24px; }
+  .plan-main { max-width: 540px; margin: 0 auto; display: grid; gap: 14px; }
+  .plan-clock svg { display: block; width: 100%; height: auto; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .plan-clock .face { cursor: grab; }
+  .pev { cursor: pointer; }
+  .pev text { font: 600 12.5px var(--font); fill: #fff; pointer-events: none; letter-spacing: .1px; }
+  .pev:focus-visible { outline: none; }
+  .pev:focus-visible .main { stroke: #fff; }
+  .plan-time { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .plan-time output { font-family: var(--display); font-weight: 700; font-size: 26px; min-width: 6.5ch; text-align: center; font-variant-numeric: tabular-nums; }
+  .plan-time small { font: 700 13px var(--font); color: var(--pm); margin-left: 3px; }
+  .plan-time .pbtn { width: 40px; height: 40px; }
+  .plan-time .nowbtn { height: 40px; padding: 0 14px; border: 0; border-radius: 12px; background: #f0b429; color: #3a2a00; font-weight: 700; }
+  .pcard { padding: 14px; border-radius: 18px; background: rgba(255,255,255,.08); border: 1px solid var(--pl); display: grid; gap: 10px; }
+  .pcard h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+  .pcard p { margin: 0; color: var(--pm); font-size: 14px; }
+  .pcard .hint { text-align: center; padding: 6px 0; }
+  .plan .btn { background: rgba(255,255,255,.1); border-color: var(--pl); color: #f1effa; }
+  .plan .btn.primary { background: #f0b429; border-color: #f0b429; color: #3a2a00; }
+  .plan .btn[disabled] { opacity: .45; }
+  .psec { margin: 8px 2px -4px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--pm); display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .psec span { text-transform: none; letter-spacing: 0; font-weight: 500; }
+  .prow { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid transparent; text-align: left; width: 100%; color: inherit; }
+  .prow.sel { border-color: #f0b429; }
+  .prow .dot { flex: none; width: 10px; align-self: stretch; border-radius: 5px; background: var(--c); }
+  .prow .pt { flex: 1; min-width: 0; display: grid; gap: 1px; }
+  .prow .pt b { font-size: 15px; line-height: 1.25; }
+  .prow .pt span { font-size: 13px; color: var(--pm); }
+  .prow .pbtn { width: 38px; height: 38px; }
+  .gapnote { margin: -4px 8px; padding-left: 14px; border-left: 2px dashed var(--pl); font-size: 12.5px; color: var(--pm); min-height: 22px; display: flex; align-items: center; gap: 6px; }
+  .gapnote.warn { color: #ffcf6b; border-left-color: #ffcf6b; }
+  .plan-foot { flex: none; padding: 10px 14px calc(12px + var(--safe-b)); background: linear-gradient(rgba(21,19,38,0), #151326 45%); }
+  .plan-foot .btn { width: 100%; max-width: 540px; margin: 0 auto; display: flex; justify-content: center; }
+  @media (min-width: 900px) {
+    .plan-main { max-width: 1040px; grid-template-columns: minmax(380px, 1fr) minmax(340px, 400px); align-items: start; gap: 18px 36px; }
+    .plan-clock { grid-row: 1 / span 2; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -304,6 +369,29 @@
     <div class="sheet-body" id="sheetBody" aria-live="polite"></div>
   </section>
 
+  <section class="plan" id="plan" role="dialog" aria-modal="true" aria-labelledby="planTitle" hidden>
+    <div class="plan-top">
+      <button class="pbtn" id="planClose" type="button" aria-label="Close plan"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <div class="plan-day">
+        <button class="pbtn" id="planPrev" type="button" aria-label="Previous day"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <h2 id="planTitle"></h2>
+        <button class="pbtn" id="planNext" type="button" aria-label="Next day"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+      </div>
+      <div class="ampm" id="ampm" role="group" aria-label="Morning or afternoon"><button type="button" data-h="am">AM</button><button type="button" data-h="pm">PM</button></div>
+    </div>
+    <div class="plan-scroll" id="planScroll">
+      <div class="plan-main">
+        <div class="plan-clock" id="planClock"></div>
+        <div style="display:grid;gap:14px">
+          <div class="plan-time" id="planTime"></div>
+          <div class="pcard" id="planCard"></div>
+        </div>
+        <div id="planList" style="display:grid;gap:10px"></div>
+      </div>
+    </div>
+    <div class="plan-foot"><button class="btn primary" id="planCal" type="button"></button></div>
+  </section>
+
   <div class="toast" id="toast" role="status"></div>
   <div id="safeProbe" style="position:absolute;visibility:hidden;padding-bottom:env(safe-area-inset-bottom,0px)"></div>
 </div>
@@ -356,6 +444,11 @@
     ext: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
     calplus: '<path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/>',
     download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+    heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+    plus: '<path d="M5 12h14"/><path d="M12 5v14"/>',
+    minus: '<path d="M5 12h14"/>',
+    x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+    alert: '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
     rss: '<path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>',
   };
   const svg = (name, size) => `<svg class="ico" width="${size || 18}" height="${size || 18}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.other}</svg>`;
@@ -420,7 +513,15 @@
     if (!ok) console.warn("Skipping invalid event:", e);
     return ok;
   });
-  events.forEach((e, i) => { e.idx = i; });
+  events.forEach((e, i) => { e.idx = i; e.uid = IcsExport.uid(e); });
+
+  /* "my day": events the visitor hearted, remembered on this device */
+  const PLAN_KEY = "gc-plan-v1";
+  const plan = new Set();
+  try { JSON.parse(localStorage.getItem(PLAN_KEY) || "[]").forEach((u) => plan.add(u)); } catch (_) {}
+  const savePlan = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify([...plan])); } catch (_) {} };
+  const touchesDay = (e, d) => e.start < `${addDays(d, 1)}T00:00` && e.end > `${d}T00:00`;
+  const plannedFor = (d) => events.filter((e) => plan.has(e.uid) && touchesDay(e, d));
 
   const state = { date: "", time: "", window: "week", showEnded: false, cats: new Set(Object.keys(CATEGORIES)), sel: null };
   const moment = () => `${state.date}T${state.time}`;
@@ -608,6 +709,7 @@
     return r ? `<span class="tag">${esc(r)}</span>` : "";
   }
 
+  const heartBtn = (e) => `<button class="heart" type="button" data-plan="${e.idx}" aria-pressed="${plan.has(e.uid)}" aria-label="${plan.has(e.uid) ? "Remove from my day" : "Add to my day"}: ${esc(e.title)}">${svg("heart", 22)}</button>`;
   function listHtml(evs) {
     const T = moment();
     if (!evs.length) {
@@ -626,11 +728,14 @@
     }));
     if (ended.length) groups.push({ title: "Already ended", list: ended });
     return groups.map((g) => `<h3 class="gh ${g.cls || ""}">${esc(g.title)} <b>${g.list.length}</b></h3>` + g.list.map((e) => `
-      <button class="ev" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
-        <span class="ev-ico">${svg(CATEGORIES[e.category] ? e.category : "other", 20)}</span>
-        <span class="ev-main"><span class="ev-title">${esc(e.title)}</span><span class="ev-meta when">${esc(timeRange(e))}</span><span class="ev-meta">${esc(venues[e.venue].name)}</span></span>
-        ${tagFor(e, T)}
-      </button>`).join("")).join("") + footHtml();
+      <div class="evrow">
+        <button class="ev" type="button" data-ev="${e.idx}" style="--c:${cat(e.category).color}">
+          <span class="ev-ico">${svg(CATEGORIES[e.category] ? e.category : "other", 20)}</span>
+          <span class="ev-main"><span class="ev-title">${esc(e.title)}</span><span class="ev-meta when">${esc(timeRange(e))}</span><span class="ev-meta">${esc(venues[e.venue].name)}</span></span>
+          ${tagFor(e, T)}
+        </button>
+        ${heartBtn(e)}
+      </div>`).join("")).join("") + footHtml();
   }
   const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
@@ -660,6 +765,7 @@
         ${(meta.sources || {})[e.src] ? `<p class="meta" style="font-size:12.5px">Source: ${esc(meta.sources[e.src].name)}</p>` : ""}
         ${e.desc ? `<p class="desc">${esc(e.desc.length >= 320 ? e.desc.slice(0, 320).replace(/\s+\S*$/, "") + "…" : e.desc)}</p>` : ""}
         <div class="btn-row">
+          <button class="btn small" type="button" data-plan="${e.idx}" aria-pressed="${plan.has(e.uid)}">${svg("heart", 17)} ${plan.has(e.uid) ? "In my day" : "Add to my day"}</button>
           <a class="btn small" href="${esc(IcsExport.googleUrl(e, v))}" target="_blank" rel="noopener">${svg("calplus", 17)} Google Calendar</a>
           <button class="btn small" type="button" data-ics="${e.idx}">${svg("download", 17)} Apple / Outlook</button>
           ${safeUrl(e.url) ? `<a class="btn small" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">Details ${svg("ext", 16)}</a>` : ""}
@@ -683,7 +789,9 @@
   function sheetHeadHtml(evs) {
     if (state.sel) return `<button class="back" type="button" data-back data-nodrag>${svg("back", 18)} All events</button>`;
     const live = evs.filter((e) => e.status === "active").length, soon = evs.filter((e) => e.status === "upcoming").length;
-    return `<div class="sum"><span><i style="background:var(--live)"></i>${live} live</span><span><i style="background:var(--soon)"></i>${soon} upcoming</span></div>`;
+    const mine = plannedFor(state.date).length;
+    return `<div class="sum"><span><i style="background:var(--live)"></i>${live} live</span><span><i style="background:var(--soon)"></i>${soon} upcoming</span></div>
+      <button class="plan-btn" type="button" data-openplan data-nodrag>${svg("clock", 17)} Plan my day${mine ? ` <b>${mine}</b>` : ""}</button>`;
   }
 
   function renderWhen(dateChanged) {
@@ -742,6 +850,7 @@
     $("dlVisible").disabled = !n;
     $("dlVisible").innerHTML = `${svg("download", 19)} ${n ? `Download ${n} event${n === 1 ? "" : "s"} (.ics)` : "No events to add"}`;
     saveHash();
+    if (!$("plan").hidden && !planDragging) renderPlan();
   }
 
   function setMoment(date, time) {
@@ -769,6 +878,213 @@
     $("whenToggle").setAttribute("aria-expanded", String(open));
   }
 
+  /* ====================== Plan my day: the clock ====================== */
+  const G = { FACE: 96, THICK: 26, GAP: 4, PAD: 12 };                 // clock geometry (SVG units)
+  let planHalf = "pm", planSel = null, planDragging = false;
+  const polar = (r, deg) => { const a = (deg * Math.PI) / 180; return [r * Math.sin(a), -r * Math.cos(a)]; };
+  const f2 = (n) => n.toFixed(2);
+  const arcD = (r, d1, d2, sweep) => {
+    const [x1, y1] = polar(r, d1), [x2, y2] = polar(r, d2);
+    return `M${f2(x1)} ${f2(y1)}A${r} ${r} 0 ${Math.abs(d2 - d1) > 180 ? 1 : 0} ${sweep} ${f2(x2)} ${f2(y2)}`;
+  };
+  const km = (a, b) => { const r = Math.PI / 180, h = Math.sin(((b.lat - a.lat) * r) / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(((b.lng - a.lng) * r) / 2) ** 2; return 12742 * Math.asin(Math.sqrt(h)); };
+  const clockTime = (t) => { const p = parts(`2000-01-01T${t}`), f = fmt12(p.h, p.mi); return { txt: `${f.num.includes(":") ? f.num : f.num + ":00"}`, ap: f.ap }; };
+
+  function layoutPlan(list, half) {
+    const base = `${state.date}T00:00`, hs = half === "am" ? 0 : 720, r0 = G.FACE + G.PAD + G.THICK / 2;
+    const items = [];
+    for (const e of list) {
+      const s0 = Math.max(0, toMin(e.start) - toMin(base)) - hs, e0 = Math.min(1440, toMin(e.end) - toMin(base)) - hs;
+      const s1 = Math.max(0, s0), e1 = Math.min(720, e0);
+      if (e1 <= s1) continue;
+      const trueSpan = (e1 - s1) / 2;                                   // degrees (720 min = 360°)
+      const needPx = Math.min(e.title.length, 16) * 6.6 + 24;
+      const needDeg = ((needPx / r0) * 180) / Math.PI;
+      const span = Math.max(trueSpan, needDeg), mid = (s1 + e1) / 4;
+      items.push({ e, vs: trueSpan >= needDeg ? s1 / 2 : mid - span / 2, ve: trueSpan >= needDeg ? e1 / 2 : mid + span / 2, mid, clippedStart: s0 < 0, clippedEnd: e0 > 720 });
+    }
+    items.sort((a, b) => a.vs - b.vs || a.ve - b.ve);
+    const laneEnd = [];                                                 // greedy rings: first ring whose last block has finished
+    for (const it of items) {
+      let k = laneEnd.findIndex((end) => end + 1.5 <= it.vs);
+      if (k < 0) { k = laneEnd.length; laneEnd.push(-999); }
+      laneEnd[k] = it.ve; it.lane = k;
+    }
+    return { items, lanes: Math.max(1, laneEnd.length) };
+  }
+
+  function renderPlan() {
+    const T = moment(), list = plannedFor(state.date).filter((e) => !e.allDay).sort((a, b) => a.start.localeCompare(b.start));
+    const allDay = plannedFor(state.date).filter((e) => e.allDay);
+    $("planTitle").innerHTML = `${esc(dayShort(state.date))}${state.date === nowLocal().date ? "<small>Today</small>" : ""}`;
+
+    // AM / PM counts
+    const count = (h) => layoutPlan(list, h).items.length;
+    document.querySelectorAll("#ampm button").forEach((b) => { const n = count(b.dataset.h); b.setAttribute("aria-pressed", String(b.dataset.h === planHalf)); b.textContent = b.dataset.h.toUpperCase() + (n ? ` · ${n}` : ""); });
+
+    const { items, lanes } = layoutPlan(list, planHalf);
+    const th = lanes <= 3 ? 26 : lanes <= 5 ? 22 : 19, gap = lanes <= 3 ? 4 : 3;     // thinner rings keep the clock big when many events stack
+    const fs = th >= 26 ? 12.5 : th >= 22 ? 11.5 : 10.5, cw = (6.6 * fs) / 12.5;
+    const laneR = (k) => G.FACE + G.PAD + k * (th + gap) + th / 2;
+    const half = Math.max(150, laneR(lanes - 1) + th / 2 + 12);
+    const tm = minutesOf(state.time);
+
+    let out = `<svg viewBox="${-half} ${-half} ${half * 2} ${half * 2}" role="group" aria-label="Clock of your day, ${planHalf === "am" ? "morning" : "afternoon"}">`;
+    out += `<circle class="face" r="${G.FACE}" fill="#14132a" stroke="rgba(255,255,255,.07)" stroke-width="2"/>`;
+    for (let i = 0; i < 60; i++) {                                       // minute dots, bigger on the hours
+      const [x, y] = polar(G.FACE - 9, i * 6);
+      out += i % 5 === 0 ? `<circle cx="${f2(x)}" cy="${f2(y)}" r="2.3" fill="#fff"/>` : `<circle cx="${f2(x)}" cy="${f2(y)}" r="1" fill="rgba(255,255,255,.35)"/>`;
+    }
+    for (let h = 1; h <= 12; h++) { const [x, y] = polar(G.FACE - 38, h * 30); out += `<text x="${f2(x)}" y="${f2(y)}" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, system-ui, sans-serif" font-weight="700" font-size="22" fill="#fff" pointer-events="none">${h}</text>`; }
+
+    items.forEach((it, i) => {
+      const e = it.e, r = laneR(it.lane), cap = ((th / 2 / r) * 180) / Math.PI, c = cat(e.category).color;
+      const a1 = Math.min(it.vs + cap, it.mid - 0.05), a2 = Math.max(it.ve - cap, it.mid + 0.05);
+      const status = statusOf(e, T), top = Math.cos((it.mid * Math.PI) / 180) >= 0;
+      const visLen = ((it.ve - it.vs) * Math.PI * r) / 180, maxChars = Math.max(3, Math.floor((visLen - 18) / cw));
+      const label = e.title.length > maxChars ? e.title.slice(0, Math.max(1, maxChars - 1)).trimEnd() + "…" : e.title;
+      const tr = top ? r - fs * 0.35 : r + fs * 0.35;                                // text sits on its path: flip direction on the lower half so it reads upright
+      const textPath = top ? arcD(tr, a1, a2, 1) : arcD(tr, a2, a1, 0);
+      const done = status === "ended", sel = planSel === e.uid;
+      const spoken = `${e.title}, ${timeRange(e)}, ${venues[e.venue].name}`;
+      out += `<g class="pev" data-uid="${esc(e.uid)}" tabindex="0" role="button" aria-label="${esc(spoken)}" opacity="${done ? 0.5 : 1}">`;
+      if (sel) out += `<path d="${arcD(r, a1, a2, 1)}" fill="none" stroke="#fff" stroke-width="${th + 6}" stroke-linecap="round" opacity=".95"/>`;
+      out += `<path class="main" d="${arcD(r, a1, a2, 1)}" fill="none" stroke="${c}" stroke-width="${th}" stroke-linecap="round"/>`;
+      if (status === "active" && !e.open) {                              // the part of the block that has already happened is darker
+        const now = Math.min(Math.max((tm - (planHalf === "am" ? 0 : 720)) / 2, a1), a2);
+        if (now > a1 + 0.2) out += `<path d="${arcD(r, a1, now, 1)}" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="${th}" stroke-linecap="round"/>`;
+      }
+      out += `<path id="tp${i}" d="${textPath}" fill="none"/><text style="font-size:${fs}px"><textPath href="#tp${i}" xlink:href="#tp${i}" startOffset="50%" text-anchor="middle">${esc(label)}</textPath></text>`;
+      if (it.clippedStart || it.clippedEnd) { const [x, y] = polar(r, it.clippedStart ? a1 : a2); out += `<circle cx="${f2(x)}" cy="${f2(y)}" r="3" fill="#fff" opacity=".9"/>`; }   // runs past noon/midnight
+      out += `</g>`;
+    });
+
+    // hands: they show the selected time and can be dragged
+    const hAng = ((tm / 60) % 12) * 30, mAng = (tm % 60) * 6;
+    out += `<g id="hands" pointer-events="none"><line id="hh" x2="0" y2="${-G.FACE * 0.52}" stroke="#7a7699" stroke-width="9" stroke-linecap="round" transform="rotate(${hAng})"/>`
+         + `<line id="mh" x2="0" y2="${-G.FACE * 0.84}" stroke="#8f8bb0" stroke-width="6" stroke-linecap="round" transform="rotate(${mAng})"/>`
+         + `<circle r="8" fill="#fff"/><circle r="3" fill="#14132a"/></g>`;
+    out += `<circle id="faceHit" class="face" r="${G.FACE}" fill="transparent"/>`;       // on top, to catch drags
+    out += `</svg>`;
+    $("planClock").innerHTML = out;
+
+    // time readout + stepper
+    const ct = clockTime(state.time);
+    $("planTime").innerHTML = `<button class="pbtn" type="button" data-step="-30" aria-label="30 minutes earlier">${svg("minus", 18)}</button><output id="planOut" aria-live="polite">${ct.txt}<small>${ct.ap}</small></output><button class="pbtn" type="button" data-step="30" aria-label="30 minutes later">${svg("plus", 18)}</button><button class="nowbtn" type="button" data-now>Now</button>`;
+
+    // selected block card
+    const selE = planSel && events.find((x) => x.uid === planSel);
+    if (selE && plan.has(selE.uid)) {
+      const v = venues[selE.venue];
+      $("planCard").innerHTML = `<h3>${esc(selE.title)}</h3><p>${esc(timeRange(selE))} · ${esc(v.name)}</p>
+        <div class="btn-row"><a class="btn primary grow" href="${esc(mapsUrl(selE.venue, "dir"))}" target="_blank" rel="noopener">${svg("nav", 18)} Directions</a>
+        <button class="btn" type="button" data-showmap="${selE.idx}">${svg("pin", 17)} On map</button>
+        <button class="btn" type="button" data-plan="${selE.idx}">${svg("x", 17)} Remove</button></div>`;
+    } else if (list.length || allDay.length) {
+      $("planCard").innerHTML = `<p class="hint">Tap a block for details. Drag the clock face, or use − and +, to move the time.</p>`;
+    } else {
+      $("planCard").innerHTML = `<p class="hint"><b style="color:#fff">Nothing planned for ${esc(dayShort(state.date))}.</b><br>Tap the ♡ on any event, or add one from the list below, and it appears on the clock.</p>`;
+    }
+
+    // list: your day, with travel hints; all-day; ideas
+    const row = (e, planned) => { const v = venues[e.venue]; return `<div class="prow${planSel === e.uid ? " sel" : ""}" style="--c:${cat(e.category).color}"><span class="dot"></span>
+        <button class="pt" type="button" data-pick="${e.idx}" style="all:unset;flex:1;min-width:0;display:grid;gap:1px;cursor:pointer"><b>${esc(e.title)}</b><span>${esc(timeRange(e))} · ${esc(v.name)}</span></button>
+        <button class="pbtn" type="button" data-plan="${e.idx}" aria-label="${planned ? "Remove" : "Add"} ${esc(e.title)}">${svg(planned ? "x" : "plus", 18)}</button></div>`; };
+    let html = "";
+    if (list.length || allDay.length) {
+      const first = list[0], last = list[list.length - 1];
+      html += `<div class="psec">Your day <span>${list.length} event${list.length === 1 ? "" : "s"}${first ? ` · ${timeStr(first.start)} – ${timeStr(last.end)}` : ""}</span></div>`;
+      allDay.forEach((e) => { html += row(e, true); });
+      list.forEach((e, i) => {
+        html += row(e, true);
+        const nx = list[i + 1]; if (!nx) return;
+        const gap = Math.round(toMin(nx.start) - toMin(e.end)), a = venues[e.venue], b = venues[nx.venue];
+        const drive = e.venue === nx.venue ? 0 : Math.max(3, Math.round(km(a, b) / 0.8) + 2);   // ~30 mph around town, plus parking
+        if (gap < 0) html += `<div class="gapnote warn">${svg("alert", 15)} Overlaps with the next event by ${-gap} min</div>`;
+        else if (e.venue === nx.venue) html += `<div class="gapnote">Same place · ${gap} min between</div>`;
+        else if (gap < drive) html += `<div class="gapnote warn">${svg("alert", 15)} Tight: ${gap} min between, about ${drive} min to drive</div>`;
+        else html += `<div class="gapnote">${gap} min between · about ${drive} min to drive</div>`;
+      });
+    }
+    const more = events.filter((e) => !e.allDay && !plan.has(e.uid) && touchesDay(e, state.date)).sort((a, b) => a.start.localeCompare(b.start));
+    if (more.length) {
+      html += `<div class="psec">Add to your day <span>${more.length} on ${esc(dayShort(state.date))}</span></div>`;
+      more.slice(0, planAll ? 99 : 6).forEach((e) => { html += row(e, false); });
+      if (more.length > 6 && !planAll) html += `<button class="btn" type="button" data-planall>Show all ${more.length}</button>`;
+    }
+    $("planList").innerHTML = html;
+
+    const n = list.length + allDay.length;
+    $("planCal").disabled = !n;
+    $("planCal").innerHTML = `${svg("calplus", 19)} ${n ? `Add my ${n} event${n === 1 ? "" : "s"} to my calendar` : "Nothing planned yet"}`;
+  }
+  let planAll = false;
+
+  function updateHands() {
+    const tm = minutesOf(state.time);
+    $("hh")?.setAttribute("transform", `rotate(${((tm / 60) % 12) * 30})`);
+    $("mh")?.setAttribute("transform", `rotate(${(tm % 60) * 6})`);
+    const ct = clockTime(state.time); const o = $("planOut"); if (o) o.innerHTML = `${ct.txt}<small>${ct.ap}</small>`;
+  }
+  function openPlan() {
+    planHalf = minutesOf(state.time) < 720 ? "am" : "pm"; planSel = null; planAll = false;
+    setWhen(false);
+    $("plan").hidden = false; app.classList.add("plan-open"); renderPlan(); $("planClose").focus();
+  }
+  function closePlan() { $("plan").hidden = true; app.classList.remove("plan-open"); planDragging = false; render(); }
+  function togglePlan(idx) {
+    const e = events[idx]; if (!e) return;
+    if (plan.has(e.uid)) { plan.delete(e.uid); if (planSel === e.uid) planSel = null; toast("Removed from your day"); }
+    else { plan.add(e.uid); planSel = e.uid; toast("Added to your day"); if (!e.allDay) planHalf = toMin(e.start) - toMin(`${state.date}T00:00`) < 720 ? "am" : "pm"; }
+    savePlan(); render();
+  }
+
+  // drag the clock face to set the time (snaps to 5 minutes)
+  function faceTime(ev) {
+    const svgEl = $("planClock").querySelector("svg"), r = svgEl.getBoundingClientRect();
+    let a = (Math.atan2(ev.clientX - (r.left + r.width / 2), -(ev.clientY - (r.top + r.height / 2))) * 180) / Math.PI; if (a < 0) a += 360;
+    return timeOf(((planHalf === "am" ? 0 : 720) + (Math.round((a * 2) / 5) * 5) % 720));
+  }
+  let dragRaf = 0;
+  $("planClock").addEventListener("pointerdown", (ev) => {
+    if (ev.target.id !== "faceHit") return;
+    planDragging = true; ev.target.setPointerCapture(ev.pointerId);
+    state.time = faceTime(ev); updateHands();
+  });
+  $("planClock").addEventListener("pointermove", (ev) => {
+    if (!planDragging) return;
+    state.time = faceTime(ev); updateHands();
+    if (!dragRaf) dragRaf = requestAnimationFrame(() => { dragRaf = 0; render(); });
+  });
+  const endFaceDrag = () => { if (planDragging) { planDragging = false; render(); } };
+  $("planClock").addEventListener("pointerup", endFaceDrag);
+  $("planClock").addEventListener("pointercancel", endFaceDrag);
+  $("planClock").addEventListener("click", (ev) => {
+    const g = ev.target.closest(".pev"); if (!g) return;
+    planSel = planSel === g.dataset.uid ? null : g.dataset.uid; renderPlan();
+  });
+  $("planClock").addEventListener("keydown", (ev) => {
+    if ((ev.key === "Enter" || ev.key === " ") && ev.target.classList?.contains("pev")) { ev.preventDefault(); planSel = ev.target.dataset.uid; renderPlan(); }
+  });
+
+  $("plan").addEventListener("click", (ev) => {
+    const t = ev.target;
+    const heart = t.closest("[data-plan]"); if (heart) { togglePlan(+heart.dataset.plan); return; }
+    const pick = t.closest("[data-pick]"); if (pick) { const e = events[+pick.dataset.pick]; if (plan.has(e.uid)) { planSel = e.uid; planHalf = toMin(e.start) - toMin(`${state.date}T00:00`) < 720 ? "am" : "pm"; renderPlan(); } else togglePlan(e.idx); return; }
+    const step = t.closest("[data-step]"); if (step) { state.time = timeOf(Math.min(1425, Math.max(0, minutesOf(state.time) + +step.dataset.step))); render(); return; }
+    if (t.closest("[data-now]")) { const n = nowLocal(); planHalf = minutesOf(n.time) < 720 ? "am" : "pm"; setMoment(n.date, n.time); return; }
+    const h = t.closest("[data-h]"); if (h) { planHalf = h.dataset.h; renderPlan(); return; }
+    if (t.closest("[data-planall]")) { planAll = true; renderPlan(); return; }
+    const sm = t.closest("[data-showmap]"); if (sm) { const e = events[+sm.dataset.showmap]; closePlan(); openVenue(e.venue, e.idx, true); return; }
+  });
+  $("planClose").addEventListener("click", closePlan);
+  $("planPrev").addEventListener("click", () => { planSel = null; planAll = false; setMoment(addDays(state.date, -1)); });
+  $("planNext").addEventListener("click", () => { planSel = null; planAll = false; setMoment(addDays(state.date, 1)); });
+  $("planCal").addEventListener("click", () => {
+    const mine = plannedFor(state.date).sort((a, b) => a.start.localeCompare(b.start)); if (!mine.length) return;
+    download(`my-day-${state.date}.ics`, icsOf(mine)); toast("Calendar file downloaded");
+  });
+
   /* ---- events ---- */
   $("whenToggle").addEventListener("click", () => setWhen(!$("when").classList.contains("open")));
   $("now").addEventListener("click", () => { const n = nowLocal(); setMoment(n.date, n.time); });
@@ -788,11 +1104,16 @@
       installEvt.userChoice.finally(() => { installEvt = null; render(); });
       return;
     }
+    const heart = e.target.closest("[data-plan]");
+    if (heart) { togglePlan(+heart.dataset.plan); return; }
     const ics = e.target.closest("[data-ics]");
     if (ics) { const x = events[+ics.dataset.ics]; download(`${slug(x.title)}.ics`, icsOf([x])); toast("Calendar file downloaded"); }
   });
-  $("sheetHead").addEventListener("click", (e) => { if (e.target.closest("[data-back]")) closeVenue(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && state.sel && !$("calDialog").open) closeVenue(); });
+  $("sheetHead").addEventListener("click", (e) => { if (e.target.closest("[data-back]")) closeVenue(); else if (e.target.closest("[data-openplan]")) openPlan(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape" || $("calDialog").open) return;
+    if (!$("plan").hidden) closePlan(); else if (state.sel) closeVenue();
+  });
 
   let me;
   $("locate").addEventListener("click", () => {

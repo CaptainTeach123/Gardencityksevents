@@ -92,12 +92,6 @@ window.VENUES = {
     "address": "801 Campus Dr, Garden City, KS",
     "lat": 37.97008,
     "lng": -100.84966
-  },
-  "finnup-hutchison-rooms": {
-    "name": "Finnup/Hutchison Rooms",
-    "address": "605 E. Walnut Street, Garden City, KS",
-    "lat": 37.97057,
-    "lng": -100.86578
   }
 };
 window.EVENTS = [
@@ -164,7 +158,7 @@ window.EVENTS = [
   {"title":"Drawn Together","venue":"library","category":"family","start":"2026-10-22T16:30","end":"2026-10-22T17:00","url":"https://finneylibrary.org/event/drawn-together/2026-10-22/","src":"library","desc":"Learn the process for making art and the different forms it takes."},
   {"title":"Canvas+Paint - Oct 22nd","venue":"gca","category":"arts","start":"2026-10-22T18:00","end":"2026-10-22T20:00","url":"https://gardencityarts.org/upcoming-events/canvas-paintoct-15th-k6bxz","src":"gca","desc":""},
   {"title":"Dungeons & Dragons Junior","venue":"library","category":"community","start":"2026-10-22T18:00","end":"2026-10-22T19:00","url":"https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-10-22/","src":"library","desc":"A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17"},
-  {"title":"T.A.L.C","venue":"finnup-hutchison-rooms","category":"community","start":"2026-10-22T18:00","end":"2026-10-22T19:00","url":"https://finneylibrary.org/event/t-a-l-c-8/2026-10-22/","src":"library","desc":"This is a teen group of volunteers that help the library with any and all aspects of Library Programming. This group meets the 4th Thursday of every month at 6pm. Ages 10-17! Contact the library for more details"},
+  {"title":"T.A.L.C","venue":"library","category":"community","start":"2026-10-22T18:00","end":"2026-10-22T19:00","url":"https://finneylibrary.org/event/t-a-l-c-8/2026-10-22/","src":"library","desc":"This is a teen group of volunteers that help the library with any and all aspects of Library Programming. This group meets the 4th Thursday of every month at 6pm. Ages 10-17! Contact the library for more details"},
   {"title":"Wee Readers","venue":"library","category":"family","start":"2026-10-23T10:30","end":"2026-10-23T11:00","url":"https://finneylibrary.org/event/wee-readers-22/2026-10-23/","src":"library","desc":"themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5"},
   {"title":"Game Night","venue":"library","category":"family","start":"2026-10-23T16:30","end":"2026-10-23T17:30","url":"https://finneylibrary.org/event/game-night-10/2026-10-23/","src":"library","desc":"drop in and play with any of our board, video, or card games"},
   {"title":"Library Master","venue":"library","category":"community","start":"2026-10-23T18:00","end":"2026-10-23T19:00","url":"https://finneylibrary.org/event/library-master/2026-10-23/","src":"library","desc":"Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!"},

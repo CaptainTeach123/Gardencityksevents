@@ -41,21 +41,29 @@ To refresh the map data (or change the area), run **Actions → Build Garden Cit
 area out of Protomaps' free daily world build and redeploys the site. Map data © OpenStreetMap contributors (ODbL);
 keep the attribution in the corner of the map.
 
-## Updating events (from VisitGCK.com)
+## Where the events come from
 
-Events come from the iCal export of https://www.visitgck.com/events-calendar/ (their site blocks automated
-requests, so download the `.ics` in your browser).
+Events are merged from four places and de-duplicated (when VisitGCK and the organizer both list the same event, the
+organizer's own listing wins):
 
-```
-# 1. save the export as data/visitgck.ics
-# 2. regenerate events.js
-node scripts/build-events.js
-```
+| Source | How it's fetched |
+|---|---|
+| Finney County Public Library | automatically, daily (their public calendar API) |
+| Garden City Arts | automatically, daily (their website's JSON feed) |
+| Garden City Community College | automatically, daily (`events.json` on their site) |
+| VisitGCK.com | **by hand**: their site blocks robots. Export the calendar and upload it as `data/visitgck.ics` |
 
-- Venues are defined in `scripts/venues.json`. If the build reports "unknown venue", add it there
-  (`match` = lowercase text found in the event's location).
-- **Pin locations are rough estimates** (`"approx": true`; popups say so). Run
-  `node scripts/geocode.js` on a machine with internet to look up real coordinates from each venue's address
-  (OpenStreetMap Nominatim), then re-run the build. Check the result on the map.
-- Events with no published end time show only a start time and count as "happening" for 2 hours.
-- The current data covers Oct 9–14, 2026 only; the map says so when you pick a date outside the range.
+The **Update events** workflow (Actions tab) runs every morning, or whenever `data/visitgck.ics` is uploaded, or from
+**Run workflow**. It runs `scripts/pull-feeds.js` (-> `data/feeds.json`), `scripts/build-events.js` (-> `events.js` and the
+subscribable `garden-city-events.ics`), places any new venues with `scripts/geocode.js`, and redeploys the site. If one
+source is down, its last saved events are kept. To add another source, write a small adapter in `scripts/pull-feeds.js`.
+
+Venues live in `scripts/venues.json` (new ones are added automatically; fix a pin by editing `lat`/`lng` and deleting `approx`).
+
+## Plan my day
+
+Tap the heart on any event to add it to "my day" (saved on the visitor's phone). **Plan my day** shows the day as a
+12-hour clock: each planned event is an arc around the rim (overlaps stack in rings), the hands show the selected time and
+can be dragged, and AM/PM tabs flip between halves. Below the clock are the planned events with drive-time warnings
+(for example "Tight: 5 min between, about 9 min to drive"), ideas to add, and a button that exports the day to a calendar.
+

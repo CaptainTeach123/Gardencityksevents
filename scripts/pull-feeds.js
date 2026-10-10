@@ -119,8 +119,19 @@ function normalizeGccc(list) {
   for (const it of Array.isArray(list) ? list : []) {
     const when = parseGcccDate(it.date);
     if (!when || !it.title) { bad.push(it.title || "(untitled)"); continue; }
+    let title = stripHtml(it.title);
+    const rng = title.match(/\s*\|\s*(\d{1,2})(?::(\d\d))?\s*[-–]\s*(\d{1,2})(?::(\d\d))?\s*([AP])\.?M\.?\s*$/i);   // "… | 6:00-8:00 PM"
+    if (rng) {
+      title = title.slice(0, rng.index).trim();
+      if (when.open && !when.allDay) {
+        let h = +rng[3] % 12 + (rng[5].toUpperCase() === "P" ? 12 : 0);
+        let end = `${when.start.slice(0, 10)}T${String(h).padStart(2, "0")}:${rng[4] || "00"}`;
+        if (end <= when.start) end = addMinutes(end, 720);          // "11-1 PM": the end is after noon
+        when.end = end; delete when.open;
+      }
+    }
     out.push({
-      source: "gccc", title: stripHtml(it.title), desc: stripHtml(it.info || ""),
+      source: "gccc", title, desc: stripHtml(it.info || ""),
       location: "Garden City Community College, 801 Campus Dr, Garden City, KS",
       url: it.link ? new URL(it.link, "https://www.gcccks.edu").href : "https://www.gcccks.edu/events/", tags: [],
       ...when,
