@@ -63,11 +63,10 @@ window.VENUES = {
     "lng": -100.84588
   },
   "refinery": {
-    "name": "The Refinery Event Center",
+    "name": "The Refinery Fieldhouse & Event Center",
     "address": "3122 Cecil Dr, Garden City, KS 67846",
-    "lat": 37.9555,
-    "lng": -100.843,
-    "approx": true
+    "lat": 37.97206,
+    "lng": -100.83519
   },
   "gravity": {
     "name": "Gravity Wellness Spa",
