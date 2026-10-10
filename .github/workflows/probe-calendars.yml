@@ -23,6 +23,8 @@ jobs:
               echo "*** iCal FEED: $(grep -c 'BEGIN:VEVENT' /tmp/p.out) events"; grep -m5 'SUMMARY\|DTSTART' /tmp/p.out | head -6
             elif grep -qi '<rss\|<feed\|<channel' /tmp/p.out 2>/dev/null; then
               echo "*** RSS/Atom FEED: $(grep -ci '<item\|<entry' /tmp/p.out) items"; grep -m6 -i '<title' /tmp/p.out | head -6
+            elif head -c 1 /tmp/p.out | grep -q '[{\[]'; then
+              echo "*** JSON: $(head -c 700 /tmp/p.out | tr '\n' ' ')"
             else
               echo "title: $(grep -io '<title>[^<]*' /tmp/p.out | head -1)"
               echo "feed-like links:"
