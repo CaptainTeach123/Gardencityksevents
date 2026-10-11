@@ -4,95 +4,23 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 52
+   "count": 50
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 36
+   "count": 34
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
-   "ok": true,
-   "count": 6
+   "ok": false,
+   "count": 6,
+   "error": "fetch failed"
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Lego Club",
-   "desc": "create and imagine freely using the library’s LEGO collection",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-10T10:00",
-   "end": "2026-10-10T11:00",
-   "url": "https://finneylibrary.org/event/lego-club-4/2026-10-10/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Writers Meetup - Oct 10th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-10T10:00",
-   "end": "2026-10-10T12:00",
-   "url": "https://gardencityarts.org/upcoming-events/writers-meetup-sept-12th-gnadz-p6497",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "socialize",
-    "writing",
-    "writer",
-    "literary"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Project Lab - Oct 10th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-10T13:00",
-   "end": "2026-10-10T15:00",
-   "url": "https://gardencityarts.org/upcoming-events/lab-oct-2026-82y4w-hpmjn",
-   "tags": [
-    "Children's Classes",
-    "Family Classes",
-    "painting class",
-    "paint",
-    "family class",
-    "kid friendly"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Kitchen Fun",
-   "desc": "beginner-friendly cooking focused on basic skills and fun but simple recipes",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-10T14:00",
-   "end": "2026-10-10T15:00",
-   "url": "https://finneylibrary.org/event/kitchen-fun-2/2026-10-10/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons",
-   "desc": "one-shot campaigns with available characters or character sheets to make your own. ages 18+",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-10T16:30",
-   "end": "2026-10-10T19:30",
-   "url": "https://finneylibrary.org/event/dungeons-dragons/2026-10-10/",
-   "tags": [
-    "Adult"
-   ]
-  },
   {
    "source": "library",
    "title": "Sunday Fun Day",
@@ -1294,6 +1222,18 @@
    "start": "2026-12-24T18:00",
    "end": "2026-12-24T19:00",
    "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-24/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Library Master",
+   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-25T18:00",
+   "end": "2026-12-25T19:00",
+   "url": "https://finneylibrary.org/event/library-master/2026-12-25/",
    "tags": [
     "Tweens/Teens"
    ]
