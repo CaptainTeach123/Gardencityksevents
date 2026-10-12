@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 50
+   "count": 49
   },
   "gca": {
    "name": "Garden City Arts",
@@ -15,24 +15,11 @@
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
-   "ok": false,
-   "count": 6,
-   "error": "fetch failed"
+   "ok": true,
+   "count": 6
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Sunday Fun Day",
-   "desc": "laid-back gathering with crafts, activities, and plenty of fun",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-11T14:30",
-   "end": "2026-10-11T16:30",
-   "url": "https://finneylibrary.org/event/sunday-fun-day-2/2026-10-11/",
-   "tags": [
-    "Family Event"
-   ]
-  },
   {
    "source": "gca",
    "title": "ArtFULL Mornings",
