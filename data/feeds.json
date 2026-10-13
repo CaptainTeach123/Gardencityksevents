@@ -10,7 +10,7 @@
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,26 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gca",
-   "title": "ArtFULL Mornings",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-13T10:00",
-   "end": "2026-10-13T11:30",
-   "url": "https://gardencityarts.org/upcoming-events/artfull-oct-2026",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "socialize",
-    "writing",
-    "writer",
-    "literary"
-   ]
-  },
   {
    "source": "library",
    "title": "You and Me Sensory",
