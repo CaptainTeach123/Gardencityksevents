@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 49
+   "count": 47
   },
   "gca": {
    "name": "Garden City Arts",
@@ -20,56 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "You and Me Sensory",
-   "desc": "hands-on, sensory-based play for little learners",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-13T10:00",
-   "end": "2026-10-13T10:30",
-   "url": "https://finneylibrary.org/event/you-and-me-sensory-2/2026-10-13/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Movie Mania",
-   "desc": "family-friendly movies with the first bag of popcorn on us",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-13T16:30",
-   "end": "2026-10-13T18:30",
-   "url": "https://finneylibrary.org/event/movie-mania-10/2026-10-13/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Creative Crew: Grades 1st-2nd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-10-13T17:00",
-   "end": "2026-10-13T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-sf9pc-xlely",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Adult Craft Night",
-   "desc": "A different craft will be provided each month, or you can bring your own project from home. Age 18+",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-13T18:30",
-   "end": "2026-10-13T19:30",
-   "url": "https://finneylibrary.org/event/adult-craft-night/2026-10-13/",
-   "tags": [
-    "Adult"
-   ]
-  },
   {
    "source": "gccc",
    "title": "Fall 2026 Choir Concert",
@@ -394,6 +344,26 @@
     "after school program",
     "kids",
     "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Poetry Reading w/ Hauscar Medina",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-10-21T19:15",
+   "end": "2026-10-21T20:15",
+   "url": "https://gardencityarts.org/upcoming-events/poetry-reading",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "family",
+    "poetry",
+    "poem",
+    "reading",
+    "event",
+    "family friending"
    ]
   },
   {
@@ -1203,6 +1173,18 @@
    "url": "https://finneylibrary.org/event/library-master/2026-12-25/",
    "tags": [
     "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Library Board Meeting",
+   "desc": "",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-28T17:00",
+   "end": "2026-12-28T18:30",
+   "url": "https://finneylibrary.org/event/library-board-meeting/2026-12-28/",
+   "tags": [
+    "Board Meeting"
    ]
   }
  ]
