@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 47
+   "count": 45
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,55 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Fall 2026 Choir Concert",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/fall-2026-choir-concert.html",
-   "tags": [],
-   "start": "2026-10-13T19:00",
-   "end": "2026-10-13T21:00",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Club Read",
-   "desc": "A read aloud book club",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-14T13:00",
-   "end": "2026-10-14T14:00",
-   "url": "https://finneylibrary.org/event/club-read-2/2026-10-14/",
-   "tags": [
-    "Adult"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Pokémon Club",
-   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-14T16:30",
-   "end": "2026-10-14T17:00",
-   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-10-14/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Studio Squad: Grades 3rd - 5th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-10-14T17:00",
-   "end": "2026-10-14T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
   {
    "source": "library",
    "title": "Tiny Tots",
@@ -1186,6 +1137,17 @@
    "tags": [
     "Board Meeting"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "BusterCon Comic Convention 2027 | 10AM - 5PM",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2027/bustercon-event.html",
+   "tags": [],
+   "start": "2027-02-27T10:00",
+   "end": "2027-02-27T12:00",
+   "open": true
   }
  ]
 }

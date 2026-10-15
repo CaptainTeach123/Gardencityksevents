@@ -25,168 +25,23 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-garden-city-arts-artfull-mornings-202610131000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T100000
-DTEND;TZID=America/Chicago:20261013T113000
-SUMMARY:Garden City Arts: ArtFULL Mornings
-DESCRIPTION:Fill your morning with art\, learning\, and creativity! ArtFULL
-  Mornings is a free monthly program for adults that combines art history\,
-  hands-on creativity\, and conversation. Each month\, Conny will introduce
-  an artist\, movement\, or moment in art history through a short presentat
- ion and discussion. Then\, Robin will lead \n\nhttps://www.visitgck.com/ev
- ent/garden-city-arts-artfull-mornings/
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://www.visitgck.com/event/garden-city-arts-artfull-mornings/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-ladies-night-buffalo-dunes-2-2026-10-13-202610131700@gardencityks
- events
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T170000
-DTEND;TZID=America/Chicago:20261013T200000
-SUMMARY:Ladies Night - Buffalo Dunes
-DESCRIPTION:Ladies Night at Buffalo Dunes! $15 for non members\, free for m
- embers$2 beers and seltzers 5:00\, 5:10\, 5:20\, 5:30–structured play\, 
- call to play with a partner 5:30\, 5:40\, 5:50\, 6:00\, 6:10–relax play\
- , call to play with your foursomes Call clubhouse\, no google forms this y
- ear: 620-276-1210\n\nhttps://www.visitgck.com/event/ladies-night-buffalo-d
- unes-2/2026-10-13/
-LOCATION:Buffalo Dunes Golf Course\, Buffalo Dunes Golf Course\, Garden Cit
- y\, KS
-URL:https://www.visitgck.com/event/ladies-night-buffalo-dunes-2/2026-10-13/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-finney-county-public-library-adult-craft-night-2026-10-13-2026101
- 31830@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T183000
-DTEND;TZID=America/Chicago:20261013T203000
-SUMMARY:Finney County Public Library: Adult Craft Night
-DESCRIPTION:Start time only\; the end time was not published.\n\nA differen
- t craft will be provided each month\, or you can bring your own project fr
- om home. Ages 18+ Tuesdays at 6:30pm Finney County Public Library\, 605 E 
- Walnut St Subject to cancellation. Call (620) 272-3680\, go to finneylibra
- ry.org\, or visit Finney County Public Library on Facebook for more inform
- ation.\n\nhttps://www.visitgck.com/event/finney-county-public-library-adul
- t-craft-night/2026-10-13/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-adult-craft
- -night/2026-10-13/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-finney-county-public-library-family-crafts-2026-10-13-20261013183
- 0@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T183000
-DTEND;TZID=America/Chicago:20261013T203000
-SUMMARY:Finney County Public Library: Family Crafts
-DESCRIPTION:Start time only\; the end time was not published.\n\nWhether yo
- u come by yourself or have the whole crew in tow\, join us for different c
- rafts each week or bring your own project from home! All ages Tuesdays at 
- 6:30pm Finney County Public Library\, 605 E Walnut St. Subject to cancella
- tion. Visit finneylibrary.org or follow Finney County Public Library on Fa
- cebook for updat\n\nhttps://www.visitgck.com/event/finney-county-public-li
- brary-family-crafts/2026-10-13/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://www.visitgck.com/event/finney-county-public-library-family-craf
- ts/2026-10-13/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-gpms-class-clay-witch-hat-tea-lights-202610131830@gardencitykseve
- nts
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T183000
-DTEND;TZID=America/Chicago:20261013T203000
-SUMMARY:GPMS Class: Clay Witch Hat Tea Lights
-DESCRIPTION:Start time only\; the end time was not published.\n\nBring on t
- he spooky season! Join Elena in learning to make witch hat luminaries. Par
- ticipants will create little witch hats to cover tea lights for another sp
- ooky cute Halloween decoration. The pieces will be dried and fired at GPMS
-  over the week following class. Participants will need to return to GPMS t
- o pick up thei\n\nhttps://www.visitgck.com/event/gpms-class-clay-witch-hat
- -tea-lights/
-LOCATION:Great Plains MakerSpace\, 2308 N 3rd St\, Garden City\, KS 67846
-GEO:37.98644;-100.86477
-URL:https://www.visitgck.com/event/gpms-class-clay-witch-hat-tea-lights/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-trivia-night-at-main-street-food-brew-hall-4-2026-10-13-202610131
- 830@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T183000
-DTEND;TZID=America/Chicago:20261013T203000
-SUMMARY:Trivia Night at Main Street Food & Brew Hall
-DESCRIPTION:Start time only\; the end time was not published.\n\nJoin Main 
- Street Food & Brew Hall every Tuesday at 6:30 PM for an evening of fun\, p
- rizes\, and bragging rights. 🏆 Prizes: 🥇 1st Place: $50 Gift Card 
- 🥈 2nd Place: $25 Gift Card 🥉 3rd Place: $15 Gift Card\n\nhttps://www
- .visitgck.com/event/trivia-night-at-main-street-food-brew-hall-4/2026-10-1
- 3/
-LOCATION:Main St Food & Brew Hall\, 207 N Main St\, Garden City\, KS 67846
-GEO:37.96582;-100.8743
-URL:https://www.visitgck.com/event/trivia-night-at-main-street-food-brew-ha
- ll-4/2026-10-13/
-END:VEVENT
-BEGIN:VEVENT
-UID:events-2026-fall-2026-choir-concert-html-202610131900@gardencityksevent
- s
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261013T190000
-DTEND;TZID=America/Chicago:20261013T210000
-SUMMARY:Fall 2026 Choir Concert
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/fall-2026-choir-concert.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/fall-2026-choir-concert.html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-club-read-2-2026-10-14-202610141300@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261014T130000
-DTEND;TZID=America/Chicago:20261014T140000
-SUMMARY:Club Read
-DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
- read-2/2026-10-14/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/club-read-2/2026-10-14/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-pokemon-club-2-2026-10-14-202610141630@gardencityksevents
+UID:event-finney-county-public-library-pokemon-club-ages-6-9-2026-10-14-202
+ 610141630@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261014T163000
-DTEND;TZID=America/Chicago:20261014T170000
-SUMMARY:Pokémon Club
+DTEND;TZID=America/Chicago:20261014T173000
+SUMMARY:Finney County Public Library: Pokémon Club (Ages 6-9)
 DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
  \, cards\, and show! From crafts\, activities based around the theme\, wat
- ch parties\, and gaming days\, the Pokémon club has something to offer ev
- ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-10-14/
+ ch parties\, and gaming days\, Pokemon club has something to offer every f
+ an! Starts April 1st at 4:30pm. Ages 6-9 Subject to cancellation. Check fi
+ nneylibrary.org or Facebook Finney County \n\nhttps://www.visitgck.com/eve
+ nt/finney-county-public-library-pokemon-club-ages-6-9/2026-10-14/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/pokemon-club-2/2026-10-14/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa-202610141700
- @gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261014T170000
-DTEND;TZID=America/Chicago:20261014T183000
-SUMMARY:Studio Squad: Grades 3rd - 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
- zxkg-6cm3b-ln8jb-7fdfa
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm
- 3b-ln8jb-7fdfa
+URL:https://www.visitgck.com/event/finney-county-public-library-pokemon-clu
+ b-ages-6-9/2026-10-14/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-water-walking-at-parrot-cove-2-2026-10-14-202610141700@gardencity
@@ -1308,5 +1163,17 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/library-board-meeting/2026-12-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2027-bustercon-event-html-202702271000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270227T100000
+DTEND;TZID=America/Chicago:20270227T120000
+SUMMARY:BusterCon Comic Convention 2027 | 10AM - 5PM
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2027/bustercon-event.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2027/bustercon-event.html
 END:VEVENT
 END:VCALENDAR
