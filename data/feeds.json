@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 45
+   "count": 42
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,59 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Tiny Tots",
-   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-15T10:30",
-   "end": "2026-10-15T11:00",
-   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-10-15/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Drawn Together",
-   "desc": "Learn the process for making art and the different forms it takes.",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-15T16:30",
-   "end": "2026-10-15T17:00",
-   "url": "https://finneylibrary.org/event/drawn-together/2026-10-15/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Canvas+Paint - Oct 15th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-15T18:00",
-   "end": "2026-10-15T20:00",
-   "url": "https://gardencityarts.org/upcoming-events/canvas-paintoct-15th",
-   "tags": [
-    "Adult Classes",
-    "Family Classes",
-    "painting class",
-    "adult class",
-    "paint",
-    "family class"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Genealogy Night",
-   "desc": "Learn how to find your ancestors and map your family tree. Ages 18+",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-15T18:00",
-   "end": "2026-10-15T19:00",
-   "url": "https://finneylibrary.org/event/genealogy-night/2026-10-15/",
-   "tags": [
-    "Adult"
-   ]
-  },
   {
    "source": "library",
    "title": "Wee Readers",
