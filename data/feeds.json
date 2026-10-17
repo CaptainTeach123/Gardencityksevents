@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 42
+   "count": 23
   },
   "gca": {
    "name": "Garden City Arts",
@@ -20,42 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Wee Readers",
-   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-16T10:30",
-   "end": "2026-10-16T11:00",
-   "url": "https://finneylibrary.org/event/wee-readers-22/2026-10-16/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Game Night",
-   "desc": "drop in and play with any of our board, video, or card games",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-16T16:30",
-   "end": "2026-10-16T17:30",
-   "url": "https://finneylibrary.org/event/game-night-10/2026-10-16/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-16T18:00",
-   "end": "2026-10-16T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-10-16/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
   {
    "source": "gca",
    "title": "Drop-BY Art Saturday - Oct 17th",
@@ -508,18 +472,6 @@
    ]
   },
   {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-05T18:00",
-   "end": "2026-11-05T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-11-05/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
    "source": "gca",
    "title": "Mini Canvas+Paint - Nov 5th",
    "desc": "",
@@ -534,18 +486,6 @@
     "paint",
     "family class",
     "kid friendly"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-06T18:00",
-   "end": "2026-11-06T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-11-06/",
-   "tags": [
-    "Tweens/Teens"
    ]
   },
   {
@@ -688,30 +628,6 @@
    ]
   },
   {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-12T18:00",
-   "end": "2026-11-12T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-11-12/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-13T18:00",
-   "end": "2026-11-13T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-11-13/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
    "source": "gca",
    "title": "Open Studio - Nov",
    "desc": "",
@@ -793,18 +709,6 @@
    ]
   },
   {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-19T18:00",
-   "end": "2026-11-19T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-11-19/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
    "source": "gca",
    "title": "Holiday Open House - Member’s Preview",
    "desc": "",
@@ -821,18 +725,6 @@
     "open studio",
     "hobby",
     "socialize"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-20T18:00",
-   "end": "2026-11-20T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-11-20/",
-   "tags": [
-    "Tweens/Teens"
    ]
   },
   {
@@ -882,30 +774,6 @@
    "url": "https://finneylibrary.org/event/library-board-meeting/2026-11-23/",
    "tags": [
     "Board Meeting"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-26T18:00",
-   "end": "2026-11-26T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-11-26/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-27T18:00",
-   "end": "2026-11-27T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-11-27/",
-   "tags": [
-    "Tweens/Teens"
    ]
   },
   {
@@ -959,78 +827,6 @@
    ]
   },
   {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-03T18:00",
-   "end": "2026-12-03T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-03/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-04T18:00",
-   "end": "2026-12-04T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-12-04/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-10T18:00",
-   "end": "2026-12-10T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-10/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-11T18:00",
-   "end": "2026-12-11T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-12-11/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-17T18:00",
-   "end": "2026-12-17T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-17/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-18T18:00",
-   "end": "2026-12-18T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-12-18/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
    "source": "gca",
    "title": "Closing Reception - Annual Member Showcase",
    "desc": "",
@@ -1047,30 +843,6 @@
     "open studio",
     "hobby",
     "socialize"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-24T18:00",
-   "end": "2026-12-24T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-24/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-25T18:00",
-   "end": "2026-12-25T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-12-25/",
-   "tags": [
-    "Tweens/Teens"
    ]
   },
   {

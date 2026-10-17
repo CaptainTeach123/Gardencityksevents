@@ -25,47 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-wee-readers-22-2026-10-16-202610161030@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261016T103000
-DTEND;TZID=America/Chicago:20261016T110000
-SUMMARY:Wee Readers
-DESCRIPTION:themed storytime with crafts and activities\, now with morning 
- and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
- 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-10-16/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/wee-readers-22/2026-10-16/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-game-night-10-2026-10-16-202610161630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261016T163000
-DTEND;TZID=America/Chicago:20261016T173000
-SUMMARY:Game Night
-DESCRIPTION:drop in and play with any of our board\, video\, or card games\
- n\nhttps://finneylibrary.org/event/game-night-10/2026-10-16/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/game-night-10/2026-10-16/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-10-16-202610161800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261016T180000
-DTEND;TZID=America/Chicago:20261016T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-10-16/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-10-16/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-drop-by-oct-17th-202610171000@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261017T100000
@@ -510,22 +469,6 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/studios-squad-nov
 END:VEVENT
 BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-11-05-202611051800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261105T180000
-DTEND;TZID=America/Chicago:20261105T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-11-05/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 11-05/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-mini-cp-nov-2026-202611051800@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261105T180000
@@ -535,20 +478,6 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-06-202611061800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261106T180000
-DTEND;TZID=America/Chicago:20261106T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-06/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-06/
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2026-12-angry-jurors-performances-friday-html-202611061900@garde
@@ -679,36 +608,6 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12th
 END:VEVENT
 BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-11-12-202611121800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261112T180000
-DTEND;TZID=America/Chicago:20261112T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-11-12/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 11-12/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-13-202611131800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261113T180000
-DTEND;TZID=America/Chicago:20261113T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-13/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-13/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-open-studio-oct-2026-yanf6-202611131800@gardencitykseve
  nts
 DTSTAMP:20261009T153939Z
@@ -777,22 +676,6 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah
 END:VEVENT
 BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-11-19-202611191800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261119T180000
-DTEND;TZID=America/Chicago:20261119T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-11-19/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 11-19/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-holiday-member-only-202611201800@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261120T180000
@@ -802,20 +685,6 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/holiday-member-only
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/holiday-member-only
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-20-202611201800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T180000
-DTEND;TZID=America/Chicago:20261120T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-20/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-drop-by-nov-21st-202611211000@gardencityksevents
@@ -853,36 +722,6 @@ GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/library-board-meeting/2026-11-23/
 END:VEVENT
 BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-11-26-202611261800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261126T180000
-DTEND;TZID=America/Chicago:20261126T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-11-26/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 11-26/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-27-202611271800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261127T180000
-DTEND;TZID=America/Chicago:20261127T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-27/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-27/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-blushing-nov-17th-202611271900@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261127T190000
@@ -916,96 +755,6 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/acrylic-pour
 END:VEVENT
 BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-12-03-202612031800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261203T180000
-DTEND;TZID=America/Chicago:20261203T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-12-03/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 12-03/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-12-04-202612041800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261204T180000
-DTEND;TZID=America/Chicago:20261204T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-12-04/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-12-04/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-12-10-202612101800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261210T180000
-DTEND;TZID=America/Chicago:20261210T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-12-10/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 12-10/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-12-11-202612111800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261211T180000
-DTEND;TZID=America/Chicago:20261211T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-12-11/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-12-11/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-12-17-202612171800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261217T180000
-DTEND;TZID=America/Chicago:20261217T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-12-17/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 12-17/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-12-18-202612181800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261218T180000
-DTEND;TZID=America/Chicago:20261218T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-12-18/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-12-18/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261219T150000
@@ -1015,36 +764,6 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/annual-member-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/annual-member-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-12-24-202612241800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261224T180000
-DTEND;TZID=America/Chicago:20261224T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 10-17\n\nhttps://finneylibrary.
- org/event/dungeons-dragons-junior-trial-run/2026-12-24/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 12-24/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-12-25-202612251800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261225T180000
-DTEND;TZID=America/Chicago:20261225T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-12-25/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-12-25/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-library-board-meeting-2026-12-28-202612281700@gardencityksevents
