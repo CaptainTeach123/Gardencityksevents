@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 20
+   "count": 19
   },
   "gca": {
    "name": "Garden City Arts",
@@ -20,18 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Sunday Fun Day",
-   "desc": "laid-back gathering with crafts, activities, and plenty of fun",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-18T14:30",
-   "end": "2026-10-18T16:30",
-   "url": "https://finneylibrary.org/event/sunday-fun-day-2/2026-10-18/",
-   "tags": [
-    "Family Event"
-   ]
-  },
   {
    "source": "library",
    "title": "You and Me Sensory",
