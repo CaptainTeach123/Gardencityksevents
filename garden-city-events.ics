@@ -25,60 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-you-and-me-sensory-2-2026-10-20-202610201000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261020T100000
-DTEND;TZID=America/Chicago:20261020T103000
-SUMMARY:You and Me Sensory
-DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
- nneylibrary.org/event/you-and-me-sensory-2/2026-10-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-10-20/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-movie-mania-10-2026-10-20-202610201630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261020T163000
-DTEND;TZID=America/Chicago:20261020T183000
-SUMMARY:Movie Mania
-DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
- ttps://finneylibrary.org/event/movie-mania-10/2026-10-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/movie-mania-10/2026-10-20/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-creative-crew-sept-yzxkg-sf9pc-xlely-9x2ne-202610201700
- @gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261020T170000
-DTEND;TZID=America/Chicago:20261020T183000
-SUMMARY:Creative Crew: Grades 1st-2nd
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
- zxkg-sf9pc-xlely-9x2ne
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-sf9
- pc-xlely-9x2ne
-END:VEVENT
-BEGIN:VEVENT
-UID:event-adult-craft-night-2026-10-20-202610201830@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261020T183000
-DTEND;TZID=America/Chicago:20261020T193000
-SUMMARY:Adult Craft Night
-DESCRIPTION:A different craft will be provided each month\, or you can brin
- g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
- dult-craft-night/2026-10-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/adult-craft-night/2026-10-20/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-club-read-2-2026-10-21-202610211300@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261021T130000
