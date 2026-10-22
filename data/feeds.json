@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 16
+   "count": 14
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 27
+   "count": 25
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,64 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Club Read",
-   "desc": "A read aloud book club",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-21T13:00",
-   "end": "2026-10-21T14:00",
-   "url": "https://finneylibrary.org/event/club-read-2/2026-10-21/",
-   "tags": [
-    "Adult"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Pokémon Club",
-   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-21T16:30",
-   "end": "2026-10-21T17:00",
-   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-10-21/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Studio Squad: Grades 3rd - 5th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-10-21T17:00",
-   "end": "2026-10-21T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa-563xb",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Poetry Reading w/ Hauscar Medina",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-21T19:15",
-   "end": "2026-10-21T20:15",
-   "url": "https://gardencityarts.org/upcoming-events/poetry-reading",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "family",
-    "poetry",
-    "poem",
-    "reading",
-    "event",
-    "family friending"
-   ]
-  },
   {
    "source": "library",
    "title": "Tiny Tots",

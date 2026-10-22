@@ -25,59 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-club-read-2-2026-10-21-202610211300@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261021T130000
-DTEND;TZID=America/Chicago:20261021T140000
-SUMMARY:Club Read
-DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
- read-2/2026-10-21/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/club-read-2/2026-10-21/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-pokemon-club-2-2026-10-21-202610211630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261021T163000
-DTEND;TZID=America/Chicago:20261021T170000
-SUMMARY:Pokémon Club
-DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
- \, cards\, and show! From crafts\, activities based around the theme\, wat
- ch parties\, and gaming days\, the Pokémon club has something to offer ev
- ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-10-21/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/pokemon-club-2/2026-10-21/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-creative-crew-sept-yzxkg-6cm3b-ln8jb-7fdfa-563xb-202610
- 211700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261021T170000
-DTEND;TZID=America/Chicago:20261021T183000
-SUMMARY:Studio Squad: Grades 3rd - 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-sept-y
- zxkg-6cm3b-ln8jb-7fdfa-563xb
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-sept-yzxkg-6cm
- 3b-ln8jb-7fdfa-563xb
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-poetry-reading-202610211915@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261021T191500
-DTEND;TZID=America/Chicago:20261021T201500
-SUMMARY:Poetry Reading w/ Hauscar Medina
-DESCRIPTION:https://gardencityarts.org/upcoming-events/poetry-reading
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/poetry-reading
-END:VEVENT
-BEGIN:VEVENT
 UID:event-tiny-tots-2-2026-10-22-202610221030@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261022T103000
