@@ -51,19 +51,6 @@ GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/drawn-together/2026-10-22/
 END:VEVENT
 BEGIN:VEVENT
-UID:upcoming-events-canvas-paintoct-15th-k6bxz-202610221800@gardencitykseve
- nts
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261022T180000
-DTEND;TZID=America/Chicago:20261022T200000
-SUMMARY:Canvas+Paint - Oct 22nd
-DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th
- -k6bxz
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/canvas-paintoct-15th-k6bxz
-END:VEVENT
-BEGIN:VEVENT
 UID:event-dungeons-dragons-junior-trial-run-2026-10-22-202610221800@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z

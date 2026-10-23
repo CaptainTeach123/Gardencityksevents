@@ -3,14 +3,15 @@
   "library": {
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
-   "ok": true,
-   "count": 14
+   "ok": false,
+   "count": 14,
+   "error": "HTTP 522 for https://finneylibrary.org/wp-json/tribe/events/v1/events?per_page=50&page=1&start_date=2026-10-23&end_date=2027-01-06"
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 25
+   "count": 24
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -42,23 +43,6 @@
    "url": "https://finneylibrary.org/event/drawn-together/2026-10-22/",
    "tags": [
     "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Canvas+Paint - Oct 22nd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-22T18:00",
-   "end": "2026-10-22T20:00",
-   "url": "https://gardencityarts.org/upcoming-events/canvas-paintoct-15th-k6bxz",
-   "tags": [
-    "Adult Classes",
-    "Family Classes",
-    "painting class",
-    "adult class",
-    "paint",
-    "family class"
    ]
   },
   {
