@@ -3,15 +3,14 @@
   "library": {
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
-   "ok": false,
-   "count": 14,
-   "error": "HTTP 522 for https://finneylibrary.org/wp-json/tribe/events/v1/events?per_page=50&page=1&start_date=2026-10-23&end_date=2027-01-06"
+   "ok": true,
+   "count": 7
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 24
+   "count": 23
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -21,106 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Tiny Tots",
-   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-22T10:30",
-   "end": "2026-10-22T11:00",
-   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-10-22/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Drawn Together",
-   "desc": "Learn the process for making art and the different forms it takes.",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-22T16:30",
-   "end": "2026-10-22T17:00",
-   "url": "https://finneylibrary.org/event/drawn-together/2026-10-22/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 10-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-22T18:00",
-   "end": "2026-10-22T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-10-22/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "T.A.L.C",
-   "desc": "This is a teen group of volunteers that help the library with any and all aspects of Library Programming. This group meets the 4th Thursday of every month at 6pm. Ages 10-17! Contact the library for more details",
-   "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-22T18:00",
-   "end": "2026-10-22T19:00",
-   "url": "https://finneylibrary.org/event/t-a-l-c-8/2026-10-22/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Wee Readers",
-   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-23T10:30",
-   "end": "2026-10-23T11:00",
-   "url": "https://finneylibrary.org/event/wee-readers-22/2026-10-23/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Game Night",
-   "desc": "drop in and play with any of our board, video, or card games",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-23T16:30",
-   "end": "2026-10-23T17:30",
-   "url": "https://finneylibrary.org/event/game-night-10/2026-10-23/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-23T18:00",
-   "end": "2026-10-23T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-10-23/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Blushing Artiste - Oct 23rd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-10-23T19:00",
-   "end": "2026-10-23T21:30",
-   "url": "https://gardencityarts.org/upcoming-events/blushing-oct-23rd",
-   "tags": [
-    "Adult Classes",
-    "painting class",
-    "adult class",
-    "paint",
-    "girls night out"
-   ]
-  },
   {
    "source": "library",
    "title": "Lego Club",
