@@ -25,46 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-lego-club-4-2026-10-24-202610241000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261024T100000
-DTEND;TZID=America/Chicago:20261024T110000
-SUMMARY:Lego Club
-DESCRIPTION:create and imagine freely using the library’s LEGO collection
- \n\nhttps://finneylibrary.org/event/lego-club-4/2026-10-24/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/lego-club-4/2026-10-24/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-kitchen-fun-2-2026-10-24-202610241400@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261024T140000
-DTEND;TZID=America/Chicago:20261024T150000
-SUMMARY:Kitchen Fun
-DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
- imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-2/2026-10-24/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/kitchen-fun-2/2026-10-24/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-2026-10-24-202610241630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261024T163000
-DTEND;TZID=America/Chicago:20261024T193000
-SUMMARY:Dungeons & Dragons
-DESCRIPTION:one-shot campaigns with available characters or character sheet
- s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
- ragons/2026-10-24/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons/2026-10-24/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-library-board-meeting-2026-10-26-202610261700@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261026T170000
