@@ -25,19 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-library-board-meeting-2026-10-26-202610261700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261026T170000
-DTEND;TZID=America/Chicago:20261026T183000
-SUMMARY:Library Board Meeting
-DESCRIPTION:https://finneylibrary.org/event/library-board-meeting/2026-10-2
- 6/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-board-meeting/2026-10-26/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-creative-crew-nov-202610271700@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261027T170000
@@ -280,6 +267,20 @@ URL:https://gardencityarts.org/upcoming-events/lab-nov-2026-82y4w-hpmjn-nef
  gp
 END:VEVENT
 BEGIN:VEVENT
+UID:events-2026-come-from-away-open-auditions-nov-16-html-202611161800@gard
+ encityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261116T180000
+DTEND;TZID=America/Chicago:20261116T200000
+SUMMARY:Come From Away - Open Auditions 6-9 PM
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16
+ .html
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-lngg5-202611171700@garden
  cityksevents
 DTSTAMP:20261009T153939Z
@@ -292,6 +293,20 @@ LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae
  6-lngg5
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-come-from-away-open-auditions-nov-17-html-202611171800@gard
+ encityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261117T180000
+DTEND;TZID=America/Chicago:20261117T200000
+SUMMARY:Come From Away - Open Auditions 6-9 PM
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17
+ .html
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-studios-squad-nov-8pksd-n5zen-202611181700@gardencityks

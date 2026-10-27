@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 4
+   "count": 3
   },
   "gca": {
    "name": "Garden City Arts",
@@ -16,22 +16,10 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 6
+   "count": 8
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Library Board Meeting",
-   "desc": "",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-26T17:00",
-   "end": "2026-10-26T18:30",
-   "url": "https://finneylibrary.org/event/library-board-meeting/2026-10-26/",
-   "tags": [
-    "Board Meeting"
-   ]
-  },
   {
    "source": "gca",
    "title": "Creative Crew: Grades 1st-2nd",
@@ -303,6 +291,17 @@
    ]
   },
   {
+   "source": "gccc",
+   "title": "Come From Away - Open Auditions 6-9 PM",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16.html",
+   "tags": [],
+   "start": "2026-11-16T18:00",
+   "end": "2026-11-16T20:00",
+   "open": true
+  },
+  {
    "source": "gca",
    "title": "Creative Crew: Grades 1st-2nd",
    "desc": "",
@@ -315,6 +314,17 @@
     "kids",
     "fun"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "Come From Away - Open Auditions 6-9 PM",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17.html",
+   "tags": [],
+   "start": "2026-11-17T18:00",
+   "end": "2026-11-17T20:00",
+   "open": true
   },
   {
    "source": "gca",
