@@ -10,7 +10,7 @@
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 23
+   "count": 22
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,20 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gca",
-   "title": "Creative Crew: Grades 1st-2nd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-10-27T17:00",
-   "end": "2026-10-27T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-nov",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
   {
    "source": "gca",
    "title": "Studio Squad: Grades 3rd - 5th",
