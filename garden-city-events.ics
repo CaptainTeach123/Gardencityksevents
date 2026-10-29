@@ -25,20 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:upcoming-events-creative-crew-oct-yzxkg-6cm3b-ln8jb-7fdfa-563xb-d8fky-2
- 02610281700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261028T170000
-DTEND;TZID=America/Chicago:20261028T183000
-SUMMARY:Studio Squad: Grades 3rd - 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-oct-yz
- xkg-6cm3b-ln8jb-7fdfa-563xb-d8fky
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-oct-yzxkg-6cm3
- b-ln8jb-7fdfa-563xb-d8fky
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-5th-annual-halloween-fest-trunk-or-treat-html-202610301800@
  gardencityksevents
 DTSTAMP:20261009T153939Z
@@ -254,6 +240,19 @@ LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/lab-nov-2026-82y4w-hpmjn-nef
  gp
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-buster-trot-walk-run-5k-html-202611141600@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261114T160000
+DTEND;TZID=America/Chicago:20261114T180000
+SUMMARY:Buster Trot Walk/Run 5K
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/buster-trot-walk-run-5k.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/buster-trot-walk-run-5k.html
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2026-come-from-away-open-auditions-nov-16-html-202611161800@gard
