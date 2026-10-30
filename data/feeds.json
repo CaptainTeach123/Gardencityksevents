@@ -16,7 +16,7 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 9
+   "count": 10
   }
  },
  "events": [
@@ -225,6 +225,17 @@
     "paint",
     "family class"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "Mercer Gallery Artist Reception 5-7 PM - Brett K. Novack",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/mercer-gallery-artist-reception-brett-k-novack.html",
+   "tags": [],
+   "start": "2026-11-13T17:00",
+   "end": "2026-11-13T19:00",
+   "open": true
   },
   {
    "source": "gca",

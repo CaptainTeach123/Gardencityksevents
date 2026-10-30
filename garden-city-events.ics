@@ -215,6 +215,21 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12th
 END:VEVENT
 BEGIN:VEVENT
+UID:events-2026-mercer-gallery-artist-reception-brett-k-novack-html-2026111
+ 31700@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261113T170000
+DTEND;TZID=America/Chicago:20261113T190000
+SUMMARY:Mercer Gallery Artist Reception 5-7 PM - Brett K. Novack
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/mercer-gallery-artist-reception-brett-k-novack.ht
+ ml
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/mercer-gallery-artist-reception-bret
+ t-k-novack.html
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-open-studio-oct-2026-yanf6-202611131800@gardencitykseve
  nts
 DTSTAMP:20261009T153939Z
