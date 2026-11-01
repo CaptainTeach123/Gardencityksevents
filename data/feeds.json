@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 3
+   "count": 2
   },
   "gca": {
    "name": "Garden City Arts",
@@ -16,32 +16,10 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 10
+   "count": 9
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Trunk or Treat",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/5th-annual-halloween-fest-trunk-or-treat.html",
-   "tags": [],
-   "start": "2026-10-30T18:00",
-   "end": "2026-10-30T20:00"
-  },
-  {
-   "source": "library",
-   "title": "HALLOWEEN EXTRAVAGANZA",
-   "desc": "Community Trunk-or-Treat. Location: Finney County Public Library and Kansas Children’s Service League Parking Lots.",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-10-31T11:00",
-   "end": "2026-10-31T15:00",
-   "url": "https://finneylibrary.org/event/halloween-extravaganza-2/",
-   "tags": [
-    "FAMILY EVENTS"
-   ]
-  },
   {
    "source": "gca",
    "title": "Creative Crew: Grades 1st-2nd",
