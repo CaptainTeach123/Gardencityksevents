@@ -16,7 +16,7 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 9
+   "count": 10
   }
  },
  "events": [
@@ -64,6 +64,17 @@
     "family class",
     "kid friendly"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "First-Gen Celebration 11:30-12:30",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/first-gen-celebration.html",
+   "tags": [],
+   "start": "2026-11-06T11:30",
+   "end": "2026-11-06T13:30",
+   "open": true
   },
   {
    "source": "gccc",
