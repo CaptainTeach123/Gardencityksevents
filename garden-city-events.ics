@@ -25,30 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-election-day-2-202611030700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261103T070000
-DTEND;TZID=America/Chicago:20261103T190000
-SUMMARY:Election Day
-DESCRIPTION:https://finneylibrary.org/event/election-day-2/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/election-day-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-creative-crew-nov-kcx2e-202611031700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261103T170000
-DTEND;TZID=America/Chicago:20261103T183000
-SUMMARY:Creative Crew: Grades 1st-2nd
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
- x2e
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e
-END:VEVENT
-BEGIN:VEVENT
 UID:event-club-read-2-2026-11-04-202611041300@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261104T130000
@@ -782,6 +758,45 @@ GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/sunday-fun-day-thanksgiving/
 END:VEVENT
 BEGIN:VEVENT
+UID:event-holiday-movie-mania-10-2026-11-23-202611231400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261123T140000
+DTEND;TZID=America/Chicago:20261123T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-10-2026-11-24-202611241400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261124T140000
+DTEND;TZID=America/Chicago:20261124T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-24/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-10-2026-11-25-202611251400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261125T140000
+DTEND;TZID=America/Chicago:20261125T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-blushing-nov-17th-202611271900@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261127T190000
@@ -802,6 +817,19 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/acrylic-pour-junior
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/acrylic-pour-junior
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-10-2026-11-28-202611281400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261128T140000
+DTEND;TZID=America/Chicago:20261128T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-28/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-28/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-acrylic-pour-202611281500@gardencityksevents

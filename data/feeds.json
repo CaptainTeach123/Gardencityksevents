@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 32
+   "count": 35
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 22
+   "count": 21
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,32 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Election Day",
-   "desc": "",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-03T07:00",
-   "end": "2026-11-03T19:00",
-   "url": "https://finneylibrary.org/event/election-day-2/",
-   "tags": [
-    "Non Library Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Creative Crew: Grades 1st-2nd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-11-03T17:00",
-   "end": "2026-11-03T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
   {
    "source": "library",
    "title": "Club Read",
@@ -777,6 +751,42 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-11-23T14:00",
+   "end": "2026-11-23T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-11-24T14:00",
+   "end": "2026-11-24T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-24/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-11-25T14:00",
+   "end": "2026-11-25T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Blushing Artiste - Nov 27th",
    "desc": "",
@@ -807,6 +817,18 @@
     "adult class",
     "paint",
     "family class"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-11-28T14:00",
+   "end": "2026-11-28T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-28/",
+   "tags": [
+    "Family Event"
    ]
   },
   {
