@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 21
+   "count": 20
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,32 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Club Read",
-   "desc": "A read aloud book club",
-   "location": "Kansas Room, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-04T13:00",
-   "end": "2026-11-04T14:00",
-   "url": "https://finneylibrary.org/event/club-read-2/2026-11-04/",
-   "tags": [
-    "Adult"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Studio Squad: Grades 3rd - 5th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-11-04T17:00",
-   "end": "2026-11-04T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/studios-squad-nov",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
   {
    "source": "library",
    "title": "Tiny Tots",
