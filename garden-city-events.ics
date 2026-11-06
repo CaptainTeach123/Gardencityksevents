@@ -25,59 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-tiny-tots-2-2026-11-05-202611051030@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261105T103000
-DTEND;TZID=America/Chicago:20261105T110000
-SUMMARY:Tiny Tots
-DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
- es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-11-05/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/tiny-tots-2/2026-11-05/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-drawn-together-2026-11-05-202611051630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261105T163000
-DTEND;TZID=America/Chicago:20261105T170000
-SUMMARY:Drawn Together
-DESCRIPTION:Learn the process for making art and the different forms it tak
- es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-11-05/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/drawn-together/2026-11-05/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-junior-trial-run-2026-11-05-202611051800@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261105T180000
-DTEND;TZID=America/Chicago:20261105T190000
-SUMMARY:Dungeons & Dragons Junior
-DESCRIPTION:A trial run for a program that offers basic and beginner guidan
- ce for the popular role-playing game. ages 6-17\n\nhttps://finneylibrary.o
- rg/event/dungeons-dragons-junior-trial-run/2026-11-05/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
- 11-05/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-mini-cp-nov-2026-202611051800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261105T180000
-DTEND;TZID=America/Chicago:20261105T193000
-SUMMARY:Mini Canvas+Paint - Nov 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/mini-cp-nov-2026
-END:VEVENT
-BEGIN:VEVENT
 UID:event-wee-readers-22-2026-11-06-202611061030@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261106T103000
