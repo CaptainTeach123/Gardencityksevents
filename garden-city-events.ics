@@ -25,20 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-wee-readers-22-2026-11-06-202611061030@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261106T103000
-DTEND;TZID=America/Chicago:20261106T110000
-SUMMARY:Wee Readers
-DESCRIPTION:themed storytime with crafts and activities\, now with morning 
- and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
- 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-11-06/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/wee-readers-22/2026-11-06/
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-first-gen-celebration-html-202611061130@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261106T113000
@@ -49,47 +35,6 @@ DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
 LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/first-gen-celebration.html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-wee-readers-21-2026-11-06-202611061400@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261106T140000
-DTEND;TZID=America/Chicago:20261106T143000
-SUMMARY:Wee Readers
-DESCRIPTION:themed storytime with crafts and activities\, now with morning 
- and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
- 5\n\nhttps://finneylibrary.org/event/wee-readers-21/2026-11-06/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/wee-readers-21/2026-11-06/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-game-night-10-2026-11-06-202611061630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261106T163000
-DTEND;TZID=America/Chicago:20261106T173000
-SUMMARY:Game Night
-DESCRIPTION:drop in and play with any of our board\, video\, or card games\
- n\nhttps://finneylibrary.org/event/game-night-10/2026-11-06/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/game-night-10/2026-11-06/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-06-202611061800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261106T180000
-DTEND;TZID=America/Chicago:20261106T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-06/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-06/
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2026-12-angry-jurors-performances-friday-html-202611061900@garde
