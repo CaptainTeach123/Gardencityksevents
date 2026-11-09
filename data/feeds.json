@@ -16,21 +16,10 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 8
+   "count": 7
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "12 Angry Jurors | Saturday Evening Performance",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/12-angry-jurors-performances-saturday.html",
-   "tags": [],
-   "start": "2026-11-07T19:00",
-   "end": "2026-11-07T21:00",
-   "open": true
-  },
   {
    "source": "gccc",
    "title": "12 Angry Jurors | Sunday Matinee Performance",
@@ -119,7 +108,7 @@
    "desc": "Friends of the Library Booksale All Ages",
    "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
    "start": "2026-11-12T10:00",
-   "end": "2026-11-12T19:00",
+   "end": "2026-11-12T18:00",
    "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-12/",
    "tags": [
     "Family Event"
@@ -148,7 +137,7 @@
    "desc": "Friends of the Library Booksale All Ages",
    "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
    "start": "2026-11-13T10:00",
-   "end": "2026-11-13T19:00",
+   "end": "2026-11-13T18:00",
    "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-13/",
    "tags": [
     "Family Event"
@@ -190,7 +179,7 @@
    "desc": "Friends of the Library Booksale All Ages",
    "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
    "start": "2026-11-14T10:00",
-   "end": "2026-11-14T19:00",
+   "end": "2026-11-14T17:00",
    "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-14/",
    "tags": [
     "Family Event"

@@ -25,20 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-12-angry-jurors-performances-saturday-html-202611071900@gar
- dencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261107T190000
-DTEND;TZID=America/Chicago:20261107T210000
-SUMMARY:12 Angry Jurors | Saturday Evening Performance
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/12-angry-jurors-performances-saturday.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/12-angry-jurors-performances-saturda
- y.html
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-12-angry-jurors-performances-sunday-html-202611081400@garde
  ncityksevents
 DTSTAMP:20261009T153939Z
@@ -119,7 +105,7 @@ UID:event-friends-of-the-library-booksale-2-2026-11-12-202611121000@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261112T100000
-DTEND;TZID=America/Chicago:20261112T190000
+DTEND;TZID=America/Chicago:20261112T180000
 SUMMARY:Friends of the Library Booksale
 DESCRIPTION:Friends of the Library Booksale All Ages\n\nhttps://finneylibra
  ry.org/event/friends-of-the-library-booksale-2/2026-11-12/
@@ -146,7 +132,7 @@ UID:event-friends-of-the-library-booksale-2-2026-11-13-202611131000@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261113T100000
-DTEND;TZID=America/Chicago:20261113T190000
+DTEND;TZID=America/Chicago:20261113T180000
 SUMMARY:Friends of the Library Booksale
 DESCRIPTION:Friends of the Library Booksale All Ages\n\nhttps://finneylibra
  ry.org/event/friends-of-the-library-booksale-2/2026-11-13/
@@ -189,7 +175,7 @@ UID:event-friends-of-the-library-booksale-2-2026-11-14-202611141000@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261114T100000
-DTEND;TZID=America/Chicago:20261114T190000
+DTEND;TZID=America/Chicago:20261114T170000
 SUMMARY:Friends of the Library Booksale
 DESCRIPTION:Friends of the Library Booksale All Ages\n\nhttps://finneylibra
  ry.org/event/friends-of-the-library-booksale-2/2026-11-14/
