@@ -25,31 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-12-angry-jurors-performances-sunday-html-202611081400@garde
- ncityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261108T140000
-DTEND;TZID=America/Chicago:20261108T160000
-SUMMARY:12 Angry Jurors | Sunday Matinee Performance
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/12-angry-jurors-performances-sunday.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/12-angry-jurors-performances-sunday.
- html
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-artfull-nov-2026-202611101000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261110T100000
-DTEND;TZID=America/Chicago:20261110T113000
-SUMMARY:ArtFULL Mornings - Nov 10th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/artfull-nov-2026
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/artfull-nov-2026
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-202611101700@gardencityks
  events
 DTSTAMP:20261009T153939Z
@@ -319,6 +294,18 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/club-read-2/2026-11-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-gc3-jazz-fest-html-202611181300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261118T130000
+DTEND;TZID=America/Chicago:20261118T150000
+SUMMARY:GC3 Jazz Fest
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/gc3-jazz-fest.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/gc3-jazz-fest.html
 END:VEVENT
 BEGIN:VEVENT
 UID:event-pokemon-club-2-2026-11-18-202611181630@gardencityksevents

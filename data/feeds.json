@@ -10,7 +10,7 @@
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 16
+   "count": 15
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,37 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "12 Angry Jurors | Sunday Matinee Performance",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/12-angry-jurors-performances-sunday.html",
-   "tags": [],
-   "start": "2026-11-08T14:00",
-   "end": "2026-11-08T16:00",
-   "open": true
-  },
-  {
-   "source": "gca",
-   "title": "ArtFULL Mornings - Nov 10th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-10T10:00",
-   "end": "2026-11-10T11:30",
-   "url": "https://gardencityarts.org/upcoming-events/artfull-nov-2026",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "socialize",
-    "writing",
-    "writer",
-    "literary"
-   ]
-  },
   {
    "source": "gca",
    "title": "Creative Crew: Grades 1st-2nd",
@@ -308,6 +277,17 @@
    "tags": [
     "Adult"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "GC3 Jazz Fest",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/gc3-jazz-fest.html",
+   "tags": [],
+   "start": "2026-11-18T13:00",
+   "end": "2026-11-18T15:00",
+   "open": true
   },
   {
    "source": "library",
