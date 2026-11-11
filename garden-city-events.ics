@@ -25,20 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-202611101700@gardencityks
- events
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261110T170000
-DTEND;TZID=America/Chicago:20261110T183000
-SUMMARY:Creative Crew: Grades 1st-2nd
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
- x2e-xkae6
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae
- 6
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-exploration-day-event-html-202611110830@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261111T083000
