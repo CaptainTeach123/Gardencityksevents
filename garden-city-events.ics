@@ -37,31 +37,6 @@ GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/exploration-day-event.html
 END:VEVENT
 BEGIN:VEVENT
-UID:event-library-board-meeting-2026-11-11-202611111700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261111T170000
-DTEND;TZID=America/Chicago:20261111T180000
-SUMMARY:Library Board Meeting
-DESCRIPTION:https://finneylibrary.org/event/library-board-meeting/2026-11-1
- 1/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-board-meeting/2026-11-11/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-studios-squad-nov-8pksd-202611111700@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261111T170000
-DTEND;TZID=America/Chicago:20261111T183000
-SUMMARY:Studio Squad: Grades 3rd - 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-nov-8p
- ksd
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/studios-squad-nov-8pksd
-END:VEVENT
-BEGIN:VEVENT
 UID:event-friends-of-the-library-booksale-2-2026-11-12-202611121000@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z
@@ -376,6 +351,19 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
  11-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-sleigh-what-christmas-lighting-html-202611191830@gardencity
+ ksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261119T183000
+DTEND;TZID=America/Chicago:20261119T203000
+SUMMARY:Sleigh What? Christmas Lighting with Billy!
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/sleigh-what-christmas-lighting.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/sleigh-what-christmas-lighting.html
 END:VEVENT
 BEGIN:VEVENT
 UID:event-wee-readers-22-2026-11-20-202611201030@gardencityksevents
