@@ -25,45 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-exploration-day-event-html-202611110830@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261111T083000
-DTEND;TZID=America/Chicago:20261111T103000
-SUMMARY:Exploration Day 2026
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/exploration-day-event.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/exploration-day-event.html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-friends-of-the-library-booksale-2-2026-11-12-202611121000@gardenc
- ityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261112T100000
-DTEND;TZID=America/Chicago:20261112T180000
-SUMMARY:Friends of the Library Booksale
-DESCRIPTION:Friends of the Library Booksale All Ages\n\nhttps://finneylibra
- ry.org/event/friends-of-the-library-booksale-2/2026-11-12/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-
- 11-12/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-canvas-paint-nov-12th-202611121800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261112T180000
-DTEND;TZID=America/Chicago:20261112T200000
-SUMMARY:Canvas+Paint - Nov 12th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12t
- h
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-12th
-END:VEVENT
-BEGIN:VEVENT
 UID:event-friends-of-the-library-booksale-2-2026-11-13-202611131000@gardenc
  ityksevents
 DTSTAMP:20261009T153939Z

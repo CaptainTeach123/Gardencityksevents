@@ -4,62 +4,22 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 24
+   "count": 23
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 13
+   "count": 12
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 8
+   "count": 7
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Exploration Day 2026",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/exploration-day-event.html",
-   "tags": [],
-   "start": "2026-11-11T08:30",
-   "end": "2026-11-11T10:30",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Friends of the Library Booksale",
-   "desc": "Friends of the Library Booksale All Ages",
-   "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-12T10:00",
-   "end": "2026-11-12T18:00",
-   "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-12/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Canvas+Paint - Nov 12th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-12T18:00",
-   "end": "2026-11-12T20:00",
-   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-nov-12th",
-   "tags": [
-    "Adult Classes",
-    "Family Classes",
-    "painting class",
-    "adult class",
-    "paint",
-    "family class"
-   ]
-  },
   {
    "source": "library",
    "title": "Friends of the Library Booksale",
