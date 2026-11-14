@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 23
+   "count": 22
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 12
+   "count": 11
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -21,18 +21,6 @@
  },
  "events": [
   {
-   "source": "library",
-   "title": "Friends of the Library Booksale",
-   "desc": "Friends of the Library Booksale All Ages",
-   "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-13T10:00",
-   "end": "2026-11-13T18:00",
-   "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-13/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
    "source": "gccc",
    "title": "Mercer Gallery Artist Reception 5-7 PM - Brett K. Novack",
    "desc": "",
@@ -42,25 +30,6 @@
    "start": "2026-11-13T17:00",
    "end": "2026-11-13T19:00",
    "open": true
-  },
-  {
-   "source": "gca",
-   "title": "Open Studio - Nov",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-13T18:00",
-   "end": "2026-11-13T21:00",
-   "url": "https://gardencityarts.org/upcoming-events/open-studio-oct-2026-yanf6",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "open studio",
-    "hobby",
-    "socialize"
-   ]
   },
   {
    "source": "library",
