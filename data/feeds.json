@@ -4,62 +4,22 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 22
+   "count": 21
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 11
+   "count": 10
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 7
+   "count": 6
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Mercer Gallery Artist Reception 5-7 PM - Brett K. Novack",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/mercer-gallery-artist-reception-brett-k-novack.html",
-   "tags": [],
-   "start": "2026-11-13T17:00",
-   "end": "2026-11-13T19:00",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Friends of the Library Booksale",
-   "desc": "Friends of the Library Booksale All Ages",
-   "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-14T10:00",
-   "end": "2026-11-14T17:00",
-   "url": "https://finneylibrary.org/event/friends-of-the-library-booksale-2/2026-11-14/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Project Lab - Nov 14th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-14T13:00",
-   "end": "2026-11-14T15:00",
-   "url": "https://gardencityarts.org/upcoming-events/lab-nov-2026-82y4w-hpmjn-nefgp",
-   "tags": [
-    "Children's Classes",
-    "Family Classes",
-    "painting class",
-    "paint",
-    "family class",
-    "kid friendly"
-   ]
-  },
   {
    "source": "gccc",
    "title": "Buster Trot Walk/Run 5K",
