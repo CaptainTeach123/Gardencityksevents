@@ -25,19 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-buster-trot-walk-run-5k-html-202611141600@gardencityksevent
- s
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261114T160000
-DTEND;TZID=America/Chicago:20261114T180000
-SUMMARY:Buster Trot Walk/Run 5K
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/buster-trot-walk-run-5k.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/buster-trot-walk-run-5k.html
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-come-from-away-open-auditions-nov-16-html-202611161800@gard
  encityksevents
 DTSTAMP:20261009T153939Z
@@ -466,6 +453,18 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/sunday-fun-day-2/2026-11-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-letters-to-santa-taz99-202612041600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T160000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Letters to Santa
+DESCRIPTION:https://gardencityarts.org/upcoming-events/letters-to-santa-taz
+ 99
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/letters-to-santa-taz99
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents

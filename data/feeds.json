@@ -10,27 +10,16 @@
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 10
+   "count": 11
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 6
+   "count": 5
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Buster Trot Walk/Run 5K",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/buster-trot-walk-run-5k.html",
-   "tags": [],
-   "start": "2026-11-14T16:00",
-   "end": "2026-11-14T18:00",
-   "open": true
-  },
   {
    "source": "gccc",
    "title": "Come From Away - Open Auditions 6-9 PM",
@@ -464,6 +453,25 @@
    "url": "https://finneylibrary.org/event/sunday-fun-day-2/2026-11-29/",
    "tags": [
     "Family Event"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Letters to Santa",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-04T16:00",
+   "end": "2026-12-04T19:00",
+   "url": "https://gardencityarts.org/upcoming-events/letters-to-santa-taz99",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "open studio",
+    "hobby",
+    "socialize"
    ]
   },
   {
