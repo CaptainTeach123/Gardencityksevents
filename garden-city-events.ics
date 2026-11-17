@@ -467,6 +467,20 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/letters-to-santa-taz99
 END:VEVENT
 BEGIN:VEVENT
+UID:events-2026-christmas-choral-vespers-concert-html-202612061430@gardenci
+ tyksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261206T143000
+DTEND;TZID=America/Chicago:20261206T163000
+SUMMARY:Christmas Choral Vespers Concert
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/christmas-choral-vespers-concert.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/christmas-choral-vespers-concert.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261219T150000

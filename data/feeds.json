@@ -16,7 +16,7 @@
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 5
+   "count": 6
   }
  },
  "events": [
@@ -473,6 +473,17 @@
     "hobby",
     "socialize"
    ]
+  },
+  {
+   "source": "gccc",
+   "title": "Christmas Choral Vespers Concert",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/christmas-choral-vespers-concert.html",
+   "tags": [],
+   "start": "2026-12-06T14:30",
+   "end": "2026-12-06T16:30",
+   "open": true
   },
   {
    "source": "gca",
