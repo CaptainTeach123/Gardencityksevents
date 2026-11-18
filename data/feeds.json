@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 21
+   "count": 18
   },
   "gca": {
    "name": "Garden City Arts",
@@ -25,72 +25,11 @@
    "title": "Come From Away - Open Auditions 6-9 PM",
    "desc": "",
    "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16.html",
-   "tags": [],
-   "start": "2026-11-16T18:00",
-   "end": "2026-11-16T20:00",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "You and Me Sensory",
-   "desc": "hands-on, sensory-based play for little learners",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-17T10:00",
-   "end": "2026-11-17T10:30",
-   "url": "https://finneylibrary.org/event/you-and-me-sensory-2/2026-11-17/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Movie Mania",
-   "desc": "family-friendly movies with the first bag of popcorn on us",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-17T16:30",
-   "end": "2026-11-17T18:30",
-   "url": "https://finneylibrary.org/event/movie-mania-10/2026-11-17/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Creative Crew: Grades 1st-2nd",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-11-17T17:00",
-   "end": "2026-11-17T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae6-lngg5",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
-  },
-  {
-   "source": "gccc",
-   "title": "Come From Away - Open Auditions 6-9 PM",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
    "url": "https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17.html",
    "tags": [],
    "start": "2026-11-17T18:00",
    "end": "2026-11-17T20:00",
    "open": true
-  },
-  {
-   "source": "library",
-   "title": "Adult Craft Night",
-   "desc": "A different craft will be provided each month, or you can bring your own project from home. Age 18+",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-17T18:30",
-   "end": "2026-11-17T19:30",
-   "url": "https://finneylibrary.org/event/adult-craft-night/2026-11-17/",
-   "tags": [
-    "Adult"
-   ]
   },
   {
    "source": "library",
@@ -456,6 +395,17 @@
    ]
   },
   {
+   "source": "gccc",
+   "title": "Campus Closed 11/21-11/29 for Thanksgiving Break",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/campus-closed-thanksgiving-break.html",
+   "tags": [],
+   "start": "2026-11-29T23:59",
+   "end": "2026-11-30T01:59",
+   "open": true
+  },
+  {
    "source": "gca",
    "title": "Letters to Santa",
    "desc": "",
@@ -515,6 +465,16 @@
    "tags": [
     "Board Meeting"
    ]
+  },
+  {
+   "source": "gca",
+   "title": "Annual Meeting 2026",
+   "desc": "Please join us as we celebrate the arts in our community during our Art Social Hour and Annual Meeting! Stop by anytime between 6:00 - 6:45 PM for GCA's first annual Open House. During this event we will have refreshments, family art activities, and information on the year's upcoming programs. The Board of Directors and Executive Director will also be present to talk with those interested in getting involved with GCA. Information of volunteering and copies of our annual report will be available for anyone interested to take home. Our Annual Meeting will start at 6:45PM during which the executive board will be elected and our annual report will be formally presented.",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-08T18:00",
+   "end": "2027-02-08T19:00",
+   "url": "https://gardencityarts.org/upcoming-events/2025/1/13/annual-meeting-2026-5zjfj-ss8cx",
+   "tags": []
   },
   {
    "source": "gccc",

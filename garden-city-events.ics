@@ -25,60 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-come-from-away-open-auditions-nov-16-html-202611161800@gard
- encityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261116T180000
-DTEND;TZID=America/Chicago:20261116T200000
-SUMMARY:Come From Away - Open Auditions 6-9 PM
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-16
- .html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-you-and-me-sensory-2-2026-11-17-202611171000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261117T100000
-DTEND;TZID=America/Chicago:20261117T103000
-SUMMARY:You and Me Sensory
-DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
- nneylibrary.org/event/you-and-me-sensory-2/2026-11-17/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-11-17/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-movie-mania-10-2026-11-17-202611171630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261117T163000
-DTEND;TZID=America/Chicago:20261117T183000
-SUMMARY:Movie Mania
-DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
- ttps://finneylibrary.org/event/movie-mania-10/2026-11-17/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/movie-mania-10/2026-11-17/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-creative-crew-nov-kcx2e-xkae6-lngg5-202611171700@garden
- cityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261117T170000
-DTEND;TZID=America/Chicago:20261117T183000
-SUMMARY:Creative Crew: Grades 1st-2nd
-DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-nov-kc
- x2e-xkae6-lngg5
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/creative-crew-nov-kcx2e-xkae
- 6-lngg5
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-come-from-away-open-auditions-nov-17-html-202611171800@gard
  encityksevents
 DTSTAMP:20261009T153939Z
@@ -91,20 +37,6 @@ LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17
  .html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-adult-craft-night-2026-11-17-202611171830@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261117T183000
-DTEND;TZID=America/Chicago:20261117T193000
-SUMMARY:Adult Craft Night
-DESCRIPTION:A different craft will be provided each month\, or you can brin
- g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
- dult-craft-night/2026-11-17/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/adult-craft-night/2026-11-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-tiny-tots-2-2026-11-18-202611181030@gardencityksevents
@@ -455,6 +387,20 @@ GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/sunday-fun-day-2/2026-11-29/
 END:VEVENT
 BEGIN:VEVENT
+UID:events-2026-campus-closed-thanksgiving-break-html-202611292359@gardenci
+ tyksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261129T235900
+DTEND;TZID=America/Chicago:20261130T015900
+SUMMARY:Campus Closed 11/21-11/29 for Thanksgiving Break
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/campus-closed-thanksgiving-break.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/campus-closed-thanksgiving-break.htm
+ l
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-letters-to-santa-taz99-202612041600@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261204T160000
@@ -503,6 +449,24 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/library-board-meeting/2026-12-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-2025-1-13-annual-meeting-2026-5zjfj-ss8cx-202702081800@
+ gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270208T180000
+DTEND;TZID=America/Chicago:20270208T190000
+SUMMARY:Annual Meeting 2026
+DESCRIPTION:Please join us as we celebrate the arts in our community during
+  our Art Social Hour and Annual Meeting! Stop by anytime between 6:00 - 6:
+ 45 PM for GCA's first annual Open House. During this event we will have re
+ freshments\, family art activities\, and information on the year's upcomin
+ g programs. The Board of Directors an\n\nhttps://gardencityarts.org/upcomi
+ ng-events/2025/1/13/annual-meeting-2026-5zjfj-ss8cx
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/2025/1/13/annual-meeting-202
+ 6-5zjfj-ss8cx
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2027-bustercon-event-html-202702271000@gardencityksevents
