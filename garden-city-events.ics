@@ -25,46 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-come-from-away-open-auditions-nov-17-html-202611171800@gard
- encityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261117T180000
-DTEND;TZID=America/Chicago:20261117T200000
-SUMMARY:Come From Away - Open Auditions 6-9 PM
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17
- .html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-tiny-tots-2-2026-11-18-202611181030@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261118T103000
-DTEND;TZID=America/Chicago:20261118T110000
-SUMMARY:Tiny Tots
-DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
- es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-11-18/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/tiny-tots-2/2026-11-18/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-club-read-2-2026-11-18-202611181300@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261118T130000
-DTEND;TZID=America/Chicago:20261118T140000
-SUMMARY:Club Read
-DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
- read-2/2026-11-18/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/club-read-2/2026-11-18/
-END:VEVENT
-BEGIN:VEVENT
 UID:events-2026-gc3-jazz-fest-html-202611181300@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261118T130000
@@ -75,35 +35,6 @@ DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
 LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/gc3-jazz-fest.html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-pokemon-club-2-2026-11-18-202611181630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261118T163000
-DTEND;TZID=America/Chicago:20261118T170000
-SUMMARY:Pokémon Club
-DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
- \, cards\, and show! From crafts\, activities based around the theme\, wat
- ch parties\, and gaming days\, the Pokémon club has something to offer ev
- ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-11-18/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/pokemon-club-2/2026-11-18/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-studios-squad-nov-8pksd-n5zen-202611181700@gardencityks
- events
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261118T170000
-DTEND;TZID=America/Chicago:20261118T183000
-SUMMARY:Studio Squad: Grades 3rd - 5th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-nov-8p
- ksd-n5zen
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/studios-squad-nov-8pksd-n5ze
- n
 END:VEVENT
 BEGIN:VEVENT
 UID:event-tiny-tots-2-2026-11-19-202611191030@gardencityksevents
@@ -130,19 +61,6 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/drawn-together/2026-11-19/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-canvas-paint-nov-19th-bbwah-202611191800@gardencityksev
- ents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261119T180000
-DTEND;TZID=America/Chicago:20261119T200000
-SUMMARY:Canvas+Paint - Nov 19th
-DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19t
- h-bbwah
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah
 END:VEVENT
 BEGIN:VEVENT
 UID:event-dungeons-dragons-junior-trial-run-2026-11-19-202611191800@gardenc
@@ -401,6 +319,33 @@ URL:https://www.gcccks.edu/events/2026/campus-closed-thanksgiving-break.htm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:events-2026-gccc-kstate-signing-ceremony-html-202612021500@gardencityks
+ events
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261202T150000
+DTEND;TZID=America/Chicago:20261202T170000
+SUMMARY:Garden City Community College and Kansas State University Signing C
+ eremony
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/gccc-kstate-signing-ceremony.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/gccc-kstate-signing-ceremony.html
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-nov-19th-bbwah-202612031800@gardencityksev
+ ents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T180000
+DTEND;TZID=America/Chicago:20261203T200000
+SUMMARY:Canvas+Paint - Nov 19th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19t
+ h-bbwah
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-letters-to-santa-taz99-202612041600@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261204T160000
@@ -425,6 +370,18 @@ LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/christmas-choral-vespers-concert.htm
  l
+END:VEVENT
+BEGIN:VEVENT
+UID:events-2026-fill-a-ford-toy-drive-html-202612081800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261208T180000
+DTEND;TZID=America/Chicago:20261208T200000
+SUMMARY:Fill a Ford Toy Drive | 8 AM - 6 PM
+DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
+ w.gcccks.edu/events/2026/fill-a-ford-toy-drive.html
+LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
+GEO:37.97008;-100.84966
+URL:https://www.gcccks.edu/events/2026/fill-a-ford-toy-drive.html
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents

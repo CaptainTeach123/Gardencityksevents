@@ -4,57 +4,22 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 18
+   "count": 15
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 11
+   "count": 10
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 6
+   "count": 7
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Come From Away - Open Auditions 6-9 PM",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/come-from-away-open-auditions-nov-17.html",
-   "tags": [],
-   "start": "2026-11-17T18:00",
-   "end": "2026-11-17T20:00",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Tiny Tots",
-   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-18T10:30",
-   "end": "2026-11-18T11:00",
-   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-11-18/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Club Read",
-   "desc": "A read aloud book club",
-   "location": "Kansas Room, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-18T13:00",
-   "end": "2026-11-18T14:00",
-   "url": "https://finneylibrary.org/event/club-read-2/2026-11-18/",
-   "tags": [
-    "Adult"
-   ]
-  },
   {
    "source": "gccc",
    "title": "GC3 Jazz Fest",
@@ -65,32 +30,6 @@
    "start": "2026-11-18T13:00",
    "end": "2026-11-18T15:00",
    "open": true
-  },
-  {
-   "source": "library",
-   "title": "Pokémon Club",
-   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-18T16:30",
-   "end": "2026-11-18T17:00",
-   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-11-18/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Studio Squad: Grades 3rd - 5th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
-   "start": "2026-11-18T17:00",
-   "end": "2026-11-18T18:30",
-   "url": "https://gardencityarts.org/upcoming-events/studios-squad-nov-8pksd-n5zen",
-   "tags": [
-    "after school program",
-    "kids",
-    "fun"
-   ]
   },
   {
    "source": "library",
@@ -114,23 +53,6 @@
    "url": "https://finneylibrary.org/event/drawn-together/2026-11-19/",
    "tags": [
     "Children"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Canvas+Paint - Nov 19th",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-19T18:00",
-   "end": "2026-11-19T20:00",
-   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah",
-   "tags": [
-    "Adult Classes",
-    "Family Classes",
-    "painting class",
-    "adult class",
-    "paint",
-    "family class"
    ]
   },
   {
@@ -406,6 +328,34 @@
    "open": true
   },
   {
+   "source": "gccc",
+   "title": "Garden City Community College and Kansas State University Signing Ceremony",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/gccc-kstate-signing-ceremony.html",
+   "tags": [],
+   "start": "2026-12-02T15:00",
+   "end": "2026-12-02T17:00",
+   "open": true
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Nov 19th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-03T18:00",
+   "end": "2026-12-03T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Letters to Santa",
    "desc": "",
@@ -433,6 +383,17 @@
    "tags": [],
    "start": "2026-12-06T14:30",
    "end": "2026-12-06T16:30",
+   "open": true
+  },
+  {
+   "source": "gccc",
+   "title": "Fill a Ford Toy Drive | 8 AM - 6 PM",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/fill-a-ford-toy-drive.html",
+   "tags": [],
+   "start": "2026-12-08T18:00",
+   "end": "2026-12-08T20:00",
    "open": true
   },
   {
