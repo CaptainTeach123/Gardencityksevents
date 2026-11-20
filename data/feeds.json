@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 15
+   "count": 12
   },
   "gca": {
    "name": "Garden City Arts",
@@ -20,53 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "GC3 Jazz Fest",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/gc3-jazz-fest.html",
-   "tags": [],
-   "start": "2026-11-18T13:00",
-   "end": "2026-11-18T15:00",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Tiny Tots",
-   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-19T10:30",
-   "end": "2026-11-19T11:00",
-   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-11-19/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Drawn Together",
-   "desc": "Learn the process for making art and the different forms it takes.",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-19T16:30",
-   "end": "2026-11-19T17:00",
-   "url": "https://finneylibrary.org/event/drawn-together/2026-11-19/",
-   "tags": [
-    "Children"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons Junior",
-   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 6-17",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-19T18:00",
-   "end": "2026-11-19T19:00",
-   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-11-19/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
   {
    "source": "gccc",
    "title": "Sleigh What? Christmas Lighting with Billy!",
@@ -395,6 +348,16 @@
    "start": "2026-12-08T18:00",
    "end": "2026-12-08T20:00",
    "open": true
+  },
+  {
+   "source": "gccc",
+   "title": "Mercer Gallery Artist Reception | GCHS Students",
+   "desc": "",
+   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
+   "url": "https://www.gcccks.edu/events/2026/mercer-gallery-art-recception-gchs.html",
+   "tags": [],
+   "start": "2026-12-08T18:00",
+   "end": "2026-12-08T19:00"
   },
   {
    "source": "gca",
