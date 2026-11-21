@@ -4,100 +4,22 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 12
+   "count": 8
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 10
+   "count": 70
   },
   "gccc": {
    "name": "Garden City Community College",
    "url": "https://www.gcccks.edu/events/",
    "ok": true,
-   "count": 7
+   "count": 6
   }
  },
  "events": [
-  {
-   "source": "gccc",
-   "title": "Sleigh What? Christmas Lighting with Billy!",
-   "desc": "",
-   "location": "Garden City Community College, 801 Campus Dr, Garden City, KS",
-   "url": "https://www.gcccks.edu/events/2026/sleigh-what-christmas-lighting.html",
-   "tags": [],
-   "start": "2026-11-19T18:30",
-   "end": "2026-11-19T20:30",
-   "open": true
-  },
-  {
-   "source": "library",
-   "title": "Wee Readers",
-   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-20T10:30",
-   "end": "2026-11-20T11:00",
-   "url": "https://finneylibrary.org/event/wee-readers-22/2026-11-20/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Wee Readers",
-   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-20T14:00",
-   "end": "2026-11-20T14:30",
-   "url": "https://finneylibrary.org/event/wee-readers-21/2026-11-20/",
-   "tags": [
-    "Babies/Toddlers"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Game Night",
-   "desc": "drop in and play with any of our board, video, or card games",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-20T16:30",
-   "end": "2026-11-20T17:30",
-   "url": "https://finneylibrary.org/event/game-night-10/2026-11-20/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Holiday Open House - Member’s Preview",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-20T18:00",
-   "end": "2026-11-20T20:00",
-   "url": "https://gardencityarts.org/upcoming-events/holiday-member-only",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "open studio",
-    "hobby",
-    "socialize"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Library Master",
-   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-20T18:00",
-   "end": "2026-11-20T19:00",
-   "url": "https://finneylibrary.org/event/library-master/2026-11-20/",
-   "tags": [
-    "Tweens/Teens"
-   ]
-  },
   {
    "source": "gca",
    "title": "Drop-BY Art Saturday - Nov 21st",
@@ -293,6 +215,23 @@
   },
   {
    "source": "gca",
+   "title": "Unspoken: Painted Word Floaters",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-02T18:00",
+   "end": "2026-12-02T20:30",
+   "url": "https://gardencityarts.org/upcoming-events/unspoken",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
    "title": "Canvas+Paint - Nov 19th",
    "desc": "",
    "location": "Garden City Arts, 318 N Main St, Garden City, KS",
@@ -328,6 +267,40 @@
    ]
   },
   {
+   "source": "gca",
+   "title": "Drop-BY Art Saturday - Dec 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-05T10:00",
+   "end": "2026-12-05T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-dec-5th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Watercolor Workshop - Dec 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-05T13:00",
+   "end": "2026-12-05T15:00",
+   "url": "https://gardencityarts.org/upcoming-events/watercolor-dec-5th",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "watercolor"
+   ]
+  },
+  {
    "source": "gccc",
    "title": "Christmas Choral Vespers Concert",
    "desc": "",
@@ -337,6 +310,24 @@
    "start": "2026-12-06T14:30",
    "end": "2026-12-06T16:30",
    "open": true
+  },
+  {
+   "source": "gca",
+   "title": "Christmas Mini & Me",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-08T18:00",
+   "end": "2026-12-08T19:00",
+   "url": "https://gardencityarts.org/upcoming-events/mini-me-dec-8th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class",
+    "kids"
+   ]
   },
   {
    "source": "gccc",
@@ -361,6 +352,149 @@
   },
   {
    "source": "gca",
+   "title": "Art Sprouts - Dec",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-10T09:30",
+   "end": "2026-12-10T10:30",
+   "url": "https://gardencityarts.org/upcoming-events/art-sprouts-dec-10th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pre-k",
+    "process art",
+    "creative play"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Dec 10th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-10T18:00",
+   "end": "2026-12-10T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-dec-10-2026",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Blushing Artiste - Dec 11th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-11T19:00",
+   "end": "2026-12-11T21:30",
+   "url": "https://gardencityarts.org/upcoming-events/blushing-dec-11th",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "girls night out"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Writers Meetup - Dec 12th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-12T10:00",
+   "end": "2026-12-12T11:30",
+   "url": "https://gardencityarts.org/upcoming-events/writers-meetup-dec-12th",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "socialize",
+    "writing",
+    "writer",
+    "literary"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Handbound Leather Journals - Dec 12th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-12T13:00",
+   "end": "2026-12-12T16:00",
+   "url": "https://gardencityarts.org/upcoming-events/handbound-leather",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Mini Canvas+Paint - Dec 15th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-15T18:00",
+   "end": "2026-12-15T19:30",
+   "url": "https://gardencityarts.org/upcoming-events/mini-cp-dec-2026",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "painting class",
+    "paint",
+    "family class",
+    "kid friendly"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Open Studio - Dec",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-18T18:00",
+   "end": "2026-12-18T19:00",
+   "url": "https://gardencityarts.org/upcoming-events/open-studio-dec-2026",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "open studio",
+    "hobby",
+    "socialize"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Drop-BY Art Saturday - Dec 19th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-19T10:00",
+   "end": "2026-12-19T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-dec-19th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
    "title": "Closing Reception - Annual Member Showcase",
    "desc": "",
    "location": "Garden City Arts, 318 N Main St, Garden City, KS",
@@ -379,6 +513,23 @@
    ]
   },
   {
+   "source": "gca",
+   "title": "Canvas+Paint - Dec 22nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2026-12-22T18:00",
+   "end": "2026-12-22T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-dec-22-2026",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
    "source": "library",
    "title": "Library Board Meeting",
    "desc": "",
@@ -392,6 +543,470 @@
   },
   {
    "source": "gca",
+   "title": "Drop-BY Art Saturday - Jan 2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-02T10:00",
+   "end": "2027-01-02T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-jan-2nd",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Writers Meetup - Jan 9th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-09T10:00",
+   "end": "2027-01-09T11:30",
+   "url": "https://gardencityarts.org/upcoming-events/writers-meetup-jan-9th",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "socialize",
+    "writing",
+    "writer",
+    "literary"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-12T16:00",
+   "end": "2027-01-12T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-jan-12",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-13T16:00",
+   "end": "2027-01-13T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-jan-13",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Art Sprouts - Jan",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-14T09:30",
+   "end": "2027-01-14T10:30",
+   "url": "https://gardencityarts.org/upcoming-events/art-sprouts-jan-14th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pre-k",
+    "process art",
+    "creative play"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Jan 14th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-14T18:00",
+   "end": "2027-01-14T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-jan-14-2027",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-15T15:45",
+   "end": "2027-01-15T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-jan-15",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Open Studio - Jan",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-15T18:00",
+   "end": "2027-01-15T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/open-studio-jan-2027",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "open studio",
+    "hobby",
+    "socialize"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Drop-BY Art Saturday - Jan 16th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-16T10:00",
+   "end": "2027-01-16T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-jan-16th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Watercolor Workshop - Jan 16th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-16T13:00",
+   "end": "2027-01-16T15:00",
+   "url": "https://gardencityarts.org/upcoming-events/watercolor-jan-16th",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "watercolor"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-19T16:00",
+   "end": "2027-01-19T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-jan-19",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Mini Canvas+Paint - Jan 19th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-19T18:00",
+   "end": "2027-01-19T19:30",
+   "url": "https://gardencityarts.org/upcoming-events/mini-cp-jan-2026",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "painting class",
+    "paint",
+    "family class",
+    "kid friendly"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-20T16:00",
+   "end": "2027-01-20T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-jan-20",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-22T15:45",
+   "end": "2027-01-22T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-jan-22",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Blushing Artiste - Jan 22nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-22T19:00",
+   "end": "2027-01-22T21:30",
+   "url": "https://gardencityarts.org/upcoming-events/blushing-jan-22nd",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "girls night out"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Postcards After Dark - Jan 23rd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-23T13:00",
+   "end": "2027-01-23T15:00",
+   "url": "https://gardencityarts.org/upcoming-events/postcards-after-dark-2027",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-26T16:00",
+   "end": "2027-01-26T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-jan-26",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-27T16:00",
+   "end": "2027-01-27T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-jan-27",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Jan 28th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-28T18:00",
+   "end": "2027-01-28T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-jan-28-2027",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-01-29T15:45",
+   "end": "2027-01-29T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-jan-29",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Beaded Jewelry Bar - Jan 29th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-29T19:00",
+   "end": "2027-01-29T21:00",
+   "url": "https://gardencityarts.org/upcoming-events/beaded-bracelet",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Carved in Kansas: Block Printing",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-01-30T13:30",
+   "end": "2027-01-30T16:00",
+   "url": "https://gardencityarts.org/upcoming-events/carved-kansas",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-02T16:00",
+   "end": "2027-02-02T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-feb-2",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-03T16:00",
+   "end": "2027-02-03T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-feb-3",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Bookmaking Workshop - 3rd & 4th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-03T18:00",
+   "end": "2027-02-03T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/bookmaking-japanese",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Bookmaking Workshop - 3rd & 4th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-04T18:00",
+   "end": "2027-02-04T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/bookmaking-japanese-2",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-05T15:45",
+   "end": "2027-02-05T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-feb-5",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Drop-BY Art Saturday - Feb 6th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-06T10:00",
+   "end": "2027-02-06T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-feb-6th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Watercolor Workshop - Feb 6th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-06T13:00",
+   "end": "2027-02-06T15:00",
+   "url": "https://gardencityarts.org/upcoming-events/watercolor-feb-6th",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "watercolor"
+   ]
+  },
+  {
+   "source": "gca",
    "title": "Annual Meeting 2026",
    "desc": "Please join us as we celebrate the arts in our community during our Art Social Hour and Annual Meeting! Stop by anytime between 6:00 - 6:45 PM for GCA's first annual Open House. During this event we will have refreshments, family art activities, and information on the year's upcoming programs. The Board of Directors and Executive Director will also be present to talk with those interested in getting involved with GCA. Information of volunteering and copies of our annual report will be available for anyone interested to take home. Our Annual Meeting will start at 6:45PM during which the executive board will be elected and our annual report will be formally presented.",
    "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
@@ -399,6 +1014,309 @@
    "end": "2027-02-08T19:00",
    "url": "https://gardencityarts.org/upcoming-events/2025/1/13/annual-meeting-2026-5zjfj-ss8cx",
    "tags": []
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-09T16:00",
+   "end": "2027-02-09T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-feb-9",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Mini Canvas+Paint - Feb 9th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-09T18:00",
+   "end": "2027-02-09T19:00",
+   "url": "https://gardencityarts.org/upcoming-events/mini-cp-feb-2026-hh",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "painting class",
+    "paint",
+    "family class",
+    "kid friendly"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-10T16:00",
+   "end": "2027-02-10T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-feb-10",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Art Sprouts - Feb",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-11T09:30",
+   "end": "2027-02-11T10:30",
+   "url": "https://gardencityarts.org/upcoming-events/art-sproutsfeb-11th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pre-k",
+    "process art",
+    "creative play"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Abstract Landscapes",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-11T18:00",
+   "end": "2027-02-11T20:30",
+   "url": "https://gardencityarts.org/upcoming-events/abstract-landscape",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-12T15:45",
+   "end": "2027-02-12T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-feb-12",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Blushing Artiste - Feb 12th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-12T19:00",
+   "end": "2027-02-12T21:30",
+   "url": "https://gardencityarts.org/upcoming-events/blushing-feb-12th",
+   "tags": [
+    "Adult Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "girls night out"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Writers Meetup - Feb 13th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-13T10:00",
+   "end": "2027-02-13T11:30",
+   "url": "https://gardencityarts.org/upcoming-events/writers-meetup-feb-13th",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "socialize",
+    "writing",
+    "writer",
+    "literary"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-16T16:00",
+   "end": "2027-02-16T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-feb-16",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-17T16:00",
+   "end": "2027-02-17T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-feb-10-5z33l",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Feb 18th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-18T18:00",
+   "end": "2027-02-18T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-feb-18-2027",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-19T15:45",
+   "end": "2027-02-19T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-feb-19",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Open Studio - Feb",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-19T18:00",
+   "end": "2027-02-19T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/open-studio-feb-2027",
+   "tags": [
+    "Adult Classes",
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "adult",
+    "open studio",
+    "hobby",
+    "socialize"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Drop-BY Art Saturday - Feb 20th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-20T10:00",
+   "end": "2027-02-20T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/drop-by-feb-20th",
+   "tags": [
+    "Children's Classes",
+    "Family Classes",
+    "free classes",
+    "family",
+    "free",
+    "pickup",
+    "art bags"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Creative Crew: Grades K-2nd",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-23T16:00",
+   "end": "2027-02-23T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/creative-crew-feb-23",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Studio Squad: Grades 3rd - 5th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-24T16:00",
+   "end": "2027-02-24T17:30",
+   "url": "https://gardencityarts.org/upcoming-events/studios-squad-feb-20",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Canvas+Paint - Feb 25th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-25T18:00",
+   "end": "2027-02-25T20:00",
+   "url": "https://gardencityarts.org/upcoming-events/canvas-paint-feb25-2027",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Maker Meetup: Grades 6th - 8th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2027-02-26T15:45",
+   "end": "2027-02-26T17:15",
+   "url": "https://gardencityarts.org/upcoming-events/maker-meetup-feb-26",
+   "tags": [
+    "after school program",
+    "kids",
+    "fun"
+   ]
+  },
+  {
+   "source": "gca",
+   "title": "Beaded Jewelry Bar - Feb 26th",
+   "desc": "",
+   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
+   "start": "2027-02-26T19:00",
+   "end": "2027-02-26T21:00",
+   "url": "https://gardencityarts.org/upcoming-events/beaded-necklace",
+   "tags": [
+    "Adult Classes",
+    "Family Classes",
+    "painting class",
+    "adult class",
+    "paint",
+    "family class"
+   ]
   },
   {
    "source": "gccc",

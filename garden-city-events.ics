@@ -25,85 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:events-2026-sleigh-what-christmas-lighting-html-202611191830@gardencity
- ksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261119T183000
-DTEND;TZID=America/Chicago:20261119T203000
-SUMMARY:Sleigh What? Christmas Lighting with Billy!
-DESCRIPTION:Start time only\; the end time was not published.\n\nhttps://ww
- w.gcccks.edu/events/2026/sleigh-what-christmas-lighting.html
-LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
-GEO:37.97008;-100.84966
-URL:https://www.gcccks.edu/events/2026/sleigh-what-christmas-lighting.html
-END:VEVENT
-BEGIN:VEVENT
-UID:event-wee-readers-22-2026-11-20-202611201030@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T103000
-DTEND;TZID=America/Chicago:20261120T110000
-SUMMARY:Wee Readers
-DESCRIPTION:themed storytime with crafts and activities\, now with morning 
- and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
- 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-11-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/wee-readers-22/2026-11-20/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-wee-readers-21-2026-11-20-202611201400@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T140000
-DTEND;TZID=America/Chicago:20261120T143000
-SUMMARY:Wee Readers
-DESCRIPTION:themed storytime with crafts and activities\, now with morning 
- and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
- 5\n\nhttps://finneylibrary.org/event/wee-readers-21/2026-11-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/wee-readers-21/2026-11-20/
-END:VEVENT
-BEGIN:VEVENT
-UID:event-game-night-10-2026-11-20-202611201630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T163000
-DTEND;TZID=America/Chicago:20261120T173000
-SUMMARY:Game Night
-DESCRIPTION:drop in and play with any of our board\, video\, or card games\
- n\nhttps://finneylibrary.org/event/game-night-10/2026-11-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/game-night-10/2026-11-20/
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-holiday-member-only-202611201800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T180000
-DTEND;TZID=America/Chicago:20261120T200000
-SUMMARY:Holiday Open House - Member’s Preview
-DESCRIPTION:https://gardencityarts.org/upcoming-events/holiday-member-only
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/holiday-member-only
-END:VEVENT
-BEGIN:VEVENT
-UID:event-library-master-2026-11-20-202611201800@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261120T180000
-DTEND;TZID=America/Chicago:20261120T190000
-SUMMARY:Library Master
-DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
- hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
- event/library-master/2026-11-20/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-master/2026-11-20/
-END:VEVENT
-BEGIN:VEVENT
 UID:upcoming-events-drop-by-nov-21st-202611211000@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261121T100000
@@ -279,6 +200,17 @@ GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/gccc-kstate-signing-ceremony.html
 END:VEVENT
 BEGIN:VEVENT
+UID:upcoming-events-unspoken-202612021800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261202T180000
+DTEND;TZID=America/Chicago:20261202T203000
+SUMMARY:Unspoken: Painted Word Floaters
+DESCRIPTION:https://gardencityarts.org/upcoming-events/unspoken
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/unspoken
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-canvas-paint-nov-19th-bbwah-202612031800@gardencityksev
  ents
 DTSTAMP:20261009T153939Z
@@ -304,6 +236,28 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/letters-to-santa-taz99
 END:VEVENT
 BEGIN:VEVENT
+UID:upcoming-events-drop-by-dec-5th-202612051000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261205T100000
+DTEND;TZID=America/Chicago:20261205T170000
+SUMMARY:Drop-BY Art Saturday - Dec 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-dec-5th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-dec-5th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-watercolor-dec-5th-202612051300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261205T130000
+DTEND;TZID=America/Chicago:20261205T150000
+SUMMARY:Watercolor Workshop - Dec 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-dec-5th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/watercolor-dec-5th
+END:VEVENT
+BEGIN:VEVENT
 UID:events-2026-christmas-choral-vespers-concert-html-202612061430@gardenci
  tyksevents
 DTSTAMP:20261009T153939Z
@@ -316,6 +270,17 @@ LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/christmas-choral-vespers-concert.htm
  l
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-mini-me-dec-8th-202612081800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261208T180000
+DTEND;TZID=America/Chicago:20261208T190000
+SUMMARY:Christmas Mini & Me
+DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-me-dec-8th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/mini-me-dec-8th
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2026-fill-a-ford-toy-drive-html-202612081800@gardencityksevents
@@ -344,6 +309,97 @@ URL:https://www.gcccks.edu/events/2026/mercer-gallery-art-recception-gchs.h
  tml
 END:VEVENT
 BEGIN:VEVENT
+UID:upcoming-events-art-sprouts-dec-10th-202612100930@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T093000
+DTEND;TZID=America/Chicago:20261210T103000
+SUMMARY:Art Sprouts - Dec
+DESCRIPTION:https://gardencityarts.org/upcoming-events/art-sprouts-dec-10th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/art-sprouts-dec-10th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-dec-10-2026-202612101800@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T180000
+DTEND;TZID=America/Chicago:20261210T200000
+SUMMARY:Canvas+Paint - Dec 10th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-dec-10-
+ 2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-dec-10-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-blushing-dec-11th-202612111900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261211T190000
+DTEND;TZID=America/Chicago:20261211T213000
+SUMMARY:Blushing Artiste - Dec 11th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/blushing-dec-11th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/blushing-dec-11th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-writers-meetup-dec-12th-202612121000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261212T100000
+DTEND;TZID=America/Chicago:20261212T113000
+SUMMARY:Writers Meetup - Dec 12th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/writers-meetup-dec-1
+ 2th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/writers-meetup-dec-12th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-handbound-leather-202612121300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261212T130000
+DTEND;TZID=America/Chicago:20261212T160000
+SUMMARY:Handbound Leather Journals - Dec 12th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/handbound-leather
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/handbound-leather
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-mini-cp-dec-2026-202612151800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261215T180000
+DTEND;TZID=America/Chicago:20261215T193000
+SUMMARY:Mini Canvas+Paint - Dec 15th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-dec-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/mini-cp-dec-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-open-studio-dec-2026-202612181800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T180000
+DTEND;TZID=America/Chicago:20261218T190000
+SUMMARY:Open Studio - Dec
+DESCRIPTION:https://gardencityarts.org/upcoming-events/open-studio-dec-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/open-studio-dec-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-dec-19th-202612191000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261219T100000
+DTEND;TZID=America/Chicago:20261219T170000
+SUMMARY:Drop-BY Art Saturday - Dec 19th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-dec-19th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-dec-19th
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261219T150000
@@ -353,6 +409,19 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/annual-member-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/annual-member-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-dec-22-2026-202612221800@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261222T180000
+DTEND;TZID=America/Chicago:20261222T200000
+SUMMARY:Canvas+Paint - Dec 22nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-dec-22-
+ 2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-dec-22-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:event-library-board-meeting-2026-12-28-202612281700@gardencityksevents
@@ -366,6 +435,333 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/library-board-meeting/2026-12-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-jan-2nd-202701021000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270102T100000
+DTEND;TZID=America/Chicago:20270102T170000
+SUMMARY:Drop-BY Art Saturday - Jan 2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-jan-2nd
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-jan-2nd
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-writers-meetup-jan-9th-202701091000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270109T100000
+DTEND;TZID=America/Chicago:20270109T113000
+SUMMARY:Writers Meetup - Jan 9th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/writers-meetup-jan-9
+ th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/writers-meetup-jan-9th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-jan-12-202701121600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270112T160000
+DTEND;TZID=America/Chicago:20270112T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-jan-12
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-jan-12
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-jan-13-202701131600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270113T160000
+DTEND;TZID=America/Chicago:20270113T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-jan-13
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-jan-13
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-art-sprouts-jan-14th-202701140930@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270114T093000
+DTEND;TZID=America/Chicago:20270114T103000
+SUMMARY:Art Sprouts - Jan
+DESCRIPTION:https://gardencityarts.org/upcoming-events/art-sprouts-jan-14th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/art-sprouts-jan-14th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-jan-14-2027-202701141800@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270114T180000
+DTEND;TZID=America/Chicago:20270114T200000
+SUMMARY:Canvas+Paint - Jan 14th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-jan-14-
+ 2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-jan-14-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-jan-15-202701151545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270115T154500
+DTEND;TZID=America/Chicago:20270115T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-jan-15
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-jan-15
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-open-studio-jan-2027-202701151800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270115T180000
+DTEND;TZID=America/Chicago:20270115T200000
+SUMMARY:Open Studio - Jan
+DESCRIPTION:https://gardencityarts.org/upcoming-events/open-studio-jan-2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/open-studio-jan-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-jan-16th-202701161000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270116T100000
+DTEND;TZID=America/Chicago:20270116T170000
+SUMMARY:Drop-BY Art Saturday - Jan 16th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-jan-16th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-jan-16th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-watercolor-jan-16th-202701161300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270116T130000
+DTEND;TZID=America/Chicago:20270116T150000
+SUMMARY:Watercolor Workshop - Jan 16th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-jan-16th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/watercolor-jan-16th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-jan-19-202701191600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270119T160000
+DTEND;TZID=America/Chicago:20270119T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-jan-19
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-jan-19
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-mini-cp-jan-2026-202701191800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270119T180000
+DTEND;TZID=America/Chicago:20270119T193000
+SUMMARY:Mini Canvas+Paint - Jan 19th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-jan-2026
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/mini-cp-jan-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-jan-20-202701201600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270120T160000
+DTEND;TZID=America/Chicago:20270120T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-jan-20
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-jan-20
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-jan-22-202701221545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270122T154500
+DTEND;TZID=America/Chicago:20270122T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-jan-22
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-jan-22
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-blushing-jan-22nd-202701221900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270122T190000
+DTEND;TZID=America/Chicago:20270122T213000
+SUMMARY:Blushing Artiste - Jan 22nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/blushing-jan-22nd
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/blushing-jan-22nd
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-postcards-after-dark-2027-202701231300@gardencitykseven
+ ts
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270123T130000
+DTEND;TZID=America/Chicago:20270123T150000
+SUMMARY:Postcards After Dark - Jan 23rd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/postcards-after-dark
+ -2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/postcards-after-dark-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-jan-26-202701261600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270126T160000
+DTEND;TZID=America/Chicago:20270126T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-jan-26
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-jan-26
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-jan-27-202701271600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270127T160000
+DTEND;TZID=America/Chicago:20270127T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-jan-27
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-jan-27
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-jan-28-2027-202701281800@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270128T180000
+DTEND;TZID=America/Chicago:20270128T200000
+SUMMARY:Canvas+Paint - Jan 28th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-jan-28-
+ 2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-jan-28-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-jan-29-202701291545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270129T154500
+DTEND;TZID=America/Chicago:20270129T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-jan-29
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-jan-29
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-beaded-bracelet-202701291900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270129T190000
+DTEND;TZID=America/Chicago:20270129T210000
+SUMMARY:Beaded Jewelry Bar - Jan 29th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/beaded-bracelet
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/beaded-bracelet
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-carved-kansas-202701301330@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270130T133000
+DTEND;TZID=America/Chicago:20270130T160000
+SUMMARY:Carved in Kansas: Block Printing
+DESCRIPTION:https://gardencityarts.org/upcoming-events/carved-kansas
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/carved-kansas
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-feb-2-202702021600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270202T160000
+DTEND;TZID=America/Chicago:20270202T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-feb-2
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-feb-2
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-feb-3-202702031600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270203T160000
+DTEND;TZID=America/Chicago:20270203T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-feb-3
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-feb-3
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-bookmaking-japanese-202702031800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270203T180000
+DTEND;TZID=America/Chicago:20270203T200000
+SUMMARY:Bookmaking Workshop - 3rd & 4th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/bookmaking-japanese
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/bookmaking-japanese
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-bookmaking-japanese-2-202702041800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270204T180000
+DTEND;TZID=America/Chicago:20270204T200000
+SUMMARY:Bookmaking Workshop - 3rd & 4th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/bookmaking-japanese-
+ 2
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/bookmaking-japanese-2
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-feb-5-202702051545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270205T154500
+DTEND;TZID=America/Chicago:20270205T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-feb-5
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-feb-5
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-feb-6th-202702061000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270206T100000
+DTEND;TZID=America/Chicago:20270206T170000
+SUMMARY:Drop-BY Art Saturday - Feb 6th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-feb-6th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-feb-6th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-watercolor-feb-6th-202702061300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270206T130000
+DTEND;TZID=America/Chicago:20270206T150000
+SUMMARY:Watercolor Workshop - Feb 6th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-feb-6th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/watercolor-feb-6th
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-2025-1-13-annual-meeting-2026-5zjfj-ss8cx-202702081800@
@@ -384,6 +780,221 @@ LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/2025/1/13/annual-meeting-202
  6-5zjfj-ss8cx
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-feb-9-202702091600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270209T160000
+DTEND;TZID=America/Chicago:20270209T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-feb-9
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-feb-9
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-mini-cp-feb-2026-hh-202702091800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270209T180000
+DTEND;TZID=America/Chicago:20270209T190000
+SUMMARY:Mini Canvas+Paint - Feb 9th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-feb-2026-hh
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/mini-cp-feb-2026-hh
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-feb-10-202702101600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270210T160000
+DTEND;TZID=America/Chicago:20270210T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-feb-10
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-feb-10
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-art-sproutsfeb-11th-202702110930@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270211T093000
+DTEND;TZID=America/Chicago:20270211T103000
+SUMMARY:Art Sprouts - Feb
+DESCRIPTION:https://gardencityarts.org/upcoming-events/art-sproutsfeb-11th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/art-sproutsfeb-11th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-abstract-landscape-202702111800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270211T180000
+DTEND;TZID=America/Chicago:20270211T203000
+SUMMARY:Abstract Landscapes
+DESCRIPTION:https://gardencityarts.org/upcoming-events/abstract-landscape
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/abstract-landscape
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-feb-12-202702121545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270212T154500
+DTEND;TZID=America/Chicago:20270212T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-feb-12
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-feb-12
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-blushing-feb-12th-202702121900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270212T190000
+DTEND;TZID=America/Chicago:20270212T213000
+SUMMARY:Blushing Artiste - Feb 12th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/blushing-feb-12th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/blushing-feb-12th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-writers-meetup-feb-13th-202702131000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270213T100000
+DTEND;TZID=America/Chicago:20270213T113000
+SUMMARY:Writers Meetup - Feb 13th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/writers-meetup-feb-1
+ 3th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/writers-meetup-feb-13th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-feb-16-202702161600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270216T160000
+DTEND;TZID=America/Chicago:20270216T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-feb-16
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-feb-16
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-feb-10-5z33l-202702171600@gardencitykseve
+ nts
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270217T160000
+DTEND;TZID=America/Chicago:20270217T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-feb-10
+ -5z33l
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-feb-10-5z33l
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-feb-18-2027-202702181800@gardencityksevent
+ s
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270218T180000
+DTEND;TZID=America/Chicago:20270218T200000
+SUMMARY:Canvas+Paint - Feb 18th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-feb-18-
+ 2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-feb-18-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-feb-19-202702191545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270219T154500
+DTEND;TZID=America/Chicago:20270219T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-feb-19
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-feb-19
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-open-studio-feb-2027-202702191800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270219T180000
+DTEND;TZID=America/Chicago:20270219T200000
+SUMMARY:Open Studio - Feb
+DESCRIPTION:https://gardencityarts.org/upcoming-events/open-studio-feb-2027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/open-studio-feb-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-drop-by-feb-20th-202702201000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270220T100000
+DTEND;TZID=America/Chicago:20270220T170000
+SUMMARY:Drop-BY Art Saturday - Feb 20th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-feb-20th
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/drop-by-feb-20th
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-creative-crew-feb-23-202702231600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270223T160000
+DTEND;TZID=America/Chicago:20270223T173000
+SUMMARY:Creative Crew: Grades K-2nd
+DESCRIPTION:https://gardencityarts.org/upcoming-events/creative-crew-feb-23
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/creative-crew-feb-23
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-studios-squad-feb-20-202702241600@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270224T160000
+DTEND;TZID=America/Chicago:20270224T173000
+SUMMARY:Studio Squad: Grades 3rd - 5th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/studios-squad-feb-20
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/studios-squad-feb-20
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-canvas-paint-feb25-2027-202702251800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270225T180000
+DTEND;TZID=America/Chicago:20270225T200000
+SUMMARY:Canvas+Paint - Feb 25th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-feb25-2
+ 027
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/canvas-paint-feb25-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-maker-meetup-feb-26-202702261545@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270226T154500
+DTEND;TZID=America/Chicago:20270226T171500
+SUMMARY:Maker Meetup: Grades 6th - 8th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/maker-meetup-feb-26
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/maker-meetup-feb-26
+END:VEVENT
+BEGIN:VEVENT
+UID:upcoming-events-beaded-necklace-202702261900@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20270226T190000
+DTEND;TZID=America/Chicago:20270226T210000
+SUMMARY:Beaded Jewelry Bar - Feb 26th
+DESCRIPTION:https://gardencityarts.org/upcoming-events/beaded-necklace
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/beaded-necklace
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2027-bustercon-event-html-202702271000@gardencityksevents
