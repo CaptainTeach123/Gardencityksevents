@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 8
+   "count": 7
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 70
+   "count": 68
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -20,55 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "gca",
-   "title": "Drop-BY Art Saturday - Nov 21st",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-21T10:00",
-   "end": "2026-11-21T17:00",
-   "url": "https://gardencityarts.org/upcoming-events/drop-by-nov-21st",
-   "tags": [
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "family",
-    "free",
-    "pickup",
-    "art bags"
-   ]
-  },
-  {
-   "source": "gca",
-   "title": "Holiday Open House",
-   "desc": "",
-   "location": "Garden City Arts, 318 N Main St, Garden City, KS",
-   "start": "2026-11-21T10:00",
-   "end": "2026-11-21T17:00",
-   "url": "https://gardencityarts.org/upcoming-events/holiday-open-2026",
-   "tags": [
-    "Adult Classes",
-    "Children's Classes",
-    "Family Classes",
-    "free classes",
-    "adult",
-    "open studio",
-    "hobby",
-    "socialize"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Dungeons & Dragons",
-   "desc": "one-shot campaigns with available characters or character sheets to make your own. ages 18+",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-21T16:30",
-   "end": "2026-11-21T19:30",
-   "url": "https://finneylibrary.org/event/dungeons-dragons/2026-11-21/",
-   "tags": [
-    "Adult"
-   ]
-  },
   {
    "source": "library",
    "title": "Sunday Fun Day – Thanksgiving",

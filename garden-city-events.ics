@@ -25,42 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:upcoming-events-drop-by-nov-21st-202611211000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261121T100000
-DTEND;TZID=America/Chicago:20261121T170000
-SUMMARY:Drop-BY Art Saturday - Nov 21st
-DESCRIPTION:https://gardencityarts.org/upcoming-events/drop-by-nov-21st
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/drop-by-nov-21st
-END:VEVENT
-BEGIN:VEVENT
-UID:upcoming-events-holiday-open-2026-202611211000@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261121T100000
-DTEND;TZID=America/Chicago:20261121T170000
-SUMMARY:Holiday Open House
-DESCRIPTION:https://gardencityarts.org/upcoming-events/holiday-open-2026
-LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
-GEO:37.96716;-100.87369
-URL:https://gardencityarts.org/upcoming-events/holiday-open-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:event-dungeons-dragons-2026-11-21-202611211630@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261121T163000
-DTEND;TZID=America/Chicago:20261121T193000
-SUMMARY:Dungeons & Dragons
-DESCRIPTION:one-shot campaigns with available characters or character sheet
- s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
- ragons/2026-11-21/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/dungeons-dragons/2026-11-21/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-sunday-fun-day-thanksgiving-202611221430@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261122T143000
