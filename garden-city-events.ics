@@ -25,19 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-sunday-fun-day-thanksgiving-202611221430@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261122T143000
-DTEND;TZID=America/Chicago:20261122T153000
-SUMMARY:Sunday Fun Day – Thanksgiving
-DESCRIPTION:laid-back gathering with crafts\, activities\, and plenty of fu
- n\n\nhttps://finneylibrary.org/event/sunday-fun-day-thanksgiving/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/sunday-fun-day-thanksgiving/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-holiday-movie-mania-10-2026-11-23-202611231400@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261123T140000

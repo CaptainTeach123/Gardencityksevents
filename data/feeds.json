@@ -4,7 +4,7 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 7
+   "count": 6
   },
   "gca": {
    "name": "Garden City Arts",
@@ -20,18 +20,6 @@
   }
  },
  "events": [
-  {
-   "source": "library",
-   "title": "Sunday Fun Day – Thanksgiving",
-   "desc": "laid-back gathering with crafts, activities, and plenty of fun",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-22T14:30",
-   "end": "2026-11-22T15:30",
-   "url": "https://finneylibrary.org/event/sunday-fun-day-thanksgiving/",
-   "tags": [
-    "Family Event"
-   ]
-  },
   {
    "source": "library",
    "title": "Holiday Movie Mania",
