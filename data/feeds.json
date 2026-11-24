@@ -4,13 +4,13 @@
    "name": "Finney County Public Library",
    "url": "https://finneylibrary.org/events/",
    "ok": true,
-   "count": 6
+   "count": 61
   },
   "gca": {
    "name": "Garden City Arts",
    "url": "https://gardencityarts.org/upcoming-events",
    "ok": true,
-   "count": 68
+   "count": 69
   },
   "gccc": {
    "name": "Garden City Community College",
@@ -25,24 +25,22 @@
    "title": "Holiday Movie Mania",
    "desc": "family-friendly movies with the first bag of popcorn on us",
    "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-11-23T14:00",
-   "end": "2026-11-23T16:00",
-   "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/",
-   "tags": [
-    "Family Event"
-   ]
-  },
-  {
-   "source": "library",
-   "title": "Holiday Movie Mania",
-   "desc": "family-friendly movies with the first bag of popcorn on us",
-   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
    "start": "2026-11-24T14:00",
    "end": "2026-11-24T16:00",
    "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-24/",
    "tags": [
     "Family Event"
    ]
+  },
+  {
+   "source": "gca",
+   "title": "Gallery Closed",
+   "desc": "Double-click to edit...",
+   "location": "Garden City Arts, 318 N. Main, Garden City, KS, KS",
+   "start": "2026-11-25T13:00",
+   "end": "2026-11-26T17:00",
+   "url": "https://gardencityarts.org/upcoming-events/2024/12/24/gallery-closed-fexag-fb9nn-77545",
+   "tags": []
   },
   {
    "source": "library",
@@ -54,6 +52,18 @@
    "url": "https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/",
    "tags": [
     "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Genealogy Night",
+   "desc": "Learn how to find your ancestors and map your family tree. Ages 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-11-26T18:00",
+   "end": "2026-11-26T19:00",
+   "url": "https://finneylibrary.org/event/genealogy-night/2026-11-26/",
+   "tags": [
+    "Adult"
    ]
   },
   {
@@ -142,6 +152,66 @@
    "open": true
   },
   {
+   "source": "library",
+   "title": "You and Me Sensory",
+   "desc": "hands-on, sensory-based play for little learners",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-01T10:00",
+   "end": "2026-12-01T10:30",
+   "url": "https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-01/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-01T16:30",
+   "end": "2026-12-01T18:30",
+   "url": "https://finneylibrary.org/event/movie-mania-10/2026-12-01/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Adult Craft Night",
+   "desc": "A different craft will be provided each month, or you can bring your own project from home. Age 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-01T18:30",
+   "end": "2026-12-01T19:30",
+   "url": "https://finneylibrary.org/event/adult-craft-night/2026-12-01/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-02T10:30",
+   "end": "2026-12-02T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-02/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Club Read",
+   "desc": "A read aloud book club",
+   "location": "Kansas Room, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-02T13:00",
+   "end": "2026-12-02T14:00",
+   "url": "https://finneylibrary.org/event/club-read-2/2026-12-02/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
    "source": "gccc",
    "title": "Garden City Community College and Kansas State University Signing Ceremony",
    "desc": "",
@@ -151,6 +221,18 @@
    "start": "2026-12-02T15:00",
    "end": "2026-12-02T17:00",
    "open": true
+  },
+  {
+   "source": "library",
+   "title": "Pokémon Club",
+   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-02T16:30",
+   "end": "2026-12-02T17:00",
+   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-12-02/",
+   "tags": [
+    "Children"
+   ]
   },
   {
    "source": "gca",
@@ -170,6 +252,30 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-03T10:30",
+   "end": "2026-12-03T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-03/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Drawn Together",
+   "desc": "Learn the process for making art and the different forms it takes.",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-03T16:30",
+   "end": "2026-12-03T17:00",
+   "url": "https://finneylibrary.org/event/drawn-together/2026-12-03/",
+   "tags": [
+    "Children"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Canvas+Paint - Nov 19th",
    "desc": "",
@@ -184,6 +290,54 @@
     "adult class",
     "paint",
     "family class"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Dungeons & Dragons Junior",
+   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 6-17",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-03T18:00",
+   "end": "2026-12-03T19:00",
+   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-03/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "T.A.L.C",
+   "desc": "This is a teen group of volunteers that help the library with any and all aspects of Library Programming. This group meets the 4th Thursday of every month at 6pm. Ages 10-17! Contact the library for more details",
+   "location": "Finnup/Hutchison Rooms, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-03T18:00",
+   "end": "2026-12-03T19:00",
+   "url": "https://finneylibrary.org/event/t-a-l-c-8/2026-12-03/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Wee Readers",
+   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-04T10:30",
+   "end": "2026-12-04T11:00",
+   "url": "https://finneylibrary.org/event/wee-readers-22/2026-12-04/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Wee Readers",
+   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-04T14:00",
+   "end": "2026-12-04T14:30",
+   "url": "https://finneylibrary.org/event/wee-readers-21/2026-12-04/",
+   "tags": [
+    "Babies/Toddlers"
    ]
   },
   {
@@ -206,6 +360,30 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Game Night",
+   "desc": "drop in and play with any of our board, video, or card games",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-04T16:30",
+   "end": "2026-12-04T17:30",
+   "url": "https://finneylibrary.org/event/game-night-10/2026-12-04/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Library Master",
+   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-04T18:00",
+   "end": "2026-12-04T19:00",
+   "url": "https://finneylibrary.org/event/library-master/2026-12-04/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Drop-BY Art Saturday - Dec 5th",
    "desc": "",
@@ -221,6 +399,18 @@
     "free",
     "pickup",
     "art bags"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Kitchen Fun Junior",
+   "desc": "beginner-friendly cooking focused on basic skills and fun but simple recipes",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-05T12:30",
+   "end": "2026-12-05T13:30",
+   "url": "https://finneylibrary.org/event/kitchen-fun-junior/2026-12-05/",
+   "tags": [
+    "Children"
    ]
   },
   {
@@ -240,6 +430,30 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Kitchen Fun",
+   "desc": "beginner-friendly cooking focused on basic skills and fun but simple recipes",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-05T14:00",
+   "end": "2026-12-05T15:00",
+   "url": "https://finneylibrary.org/event/kitchen-fun-2/2026-12-05/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Dungeons & Dragons",
+   "desc": "one-shot campaigns with available characters or character sheets to make your own. ages 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-05T16:30",
+   "end": "2026-12-05T19:30",
+   "url": "https://finneylibrary.org/event/dungeons-dragons/2026-12-05/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
    "source": "gccc",
    "title": "Christmas Choral Vespers Concert",
    "desc": "",
@@ -249,6 +463,42 @@
    "start": "2026-12-06T14:30",
    "end": "2026-12-06T16:30",
    "open": true
+  },
+  {
+   "source": "library",
+   "title": "Christmas Lights Parade",
+   "desc": "Christmas Lights Parade on Main Street",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-06T18:00",
+   "end": "2026-12-06T19:00",
+   "url": "https://finneylibrary.org/event/christmas-lights-parade/",
+   "tags": [
+    "Non Library Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "You and Me Sensory",
+   "desc": "hands-on, sensory-based play for little learners",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-08T10:00",
+   "end": "2026-12-08T10:30",
+   "url": "https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-08/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-08T16:30",
+   "end": "2026-12-08T18:30",
+   "url": "https://finneylibrary.org/event/movie-mania-10/2026-12-08/",
+   "tags": [
+    "Family Event"
+   ]
   },
   {
    "source": "gca",
@@ -290,6 +540,54 @@
    "end": "2026-12-08T19:00"
   },
   {
+   "source": "library",
+   "title": "Adult Craft Night",
+   "desc": "A different craft will be provided each month, or you can bring your own project from home. Age 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-08T18:30",
+   "end": "2026-12-08T19:30",
+   "url": "https://finneylibrary.org/event/adult-craft-night/2026-12-08/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-09T10:30",
+   "end": "2026-12-09T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-09/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Club Read",
+   "desc": "A read aloud book club",
+   "location": "Kansas Room, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-09T13:00",
+   "end": "2026-12-09T14:00",
+   "url": "https://finneylibrary.org/event/club-read-2/2026-12-09/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Pokémon Club",
+   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-09T16:30",
+   "end": "2026-12-09T17:00",
+   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-12-09/",
+   "tags": [
+    "Children"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Art Sprouts - Dec",
    "desc": "",
@@ -309,6 +607,30 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-10T10:30",
+   "end": "2026-12-10T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-10/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Drawn Together",
+   "desc": "Learn the process for making art and the different forms it takes.",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-10T16:30",
+   "end": "2026-12-10T17:00",
+   "url": "https://finneylibrary.org/event/drawn-together/2026-12-10/",
+   "tags": [
+    "Children"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Canvas+Paint - Dec 10th",
    "desc": "",
@@ -323,6 +645,30 @@
     "adult class",
     "paint",
     "family class"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Genealogy Night",
+   "desc": "Learn how to find your ancestors and map your family tree. Ages 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-10T18:00",
+   "end": "2026-12-10T19:00",
+   "url": "https://finneylibrary.org/event/genealogy-night/2026-12-10/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Wee Readers",
+   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-11T10:30",
+   "end": "2026-12-11T11:00",
+   "url": "https://finneylibrary.org/event/wee-readers-22/2026-12-11/",
+   "tags": [
+    "Babies/Toddlers"
    ]
   },
   {
@@ -379,6 +725,67 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Kitchen Fun Co-Op",
+   "desc": "A special Kitchen Fun where kids and families work together to prepare 3 delicious home made soups. Learn new cooking skills, enjoy time together and share a warm, tasty meal. Ages 6-17.",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-12T13:00",
+   "end": "2026-12-12T16:00",
+   "url": "https://finneylibrary.org/event/kitchen-fun-3/2026-12-12/",
+   "tags": [
+    "Children",
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Dungeons & Dragons",
+   "desc": "one-shot campaigns with available characters or character sheets to make your own. ages 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-12T16:30",
+   "end": "2026-12-12T19:30",
+   "url": "https://finneylibrary.org/event/dungeons-dragons/2026-12-12/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Sunday Fun Day",
+   "desc": "laid-back gathering with crafts, activities, and plenty of fun",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-13T14:30",
+   "end": "2026-12-13T16:30",
+   "url": "https://finneylibrary.org/event/sunday-fun-day-2/2026-12-13/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "You and Me Sensory",
+   "desc": "hands-on, sensory-based play for little learners",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-15T10:00",
+   "end": "2026-12-15T10:30",
+   "url": "https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-15/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-15T16:30",
+   "end": "2026-12-15T18:30",
+   "url": "https://finneylibrary.org/event/movie-mania-10/2026-12-15/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Mini Canvas+Paint - Dec 15th",
    "desc": "",
@@ -393,6 +800,138 @@
     "paint",
     "family class",
     "kid friendly"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Adult Craft Night",
+   "desc": "A different craft will be provided each month, or you can bring your own project from home. Age 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-15T18:30",
+   "end": "2026-12-15T19:30",
+   "url": "https://finneylibrary.org/event/adult-craft-night/2026-12-15/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-16T10:30",
+   "end": "2026-12-16T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-16/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Club Read",
+   "desc": "A read aloud book club",
+   "location": "Kansas Room, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-16T13:00",
+   "end": "2026-12-16T14:00",
+   "url": "https://finneylibrary.org/event/club-read-2/2026-12-16/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Pokémon Club",
+   "desc": "Pokémon Club is for casual fans and avid fanatics of the games, cards, and show! From crafts, activities based around the theme, watch parties, and gaming days, the Pokémon club has something to offer every fan!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-16T16:30",
+   "end": "2026-12-16T17:00",
+   "url": "https://finneylibrary.org/event/pokemon-club-2/2026-12-16/",
+   "tags": [
+    "Children"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Tiny Tots",
+   "desc": "short, interactive storytime for infants and caregivers For ages 0-2",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-17T10:30",
+   "end": "2026-12-17T11:00",
+   "url": "https://finneylibrary.org/event/tiny-tots-2/2026-12-17/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Drawn Together",
+   "desc": "Learn the process for making art and the different forms it takes.",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-17T16:30",
+   "end": "2026-12-17T17:00",
+   "url": "https://finneylibrary.org/event/drawn-together/2026-12-17/",
+   "tags": [
+    "Children"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Dungeons & Dragons Junior",
+   "desc": "A trial run for a program that offers basic and beginner guidance for the popular role-playing game. ages 6-17",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-17T18:00",
+   "end": "2026-12-17T19:00",
+   "url": "https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-12-17/",
+   "tags": [
+    "Tweens/Teens"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Wee Readers",
+   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-18T10:30",
+   "end": "2026-12-18T11:00",
+   "url": "https://finneylibrary.org/event/wee-readers-22/2026-12-18/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Wee Readers",
+   "desc": "themed storytime with crafts and activities, now with morning and afternoon programs on Friday ***Craft/Activity recommended for ages 3-5",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-18T14:00",
+   "end": "2026-12-18T14:30",
+   "url": "https://finneylibrary.org/event/wee-readers-21/2026-12-18/",
+   "tags": [
+    "Babies/Toddlers"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Game Night",
+   "desc": "drop in and play with any of our board, video, or card games",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-18T16:30",
+   "end": "2026-12-18T17:30",
+   "url": "https://finneylibrary.org/event/game-night-10/2026-12-18/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Library Master",
+   "desc": "Complete tasks, earn points & climb the leaderboard for your chance to become the ultimate Library Master!",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-18T18:00",
+   "end": "2026-12-18T19:00",
+   "url": "https://finneylibrary.org/event/library-master/2026-12-18/",
+   "tags": [
+    "Tweens/Teens"
    ]
   },
   {
@@ -433,6 +972,18 @@
    ]
   },
   {
+   "source": "library",
+   "title": "Santa Story Time",
+   "desc": "Join us for a story and a picture with Santa Claus! All Ages",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-19T10:00",
+   "end": "2026-12-19T12:00",
+   "url": "https://finneylibrary.org/event/santa-story-time-2/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
    "source": "gca",
    "title": "Closing Reception - Annual Member Showcase",
    "desc": "",
@@ -449,6 +1000,66 @@
     "open studio",
     "hobby",
     "socialize"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Patron Holiday Party",
+   "desc": "Join us after Santa Storytime for a magical Holiday Party filled with laughter, fun and unforgettable moments. All Ages",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-19T15:00",
+   "end": "2026-12-19T18:00",
+   "url": "https://finneylibrary.org/event/patron-holiday-party/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Dungeons & Dragons",
+   "desc": "one-shot campaigns with available characters or character sheets to make your own. ages 18+",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-19T16:30",
+   "end": "2026-12-19T19:30",
+   "url": "https://finneylibrary.org/event/dungeons-dragons/2026-12-19/",
+   "tags": [
+    "Adult"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-20T14:00",
+   "end": "2026-12-20T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-20/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-21T14:00",
+   "end": "2026-12-21T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-21/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-22T14:00",
+   "end": "2026-12-22T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-22/",
+   "tags": [
+    "Family Event"
    ]
   },
   {
@@ -470,14 +1081,74 @@
   },
   {
    "source": "library",
-   "title": "Library Board Meeting",
-   "desc": "",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
    "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
-   "start": "2026-12-28T17:00",
-   "end": "2026-12-28T18:30",
-   "url": "https://finneylibrary.org/event/library-board-meeting/2026-12-28/",
+   "start": "2026-12-23T14:00",
+   "end": "2026-12-23T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-23/",
    "tags": [
-    "Board Meeting"
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-26T14:00",
+   "end": "2026-12-26T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-26/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-27T14:00",
+   "end": "2026-12-27T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-27/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-28T14:00",
+   "end": "2026-12-28T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-28/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-29T14:00",
+   "end": "2026-12-29T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-29/",
+   "tags": [
+    "Family Event"
+   ]
+  },
+  {
+   "source": "library",
+   "title": "Holiday Movie Mania",
+   "desc": "family-friendly movies with the first bag of popcorn on us",
+   "location": "Finney County Public Library, 605 E. Walnut Street, Garden City, KS",
+   "start": "2026-12-30T14:00",
+   "end": "2026-12-30T16:00",
+   "url": "https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-30/",
+   "tags": [
+    "Family Event"
    ]
   },
   {

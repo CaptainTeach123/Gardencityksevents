@@ -25,19 +25,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:event-holiday-movie-mania-10-2026-11-23-202611231400@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261123T140000
-DTEND;TZID=America/Chicago:20261123T160000
-SUMMARY:Holiday Movie Mania
-DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
- ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-23/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-holiday-movie-mania-10-2026-11-24-202611241400@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261124T140000
@@ -51,6 +38,20 @@ GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-24/
 END:VEVENT
 BEGIN:VEVENT
+UID:upcoming-events-2024-12-24-gallery-closed-fexag-fb9nn-77545-20261125130
+ 0@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261125T130000
+DTEND;TZID=America/Chicago:20261126T170000
+SUMMARY:Gallery Closed
+DESCRIPTION:Double-click to edit...\n\nhttps://gardencityarts.org/upcoming-
+ events/2024/12/24/gallery-closed-fexag-fb9nn-77545
+LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
+GEO:37.96716;-100.87369
+URL:https://gardencityarts.org/upcoming-events/2024/12/24/gallery-closed-fe
+ xag-fb9nn-77545
+END:VEVENT
+BEGIN:VEVENT
 UID:event-holiday-movie-mania-10-2026-11-25-202611251400@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261125T140000
@@ -62,6 +63,19 @@ LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS
  67846
 GEO:37.97057;-100.86578
 URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-genealogy-night-2026-11-26-202611261800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261126T180000
+DTEND;TZID=America/Chicago:20261126T190000
+SUMMARY:Genealogy Night
+DESCRIPTION:Learn how to find your ancestors and map your family tree. Ages
+  18+\n\nhttps://finneylibrary.org/event/genealogy-night/2026-11-26/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/genealogy-night/2026-11-26/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-blushing-nov-17th-202611271900@gardencityksevents
@@ -137,6 +151,72 @@ URL:https://www.gcccks.edu/events/2026/campus-closed-thanksgiving-break.htm
  l
 END:VEVENT
 BEGIN:VEVENT
+UID:event-you-and-me-sensory-2-2026-12-01-202612011000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261201T100000
+DTEND;TZID=America/Chicago:20261201T103000
+SUMMARY:You and Me Sensory
+DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
+ nneylibrary.org/event/you-and-me-sensory-2/2026-12-01/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-movie-mania-10-2026-12-01-202612011630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261201T163000
+DTEND;TZID=America/Chicago:20261201T183000
+SUMMARY:Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/movie-mania-10/2026-12-01/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/movie-mania-10/2026-12-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-adult-craft-night-2026-12-01-202612011830@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261201T183000
+DTEND;TZID=America/Chicago:20261201T193000
+SUMMARY:Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can brin
+ g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
+ dult-craft-night/2026-12-01/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/adult-craft-night/2026-12-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-02-202612021030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261202T103000
+DTEND;TZID=America/Chicago:20261202T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-02/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-02/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-club-read-2-2026-12-02-202612021300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261202T130000
+DTEND;TZID=America/Chicago:20261202T140000
+SUMMARY:Club Read
+DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
+ read-2/2026-12-02/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/club-read-2/2026-12-02/
+END:VEVENT
+BEGIN:VEVENT
 UID:events-2026-gccc-kstate-signing-ceremony-html-202612021500@gardencityks
  events
 DTSTAMP:20261009T153939Z
@@ -151,6 +231,21 @@ GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/gccc-kstate-signing-ceremony.html
 END:VEVENT
 BEGIN:VEVENT
+UID:event-pokemon-club-2-2026-12-02-202612021630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261202T163000
+DTEND;TZID=America/Chicago:20261202T170000
+SUMMARY:Pokémon Club
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
+ \, cards\, and show! From crafts\, activities based around the theme\, wat
+ ch parties\, and gaming days\, the Pokémon club has something to offer ev
+ ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-12-02/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/pokemon-club-2/2026-12-02/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-unspoken-202612021800@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261202T180000
@@ -160,6 +255,32 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/unspoken
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/unspoken
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-03-202612031030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T103000
+DTEND;TZID=America/Chicago:20261203T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-03/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-drawn-together-2026-12-03-202612031630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T163000
+DTEND;TZID=America/Chicago:20261203T170000
+SUMMARY:Drawn Together
+DESCRIPTION:Learn the process for making art and the different forms it tak
+ es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-12-03/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/drawn-together/2026-12-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-canvas-paint-nov-19th-bbwah-202612031800@gardencityksev
@@ -175,6 +296,65 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-nov-19th-bbwah
 END:VEVENT
 BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-03-202612031800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T180000
+DTEND;TZID=America/Chicago:20261203T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 6-17\n\nhttps://finneylibrary.o
+ rg/event/dungeons-dragons-junior-trial-run/2026-12-03/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-t-a-l-c-8-2026-12-03-202612031800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261203T180000
+DTEND;TZID=America/Chicago:20261203T190000
+SUMMARY:T.A.L.C
+DESCRIPTION:This is a teen group of volunteers that help the library with a
+ ny and all aspects of Library Programming. This group meets the 4th Thursd
+ ay of every month at 6pm. Ages 10-17! Contact the library for more details
+ \n\nhttps://finneylibrary.org/event/t-a-l-c-8/2026-12-03/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/t-a-l-c-8/2026-12-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-22-2026-12-04-202612041030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T103000
+DTEND;TZID=America/Chicago:20261204T110000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-12-04/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-22/2026-12-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-21-2026-12-04-202612041400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T140000
+DTEND;TZID=America/Chicago:20261204T143000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-21/2026-12-04/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-21/2026-12-04/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-letters-to-santa-taz99-202612041600@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261204T160000
@@ -185,6 +365,33 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/letters-to-santa-taz
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/letters-to-santa-taz99
+END:VEVENT
+BEGIN:VEVENT
+UID:event-game-night-10-2026-12-04-202612041630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T163000
+DTEND;TZID=America/Chicago:20261204T173000
+SUMMARY:Game Night
+DESCRIPTION:drop in and play with any of our board\, video\, or card games\
+ n\nhttps://finneylibrary.org/event/game-night-10/2026-12-04/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/game-night-10/2026-12-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-12-04-202612041800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261204T180000
+DTEND;TZID=America/Chicago:20261204T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-12-04/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-12-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-drop-by-dec-5th-202612051000@gardencityksevents
@@ -198,6 +405,20 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/drop-by-dec-5th
 END:VEVENT
 BEGIN:VEVENT
+UID:event-kitchen-fun-junior-2026-12-05-202612051230@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261205T123000
+DTEND;TZID=America/Chicago:20261205T133000
+SUMMARY:Kitchen Fun Junior
+DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
+ imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-junior/2026-1
+ 2-05/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/kitchen-fun-junior/2026-12-05/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-watercolor-dec-5th-202612051300@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261205T130000
@@ -207,6 +428,33 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/watercolor-dec-5th
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/watercolor-dec-5th
+END:VEVENT
+BEGIN:VEVENT
+UID:event-kitchen-fun-2-2026-12-05-202612051400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261205T140000
+DTEND;TZID=America/Chicago:20261205T150000
+SUMMARY:Kitchen Fun
+DESCRIPTION:beginner-friendly cooking focused on basic skills and fun but s
+ imple recipes\n\nhttps://finneylibrary.org/event/kitchen-fun-2/2026-12-05/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/kitchen-fun-2/2026-12-05/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-12-05-202612051630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261205T163000
+DTEND;TZID=America/Chicago:20261205T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-12-05/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-12-05/
 END:VEVENT
 BEGIN:VEVENT
 UID:events-2026-christmas-choral-vespers-concert-html-202612061430@gardenci
@@ -221,6 +469,45 @@ LOCATION:Garden City Community College\, 801 Campus Dr\, Garden City\, KS
 GEO:37.97008;-100.84966
 URL:https://www.gcccks.edu/events/2026/christmas-choral-vespers-concert.htm
  l
+END:VEVENT
+BEGIN:VEVENT
+UID:event-christmas-lights-parade-202612061800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261206T180000
+DTEND;TZID=America/Chicago:20261206T190000
+SUMMARY:Christmas Lights Parade
+DESCRIPTION:Christmas Lights Parade on Main Street\n\nhttps://finneylibrary
+ .org/event/christmas-lights-parade/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/christmas-lights-parade/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-you-and-me-sensory-2-2026-12-08-202612081000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261208T100000
+DTEND;TZID=America/Chicago:20261208T103000
+SUMMARY:You and Me Sensory
+DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
+ nneylibrary.org/event/you-and-me-sensory-2/2026-12-08/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-movie-mania-10-2026-12-08-202612081630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261208T163000
+DTEND;TZID=America/Chicago:20261208T183000
+SUMMARY:Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/movie-mania-10/2026-12-08/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/movie-mania-10/2026-12-08/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-mini-me-dec-8th-202612081800@gardencityksevents
@@ -260,6 +547,61 @@ URL:https://www.gcccks.edu/events/2026/mercer-gallery-art-recception-gchs.h
  tml
 END:VEVENT
 BEGIN:VEVENT
+UID:event-adult-craft-night-2026-12-08-202612081830@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261208T183000
+DTEND;TZID=America/Chicago:20261208T193000
+SUMMARY:Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can brin
+ g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
+ dult-craft-night/2026-12-08/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/adult-craft-night/2026-12-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-09-202612091030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261209T103000
+DTEND;TZID=America/Chicago:20261209T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-09/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-09/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-club-read-2-2026-12-09-202612091300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261209T130000
+DTEND;TZID=America/Chicago:20261209T140000
+SUMMARY:Club Read
+DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
+ read-2/2026-12-09/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/club-read-2/2026-12-09/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-pokemon-club-2-2026-12-09-202612091630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261209T163000
+DTEND;TZID=America/Chicago:20261209T170000
+SUMMARY:Pokémon Club
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
+ \, cards\, and show! From crafts\, activities based around the theme\, wat
+ ch parties\, and gaming days\, the Pokémon club has something to offer ev
+ ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-12-09/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/pokemon-club-2/2026-12-09/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-art-sprouts-dec-10th-202612100930@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261210T093000
@@ -269,6 +611,32 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/art-sprouts-dec-10th
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/art-sprouts-dec-10th
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-10-202612101030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T103000
+DTEND;TZID=America/Chicago:20261210T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-10/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-drawn-together-2026-12-10-202612101630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T163000
+DTEND;TZID=America/Chicago:20261210T170000
+SUMMARY:Drawn Together
+DESCRIPTION:Learn the process for making art and the different forms it tak
+ es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-12-10/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/drawn-together/2026-12-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-canvas-paint-dec-10-2026-202612101800@gardencityksevent
@@ -282,6 +650,33 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/canvas-paint-dec-10-
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-dec-10-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-genealogy-night-2026-12-10-202612101800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261210T180000
+DTEND;TZID=America/Chicago:20261210T190000
+SUMMARY:Genealogy Night
+DESCRIPTION:Learn how to find your ancestors and map your family tree. Ages
+  18+\n\nhttps://finneylibrary.org/event/genealogy-night/2026-12-10/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/genealogy-night/2026-12-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-22-2026-12-11-202612111030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261211T103000
+DTEND;TZID=America/Chicago:20261211T110000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-12-11/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-22/2026-12-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-blushing-dec-11th-202612111900@gardencityksevents
@@ -318,6 +713,74 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/handbound-leather
 END:VEVENT
 BEGIN:VEVENT
+UID:event-kitchen-fun-3-2026-12-12-202612121300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261212T130000
+DTEND;TZID=America/Chicago:20261212T160000
+SUMMARY:Kitchen Fun Co-Op
+DESCRIPTION:A special Kitchen Fun where kids and families work together to 
+ prepare 3 delicious home made soups. Learn new cooking skills\, enjoy time
+  together and share a warm\, tasty meal. Ages 6-17.\n\nhttps://finneylibra
+ ry.org/event/kitchen-fun-3/2026-12-12/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/kitchen-fun-3/2026-12-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-12-12-202612121630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261212T163000
+DTEND;TZID=America/Chicago:20261212T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-12-12/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-12-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-sunday-fun-day-2-2026-12-13-202612131430@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261213T143000
+DTEND;TZID=America/Chicago:20261213T163000
+SUMMARY:Sunday Fun Day
+DESCRIPTION:laid-back gathering with crafts\, activities\, and plenty of fu
+ n\n\nhttps://finneylibrary.org/event/sunday-fun-day-2/2026-12-13/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/sunday-fun-day-2/2026-12-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-you-and-me-sensory-2-2026-12-15-202612151000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261215T100000
+DTEND;TZID=America/Chicago:20261215T103000
+SUMMARY:You and Me Sensory
+DESCRIPTION:hands-on\, sensory-based play for little learners\n\nhttps://fi
+ nneylibrary.org/event/you-and-me-sensory-2/2026-12-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/you-and-me-sensory-2/2026-12-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-movie-mania-10-2026-12-15-202612151630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261215T163000
+DTEND;TZID=America/Chicago:20261215T183000
+SUMMARY:Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/movie-mania-10/2026-12-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/movie-mania-10/2026-12-15/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-mini-cp-dec-2026-202612151800@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261215T180000
@@ -327,6 +790,158 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/mini-cp-dec-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/mini-cp-dec-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-adult-craft-night-2026-12-15-202612151830@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261215T183000
+DTEND;TZID=America/Chicago:20261215T193000
+SUMMARY:Adult Craft Night
+DESCRIPTION:A different craft will be provided each month\, or you can brin
+ g your own project from home. Age 18+\n\nhttps://finneylibrary.org/event/a
+ dult-craft-night/2026-12-15/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/adult-craft-night/2026-12-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-16-202612161030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261216T103000
+DTEND;TZID=America/Chicago:20261216T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-club-read-2-2026-12-16-202612161300@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261216T130000
+DTEND;TZID=America/Chicago:20261216T140000
+SUMMARY:Club Read
+DESCRIPTION:A read aloud book club\n\nhttps://finneylibrary.org/event/club-
+ read-2/2026-12-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/club-read-2/2026-12-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-pokemon-club-2-2026-12-16-202612161630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261216T163000
+DTEND;TZID=America/Chicago:20261216T170000
+SUMMARY:Pokémon Club
+DESCRIPTION:Pokémon Club is for casual fans and avid fanatics of the games
+ \, cards\, and show! From crafts\, activities based around the theme\, wat
+ ch parties\, and gaming days\, the Pokémon club has something to offer ev
+ ery fan!\n\nhttps://finneylibrary.org/event/pokemon-club-2/2026-12-16/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/pokemon-club-2/2026-12-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-tiny-tots-2-2026-12-17-202612171030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261217T103000
+DTEND;TZID=America/Chicago:20261217T110000
+SUMMARY:Tiny Tots
+DESCRIPTION:short\, interactive storytime for infants and caregivers For ag
+ es 0-2\n\nhttps://finneylibrary.org/event/tiny-tots-2/2026-12-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/tiny-tots-2/2026-12-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-drawn-together-2026-12-17-202612171630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261217T163000
+DTEND;TZID=America/Chicago:20261217T170000
+SUMMARY:Drawn Together
+DESCRIPTION:Learn the process for making art and the different forms it tak
+ es.\n\nhttps://finneylibrary.org/event/drawn-together/2026-12-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/drawn-together/2026-12-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-junior-trial-run-2026-12-17-202612171800@gardenc
+ ityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261217T180000
+DTEND;TZID=America/Chicago:20261217T190000
+SUMMARY:Dungeons & Dragons Junior
+DESCRIPTION:A trial run for a program that offers basic and beginner guidan
+ ce for the popular role-playing game. ages 6-17\n\nhttps://finneylibrary.o
+ rg/event/dungeons-dragons-junior-trial-run/2026-12-17/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons-junior-trial-run/2026-
+ 12-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-22-2026-12-18-202612181030@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T103000
+DTEND;TZID=America/Chicago:20261218T110000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-22/2026-12-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-22/2026-12-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-wee-readers-21-2026-12-18-202612181400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T140000
+DTEND;TZID=America/Chicago:20261218T143000
+SUMMARY:Wee Readers
+DESCRIPTION:themed storytime with crafts and activities\, now with morning 
+ and afternoon programs on Friday ***Craft/Activity recommended for ages 3-
+ 5\n\nhttps://finneylibrary.org/event/wee-readers-21/2026-12-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/wee-readers-21/2026-12-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-game-night-10-2026-12-18-202612181630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T163000
+DTEND;TZID=America/Chicago:20261218T173000
+SUMMARY:Game Night
+DESCRIPTION:drop in and play with any of our board\, video\, or card games\
+ n\nhttps://finneylibrary.org/event/game-night-10/2026-12-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/game-night-10/2026-12-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-library-master-2026-12-18-202612181800@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261218T180000
+DTEND;TZID=America/Chicago:20261218T190000
+SUMMARY:Library Master
+DESCRIPTION:Complete tasks\, earn points & climb the leaderboard for your c
+ hance to become the ultimate Library Master!\n\nhttps://finneylibrary.org/
+ event/library-master/2026-12-18/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/library-master/2026-12-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-open-studio-dec-2026-202612181800@gardencityksevents
@@ -351,6 +966,19 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/drop-by-dec-19th
 END:VEVENT
 BEGIN:VEVENT
+UID:event-santa-story-time-2-202612191000@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261219T100000
+DTEND;TZID=America/Chicago:20261219T120000
+SUMMARY:Santa Story Time
+DESCRIPTION:Join us for a story and a picture with Santa Claus! All Ages\n\
+ nhttps://finneylibrary.org/event/santa-story-time-2/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/santa-story-time-2/
+END:VEVENT
+BEGIN:VEVENT
 UID:upcoming-events-annual-member-2026-202612191500@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261219T150000
@@ -360,6 +988,73 @@ DESCRIPTION:https://gardencityarts.org/upcoming-events/annual-member-2026
 LOCATION:Garden City Arts\, 318 N Main St\, Garden City\, KS 67846
 GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/annual-member-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:event-patron-holiday-party-202612191500@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261219T150000
+DTEND;TZID=America/Chicago:20261219T180000
+SUMMARY:Patron Holiday Party
+DESCRIPTION:Join us after Santa Storytime for a magical Holiday Party fille
+ d with laughter\, fun and unforgettable moments. All Ages\n\nhttps://finne
+ ylibrary.org/event/patron-holiday-party/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/patron-holiday-party/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-dungeons-dragons-2026-12-19-202612191630@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261219T163000
+DTEND;TZID=America/Chicago:20261219T193000
+SUMMARY:Dungeons & Dragons
+DESCRIPTION:one-shot campaigns with available characters or character sheet
+ s to make your own. ages 18+\n\nhttps://finneylibrary.org/event/dungeons-d
+ ragons/2026-12-19/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/dungeons-dragons/2026-12-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-20-202612201400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261220T140000
+DTEND;TZID=America/Chicago:20261220T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-20/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-21-202612211400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261221T140000
+DTEND;TZID=America/Chicago:20261221T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-21/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-22-202612221400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261222T140000
+DTEND;TZID=America/Chicago:20261222T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-22/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-22/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-canvas-paint-dec-22-2026-202612221800@gardencityksevent
@@ -375,17 +1070,82 @@ GEO:37.96716;-100.87369
 URL:https://gardencityarts.org/upcoming-events/canvas-paint-dec-22-2026
 END:VEVENT
 BEGIN:VEVENT
-UID:event-library-board-meeting-2026-12-28-202612281700@gardencityksevents
+UID:event-holiday-movie-mania-11-2026-12-23-202612231400@gardencityksevents
 DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261228T170000
-DTEND;TZID=America/Chicago:20261228T183000
-SUMMARY:Library Board Meeting
-DESCRIPTION:https://finneylibrary.org/event/library-board-meeting/2026-12-2
- 8/
+DTSTART;TZID=America/Chicago:20261223T140000
+DTEND;TZID=America/Chicago:20261223T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-23/
 LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
  67846
 GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/library-board-meeting/2026-12-28/
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-26-202612261400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261226T140000
+DTEND;TZID=America/Chicago:20261226T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-26/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-27-202612271400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261227T140000
+DTEND;TZID=America/Chicago:20261227T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-27/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-28-202612281400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261228T140000
+DTEND;TZID=America/Chicago:20261228T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-28/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-29-202612291400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261229T140000
+DTEND;TZID=America/Chicago:20261229T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-29/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-holiday-movie-mania-11-2026-12-30-202612301400@gardencityksevents
+DTSTAMP:20261009T153939Z
+DTSTART;TZID=America/Chicago:20261230T140000
+DTEND;TZID=America/Chicago:20261230T160000
+SUMMARY:Holiday Movie Mania
+DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
+ ttps://finneylibrary.org/event/holiday-movie-mania-11/2026-12-30/
+LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
+ 67846
+GEO:37.97057;-100.86578
+URL:https://finneylibrary.org/event/holiday-movie-mania-11/2026-12-30/
 END:VEVENT
 BEGIN:VEVENT
 UID:upcoming-events-drop-by-jan-2nd-202701021000@gardencityksevents
