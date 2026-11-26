@@ -23,7 +23,6 @@ window.VENUES = {
 };
 window.EVENTS = [
   {"title":"Gallery Closed","venue":"gca","category":"arts","start":"2026-11-25T13:00","end":"2026-11-26T17:00","url":"https://gardencityarts.org/upcoming-events/2024/12/24/gallery-closed-fexag-fb9nn-77545","src":"gca","desc":"Double-click to edit..."},
-  {"title":"Holiday Movie Mania","venue":"library","category":"family","start":"2026-11-25T14:00","end":"2026-11-25T16:00","url":"https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/","src":"library","desc":"family-friendly movies with the first bag of popcorn on us"},
   {"title":"Genealogy Night","venue":"library","category":"community","start":"2026-11-26T18:00","end":"2026-11-26T19:00","url":"https://finneylibrary.org/event/genealogy-night/2026-11-26/","src":"library","desc":"Learn how to find your ancestors and map your family tree. Ages 18+"},
   {"title":"Blushing Artiste - Nov 27th","venue":"gca","category":"community","start":"2026-11-27T19:00","end":"2026-11-27T21:30","url":"https://gardencityarts.org/upcoming-events/blushing-nov-17th","src":"gca","desc":""},
   {"title":"Acrylic Pour Junior - Nov 28th","venue":"gca","category":"arts","start":"2026-11-28T10:00","end":"2026-11-28T11:30","url":"https://gardencityarts.org/upcoming-events/acrylic-pour-junior","src":"gca","desc":""},

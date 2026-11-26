@@ -39,19 +39,6 @@ URL:https://gardencityarts.org/upcoming-events/2024/12/24/gallery-closed-fe
  xag-fb9nn-77545
 END:VEVENT
 BEGIN:VEVENT
-UID:event-holiday-movie-mania-10-2026-11-25-202611251400@gardencityksevents
-DTSTAMP:20261009T153939Z
-DTSTART;TZID=America/Chicago:20261125T140000
-DTEND;TZID=America/Chicago:20261125T160000
-SUMMARY:Holiday Movie Mania
-DESCRIPTION:family-friendly movies with the first bag of popcorn on us\n\nh
- ttps://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/
-LOCATION:Finney County Public Library\, 605 E Walnut St\, Garden City\, KS 
- 67846
-GEO:37.97057;-100.86578
-URL:https://finneylibrary.org/event/holiday-movie-mania-10/2026-11-25/
-END:VEVENT
-BEGIN:VEVENT
 UID:event-genealogy-night-2026-11-26-202611261800@gardencityksevents
 DTSTAMP:20261009T153939Z
 DTSTART;TZID=America/Chicago:20261126T180000
